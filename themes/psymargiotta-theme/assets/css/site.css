@@ -1,0 +1,462 @@
+/* footer contact section start */
+.page-contact-section-0406 {
+  background: url("/images/shapes/page-bottom-contact-section-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding-top: 10rem;
+}
+
+.mobile-shape-0406 {
+  border-radius: 2rem;
+  border: 1rem solid #304D89;
+}
+
+.mobile-shape-0406 label a {
+  @apply underline;
+}
+
+.mobile-shape-0406 label a:hover {
+  @apply text-g4;
+}
+
+@media (min-width:768px) {
+  .page-contact-section-0406 {
+    padding-top: 32rem;
+  }
+
+  .mobile-shape-0406 {
+    border: none;
+    background: url("/images/shapes/mobile-phone-border.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3.9rem;
+    background-position: center;
+  }
+}
+
+/* footer contact section end */
+
+/*======================== homepage ============================*/
+/* hero section start */
+.homepage-hero-bg-0506 {
+  background: url("/images/shapes/homepage-hero-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* hero section end */
+/* interview section start */
+.interview-sequence-0406 {
+  background: linear-gradient(180deg, #DCB7FE -28.43%, #3EBCFC 120.59%);
+}
+
+/* interview section end */
+
+/* article section start */
+.container-home-page-article-card1106>hr,
+.container-home-page-article-card1106>.home-page-article-card1106 {
+  display: none;
+}
+
+.container-home-page-article-card1106>.home-page-article-card1106:nth-child(1) {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .container-home-page-article-card1106>hr:nth-child(2) {
+    display: block;
+  }
+
+  .container-home-page-article-card1106>.home-page-article-card1106:nth-child(3) {
+    display: flex;
+  }
+}
+
+/* article section end */
+
+/*================ single template page =================*/
+/* hero start */
+.single-template-page-hero-0506 {
+  background: url("/images/shapes/single-page-template-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.single-template-page-hero-button-0506 {
+  background: linear-gradient(256.85deg, #BB86FF 17.37%, #2C61C8 136.07%);
+}
+
+/* hero end */
+
+/* error message start */
+.single-template-page-error-message-0506 {
+  line-height: 3rem !important;
+}
+
+@media (min-width:768px) {
+  .single-template-page-error-message-0506 {
+    line-height: 4rem !important;
+  }
+}
+
+@media (min-width:1024px) {
+  .single-template-page-error-message-0506 {
+    line-height: 5rem !important;
+  }
+}
+
+.single-template-page-error-message-0506 a {
+  @apply underline;
+}
+
+.single-template-page-error-message-0506 a:hover {
+  @apply text-deep-purple;
+}
+
+/* error message end */
+
+/* pros style start */
+.prose>*,
+.prose>strong {
+  color: #313062 !important;
+}
+
+/* pros style end */
+
+/*================ digital psychologist page =================*/
+/* hero start  */
+.digital-psychologist-hero-0506 {
+  background: url("/images/shapes/digital-psycologist-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* hero end  */
+/* gradient style start */
+.gradient-circle-border {
+  border-radius: 50%;
+  background: linear-gradient(180deg, #D8ACFE 0%, #1EB3FB 100%);
+}
+
+.gradient-rectangle-border {
+  background: linear-gradient(180deg, #D8ACFE 0%, #1EB3FB 100%);
+}
+
+.gradient-rectangle-border2 {
+  background: linear-gradient(180deg, #DCB7FE -28.43%, #3EBCFC 120.59%);
+}
+
+.gradient-g7 {
+  background: linear-gradient(180deg, #99DBF9 0%, rgba(156, 220, 250, 0.66) 59.9%);
+}
+
+/* gradient style end*/
+
+/*================ list page =================*/
+/* hero start */
+.list-page-hero-bg-0706 {
+  background: url("/images/shapes/list-page-hero-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* hero end */
+
+
+/* article list page start */
+div.category-page-article-card-1006 {
+  display: none;
+}
+
+div.category-page-article-card-1006:nth-child(1) {
+  display: grid;
+}
+
+@media (min-width: 640px) {
+
+  div.category-page-article-card-1006:nth-child(1),
+  div.category-page-article-card-1006:nth-child(2) {
+    display: grid;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  div.category-page-article-card-1006:nth-child(1),
+  div.category-page-article-card-1006:nth-child(2),
+  div.category-page-article-card-1006:nth-child(3) {
+    display: grid;
+  }
+}
+
+/* article list page end */
+
+
+/*================ single article page =================*/
+.single-article-section-content0706 {
+  max-width: 60rem !important;
+}
+
+
+@media (min-width:768px) {
+  .single-article-section-table-of-content0706 {
+    max-height: 85vh !important;
+    overflow-y: auto !important;
+  }
+}
+
+aside a:hover {
+  @apply text-g1;
+}
+
+/* buttons */
+.g3-white-button {
+  position: relative;
+  transition: all .3s;
+  @apply rounded-full;
+}
+
+/* change card button style start */
+span.disable-card-button,
+span.disable-card-button:hover {
+  @apply cursor-not-allowed;
+  @apply bg-g3;
+  @apply opacity-40;
+  @apply text-white;
+}
+
+/* change card button style end */
+
+
+/* overlay start */
+.animation-overlay {
+  --animate-delay: 0.5s;
+  --animate-duration: 1s;
+}
+
+/* overlay end */
+
+
+/* footer style start */
+footer a:hover {
+  @apply text-g1;
+}
+
+/* footer style end */
+
+
+/* ========================== who we are page start ============================= */
+/* hero section start */
+.who-we-are-hero-1606 {
+  background: url("/images/chi-siamo/chi-siamo-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* hero section end */
+
+/* author section start */
+.author-setion-container-1706 {
+  background: url("/images/chi-siamo/author-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+/* author section end */
+
+
+
+
+
+/* .circle-container-1906:nth-child(odd) div.number-circle-1906 {
+  @apply translate-x-9/50;
+} */
+
+.circle-container-1906 div.main-circle-1906 {
+  @apply order-last;
+}
+
+.circle-container-1906 div.number-circle-1906 {
+  @apply order-first;
+}
+
+@media (min-width: 768px) {
+  .circle-container-1906:nth-child(even) {
+    @apply self-end;
+  }
+
+  .circle-container-1906:nth-child(even) div.number-circle-1906 {
+    @apply order-first;
+    @apply translate-x-7/50;
+  }
+
+  .circle-container-1906:nth-child(odd) div.main-circle-1906 {
+    @apply order-first;
+  }
+
+  .circle-container-1906:nth-child(odd) div.number-circle-1906 {
+    @apply order-last;
+  }
+}
+
+@media (min-width: 1024px) {
+  .circle-container-1906:nth-child(even) div.number-circle-1906 {
+    @apply -translate-x-1/3;
+  }
+}
+
+@media (min-width: 1280px) {
+  .circle-container-1906:nth-child(even) div.number-circle-1906 {
+    @apply -translate-x-1/2;
+  }
+}
+
+/* map section start */
+.map-container-1906 {
+  @apply border-g1;
+  @apply border-4;
+  @apply rounded-xl;
+  width: 100%;
+  height: 25rem;
+}
+
+@media (min-width: 640px) {
+  .map-container-1906 {
+    @apply border-none;
+    background: url("/images/chi-siamo/map-overlay.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 30rem;
+    height: 35rem;
+  }
+
+  .map-section-container-1906 {
+    margin-left: 12%;
+  }
+}
+
+@media (min-width: 768px) {
+  .map-container-1906 {
+    @apply border-none;
+    width: 30rem;
+    height: 35rem;
+  }
+
+  .map-section-container-1906 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .map-container-1906 {
+    width: 30.5rem;
+    height: 35.8rem;
+  }
+}
+
+/* map section end */
+
+/* contact section start */
+.contact-link-1906 a:hover {
+  @apply underline;
+}
+
+/* contact section end */
+
+/* map card section start */
+.map-selector-card2206:nth-child(1) .map-bg-icon2106 {
+  background: url("/images/chi-siamo/orange-map-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.map-selector-card2206:nth-child(2) .map-bg-icon2106 {
+  background: url("/images/chi-siamo/yellow-map-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.map-selector-card2206:nth-child(3) .map-bg-icon2106 {
+  background: url("/images/chi-siamo/pink-map-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* map card section end */
+/* ========================== who we are page end ============================= */
+
+
+/* ========================== we can help you page start ============================= */
+/* hero section start */
+.we-can-help-you-1606 {
+  background: url("/images/psicologo-online/hero-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+@media (min-width: 1024px) {
+
+  div.category-section-card-2106:nth-child(odd)>div:first-child img {
+    @apply ml-auto;
+  }
+
+  div.category-section-card-2106:nth-child(even)>div:first-child {
+    @apply order-2;
+  }
+
+  div.category-section-card-2106:nth-child(even)>div:last-child {
+    @apply order-1;
+  }
+}
+
+/* hero section end */
+
+/* help section start */
+.about-section-top-2406 {
+  background: url("/images/psicologo-online/about-bg-top.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.about-section-bottom-2406 {
+  background: url("/images/psicologo-online/about-bg-bottom.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+/* help section end */
+
+
+/* testimonial section start */
+.testimonial-top-bg-2406 {
+  background: url("/images/psicologo-online/testimonial-bg-top.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+/* testimonial section end */
+/* book section start */
+.book-bg-2406 {
+  background: url("/images/psicologo-online/book-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+/* book section end */
+/* ========================== we can help you page end ============================= */

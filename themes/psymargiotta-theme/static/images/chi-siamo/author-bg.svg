@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1433 517" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Artboard1" transform="matrix(0.8417,0,0,0.561886,48.4618,67.6917)">
+        <rect x="-57.576" y="-120.472" width="1701.48" height="918.404" style="fill:none;"/>
+        <clipPath id="_clip1">
+            <rect x="-57.576" y="-120.472" width="1701.48" height="918.404"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g transform="matrix(1.18807,0,0,1.77972,-55.7151,-110.643)">
+                <rect x="-5" y="157" width="1439.57" height="361" style="fill:rgb(63,78,169);"/>
+            </g>
+            <g transform="matrix(1.18807,0,0,1.77972,-55.7151,-110.643)">
+                <ellipse cx="1300.92" cy="170" rx="169.917" ry="170" style="fill:rgb(200,237,243);fill-opacity:0.44;"/>
+            </g>
+            <g transform="matrix(1.18807,0,0,1.77972,-55.7151,-110.643)">
+                <ellipse cx="1300.92" cy="170" rx="169.917" ry="170" style="fill:url(#_Linear2);"/>
+            </g>
+            <g transform="matrix(1.18807,0,0,1.77972,-55.7151,-110.643)">
+                <ellipse cx="1390.05" cy="159" rx="89.956" ry="90" style="fill:rgb(30,179,251);"/>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(3.10244e-14,506.667,-506.667,3.10244e-14,1300.92,-96.6667)"><stop offset="0" style="stop-color:rgb(220,183,254);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(62,188,252);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>

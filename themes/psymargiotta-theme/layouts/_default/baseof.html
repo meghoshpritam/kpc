@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang='{{ .Site.LanguageCode }}'>
+{{ partial "head.html" . }}
+
+<body class="overflow-x-hidden">
+    {{- partial "sprites.html" -}}
+    <main>
+        {{ if .Site.Params.initialAnimation }}
+        {{ partial "overlay-animation.html" . }}
+        {{ end }}
+        {{- block "main" . }}{{- end }}
+    </main>
+</body>
+
+{{- partial "footer.html" . -}}
+
+</html>

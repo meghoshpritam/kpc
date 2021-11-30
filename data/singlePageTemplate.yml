@@ -1,0 +1,21 @@
+hero:
+  image:
+    url: /images/single-page-template-hero.svg
+    alt: hero-image
+  button:
+    label: Homepage
+    url: "/"
+
+topSection:
+  date: "Date: "
+  time:
+    before: "Tempo di Lettura: "
+    after: " Min"
+
+tableOfContent:
+  heading: "Indice:"
+
+defaultArticle:
+  image:
+    url: /images/default-article.svg
+    label: default article

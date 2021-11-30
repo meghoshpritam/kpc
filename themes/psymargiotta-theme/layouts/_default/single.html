@@ -1,0 +1,158 @@
+{{ define "main" }}
+{{ $pageData := .Site.Data.singlePageTemplate }}
+{{/* top section start  */}}
+<section class="list-page-hero-bg-0706">
+  {{- partial "header.html" . -}}
+  {{/* hero section start  */}}
+  {{ range .Site.Sections }}
+  {{ if eq . $.Parent }}
+  {{ with .Params.hero }}
+  <div class="container grid grid-cols-1 px-5 mx-auto md:grid-cols-2">
+    {{ with $.Params.articleData }}
+    <h1 class="text-3xl font-semibold md:text-4xl lg:text-6xl font-lato text-g3 md:col-span-2">
+      {{ .title.blue }} {{ .title.normal }}
+    </h1>
+    {{ end }}
+    <div>
+      <p class="max-w-xs mt-12 mb-5 text-base text-g4 font-montserrat md:text-lg md:mt-24">
+        {{ .details }}
+      </p>
+      <div class="py-7">
+        <a href="{{ .button.url | relURL }}" title="{{ .button.label }}" aria-label="{{ .button.label }}" class="px-6 py-4 text-lg text-white rounded-full single-template-page-hero-button-0506 font-lato lg:text-xl hover:shadow-lg">
+          {{ .button.label }}
+        </a>
+      </div>
+    </div>
+    <div class="mt-14 md:mt-0">
+      <img src="{{ .image.url }}" alt="{{ .image.alt }}" title="{{ .image.alt }}" class="w-4/5 h-auto mx-auto sm:w-8/12 md:w-2/3 md:mt-5 xl:w-2/4 xl:-mt-2" height="750" width="750">
+    </div>
+  </div>
+  {{ end }}
+  {{/* hero section end  */}}
+  {{ end }}
+  {{ end }}
+  {{ with .Params.articleData }}
+  {{/* article data section start  */}}
+  <section class="container px-5 mx-auto mt-10 -mb-20 xl:pb-40 xl:mt-0 text-g3 font-montserrat">
+    <h2 class="mb-12 text-xl font-semibold md:text-2xl lg:text-4xl">{{ .subtitle }}</h3>
+
+    <div class="flex flex-wrap items-center justify-between italic font-semibold mt-7">
+
+      {{ $aAuthorName := $.Params.author }}
+      {{ $aAuthorPic := $.Site.Data.authors.defaultAuthor.avatar.url }}
+      {{ $aAuthorPicAlt := $.Params.author }}
+      {{ $aAuthorPrefix := $.Site.Data.authors.defaultAuthor.namePrefix }}
+      {{ $asocialLinks := $.Site.Data.authors.defaultAuthor.socialLinks }}
+
+
+      {{ range $.Site.Data.authors.authors }}
+      {{ if eq .slug $.Params.author }}
+
+      {{ $aAuthorName = .name }}
+      {{ $aAuthorPic = .avatar.url }}
+      {{ if .avatar.alt }}
+      {{ $aAuthorPicAlt = .avatar.alt }}
+      {{ else }}
+      {{ $aAuthorPicAlt = .name  }}
+      {{ end }}
+      {{ if .socialLinks }}
+      {{ $asocialLinks = .socialLinks }}
+      {{ end }}
+
+      {{ end }}
+      {{ end }}
+      <div class="w-24 h-24 mb-10 mr-10 bg-white rounded-full shadow-circle">
+        <img src="{{ $aAuthorPic }}" alt="{{ $aAuthorPicAlt }}" title="{{ $aAuthorPicAlt }}" width="104" height="104" class="w-full h-full">
+      </div>
+      <div class="mb-10">
+        <p>{{ $aAuthorPrefix }} {{ $aAuthorName }}</p>
+        <div class="flex mt-2">
+          {{ range $asocialLinks }}
+          {{ if .enable }}
+          <a href="{{ .url }}" title="{{ .icon }}" aria-label="{{ .icon }}" target="_blank" class="mr-4 rounded-lg hover:shadow-circle">
+            <svg class="w-8 h-8">
+              <use xlink:href="#shape-{{ .icon }}" />
+            </svg>
+          </a>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+      <div class="flex-grow mb-10 mr-10"></div>
+      <div class="mb-10">
+        <p>
+          {{ $pageData.topSection.date}}
+          {{ dateFormat "2/01/2006" $.Date }}
+        </p>
+        <p>
+          {{ $pageData.topSection.time.before}}
+          {{ $.ReadingTime }}
+          {{ $pageData.topSection.time.after}}
+        </p>
+      </div>
+    </div>
+
+    <div class="hidden min-w-full mt-5 mb-12 italic prose lg:block font-lato text-g3">
+      {{ .description | markdownify }}
+    </div>
+    {{ end }}
+  </section>
+  {{/* article data section end  */}}
+
+</section>
+{{/* top section end  */}}
+
+<section class="container px-5 mx-auto mt-24 -mb-20 md:mt-32 lg:mt-40 xl:mt-0 text-g3 font-montserrat">
+  {{/* article section start  */}}
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+    <div class="lg:order-2">
+      <div class="lg:sticky lg:top-32 xl:top-40 toc-container">
+        {{ if gt ( len .TableOfContents ) 50 }}
+        <div class="mb-10 text-sm leading-7 lg:mb-0">
+          <aside class="px-5 py-5 border-2 border-gray-200 font-lato text-g3 single-article-section-table-of-content0706">
+            <p class="pt-4 text-xl font-semibold lg:text-2xl font-montserrat">
+              {{ $pageData.tableOfContent.heading }}
+            </p>
+            <hr class="bg-gray-200 w-full h-0.5 my-4" />
+            {{ .TableOfContents }}
+          </aside>
+        </div>
+        {{ end }}
+        {{ with .Params.articleData }}
+        <div class="min-w-full my-12 italic prose lg:hidden font-lato text-g3">
+          {{ .description | markdownify }}
+        </div>
+        {{ end }}
+        <div class="pt-12">
+          {{ $aImgAlt := $pageData.defaultArticle.image.alt }}
+          {{ if .Params.articleData.image.alt }}
+          {{ $aImgAlt = .Params.articleData.image.alt }}
+          {{ end }}
+          {{ if .Params.articleData.image.url }}
+          <img src="{{ .Params.articleData.image.url }}" alt="{{ .Params.articleData.image.alt }}" title="{{ .Params.articleData.image.alt }}" class="w-full h-auto" width="470" height="380">
+          {{ else }}
+          <img src="{{ $pageData.defaultArticle.image.url }}" alt="{{ $aImgAlt }}" title="{{ $aImgAlt }}" class="w-full h-auto" width="470" height="380">
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    <article class="prose single-article-section-content0706 font-lato lg:col-span-2 lg:order-1">
+      {{ .Content }}
+    </article>
+  </div>
+  {{/* article section end  */}}
+</section>
+
+<!-- page script start -->
+<script defer type="text/javascript">
+  window.onload = function() {
+    App.tocHighlight();
+  }
+</script>
+<!-- page script end -->
+
+<!-- structure data start -->
+{{ partial "schema/single-article.html" . }}
+<!-- structure data end -->
+
+{{ end }}

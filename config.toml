@@ -1,0 +1,49 @@
+baseURL = "https://www.psymargiotta.it/"
+title = "PSYMargiotta"
+theme = "psymargiotta-theme"
+staticDir = ["assets"]
+defaultContentLanguage = "it"
+google_verification = "123"
+disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
+googleAnalytics = "G-WYPF9BDN7Y"
+
+
+[languages]
+    [languages.it]
+    languageName = "IT"
+    languageCode = "it"
+    title = "Psy Margiotta"
+    weight = 1
+
+[markup]
+    [markup.goldmark.renderer]
+        unsafe = true
+    [markup.tableOfContents]
+        endLevel = 3
+        ordered = false
+        startLevel = 2
+
+
+[outputs]
+    home = ["HTML", "JSON"]
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[params]
+    contactFormUrl = "https://getform.io/f/f9dd923a-c85d-4bdb-b1a5-0ed4108f507a"
+    recaptchaKey = "6LdNcyobAAAAAC0I4HixUkZExdHP_Td_YO0YX8GH"
+    ogImage = "logo.svg"
+    initialAnimation = false
+    googleMapAPIKey = "AIzaSyCWxjJGo7_RN9nFHTOgBe1klQ9qNrTkBZ4"
+    ahrefsSiteVerification = "db33085043a2bb7da1d94bef763d8ab5074838837d68250eb12fda61c32588f5"
+    enableChat = true
+    enableiubenda = false
+    enableRecaptcha = true
+    enableScrollToTopButton = false
+
+[social]
+  twitter = "CertQuestions"

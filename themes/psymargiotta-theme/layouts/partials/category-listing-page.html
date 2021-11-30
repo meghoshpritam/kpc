@@ -1,0 +1,17 @@
+Category Listing Page: {{ .Title }}
+
+<br>
+<br>
+<br>
+
+{{ .Params.highlight.title }}
+
+
+<ul>
+    {{ range .Pages }}
+    <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+
+    {{ end }}
+</ul>

@@ -1,0 +1,65 @@
+contactSection:
+  firstName: Your Name
+  lastName: Your Surname
+  email: Your Email
+  message: Your Message
+  checkbox: >
+    Accetto Il Trattamento [Dei Dati Personali](/privacy-and-cookie-policy/).
+  submitBtn: INVIA
+  requiredMessage: Campo obbligatorio
+  invalidEmailMessage: Inserisci una email valida
+  image:
+    url: /images/page-bottom-contact.svg
+    alt: "contact-image"
+
+sections:
+  section1:
+    heading: "I nostri servizi:"
+    list:
+      - label: Psicologo Online
+        url: psicologo-online/
+      - label: Psicologo Online Gratis
+        url: psicologia-clinica/psicologo-online-gratis/
+      - label: Psicologo Digitale
+        url: lo-psicologo-digitale/
+      - label: Neuromarketing
+        url: neuromarketing/
+      - label: Piscologia Del Lavoro
+        url: psicologia-del-lavoro/
+      - label: Piscologia Clinica
+        url: psicologia-clinica/
+      - label: Piscologia Dello Sviluppo
+        url: psicologia-dello-sviluppo/
+  section2:
+    heading: "Follow Us:"
+    list:
+      - label: Facebook
+        url: https://www.facebook.com/The-Science-of-AI-Neuromarketing-111188510626549
+        icon: facebook
+      - label: Instagram
+        url: https://www.instagram.com/neuromarketing_skills/
+        icon: instagram
+    subsection:
+      heading: "Consulenti di:"
+      image:
+        icon: medic-italia
+        alt: "Piscologo Online -  Margiotta"
+        link: https://www.medicitalia.it/m.margiotta/
+  section3:
+    heading: "Contatti"
+    list:
+      - label: "[+39 340 8034830](tel:+393408034830)"
+        icon: phone
+      - label: "[margiotta@psypec.it](mailto:margiotta.mgiusy@gmail.com)"
+        icon: mail
+      - label: >
+          Via Don Bosco  
+
+          20139 Milano
+        icon: pin
+bottom:
+  left:
+    before: ©
+    after: >
+      [PSYMARGIOTTA](/). All rights reserved. | [Cookie Policy](/privacy-and-cookie-policy/) | 
+  right: P. IVA  03131760807

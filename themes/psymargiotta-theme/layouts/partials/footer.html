@@ -1,0 +1,169 @@
+{{/* scroll top top button start */}}
+{{ if and (not .Site.Params.enableChat) .Site.Params.enableScrollToTopButton }}
+<div class="fixed z-10 inline-flex items-center justify-center hidden text-white duration-500 ease-in-out shadow-lg cursor-pointer scroll-to-top-1606 right-5 bottom-5 gradient-circle-border w-14 h-14 hover:shadow-2xl hover:text-g3" onclick="App.scrollToTop()">
+  <svg class="h-4 w-7">
+    <use xlink:href="#shape-arrow-up" />
+  </svg>
+</div>
+{{ end }}
+{{/* scroll top top button end  */}}
+
+{{/* bottom contact section start */}}
+{{ with .Site.Data.footer.contactSection }}
+<div class="page-contact-section-0406 font-montserrat">
+  <div class="max-w-3xl mx-auto">
+    <form action="{{ $.Site.Params.contactFormUrl }}" onsubmit="onSubmitContactForm(event);" method="POST" class="grid grid-cols-1 px-4 py-5 mx-2 mobile-shape-0406 md:mx-0 md:px-14 md:py-8 sm:grid-cols-2 gap-x-9 gap-y-3 bg-white3 animation-swing-2506">
+      <input type="text" name="first-name" placeholder="{{ .firstName }}" required oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" oninput="this.setCustomValidity('');" class="text-base border-2 rounded-full outline-none bg-ice-blue px-2_5 py-2_5 focus:border-gray-300 text-g4 placeholder-g4">
+      <input type="text" name="last-name" placeholder="{{ .lastName }}" required oninvalid="this.setCustomValidity('{{ .requiredMessage }}')" oninput="this.setCustomValidity('');" class="text-base border-2 rounded-full outline-none bg-ice-blue px-2_5 py-2_5 focus:border-gray-300 text-g4 placeholder-g4">
+      <input type="email" name="email" placeholder="{{ .email }}" required oninvalid="this.setCustomValidity('{{ .invalidEmailMessage }}')" oninput="onInputFormEmail(this);" class="text-base border-2 rounded-full outline-none bg-ice-blue px-2_5 py-2_5 focus:border-gray-300 text-g4 placeholder-g4 sm:col-span-2">
+      <textarea name="message" id="message" cols="10" rows="3" placeholder="{{ .message }}" class="px-4 py-3 text-base border-2 outline-none resize-none bg-ice-blue rounded-3xl focus:border-gray-300 text-g4 placeholder-g4 sm:col-span-2"></textarea>
+      <label for="confirmation" class="ml-4 text-sm sm:col-span-2 text-light-gray">
+        <input type="checkbox" name="confirmation" id="confirmation" required oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" onchange="this.setCustomValidity('');">
+        {{ .checkbox | markdownify }}
+      </label>
+      <div class="{{ if ne $.Site.Params.enableRecaptcha true }} h-20 {{ end }}">
+        {{ if $.Site.Params.enableRecaptcha }}
+        <div class="g-recaptcha" data-sitekey="{{ $.Site.Params.recaptchaKey }}"></div>
+        {{ end }}
+      </div>
+      <div class="self-center justify-self-end">
+        <button type="submit" class="px-5 text-lg duration-500 ease-in-out border-2 shadow-md outline-none focus:outline-none hover:shadow-lg text-g4 font-lato py-2_5 border-g4 rounded-xl hover:bg-g4 hover:text-white">
+          {{ .submitBtn }}
+        </button>
+      </div>
+    </form>
+  </div>
+
+  {{ with .image }}
+  <img src="{{ .url }}" alt="{{ .alt }}" title="{{ .alt }}" class="w-full h-auto max-w-2xl" height="603" width="672">
+  {{ end }}
+
+</div>
+{{ end }}
+{{/* bottom contact section end */}}
+
+{{/* footer start */}}
+{{ with .Site.Data.footer }}
+<footer class="text-white bg-g4">
+  {{ with .sections }}
+  <div class="container grid grid-cols-1 px-5 mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 py-14 font-lato">
+    {{ with .section1 }}
+    <div class="flex-col items-center lg:flex">
+      <div>
+        <h4 class="mb-8 text-2xl md:text-3xl">{{ .heading }}</h4>
+        <div class="flex flex-col space-y-3">
+          {{ range .list }}
+          <div>
+            <a href="{{ .url | relURL }}" title="{{ .label }}" aria-label="{{ .label }}">{{ .label }}</a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{ end }}
+
+    {{ with .section2 }}
+    <div class="flex-col items-center md:flex">
+      <div>
+        <h4 class="mb-8 text-2xl md:text-3xl">{{ .heading }}</h4>
+        <div class="flex flex-col space-y-3">
+          {{ range .list }}
+          <div class="flex">
+            <a href="{{ .url | relURL }}" title="{{ .label }}" aria-label="{{ .label }}" target="_blank" class="flex items-center" rel="noopener">
+              <svg class="mr-2 w-7 h-7">
+                <use xlink:href="#shape-{{ .icon }}" />
+              </svg>
+              {{ .label }}
+            </a>
+          </div>
+          {{ end }}
+        </div>
+        <hr class="border-none w-40 h-0.5 bg-white mt-7 mb-8" />
+        {{ with .subsection }}
+        <h4 class="mb-5 text-2xl md:text-3xl">{{ .heading }}</h4>
+        {{ with .image }}
+        <a href="{{ .link }}" title="{{ .alt }}" aria-label="{{ .alt }}">
+          <svg class="w-36 md:w-48 h-9 md:h-11">
+            <use xlink:href="#shape-{{ .icon }}" />
+          </svg>
+        </a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ with .section3 }}
+    <div class="flex-col items-center lg:flex">
+      <div>
+        <h4 class="mb-8 text-2xl md:text-3xl">{{ .heading }}</h4>
+        <div class="flex flex-col space-y-3">
+          {{ range .list }}
+          <div class="flex items-baseline">
+            <svg class="w-3 h-3 mt-1.5 mr-3">
+              <use xlink:href="#shape-{{ .icon }}" />
+            </svg>
+            {{ .label | markdownify }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{ with .bottom }}
+  <div class="text-sm bg-g3 font-montserrat text-light-gray">
+    <div class="container flex flex-wrap justify-between px-5 py-3 mx-auto md:space-x-7">
+      <div class="mb-3 md:mb-0">
+        {{ .left.before | markdownify }} <span class="current-year-footer-0506">2021</span>
+        {{ .left.after | markdownify }}
+
+        <a href="https://www.iubenda.com/privacy-policy/49358839" class="iubenda-black iubenda-noiframe iubenda-embed " title="Privacy Policy ">Privacy Policy</a>
+      </div>
+      <div class="md:text-right">{{ .right | markdownify }}</div>
+    </div>
+  </div>
+  {{ end }}
+
+</footer>
+{{ end }}
+{{/* footer end */}}
+
+
+<!-- tidio chat script start -->
+{{ if .Site.Params.enableChat }}
+<script async src="//code.tidio.co/b1cpgwrn11trxczys4t7pjtlzp0jos4p.js"></script>
+{{ end }}
+<!-- tidio chat script end -->
+
+{{/* footer content section start  */}}
+<script defer type="text/javascript">
+  window.addEventListener("load", function() {
+    var elements = document.querySelectorAll('.animation-swing-2506');
+    var isRunning = false;
+
+    window.addEventListener("scroll", function() {
+      elements.forEach(element => {
+        if (!isRunning) {
+          if (App.isInViewport(element)) {
+            element.classList.add('animate__animated', 'animate__swing');
+            isRunning = true;
+            setTimeout(function() {
+              isRunning = false;
+            }, 1000)
+          } else
+            element.classList.remove('animate__animated', 'animate__swing');
+        }
+      });
+    })
+  })
+</script>
+{{/* footer content section end  */}}
+
+{{/* script start */}}
+{{ $opts := dict "config" "assets/js/babel.config.js" "noComments" true "minified" true }}
+{{- $transpiled := resources.Get "js/app.js" | babel $opts | resources.Minify -}}
+<script async src="{{ $transpiled.RelPermalink }}"></script>
+{{/* script end */}}

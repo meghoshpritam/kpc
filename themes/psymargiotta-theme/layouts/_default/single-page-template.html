@@ -1,0 +1,103 @@
+{{ define "main" }}
+{{ $pageData := .Site.Data.singlePageTemplate }}
+
+<section class="single-template-page-hero-0506">
+    {{- partial "header.html" . -}}
+    <div class="container grid grid-cols-1 px-5 pb-20 mx-auto md:grid-cols-2 md:pb-48">
+        <div>
+            <h1 class="text-3xl font-semibold font-lato md:text-4xl lg:text-6xl text-g3">
+                {{ .Params.mainTitle.normal }}
+                <span class="text-deep-purple">
+                    {{ .Params.mainTitle.purple }}
+                </span>
+            </h1>
+
+            <div class="my-20 md:my-52 lg:my-72 ">
+                <a href="{{ $pageData.hero.button.link | relURL }}"
+                    aria-label="{{ $pageData.hero.button.label }}"
+                    title="{{ $pageData.hero.button.label }}"
+                    class="px-20 py-4 text-lg text-white rounded-full single-template-page-hero-button-0506 font-lato lg:text-xl hover:shadow-lg">
+                    {{ $pageData.hero.button.label }}
+                </a>
+            </div>
+        </div>
+        <div class="flex items-center">
+            <img src="{{ $pageData.hero.image.url }}" alt="{{ $pageData.hero.image.alt }}" title="{{ $pageData.hero.image.alt }}"
+                class="w-full h-auto" class="w-full h-auto" height="550" width="740">
+        </div>
+    </div>
+</section>
+
+<section class="container px-5 mx-auto mt-16 mb-20 text-g3 font-montserrat">
+    {{ with .Params.topSection }}
+    <h2 class="text-3xl font-semibold md:text-5xl lg:text-7xl">
+        {{ .title.normal }}
+        <span class="text-deep-purple">
+            {{ .title.purple }}
+        </span>
+    </h2>
+    <h3 class="my-12 text-xl font-semibold md:text-2xl lg:text-4xl">{{ .subtitle }}</h3>
+    <hr>
+    {{ with .section2 }}
+    <div class="flex flex-wrap items-center justify-between italic font-semibold mt-7">
+        <div class="mb-10 mr-10">{{ .left | markdownify }}</div>
+        <div class="mb-10">
+            <p>
+                {{ $pageData.topSection.date}}
+                {{ .date }}
+            </p>
+            <p>
+
+                {{ $pageData.topSection.time.before}}
+                {{ $.ReadingTime }}
+                {{ $pageData.topSection.time.after}}
+            </p>
+        </div>
+    </div>
+    {{ end }}
+    <p class="mb-12 italic font-lato">
+        {{ .description | markdownify }}
+    </p>
+    {{ end }}
+
+    {{ with .Params.errorMessage }}
+    <div
+        class="max-w-5xl mx-auto text-3xl font-semibold single-template-page-error-message-0506 font-montserrat md:text-4xl lg:text-6xl">
+        <span class="text-deep-purple">
+            {{ .purple }}
+        </span>
+        {{ .normal | markdownify }}
+    </div>
+    {{ end }}
+
+    <div class="grid grid-cols-1 lg:grid-cols-3">
+        {{ if gt ( len .TableOfContents ) 50 }}
+        <div class="mb-10 lg:order-2 lg:mb-0">
+            <aside class="px-5 py-5 border-2 border-gray-200 lg:sticky lg:top-32 xl:top-40 font-lato text-g3 single-article-section-table-of-content0706 toc-container">
+                <p class="pt-4 text-xl font-semibold lg:text-2xl font-montserrat">
+                    {{ $pageData.tableOfContent.heading }}
+                </p>
+                <hr class="bg-gray-200 w-full h-0.5 my-4" />
+                {{ .TableOfContents }}
+            </aside>
+        </div>
+        {{ end }}
+
+        <article
+            class="prose font-lato lg:col-span-2 lg:order-1 single-article-section-content0706">
+            {{ .Content }}
+        </article>
+    </div>
+</section>
+
+<!-- page script start -->
+<script defer type="text/javascript">
+    window.onload = function () {
+        App.tocHighlight();
+    }
+</script>
+<!-- page script end -->
+
+{{ partial "schema/website.html" . }}
+
+{{ end }}

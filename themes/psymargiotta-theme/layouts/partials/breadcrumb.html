@@ -1,0 +1,27 @@
+<div class="font-montserrat text-base font-semibold text-g3">
+    <h6 class="">
+        <a href="{{ "/" | relLangURL }}" class="hover:text-current hover:underline text-g1">Home</a>
+        {{ $relPermalink := .RelPermalink }}
+        {{ $url := "" }}
+        {{ $lng :=.Site.Language.Lang }}
+        {{ if eq (substr .RelPermalink 1 2 ) .Site.Language.Lang }}
+        {{ $url = "/it"}}
+        {{ end }}
+        {{ range $idx, $ctx := (split .RelPermalink "/") }}
+        {{ if gt (len $ctx ) 0 }}
+        {{ if ne $ctx $lng  }}
+        {{ $url = print $url "/" $ctx }}
+        {{ if eq (len (split $relPermalink  "/") ) (add $idx 2 ) }}
+        > <span class="underline">
+            {{ humanize $ctx | title }}
+        </span>
+        {{ else }}
+        > <a href="{{ print $url "/" | relURL }}" class="hover:underline">
+            {{ humanize $ctx | title }}
+        </a>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+        {{ end }}
+    </h6>
+</div>

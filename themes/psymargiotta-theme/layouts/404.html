@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{ $pageData := .Site.Data.singlePageTemplate }}
+
+<section class="single-template-page-hero-0506">
+    {{- partial "header.html" . -}}
+    <div class="container grid grid-cols-1 px-5 pb-20 mx-auto md:grid-cols-2 md:pb-48">
+        <div>
+            <h1 class="text-3xl font-semibold font-montserrat md:text-4xl lg:text-6xl text-g3">
+                {{ .Site.Data.notFoundPage.mainTitle.normal }}
+                <span class="text-deep-purple">
+                    {{ .Site.Data.notFoundPage.mainTitle.purple }}
+                </span>
+            </h1>
+
+            <div class="my-20 md:my-52 lg:my-72 ">
+                <a href="{{ $pageData.hero.button.link | relURL }}"
+                    aria-label="{{ $pageData.hero.button.label }}"
+                    title="{{ $pageData.hero.button.label }}"
+                    class="px-20 py-4 text-lg text-white rounded-full single-template-page-hero-button-0506 font-lato lg:text-xl hover:shadow-lg">
+                    {{ $pageData.hero.button.label }}
+                </a>
+            </div>
+        </div>
+        <div class="flex items-center">
+            <img src="{{ $pageData.hero.image.url }}" alt="{{ $pageData.hero.image.alt }}" title="{{ $pageData.hero.image.alt }}"
+                class="w-full h-auto" height="550" width="740">
+        </div>
+    </div>
+</section>
+
+<section class="container px-5 mx-auto mt-16 mb-20 text-g3 font-montserrat">
+    {{ with .Site.Data.notFoundPage.errorMessage }}
+    <div
+        class="max-w-5xl mx-auto text-3xl font-semibold single-template-page-error-message-0506 font-montserrat md:text-4xl lg:text-6xl">
+        <span class="text-deep-purple">
+            {{ .purple }}
+        </span>
+        {{ .normal | markdownify }}
+    </div>
+    {{ end }}
+</section>
+{{ end }}

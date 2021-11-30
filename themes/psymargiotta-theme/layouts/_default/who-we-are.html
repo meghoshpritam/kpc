@@ -1,0 +1,344 @@
+{{ define "main" }}
+<section class="who-we-are-hero-1606 md:pb-20">
+  {{- partial "header.html" . -}}
+  {{/* hero section start */}}
+  {{ with .Params.hero }}
+  <div class="container grid col-span-1 px-5 pb-20 mx-auto lg:grid-cols-3 md:pb-48">
+    <h1 class="text-3xl font-semibold lg:col-span-3 md:text-4xl lg:text-6xl font-lato text-g3">
+      {{ .mainTitle.normal }}
+      <span class="text-g1">{{ .mainTitle.blue }}</span>
+    </h1>
+    <div>
+      <p class="max-w-xs mt-12 mb-5 text-base text-g4 font-montserrat md:text-lg md:mt-24">
+        {{ .description | markdownify }}
+      </p>
+      <div class="py-6">
+        {{ partial "hero-button" .button }}
+      </div>
+    </div>
+    <div class="flex items-center justify-center lg:col-span-2 mt-14 md:mt-0">
+      <img src="{{ .image.url }}" alt="{{ .image.alt }}" title="{{ .image.alt }}" class="w-full h-auto" height="350"
+        width="750">
+    </div>
+  </div>
+  {{ end }}
+  {{/* hero section end */}}
+
+  <div class="container px-5 pb-16 mx-auto mt-12 sm:mt-36">
+    {{/*  breadcrumb start  */}}
+    {{/*  {{- partial "breadcrumb.html" $ -}} */}}
+    <div class="h-10"></div>
+    {{/*  breadcrumb end  */}}
+
+    {{/*  quote section start  */}}
+    {{ with .Params.quote }}
+    <div
+      class="flex flex-col items-center mx-auto mt-20 space-x-7 space-y-7 md:space-x-12 sm:flex-row md:mt-36 lg:max-w-6xl 2xl:max-w-7xl">
+      <svg
+        class="self-start flex-shrink-0 block w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20 xl:w-28 xl:h-28 text-g3 sm:self-auto">
+        <use xlink:href="#shape-quote" />
+      </svg>
+      <div class="flex-grow">
+        <blockquote
+          class="relative max-w-3xl mx-auto text-xl italic font-semibold text-center md:text-2xl lg:text-3xl text-g3 font-montserrat lg:leading-loose">
+          {{ .content }}
+          <div class="flex items-center lg:absolute bottom-3.5 right-2 justify-end">
+            <hr class="bg-gray2 h-0.5 w-4 border-none mr-2" />
+            <p class="text-base italic font-semibold font-lato md:text-lg lg:text-xl text-gray2">
+              {{ .author }}
+            </p>
+          </div>
+        </blockquote>
+      </div>
+      <svg
+        class="self-end flex-shrink-0 block w-10 h-10 transform rotate-180 sm:w-16 sm:h-16 lg:w-20 lg:h-20 xl:w-28 xl:h-28 text-g3 sm:self-auto">
+        <use xlink:href="#shape-quote" />
+      </svg>
+    </div>
+    {{ end }}
+    {{/*  quote section end  */}}
+  </div>
+</section>
+
+{{/*  section2 start  */}}
+{{ with .Params.section2 }}
+<section class="container grid px-5 mx-auto md:grid-cols-2 lg:grid-cols-5 md:mt-16 gap-x-12">
+  <div class="lg:col-span-3">
+    {{ with .heading }}
+    <h2 class="text-4xl text-g3 font-lato md:text-5xl lg:text-6xl xl:text-7xl">
+      {{ .normal }}
+      <span class="text-g1">{{ .blue }}</span>
+    </h2>
+    {{ end }}
+    <div
+      class="max-w-2xl mt-6 space-y-4 text-base leading-6 font-lato sm:text-lg md:text-xl lg:text-2xl text-g3 sm:leading-8 md:leading-8 lg:leading-10 md:space-y-5 lg:space-y-7 md:mt-8 lg:mt-16">
+      {{ .content | markdownify }}
+    </div>
+  </div>
+  <div class="lg:col-span-2">
+    {{ with .image }}
+    <img src="{{ .url }}" alt="{{ .width}}" title="{{ .width}}" class="w-full h-auto mt-16" width="570" height="580">
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{/*  section2 end  */}}
+
+{{/*  method section start */}}
+{{ with .Params.method }}
+<section class="container px-5 mx-auto mt-20 xl:max-w-6xl 2xl:max-w-7xl md:mt-36">
+  {{ with .heading }}
+  <h2 class="text-4xl text-center text-g3 font-lato md:text-5xl lg:text-6xl xl:text-7xl">
+    {{ .normal }}
+    <span class="text-g1">{{ .blue }}</span>
+    {{ .normal2 }}
+  </h2>
+  {{ end }}
+  <div
+    class="mx-auto my-12 text-base italic text-center font-lato sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-g3 max-w-7xl">
+    {{ .details | markdownify }}
+  </div>
+
+  <div class="relative md:pr-20 lg:pr-10 xl:pr-0 mt-36 mb-36">
+    <div class="flex flex-col justify-center space-y-16 md:-space-y-0 lg:space-y-10">
+      {{ range $idx, $ctx := .points }}
+      <section class="relative inline-flex md:w-1/2 circle-container-1906">
+        <div class="absolute left-0 right-0 w-full h-2 gradient-rectangle-border top-1/2"></div>
+
+        <div
+          class="relative z-10 grid flex-shrink-0 w-64 h-64 grid-rows-2 gradient-circle-border md:w-72 md:h-72 lg:w-80 lg:h-80 main-circle-1906 animation-pulse-2506-02">
+          <div
+            class="pt-16 text-2xl text-center text-white font-lato md:text-3xl lg:text-4xl md:pt-16 lg:pt-20">
+            {{ $ctx.title }}
+          </div>
+          <div
+            class="text-g4 bg-white my-2 mx-2 rounded-b-full px-5 lg:px-7 text-center font-lato text-sm md:text-base lg:text-4.8 lg:leading-6 py-2">
+            {{ $ctx.description }}
+          </div>
+        </div>
+
+        <div class="flex-grow"></div>
+
+        <div
+          class="z-10 self-center flex-shrink-0 transform justify-self-end number-circle-1906 md:translate-x-9/50 lg:translate-x-2/3 xl:translate-x-1/2">
+          <div
+            class="z-20 flex items-center justify-center w-20 h-20 mx-auto gradient-circle-border md:w-28 md:h-28">
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 pb-5 text-5xl font-bold bg-white rounded-full md:w-24 md:h-24 text-g4 font-playfairDisplay">
+              {{ add $idx 1 }}
+            </div>
+          </div>
+        </div>
+      </section>
+      {{ end }}
+    </div>
+
+    <div class="absolute top-10 bottom-10 lg:top-16 lg:bottom-16 left-10 md:left-1/2">
+      <div class="relative">
+        <div class="absolute w-5 h-5 gradient-circle-border -top-1 -left-2"></div>
+      </div>
+      <div class="bg-g1 w-1.5 h-full mx-auto z-10"></div>
+      <div class="relative">
+        <div class="gradient-circle-border w-5 h-5 absolute -top-1 left-1.8"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{{ end }}
+{{/*  method section end  */}}
+
+{{/*  ceo section start  */}}
+{{ with .Params.ceo }}
+<section class="relative mb-20 author-setion-container-1706 mt-28 pt-7 xl:pt-16 pb-14">
+  <div class="container px-5 mx-auto">
+    <div class="flex justify-center">
+      {{ with .image }}
+      <img src="{{ .url }}" alt="{{ .alt }}" title="{{ .alt }}"
+        class="h-auto transform -translate-y-5 w-52 sm:w-56 md:w-72 lg:w-80" width="274"
+        height="274">
+      {{ end }}
+    </div>
+    <div class="relative max-w-5xl mx-auto md:px-14 lg:px-20">
+      <svg
+        class="absolute top-0 left-0 self-start flex-shrink-0 w-8 h-8 text-white transform -translate-y-12 sm:w-10 sm:h-10 lg:w-12 lg:h-12 xl:w-14 xl:h-14 sm:self-auto sm:-translate-y-2/3">
+        <use xlink:href="#shape-quote" />
+      </svg>
+      <blockquote
+        class="mb-4 text-xl font-bold text-center text-white font-playfairDisplay md:text-2xl lg:text-3xl">
+        {{ .quote | markdownify }}
+      </blockquote>
+      <svg
+        class="absolute bottom-0 right-0 self-end flex-shrink-0 w-8 h-8 text-white transform rotate-180 translate-y-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12 xl:w-14 xl:h-14 sm:self-auto sm:translate-y-0">
+        <use xlink:href="#shape-quote" />
+      </svg>
+      <div class="flex items-center justify-center space-x-5">
+        <hr class="block border-none h-0.5 md:h-1 w-16 sm:w-24  md:w-32 bg-white" />
+        <p class="text-xs font-bold text-center text-white font-montserrat sm:text-base d:text-lg">
+          {{ .footer }}</p>
+        <hr class="block border-none h-0.5 md:h-1 w-16 sm:w-24  md:w-32 bg-white" />
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-0 transform translate-y-1/2 left-2/3">
+    <div
+      class="w-12 h-12 rounded-full sm:h-14 sm:w-14 md:h-20 md:w-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 gradient-g7">
+    </div>
+  </div>
+</section>
+{{ end }}
+{{/*  ceo section end  */}}
+
+{{/*  office section start */}}
+{{ with .Params.office }}
+<section class="container px-5 mx-auto">
+  <div class="container px-5 mx-auto mt-20 md:mt-36">
+    {{ with .heading }}
+    <h2 class="text-5xl text-center text-g3 font-lato md:text-7xl lg:text-8xl xl:text-9xl mb-28">
+      {{ .normal }}
+      <span class="text-g1">{{ .blue }}</span>
+    </h2>
+    {{ end }}
+    <div class="grid max-w-6xl grid-cols-1 gap-12 mx-auto md:grid-cols-3">
+      {{ range $idx, $ctx := .offices }}
+      <div
+        class="{{ if eq $idx 0}}from-g5-f to-g5-t text-white{{else}}text-g4{{end}} map-selector-card2206 bg-gradient-to-b hover:from-g5-f hover:to-g5-t grid grid-cols-3 sm:grid-cols-1 lg:grid-cols-3 gap-y-3 bg-white shadow-xl rounded-3xl px-7 py-10 hover:shadow-2xl cursor-pointer hover:text-g3"
+        onclick="App.changeSelectedMap('{{ $idx }}')">
+        <div class="justify-self-center">
+          <div class="inline-flex px-4 py-4 mt-3 rounded-full map-bg-icon2106">
+            <svg class="text-white h-7 w-7 sm:w-10 sm:h-10">
+              <use xlink:href="#shape-pin" />
+            </svg>
+          </div>
+        </div>
+        <div class="col-span-2 sm:col-span-1 lg:col-span-2">
+          <h3 class="mb-8 text-xl font-lato text-g3 sm:mb-4 lg:mb-8">
+            {{ $ctx.title }}</h3>
+          <div class="text-sm font-lato">
+            {{ $ctx.address | markdownify }}</div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <p
+      class="max-w-6xl mx-auto mt-20 mb-10 text-lg text-center text-g4 font-lato md:text-xl lg:text-2xl">
+      {{ .details }}</p>
+  </div>
+
+  <div class="relative map-section-container-1906">
+    {{ with .contact }}
+    <div class="right-0 max-w-xs mx-auto xl:absolute contact-link-1906 py-7 xl:ml-0 xl:mr-0">
+      <h4 class="mb-10 text-3xl text-g3 font-lato">{{ .title }}</h4>
+      <div class="py-2 text-lg text-g4 opacity-60 font-lato">{{ .tel | markdownify}}</div>
+      <div class="py-2 text-lg text-g4 opacity-60 font-lato">{{ .email | markdownify}}</div>
+    </div>
+    {{ end }}
+    <div
+      class="map-container-1906 rounded-sm sm:rounded-full sm:pt-1 sm:px-1 lg:px-1.5 lg:pt-1.5 sm:pb-24 lg:pb-28">
+      <div id="map1"
+        class="w-full h-full duration-300 ease-in-out rounded-md g-map-1906 sm:rounded-full sm:border-4 sm:border-g1">
+      </div>
+      <div id="map2"
+        class="hidden w-full h-full duration-300 ease-in-out rounded-md g-map-1906 sm:rounded-full sm:border-4 sm:border-g1">
+      </div>
+      <div id="map3"
+        class="hidden w-full h-full duration-300 ease-in-out rounded-md g-map-1906 sm:rounded-full sm:border-4 sm:border-g1">
+      </div>
+    </div>
+    {{ with .contact }}
+    {{ with .image }}
+    <div
+      class="pl-20 md:-mb-72 mt-7 sm:-mt-24 md:-mt-28 lg:-mt-28 xl:-mt-28 2xl:-mt-32 address-bottom-image-container-1906 sm:pl-60 lg:pl-60">
+      <img src="{{ .url }}" alt="{{ .alt }}" title="{{ .alt }}"
+        class="w-3/4 h-auto lg:max-w-xl sm:w-104 md:w-108 lg:w-2/3 xl:w-2/4 2xl:w-2/5">
+    </div>
+    {{ end }}
+    {{ end }}
+  </div>
+  <div>
+  </div>
+</section>
+{{ end }}
+{{/*  office section end  */}}
+
+<script defer type="text/javascript">
+  function initMap() {
+    var zoom = 17;
+
+    var loc1 = {
+      lat: Number(
+        "{{ range $idx, $ctx := .Params.office.offices }}{{ if eq $idx 0 }}{{ $ctx.lat }}{{ end }}{{ end }}"
+      ),
+      lng: Number(
+        "{{ range $idx, $ctx := .Params.office.offices }}{{ if eq $idx 0 }}{{ $ctx.lng }}{{ end }}{{ end }}"
+      ),
+
+    };
+
+    var loc2 = {
+      lat: Number(
+        "{{ range $idx, $ctx := .Params.office.offices }}{{ if eq $idx 1 }}{{ $ctx.lat }}{{ end }}{{ end }}"
+      ),
+      lng: Number(
+        "{{ range $idx, $ctx := .Params.office.offices }}{{ if eq $idx 1 }}{{ $ctx.lng }}{{ end }}{{ end }}"
+      ),
+
+    };
+
+    var loc3 = {
+      lat: Number(
+        "{{ range $idx, $ctx := .Params.office.offices }}{{ if eq $idx 2 }}{{ $ctx.lat }}{{ end }}{{ end }}"
+      ),
+      lng: Number(
+        "{{ range $idx, $ctx := .Params.office.offices }}{{ if eq $idx 2 }}{{ $ctx.lng }}{{ end }}{{ end }}"
+      ),
+
+    };
+
+    var map1 = new google.maps.Map(document.querySelector('#map1'), {
+      zoom: zoom,
+      center: loc1,
+    });
+
+    var map2 = new google.maps.Map(document.querySelector('#map2'), {
+      zoom: zoom,
+      center: loc2,
+    });
+
+    var map3 = new google.maps.Map(document.querySelector('#map3'), {
+      zoom: zoom,
+      center: loc3,
+    });
+
+    var marker1 = new google.maps.Marker({
+      position: loc1,
+      map: map1,
+    });
+
+    var marker2 = new google.maps.Marker({
+      position: loc2,
+      map: map2,
+    });
+
+    var marker3 = new google.maps.Marker({
+      position: loc3,
+      map: map3,
+    });
+  }
+</script>
+
+<script async type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.googleMapAPIKey }}&callback=initMap&libraries=&v=weekly">
+</script>
+
+<script defer>
+  window.onload = function () {
+    App.onScrollAnimation('.animation-pulse-2506-02', ['animate__animated',
+      'animate__pulse'
+    ], ['', 'animate__delay-1s', 'animate__delay-1s', 'animate__delay-1s']);
+  }
+</script>
+
+{{ partial "schema/website.html" . }}
+
+{{ end }}

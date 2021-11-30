@@ -1,0 +1,54 @@
+{{ $homeBreadcrumb := "Home" }}
+
+
+<!-- Breadcrumbs -->
+{{ if .IsHome }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ $homeBreadcrumb }}",
+      "item": "{{ .Permalink }}"
+    }]
+  }
+</script>
+{{ else  }}
+{{ $countIdx := 2 }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+    {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "{{ "/" | absLangURL }}"
+    },
+    {{ $relPermalink := .RelPermalink }}
+    {{ $url := "" }}
+    {{ $lng :=.Site.Language.Lang }}
+    {{ if eq (substr .RelPermalink 1 2 ) .Site.Language.Lang }}
+    {{ $url = "/it"}}
+    {{ end }}
+    {{ range $idx, $ctx := (split .RelPermalink "/") }}
+    {{ if gt (len $ctx ) 0 }}
+    {{ if ne $ctx $lng  }}
+    {{ $url = print $url "/" $ctx }}
+     {
+     "@type": "ListItem",
+     "position": {{ $countIdx }},
+     "name": "{{ humanize (replace $ctx "posts" "blog") | title }}",
+     "item": "{{ print $url "/" | absURL }}"
+     } {{ if ne (len (split $relPermalink  "/") ) (add $idx 2 ) }} , {{ end }}
+    {{ $countIdx = add $countIdx 1 }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    ]
+  }
+</script>
+{{ end }}

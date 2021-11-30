@@ -1,0 +1,120 @@
+fonts:
+staticPaths:
+  - template: index
+    fonts:
+      - href: /fonts/Lato/Lato-Regular.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-Bold.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-Regular.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-Italic.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-ExtraBold.woff2
+        type: font/woff2
+
+  - template: digital-psychologist
+    fonts:
+      - href: /fonts/Lato/Lato-Regular.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-Bold.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-Regular.woff2
+        type: font/woff2
+
+  - template: we-can-help-you
+    fonts:
+      - href: /fonts/Lato/Lato-Regular.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-Bold.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-BoldItalic.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-SemiBoldItalic.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-Regular.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-ExtraBold.woff2
+        type: font/woff2
+      - href: /fonts/PlayfairDisplay/static/PlayfairDisplay-Bold.woff2
+        type: font/woff2
+
+  - template: who-we-are
+    fonts:
+      - href: /fonts/Lato/Lato-Regular.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-Bold.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-Italic.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-BoldItalic.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-SemiBoldItalic.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-Regular.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-ExtraBold.woff2
+        type: font/woff2
+      - href: /fonts/PlayfairDisplay/static/PlayfairDisplay-Bold.woff2
+        type: font/woff2
+
+  - template: list
+    fonts:
+      - href: /fonts/Lato/Lato-Regular.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-Italic.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-Bold.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-BoldItalic.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-Regular.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-ExtraBold.woff2
+        type: font/woff2
+
+  - template: single
+    fonts:
+      - href: /fonts/Lato/Lato-Regular.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-Italic.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-Bold.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-BoldItalic.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-SemiBoldItalic.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-Regular.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-ExtraBold.woff2
+        type: font/woff2
+
+  - template: single-page-template
+    fonts:
+      - href: /fonts/Lato/Lato-Regular.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-Italic.woff2
+        type: font/woff2
+      - href: /fonts/Lato/Lato-Bold.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-SemiBoldItalic.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-Regular.woff2
+        type: font/woff2
+      - href: /fonts/Montserrat/Montserrat-ExtraBold.woff2
+        type: font/woff2
