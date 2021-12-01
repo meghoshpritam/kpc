@@ -7,6 +7,8 @@ Check the live demo [here](http://www.psymargiotta.it.s3-website.eu-south-1.amaz
 ```bash
 # clone the repository and change the directory
 git clone https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/psymargiotta
+or
+git clone codecommit://cq-super-users@psicologoscolastico
 cd psymargiotta
 
 # install the dependency

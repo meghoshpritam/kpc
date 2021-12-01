@@ -1,1 +1,5 @@
 User-agent: *
+Disallow: /
+
+User-agent: AhrefsSiteAudit
+Allow: /
