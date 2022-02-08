@@ -1,5 +1,5 @@
 ---
-title: "Psy Margiotta"
+title: "Psicologo scolastico"
 description: "Perché vai dallo psicologo? Lo psicologo è un professionista del benessere psicofisico, qualificato nel fornire supporto in presenza o a distanza."
 date: 2021-01-18T20:10:48Z
 
