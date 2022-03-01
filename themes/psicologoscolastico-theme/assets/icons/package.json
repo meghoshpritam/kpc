@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "grunt",
-    "copy": "cp ./dest/svg-defs.svg ./../../layouts/partials/sprites.html",
+    "generate": "npm start && npm run copy",
+    "copy": "cp ./dest/sprites.html ./../../layouts/partials/sprites.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pritam Ghosh",
