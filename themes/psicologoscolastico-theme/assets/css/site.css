@@ -457,3 +457,8 @@ a,
 button {
   @apply duration-300 ease-in-out;
 }
+
+/* ========================== footer style ============================= */
+.current-year-footer-0102 a {
+  @apply hover:text-secondary;
+}

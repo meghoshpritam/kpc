@@ -81,6 +81,7 @@ module.exports = {
         'blue-gray': '#304659',
         // ============= OLD SECTION END ==============
         dark: '#303234',
+        dark2: '#626381',
         primary: '#2300B1',
         secondary: '#F48C06',
         gray2: '#696984',

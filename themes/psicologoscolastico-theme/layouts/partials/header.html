@@ -154,11 +154,11 @@
     <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="flex items-center justify-center mr-20">
       <svg class="flex-shrink-0 w-10 h-10 lg:w-12 xl:w-16 lg:h-12 xl:h-16">
         <use xlink:href="#shape-{{ .icon }}" />
-        <div class="flex flex-col ml-6 text-2xl leading-7">
-          <span>Psicologo</span>
-          <span>Scolastico</span>
-        </div>
       </svg>
+      <div class="flex flex-col ml-6 text-2xl leading-7">
+        <span>Psicologo</span>
+        <span>Scolastico</span>
+      </div>
     </a>
     {{ end }}
     {{ range .menuLinks }}

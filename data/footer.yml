@@ -1,3 +1,18 @@
+logo:
+  icon: logo-full
+  url: "/"
+  title: Home
+
+links:
+  - title: Privacy Policy
+    url: 'privacy-policy'
+  - title: Terms & Conditions
+    url: 'terms-condition'
+
+bottom:
+  before: ©
+  after: >
+      Class Technologies Inc.
 contactSection:
   firstName: Your Name
   lastName: Your Surname
@@ -57,9 +72,3 @@ sections:
 
           20139 Milano
         icon: pin
-bottom:
-  left:
-    before: ©
-    after: >
-      [PSYMARGIOTTA](/). All rights reserved. | [Cookie Policy](/privacy-and-cookie-policy/) | 
-  right: P. IVA  03131760807

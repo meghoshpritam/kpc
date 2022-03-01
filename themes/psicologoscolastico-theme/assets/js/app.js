@@ -373,7 +373,7 @@ class App {
   };
   static onLoad = () => {
     // change current year
-    document.querySelector(".current-year-footer-0506").innerHTML =
+    document.querySelector(".current-year-footer-0102").innerHTML =
       new Date().getFullYear();
     App.onScroll();
   };
