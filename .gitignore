@@ -1,0 +1,16 @@
+# Filename patterns to ignore
+*.DS_Store
+
+# Ignore generated files
+themes/**/node_modules/
+resources/_gen
+node_modules
+public
+
+# Ignore IDE files
+.vscode/
+.idea
+/examdown.iml
+
+# Ignore Environment File
+.env
