@@ -73,7 +73,7 @@ module.exports = {
         'dark-purple': '#7C3A85',
         indigo: '#242464',
         lavender: '#9B8ABD',
-        gray2: '#7B7F89',
+        // gray2: '#7B7F89',
         'g5-f': '#DCB7FE',
         'g5-t': '#3EBCFC',
         'g8-f': '#E73DFF',
@@ -81,6 +81,10 @@ module.exports = {
         'blue-gray': '#304659',
         // ============= OLD SECTION END ==============
         dark: '#303234',
+        primary: '#2300B1',
+        secondary: '#F48C06',
+        gray2: '#696984',
+        'sky-blue': '#23BDEE'
       },
       fontFamily: {
         nunitoSans: ['NunitoSans', 'sans-serif'],
