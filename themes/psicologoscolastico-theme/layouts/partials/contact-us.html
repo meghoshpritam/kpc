@@ -1,9 +1,10 @@
-<section class="fixed inset-0 h-screen overflow-y-auto bg-left-bottom bg-no-repeat bg-cover bg-contact-us z-70">
-  <button class="absolute text-white right-7 top-7 hover:text-secondary">
+<input type="checkbox" id="contact-us-dialog" class="hidden">
+<section class="fixed inset-0 h-screen overflow-y-auto bg-left-bottom bg-no-repeat bg-cover bg-contact-us z-70 contact-us-dialog">
+  <label for="contact-us-dialog" class="absolute cursor-pointer lg:text-white text-dark2 right-7 top-7 hover:text-secondary">
     <svg class="w-8 h-8 sm:w-9 sm:h-9">
       <use xlink:href="#shape-cross-circle" />
     </svg>
-  </button>
+  </label>
   <div class="container grid h-full grid-cols-1 px-0 py-0 mx-auto sm:px-4 sm:py-7 lg:grid-cols-2">
     <div class="h-full px-4 py-8 lg:px-24 bg-light-gray">
       <h2 class="py-6 text-3xl leading-10 text-center text-dark">{{ .heading }}</h2>
@@ -17,7 +18,7 @@
           <input type="checkbox" name="{{ .confirm.id }}" id="{{ .confirm.id }}" required oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" onchange="this.setCustomValidity('');">
           {{ .confirm.label | markdownify }}
         </label>
-        <div class="grid grid-cols-2">
+        <div class="grid grid-cols-2 pt-7">
           <div class="{{ if ne $.Site.Params.enableRecaptcha true }} h-20 {{ end }}">
             {{ if $.Site.Params.enableRecaptcha }}
             <div class="g-recaptcha" data-sitekey="{{ $.Site.Params.recaptchaKey }}"></div>

@@ -13,3 +13,11 @@ button {
 .current-year-footer-0102 a {
   @apply hover:text-secondary;
 }
+
+input#contact-us-dialog ~ section.contact-us-dialog {
+  @apply hidden;
+}
+
+input#contact-us-dialog:checked ~ section.contact-us-dialog {
+  @apply block;
+}
