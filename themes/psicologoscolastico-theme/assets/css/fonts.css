@@ -93,3 +93,51 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: OpenSans;
+  src: local('OpenSans-LightItalic'), local('OpenSans LightItalic'), url('static/fonts/OpenSans/OpenSans-LightItalic.woff2')  format('woff2'), url('static/fonts/OpenSans/OpenSans-LightItalic.woff')  format('woff'), url('static/fonts/OpenSans/OpenSans-LightItalic.ttf')  format('ttf');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: local('OpenSans-Light'), local('OpenSans Light'), url('static/fonts/OpenSans/OpenSans-Light.woff2')  format('woff2'), url('static/fonts/OpenSans/OpenSans-Light.woff')  format('woff'), url('static/fonts/OpenSans/OpenSans-Light.ttf')  format('ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: local('OpenSans-Regular'), local('OpenSans Regular'), url('static/fonts/OpenSans/OpenSans-Regular.woff2')  format('woff2'), url('static/fonts/OpenSans/OpenSans-Regular.woff')  format('woff'), url('static/fonts/OpenSans/OpenSans-Regular.ttf')  format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: local('OpenSans-Medium'), local('OpenSans Medium'), url('static/fonts/OpenSans/OpenSans-Medium.woff2')  format('woff2'), url('static/fonts/OpenSans/OpenSans-Medium.woff')  format('woff'), url('static/fonts/OpenSans/OpenSans-Medium.ttf')  format('ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: local('OpenSans-SemiBold'), local('OpenSans SemiBold'), url('static/fonts/OpenSans/OpenSans-SemiBold.woff2')  format('woff2'), url('static/fonts/OpenSans/OpenSans-SemiBold.woff')  format('woff'), url('static/fonts/OpenSans/OpenSans-SemiBold.ttf')  format('ttf');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: local('OpenSans-Bold'), local('OpenSans Bold'), url('static/fonts/OpenSans/OpenSans-Bold.woff2')  format('woff2'), url('static/fonts/OpenSans/OpenSans-Bold.woff')  format('woff'), url('static/fonts/OpenSans/OpenSans-Bold.ttf')  format('ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
