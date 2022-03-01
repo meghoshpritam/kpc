@@ -1,11 +1,66 @@
 {{ define "main" }}
-{{ partial "header" . }}
-homepage 
-{{/* home hero start */}}
+{{/* homie hero start */}}
+{{ with .Params.hero }}
+<section class="relative bg-left-bottom bg-no-repeat bg-cover pt-28 bg-home-hero">
+  <div class="absolute top-0 left-0 right-0 overflow-hidden">
+    {{ partial "header" $ }}
+  </div>
+  <div class="container grid grid-cols-1 px-4 mx-auto text-white lg:grid-cols-2">
+    <div class="flex flex-col justify-center py-20">
+      <h1 class="text-4xl font-semibold md:max-w-xs md:text-5xl">{{ .heading }}</h1>
+      <p class="mt-2 text-base md:text-lg md:max-w-md font-nunitoSans">{{ .details }}</p>
+      {{ with .button }}
+      <div class="mt-8">
+        <label for="contact-us-dialog" class="inline-block px-8 py-3 text-sm text-white duration-300 ease-in-out border-2 cursor-pointer md:text-base md:px-12 md:py-5 hover:bg-white hover:text-sky-blue border-sky-blue bg-sky-blue rounded-xl md:rounded-3xl">
+          {{ .label }}
+        </label>
+      </div>
+      {{ end }}
+    </div>
+    <div class="flex flex-col justify-center">
+      {{ with .image }}
+      <img src="{{ .url }}" alt="{{ .alt }}" class="w-full h-auto max-w-lg">
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
 {{/* home hero end */}}
 
-{{/* statistics start */}}
-{{/* statistics end */}}
+{{/* trusted by start */}}
+{{ with .Params.trustedBy }}
+<section class="container px-4 mx-auto mt-44">
+  <p class="mb-16 text-2xl font-medium text-center text-gray2">{{ .heading }}</p>
+  {{ with .image }}
+  <img src="{{ .url }}" alt="{{ .alt }}" class="w-full h-auto">
+  {{ end }}
+</section>
+{{ end }}
+{{/* trusted by end */}}
+
+{{/* about platform start  */}}
+{{ with .Params.aboutPlatform }}
+<section class="container px-4 mx-auto mt-24">
+  {{ with .heading }}
+  <h2 class="text-3xl font-bold text-center">
+    <span class="text-primary mr-1.5">{{ .primary }}</span>
+    <span class="text-secondary">{{ .secondary }}</span>
+  </h2>
+  {{ end }}
+  <p class="max-w-2xl mx-auto mt-3 text-xl text-center text-gray2">{{ .details }}</p>
+  <div class="grid grid-cols-1 mt-20 sm:grid-cols-2 lg:grid-cols-3">
+    {{ range .features }}
+    <div class="px-6 pt-24 pb-5 mx-4 rounded-sm shadow-lg">
+      <h3 class="mb-5 text-2xl font-medium text-center text-primary">{{ .title }}</h3>
+      <div class="text-center text-gray2">
+        {{ .details | markdownify }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{/* about platform end  */}}
 
 {{/* how to interview start */}}
 {{/* how to interview end */}}

@@ -4,17 +4,40 @@ description: "Perché vai dallo psicologo? Lo psicologo è un professionista del
 date: 2021-01-18T20:10:48Z
 
 hero: 
-  heading: Vai dallo Psicologo?
-  subHeading:  Roba da matti!
-  details: >
-    Liberati dai pregiudizi, supera i tuoi limiti e scegli di migliorare la tua vita!
+  heading: PSICOLOGO SCOLASTICO
+  details: > 
+    Con lo psicologo scolastico il tuo prossimo successo è dietro l’angolo
   button:
-    label: Vieni a Conoscerci
-    url: chi-siamo/
+    label: Contattaci
   image: 
-    url: /images/homepage-hero.svg
-    alt: Psymargiotta homepage dello psicologo online
+    url: /images/home-hero.webp
+    alt: Psymargiotta homepage
 
+trustedBy:
+  heading: Scelto da oltre 1000 utenti in tutto il mondo
+  image: 
+    url: /images/trusted-by-companies.svg
+    alt: company trust
+
+aboutPlatform:
+  heading:
+    primary: Una piattaforma, 
+    secondary: mille vantaggi.
+  details: >
+    Il tuo percorso di crescita, fatto di autonomie e separazioni, inizia proprio nella scuola. Lo psicologo scolastico ti aiuta a gestire al meglio!
+  features:
+    - title: Studenti
+      icon:
+      details: >
+        Lo psicologo scolastico aiuta lo studente a fare luce su ciò che sta vivendo e a costruisce con lui un percorso per stare meglio, affrontando il problema in modo personalizzato
+    - title: Genitori
+      icon:
+      details: >
+        Offre uno spazio di ascolto in cui  esprimere le fatiche del ruolo genitoriale e gettare le basi per la creazione di un rapporto di fiducia con la scuola nella crescita dei propri figli.
+    - title: Insegnanti
+      icon:
+      details: >
+        Accoglie le richieste di insegnanti che osservano situazioni critiche o che desiderano un feedback rispetto alla gestione di casi delle loro classi
 statistics:
   heading: "Il nostro inconscio in cifre:"
   circles:

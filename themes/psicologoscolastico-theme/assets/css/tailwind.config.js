@@ -10,6 +10,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
+        'home-hero': "url('/images/patterns/homepage-bg-pattern.svg')",
         'contact-us': "url('/images/patterns/contact-us-pattern.svg')",
       },
       borderWidth: {

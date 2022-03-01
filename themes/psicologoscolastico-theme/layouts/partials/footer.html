@@ -1,4 +1,3 @@
-
 {{/* scroll top top button start */}}
 {{ if and (not .Site.Params.enableChat) .Site.Params.enableScrollToTopButton }}
 <div class="fixed z-10 inline-flex items-center justify-center hidden text-white duration-500 ease-in-out shadow-lg cursor-pointer scroll-to-top-1606 right-5 bottom-5 gradient-circle-border w-14 h-14 hover:shadow-2xl hover:text-g3" onclick="App.scrollToTop()">
@@ -9,47 +8,13 @@
 {{ end }}
 {{/* scroll top top button end  */}}
 
-{{/* bottom contact section start */}}
-{{ with .Site.Data.footer.contactSection }}
-<div class="page-contact-section-0406 font-montserrat">
-  <div class="max-w-3xl mx-auto">
-    <form action="{{ $.Site.Params.contactFormUrl }}" onsubmit="onSubmitContactForm(event);" method="POST" class="grid grid-cols-1 px-4 py-5 mx-2 mobile-shape-0406 md:mx-0 md:px-14 md:py-8 sm:grid-cols-2 gap-x-9 gap-y-3 bg-white3 animation-swing-2506">
-      <input type="text" name="first-name" placeholder="{{ .firstName }}" required oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" oninput="this.setCustomValidity('');" class="text-base border-2 rounded-full outline-none bg-ice-blue px-2_5 py-2_5 focus:border-gray-300 text-g4 placeholder-g4">
-      <input type="text" name="last-name" placeholder="{{ .lastName }}" required oninvalid="this.setCustomValidity('{{ .requiredMessage }}')" oninput="this.setCustomValidity('');" class="text-base border-2 rounded-full outline-none bg-ice-blue px-2_5 py-2_5 focus:border-gray-300 text-g4 placeholder-g4">
-      <input type="email" name="email" placeholder="{{ .email }}" required oninvalid="this.setCustomValidity('{{ .invalidEmailMessage }}')" oninput="onInputFormEmail(this);" class="text-base border-2 rounded-full outline-none bg-ice-blue px-2_5 py-2_5 focus:border-gray-300 text-g4 placeholder-g4 sm:col-span-2">
-      <textarea name="message" id="message" cols="10" rows="3" placeholder="{{ .message }}" class="px-4 py-3 text-base border-2 outline-none resize-none bg-ice-blue rounded-3xl focus:border-gray-300 text-g4 placeholder-g4 sm:col-span-2"></textarea>
-      <label for="confirmation" class="ml-4 text-sm sm:col-span-2 text-light-gray">
-        <input type="checkbox" name="confirmation" id="confirmation" required oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" onchange="this.setCustomValidity('');">
-        {{ .checkbox | markdownify }}
-      </label>
-      <div class="{{ if ne $.Site.Params.enableRecaptcha true }} h-20 {{ end }}">
-        {{ if $.Site.Params.enableRecaptcha }}
-        <div class="g-recaptcha" data-sitekey="{{ $.Site.Params.recaptchaKey }}"></div>
-        {{ end }}
-      </div>
-      <div class="self-center justify-self-end">
-        <button type="submit" class="px-5 text-lg duration-500 ease-in-out border-2 shadow-md outline-none focus:outline-none hover:shadow-lg text-g4 font-lato py-2_5 border-g4 rounded-xl hover:bg-g4 hover:text-white">
-          {{ .submitBtn }}
-        </button>
-      </div>
-    </form>
-  </div>
-
-  {{ with .image }}
-  <img src="{{ .url }}" alt="{{ .alt }}" title="{{ .alt }}" class="w-full h-auto max-w-2xl" height="603" width="672">
-  {{ end }}
-
-</div>
-{{ end }}
-{{/* bottom contact section end */}}
-
 {{/* footer start */}}
 {{ with .Site.Data.footer }}
 {{ partial "contact-us.html" .contactUs }}
 <footer class="pt-10 pb-12 text-white bg-dark">
   {{ with .logo }}
   <div class="flex items-center justify-center mb-28">
-    <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="flex items-center justify-center mr-20">
+    <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="flex items-center justify-center">
       <svg class="h-20 w-60">
         <use xlink:href="#shape-{{ .icon }}" />
       </svg>
