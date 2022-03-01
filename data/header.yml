@@ -1,20 +1,17 @@
-primaryMenu:
-  - label: Psicologia del Lavoro
-    url: psicologia-del-lavoro/
-  - label: Psicologia Clinica
-    url: psicologia-clinica/
-  - label: Psicologia dello Sviluppo
-    url: psicologia-dello-sviluppo/
+logo:
+  icon: logo
+  url: "/"
+  title: Home
 
-secondaryMenu:
-  email:
-    label: email
-    # url: "contattaci/" # not working
-  button:
-    label: Psicologo Online
-    url: psicologo-online/
-  links:
-    - label: Neuromarketing
-      url: neuromarketing/
-    - label: Psicologia Digitale
-      url: lo-psicologo-digitale/
+menuLinks:
+  - title: Home
+    url: "/"
+  - title: Servizi
+    url: "/servizi"
+  - title: Blog
+    url: "/blog"
+  - title: Chi Siamo
+    url: "/#servizi"
+
+contactButton:
+  label: Contattaci

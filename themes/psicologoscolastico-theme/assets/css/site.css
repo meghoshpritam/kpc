@@ -452,3 +452,8 @@ html,
 body {
   @apply font-poppins;
 }
+
+a,
+button {
+  @apply duration-300 ease-in-out;
+}
