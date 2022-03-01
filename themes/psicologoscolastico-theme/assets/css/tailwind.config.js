@@ -44,9 +44,9 @@ module.exports = {
         // ============= OLD SECTION END ==============
       },
       spacing: {
-        // ============= OLD SECTION START ==============
-        13: '3.25rem',
         1.5: '0.375rem',
+        13: '3.25rem',
+        17: '4.25rem',
         79.2: '19.8rem',
         92: '23rem',
         100: '25rem',
@@ -54,7 +54,6 @@ module.exports = {
         108: '27rem',
         110: '27.5rem',
         112: '28rem',
-        // ============= OLD SECTION END ==============
       },
       colors: {
         // ============= OLD SECTION START ==============
@@ -62,7 +61,6 @@ module.exports = {
         g2: '#D3AEFE',
         g3: '#313062',
         g4: '#304D89',
-        'light-gray': '#C2C2C2',
         white2: '#F6F7FA',
         white3: '#F9F9F9',
         white4: '#F5F8FF',
@@ -82,10 +80,11 @@ module.exports = {
         // ============= OLD SECTION END ==============
         dark: '#303234',
         dark2: '#626381',
+        'light-gray': '#e5e5e5',
+        gray2: '#696984',
         primary: '#2300B1',
         secondary: '#F48C06',
-        gray2: '#696984',
-        'sky-blue': '#23BDEE'
+        'sky-blue': '#23BDEE',
       },
       fontFamily: {
         nunitoSans: ['NunitoSans', 'sans-serif'],

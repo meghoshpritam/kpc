@@ -9,6 +9,36 @@ links:
   - title: Terms & Conditions
     url: 'terms-condition'
 
+contactUs:
+  heading: Contact Us
+  form:
+    name:
+      placeholder: Name *
+      id: name
+      required: true
+    email:
+      placeholder: Email*
+      id: email
+      required: true
+    subject:
+      placeholder: Oggetto 
+      id: subject
+      required: false
+    message:
+      placeholder: what you wanna say? *
+      id: message
+      required: true
+    confirm:
+      id: confirm
+      label: >
+        Accetto Il Trattamento [Dei Dati Personali](/privacy-policy/).
+    submitBtn: Invia
+    requiredMessage: Campo obbligatorio
+    invalidEmailMessage: Inserisci una email valida
+  image:
+    url: /images/girl-with-mobile.webp
+    alt: contact us
+
 bottom:
   before: ©
   after: >

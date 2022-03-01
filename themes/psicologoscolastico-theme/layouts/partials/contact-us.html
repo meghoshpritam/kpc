@@ -1,0 +1,37 @@
+<section class="h-screen overflow-y-auto bg-dark">
+  <div class="container grid grid-cols-1 px-4 mx-auto lg:grid-cols-2 ">
+    <div class="h-full px-24 py-8 my-7 bg-light-gray">
+      <h2 class="py-6 text-3xl leading-10 text-center text-dark">{{ .heading }}</h2>
+      {{ with .form }}
+      <form action="">
+        <input type="text" name="{{ .name.id }}" id="{{ .name.id }}" placeholder="{{ .name.placeholder }}" required="{{ .name.required }}" oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" class="border-transparent outline-none border-2 focus:border-dark bg-white px-5 py-3.5 placeholder-opacity-50 placeholder-black text-dark rounded-lg mb-6 text-sm w-full">
+        <input type="email" name="{{ .email.id }}" id="{{ .email.id }}" placeholder="{{ .email.placeholder }}" required="{{ .email.required }}" oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" class="border-transparent border-2 focus:border-dark outline-none bg-white px-5 py-3.5 placeholder-opacity-50 placeholder-black text-dark rounded-lg mb-6 text-sm w-full">
+        <input type="text" name="{{ .subject.id }}" id="{{ .subject.id }}" placeholder="{{ .subject.placeholder }}" required="{{ .subject.required }}" oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" class="border-transparent border-2  focus:border-dark outline-none bg-white px-5 py-3.5 placeholder-opacity-50 placeholder-black text-dark rounded-lg mb-6 text-sm w-full">
+        <textarea name="{{ .message.id }}" id="{{ .message.id }}" placeholder="{{ .message.placeholder }}" rows="5" required="{{ .message.required }}" oninvalid="this.setCustomValidity('{{ .invalidEmailMessage }}');" class="border-transparent border-2 focus:border-dark outline-none bg-white px-5 py-3.5 placeholder-opacity-50 placeholder-black text-dark rounded-lg mb-6 text-sm w-full"></textarea>
+        <label for="confirmation" class="text-dark">
+          <input type="checkbox" name="{{ .confirm.id }}" id="{{ .confirm.id }}" required oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" onchange="this.setCustomValidity('');">
+          {{ .confirm.label | markdownify }}
+        </label>
+        <div class="grid grid-cols-2">
+          <div class="{{ if ne $.Site.Params.enableRecaptcha true }} h-20 {{ end }}">
+            {{ if $.Site.Params.enableRecaptcha }}
+            <div class="g-recaptcha" data-sitekey="{{ $.Site.Params.recaptchaKey }}"></div>
+            {{ end }}
+          </div>
+          <div class="self-center justify-self-end">
+            <button type="submit" class="text-lg bg-white text-dark hover:text-white hover:bg-dark py-1.5 px-7">
+              {{ .submitBtn }}
+            </button>
+          </div>
+        </div>
+      </form>
+      {{ end }}
+    </div>
+    <div class="flex flex-col justify-center">
+      {{ with .image }}
+      <img src="{{ .url }}" alt="{{ .alt }}" class="w-full h-auto -ml-17">
+      {{ end }}
+    </div>
+  </div>
+  <div></div>
+</section>
