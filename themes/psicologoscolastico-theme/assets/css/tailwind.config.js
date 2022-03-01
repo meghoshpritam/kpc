@@ -9,6 +9,9 @@ module.exports = {
       // ============= OLD SECTION END ==============
     },
     extend: {
+      backgroundImage: {
+        'contact-us': "url('/images/patterns/contact-us-pattern.svg')",
+      },
       borderWidth: {
         1: '1px',
       },
@@ -46,6 +49,7 @@ module.exports = {
       },
       zIndex: {
         60: 60,
+        70: 70,
       },
       typography: {
         // ============= OLD SECTION START ==============
