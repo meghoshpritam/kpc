@@ -83,11 +83,8 @@ module.exports = {
         dark: '#303234',
       },
       fontFamily: {
-        // ============= OLD SECTION START ==============
-        montserrat: ['Montserrat', 'sans-serif'],
-        lato: ['Lato', 'sans-serif'],
-        playfairDisplay: ['PlayfairDisplay', 'sans-serif'],
-        // ============= OLD SECTION END ==============
+        nunitoSans: ['NunitoSans', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       padding: {
         // ============= OLD SECTION START ==============
