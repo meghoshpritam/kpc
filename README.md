@@ -1,15 +1,15 @@
 # Psymargiotta Theme
 
-Check the live demo [here](http://www.psymargiotta.it.s3-website.eu-south-1.amazonaws.com/)
+Check the live demo [here](http://www.psicologoscolastico.it.s3-website.eu-south-1.amazonaws.com/)
 
 ## Quick start
 
 ```bash
 # clone the repository and change the directory
-git clone https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/psymargiotta
+git clone https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/psicologoscolastico
 or
 git clone codecommit://cq-super-users@psicologoscolastico
-cd psymargiotta
+cd psicologoscolastico
 
 # install the dependency
 npm i 
@@ -26,8 +26,8 @@ And open, [http://localhost:1313/](http://localhost:1313/) to your web browser .
 
 ```bash
 # clone the repository and change the directory
-git clone https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/psymargiotta
-cd psymargiotta
+git clone https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/psicologoscolastico
+cd psicologoscolastico
 
 # install the dependency
 npm i 

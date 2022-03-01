@@ -1,7 +1,7 @@
 {
-  "name": "psymargiotta",
+  "name": "psicologoscolastico",
   "version": "0.0.1",
-  "description": "psymargiotta",
+  "description": "psicologoscolastico",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.14.3",
