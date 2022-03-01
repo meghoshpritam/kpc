@@ -1,6 +1,6 @@
-baseURL = "https://www.psymargiotta.it/"
-title = "PSYMargiotta"
-theme = "psymargiotta-theme"
+baseURL = "https://www.psicologoscolastico.it/"
+title = "psicologoscolastico"
+theme = "psicologoscolastico-theme"
 staticDir = ["assets"]
 defaultContentLanguage = "it"
 google_verification = "123"
@@ -13,7 +13,7 @@ googleAnalytics = "G-WYPF9BDN7Y"
     [languages.it]
     languageName = "IT"
     languageCode = "it"
-    title = "Psy Margiotta"
+    title = "psicologoscolastico"
     weight = 1
 
 [markup]
