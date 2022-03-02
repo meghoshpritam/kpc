@@ -1,20 +1,27 @@
 ---
 title: "Bisogni educativi speciali"
 description: "TODO: add description"
-author: Giusy Margiotta
-date: 2022-03-02
-publishDate: 2022-03-02
+author: "Giusy Margiotta"
+date: 2022-03-01
+lastmod: 2022-03-02
 tags:
   - insegnanti
   - genitori
 
 articleData:
   title: "Bisogni educativi speciali"
-  description: >
-    L'integrazione scolastica del bambino disabile
+  description:
+    L'integrazione scolastica del <span>bambino disabile</span>
   image:
     url:
     alt: "Bisogni educativi speciali"
+
+shortDescription: >
+  Sebbene la frase sia senza senso, ha una lunga storia. La frase è stata utilizzata per vari secoli dai tipografi per mostrare più peculiari dei tipi di carattere. Infatti, le lettere e gli spazi coinvolti in questa frase consentono di evidenziare nel miglior modo possibile, il peso, il design e altre importanti caratteristiche del carattere tipografico.
+
+
+  Sebbene la frase sia senza senso, ha una lunga storia. La frase è stata utilizzata per vari secoli dai tipografi per mostrare più peculiari dei tipi di carattere. Infatti, le lettere e gli spazi coinvolti in questa frase consentono di evidenziare nel miglior modo possibile, il peso, il design e altre importanti caratteristiche del carattere tipografico.
+
 
 layout: single
 ---

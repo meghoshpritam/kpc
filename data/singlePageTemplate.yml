@@ -1,14 +1,13 @@
 hero:
   image:
-    url: /images/single-page-template-hero.svg
-    alt: hero-image
-  button:
-    label: Homepage
-    url: "/"
+    url: /images/article-template.webp
+    alt: article-hero-image
+
 
 topSection:
-  date: "Date: "
-  time:
+  publishDate: "Publish Date: "
+  updateDate: "Updated Date: "
+  readingTime:
     before: "Tempo di Lettura: "
     after: " Min"
 
@@ -17,5 +16,5 @@ tableOfContent:
 
 defaultArticle:
   image:
-    url: /images/default-article.svg
+    url: /images/article-right.webp
     label: default article

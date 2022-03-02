@@ -10,8 +10,10 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'home-hero': "url('/images/patterns/homepage-bg-pattern.svg')",
+        'articles': "url('/images/patterns/articles-pattern.svg')",
         'contact-us': "url('/images/patterns/contact-us-pattern.svg')",
+        'home-hero': "url('/images/patterns/homepage-bg-pattern.svg')",
+        'single-article': "url('/images/patterns/single-article-pattern.svg')",
       },
       borderWidth: {
         1: '1px',
@@ -20,6 +22,7 @@ module.exports = {
         dark: '#303234',
         dark2: '#626381',
         'light-gray': '#e5e5e5',
+        'light-gray2': '#E6E6E6',
         gray2: '#696984',
         primary: '#2300B1',
         secondary: '#F48C06',
@@ -27,16 +30,19 @@ module.exports = {
       },
       fontFamily: {
         nunitoSans: ['NunitoSans', 'sans-serif'],
+        openSans: ['OpenSans', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
       },
       fontSize: {
         3.75: '0.9375rem',
         4.8: '1.2rem',
+        7: '1.75rem',
         36: '9rem',
         40: '10rem',
         56: '14rem',
       },
       spacing: {
+        1.25: '0.3125rem',
         1.5: '0.375rem',
         13: '3.25rem',
         17: '4.25rem',
