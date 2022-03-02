@@ -18,7 +18,7 @@
       "@type": "WebPage",
       "@id": "{{ .Permalink }}"
     },
-    "headline": "{{ .Params.articleData.title.blue }} {{ .Params.articleData.title.normal }}",
+    "headline": "{{ .Params.articleData.title }}",
     "image": ["{{ $articleImage }}"],
     "datePublished": "{{ dateFormat "2006-01-02" $.Date }}",
     "dateModified": "{{ dateFormat "2006-01-02" now }}",

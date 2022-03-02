@@ -34,8 +34,7 @@
     {{ end }}
     {{ with .title }}
     <h3 class="mt-3 mb-2 text-xl text-white font-lato lg:text-2xl xl:text-3xl group-hover:text-g3">
-      {{ .blue }}
-      {{ .normal }}
+      {{ . }}
     </h3>
     {{ end }}
     <p
@@ -291,8 +290,7 @@
     {{ with $post.Params.articleData }}
     <a href="{{ $post.RelPermalink }}" class="flex flex-col flex-grow group hover:text-g1">
       <h3 class="flex-grow mb-2 text-xl font-lato md:text-2xl">
-        {{ .title.blue }}
-        {{ .title.normal }}
+        {{ .title }}
       </h3>
       <p class="mb-2 text-base font-lato text-g4 group-hover:text-g1">
         {{ .subtitle }}
