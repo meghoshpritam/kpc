@@ -13,5 +13,12 @@ hero:
     url: "/images/servizi.webp"
     alt: "Servizi"
 
+lists:
+  - area: ""
+    description: ""
+    age: ""
+    date: ""
+    file: ""
+
 layout: services
 ---

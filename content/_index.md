@@ -27,15 +27,15 @@ aboutPlatform:
     Il tuo percorso di crescita, fatto di autonomie e separazioni, inizia proprio nella scuola. Lo psicologo scolastico ti aiuta a gestire al meglio!
   features:
     - title: Studenti
-      icon:
+      icon: file-invoice
       details: >
         Lo psicologo scolastico aiuta lo studente a fare luce su ciò che sta vivendo e a costruisce con lui un percorso per stare meglio, affrontando il problema in modo personalizzato
     - title: Genitori
-      icon:
+      icon: calendar
       details: >
         Offre uno spazio di ascolto in cui  esprimere le fatiche del ruolo genitoriale e gettare le basi per la creazione di un rapporto di fiducia con la scuola nella crescita dei propri figli.
     - title: Insegnanti
-      icon:
+      icon: users
       details: >
         Accoglie le richieste di insegnanti che osservano situazioni critiche o che desiderano un feedback rispetto alla gestione di casi delle loro classi
 statistics:

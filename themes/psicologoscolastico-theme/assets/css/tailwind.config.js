@@ -18,15 +18,21 @@ module.exports = {
       borderWidth: {
         1: '1px',
       },
+      boxShadow: {
+        card1: '0px 8.4157px 50.4942px rgba(38, 45, 118, 0.08)',
+      },
       colors: {
+        blue1: '#5b72ee',
         dark: '#303234',
         dark2: '#626381',
         'light-gray': '#e5e5e5',
         'light-gray2': '#E6E6E6',
+        gold: '#FAB31C',
         gray2: '#696984',
         primary: '#2300B1',
         secondary: '#F48C06',
         'sky-blue': '#23BDEE',
+        turquoise: '#29B9E7'
       },
       fontFamily: {
         nunitoSans: ['NunitoSans', 'sans-serif'],
