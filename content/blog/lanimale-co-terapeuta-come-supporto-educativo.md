@@ -17,6 +17,14 @@ articleData:
     url:
     alt: "L’animale co-terapeuta come supporto educativo"
 
+shortDescription: >
+  Sebbene la frase sia senza senso, ha una lunga storia. La frase è stata utilizzata per vari secoli dai tipografi per mostrare più peculiari dei tipi di carattere. Infatti, le lettere e gli spazi coinvolti in questa frase consentono di evidenziare nel miglior modo possibile, il peso, il design e altre importanti caratteristiche del carattere tipografico.
+
+
+  Sebbene la frase sia senza senso, ha una lunga storia. La frase è stata utilizzata per vari secoli dai tipografi per mostrare più peculiari dei tipi di carattere. Infatti, le lettere e gli spazi coinvolti in questa frase consentono di evidenziare nel miglior modo possibile, il peso, il design e altre importanti caratteristiche del carattere tipografico.
+
+coverImage: ""
+
 layout: single
 ---
 

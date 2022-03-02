@@ -3,7 +3,7 @@ title: "Neuromarketing"
 description: "Il nostro team di esperti in Neuromarketing si occupa di trovare e sollecitare i canali di comunicazione al fine di comprendere le preferenze dei consumatori"
 date: 2021-02-01
 
-articleData:
+hero:
   title: 
     line1: "VUOI"
     line2: "APPROFONDIRE?"
@@ -13,21 +13,19 @@ articleData:
     url:
     alt: "Bisogni educativi speciali"
 
+header:
+  search:
+    placeholder: "Search"
+  filterTags:
+    - label: Studenti
+      id: studenti
+    - label: Genitori
+      id: genitori
+    - label: Insegnanti
+      id: insegnanti
 
-highlight:
-    title: "Esaurimento Emotivo"
-
-hero:
-  heading:
-    blue: Neuromarketing
-    normal:
-  details: Liberati dai pregiudizi, supera i tuoi limiti e scegli di migliorare la tua vita!
-  button:
-    url: chi-siamo/
-    label: Vieni a Conoscerci
-  image:
-    url: /images/neuromarketing/index-hero.svg
-    alt: Neuromarketing e psicologia
+article:
+  readMore: "Read more"
 
 section2:
   heading: Neuromarketing

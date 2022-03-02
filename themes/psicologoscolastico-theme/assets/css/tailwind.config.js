@@ -20,19 +20,25 @@ module.exports = {
       },
       boxShadow: {
         card1: '0px 8.4157px 50.4942px rgba(38, 45, 118, 0.08)',
+        card2: '0px 10px 60px rgba(38, 45, 118, 0.08)',
+        button: '0px 0px 5px #C4C4C4',
       },
       colors: {
         blue1: '#5b72ee',
+        'blue-gray': '#69788c',
         dark: '#303234',
         dark2: '#626381',
         'light-gray': '#e5e5e5',
         'light-gray2': '#E6E6E6',
+        'light-gray3': '#CFDCE5',
         gold: '#FAB31C',
         gray2: '#696984',
+        gray3: '#CFDCE5',
+        indigo1: '#2f327d',
         primary: '#2300B1',
         secondary: '#F48C06',
         'sky-blue': '#23BDEE',
-        turquoise: '#29B9E7'
+        turquoise: '#29B9E7',
       },
       fontFamily: {
         nunitoSans: ['NunitoSans', 'sans-serif'],
@@ -48,6 +54,9 @@ module.exports = {
         40: '10rem',
         56: '14rem',
       },
+      gridTemplateRows: {
+        7: 'repeat(7, minmax(0, 1fr))',
+      },
       spacing: {
         1.25: '0.3125rem',
         1.5: '0.375rem',
@@ -60,6 +69,8 @@ module.exports = {
         108: '27rem',
         110: '27.5rem',
         112: '28rem',
+        160: '40rem',
+        180: '45rem',
       },
       zIndex: {
         60: 60,

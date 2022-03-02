@@ -16,6 +16,14 @@ articleData:
     url:
     alt: "Circle time a scuola"
 
+shortDescription: >
+  Sebbene la frase sia senza senso, ha una lunga storia. La frase è stata utilizzata per vari secoli dai tipografi per mostrare più peculiari dei tipi di carattere. Infatti, le lettere e gli spazi coinvolti in questa frase consentono di evidenziare nel miglior modo possibile, il peso, il design e altre importanti caratteristiche del carattere tipografico.
+
+
+  Sebbene la frase sia senza senso, ha una lunga storia. La frase è stata utilizzata per vari secoli dai tipografi per mostrare più peculiari dei tipi di carattere. Infatti, le lettere e gli spazi coinvolti in questa frase consentono di evidenziare nel miglior modo possibile, il peso, il design e altre importanti caratteristiche del carattere tipografico.
+
+coverImage: ""
+
 layout: single
 ---
 **Circle Time** è una strategia di insegnamento che sta vedendo un uso crescente in tutte le fasi chiave. Come strategia Circle Time non è nuovo e può essere fatto risalire agli indiani nordamericani. Per molti anni il tempo circolare è stato ampiamente utilizzato nell'industria, per generare un approccio cooperativo alla risoluzione dei problemi che coinvolge il personale a tutti i livelli. Negli ultimi anni, il mondo dell'istruzione ha adottato questa strategia in quanto può essere fondamentale per sviluppare l'autostima tra gli alunni.

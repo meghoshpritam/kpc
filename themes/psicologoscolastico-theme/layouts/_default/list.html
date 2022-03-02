@@ -22,8 +22,8 @@
     </h3>
     <p class="flex-grow mt-2 mb-2 text-lg leading-8 text-g4 font-lato lg:text-xl xl:text-2xl">
       {{ .description | markdownify }}</p>
-    </div>
-    {{ end }}
+  </div>
+  {{ end }}
 </div>
 {{ end }}
 
@@ -33,7 +33,7 @@
 <section class="bg-left-bottom bg-no-repeat bg-cover bg-single-article">
   {{ partial "header.html" . }}
   {{/* hero section start  */}}
-  {{ with .Params.articleData }}
+  {{ with .Params.hero }}
   <div class="container grid grid-cols-1 px-4 pt-24 mx-auto text-white md:grid-cols-2">
     <div class="py-20 pb-36">
       <h1 class="text-6xl font-semibold">
@@ -64,171 +64,48 @@
   {{/* hero section end  */}}
 </section>
 
-{{/* featured post section start  */}}
-{{ $featureSection := .Site.Data.list.featurePost }}
-{{ with .Params.featuredPost }}
-{{ $featuredPost := . }}
-{{ range $.Site.Sections }}
-{{ range $post := .Pages }}
-{{ if eq (substr .RelPermalink 1 (sub (len .RelPermalink) 2)) $featuredPost.post }}
-{{ with $post.Params.articleData }}
-<section class="container grid grid-cols-1 gap-12 px-5 pb-16 mx-auto lg:grid-cols-2 text-g3 mt-28">
-  <div class="w-full mx-auto lg:row-span-2 sm:w-3/4 lg:w-full">
-    {{ $aImgAlt := $featureSection.image.alt }}
-    {{ if .image.alt }}
-    {{ $aImgAlt = .image.alt }}
-    {{ end }}
-    {{ if .image.url }}
-    <img src="{{ .image.url }}" alt="{{ .image.alt }}" title="{{ .image.alt }}" class="w-full h-auto" width="750" height="640">
-    {{ else }}
-    <img src="{{ $featureSection.image.url }}" alt="{{ $aImgAlt }}" title="{{ $aImgAlt }}" class="w-full h-auto" width="750" height="640">
-    {{ end }}
-  </div>
-  {{/* section heading start  */}}
-  <div class="order-first max-w-xl lg:order-none">
-    {{ with $featuredPost.title }}
-    <h3 class="text-3xl font-lato md:text-5xl lg:text-6xl">
-      {{ .normal }}
-      <span class="text-g1">{{ .blue }}</span>
-      {{ .normal2 }}
-    </h3>
-    {{ end }}
-
-    <hr class="bg-g3 border-none h-0.5 w-40 md:w-56 mt-5 md:mt-10 mb-8" />
-  </div>
-  {{/* section heading end  */}}
-  <div class="lg:pr-7">
-    {{/* article heading start  */}}
-    <a href="{{ $post.RelPermalink }}" class="hover:text-g1">
-      {{ with .title }}
-      <h4 class="text-2xl font-lato md:text-4xl lg:text-5xl md:leading-16 mb-9">
-        {{ .blue }}
-        {{ .normal }}
-      </h4>
-      {{ end }}
-      <p class="text-xl font-lato">{{ .subtitle }}</p>
-    </a>
-    {{/* article heading end  */}}
-
-    {{/* article related to section start */}}
-    <div class="flex flex-wrap items-center mt-3 font-lato">
-      <a href="{{ $post.Parent.RelPermalink }}" class="py-1 my-1 mr-5 text-sm text-white text-opacity-100 rounded-full bg-g4 opacity-60 px-7 hover:opacity-80">{{ $post.Parent.Title }}</a>
-      {{ range $post.Params.relatedTo }}
-      {{ $relatedTo := . }}
-      {{ range $.Site.Sections }}
-      {{ if eq (substr .RelPermalink 1 (sub (len .RelPermalink) 2)) $relatedTo }}
-      <a href="{{ .RelPermalink }}" class="py-1 my-1 mr-5 text-sm text-white text-opacity-100 rounded-full bg-g4 opacity-60 px-7 hover:opacity-80">{{ .Title }}</a>
-      {{ end }}
-      {{ end }}
+<section class="container px-4 mx-auto">
+  {{ with .Params.header }}
+  <div class="flex flex-wrap mt-10 lg:mt-16 lg:flex-nowrap">
+    <div class="relative order-2 w-full mb-7 lg:mb-0 md:w-180">
+      <input type="text" placeholder="{{ .search.placeholder }}" class="w-full px-2 py-2 text-sm border rounded-md placeholder-gray3 text-blue-gray border-gray3" />
+      <svg class="w-3.5 h-3.5 absolute top-2.5 right-3.5 text-blue-gray">
+        <use xlink:href="#shape-search"></use>
+      </svg>
+    </div>
+    <div class="flex items-center flex-wrap sm:flex-nowrap flex-grow order-2 -ml-3.5 tag-bluttons-container md:ml-11 justify-center md:justify-start">
+      {{ range .filterTags }}
+      <button class="mx-4 text-sm px-6 py-0.5 mb-4 sm:mb-0 shadow-button rounded-md border border-light-gray3" data-id="{{ .id }}">{{ .label }}</button>
       {{ end }}
     </div>
-    {{/* article related to section end  */}}
-
-    {{/* article date and author section start */}}
-    <div class="flex items-center mt-3 text-sm space-x-9 font-lato">
-      <div class="flex items-center opacity-60">
-        <svg class="flex-shrink-0 mr-2 w-7 h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10">
-          <use xlink:href="#shape-calendar-with-clock"></use>
-        </svg>
-        {{dateFormat "2/1/2006" $post.Date }}
-      </div>
-      <div class="flex items-center opacity-60">
-        <svg class="flex-shrink-0 mr-2 w-7 h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10">
-          <use xlink:href="#shape-user-check"></use>
-        </svg>
-        {{ $post.Params.Author }}
-      </div>
+    <div class="flex items-center justify-end flex-grow order-1 w-full sm:flex-nowrap lg:order-2 mb-7 lg:mb-0">
+      {{ partial "breadcrumb.html" $ }}
     </div>
-    {{/* article date and author section end */}}
-
-    {{/* article description section start  */}}
-    <a href="{{ $post.RelPermalink }}" class="hover:text-g1">
-      <div class="font-lato text-3.75 italic text-justify mt-10">
-        {{ if .description }}
-        {{ .description | markdownify | truncate 300 }}
-        {{ else }}
-        {{ $post.Summary | truncate 300 }}
-        {{ end }}
-      </div>
-    </a>
-    {{/* article description section end  */}}
-
-    {{/* article view button start */}}
-    <div class="flex justify-center py-3 mt-10">
-      <a href="{{ $post.RelPermalink }}" class="flex items-center py-2 text-lg font-bold duration-500 ease-in-out border-2 rounded-full border-g4 px-9 font-montserrat hover:text-white hover:bg-g4">
-        {{ $featureSection.continue }}
-        <svg class="h-4 ml-5 w-7">
-          <use xlink:href="#shape-arrow-right-with-head"></use>
-        </svg>
-      </a>
-    </div>
-    {{/* article view button end */}}
   </div>
-</section>
-{{ end }}
-{{ end }}
-{{ end }}
-{{ end }}
-{{ end }}
-{{/* featured post section end  */}}
-
-{{/* category article section start */}}
-{{ if .Params.pageArticle.enable }}
-{{ $defaultArticleSection := .Site.Data.singlePageTemplate.defaultArticle }}
-{{ $category := (dict "label" .Name "url" .RelPermalink) }}
-<section class="container px-5 pb-16 mx-auto mt-32 overflow-x-hidden text-g3 mb-36">
-  {{ $totalCards := 0 }}
-  {{ with .Params.pageArticle.heading }}
-  <h2 class="mb-16 text-2xl text-g4 font-lato sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-    {{ .normal }}
-    <span class="text-g1">{{ .blue }}</span>
-  </h2>
   {{ end }}
-  <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 wrapper-category-page-article-card-1006">
-    {{ range .Pages }}
-    {{ $totalCards = add $totalCards 1 }}
-    {{ block "singleArticle" (dict "ctx" . "dArticle" $defaultArticleSection "category" $category ) }}
-    {{ end }}
-    {{ end }}
-    {{ range .Site.Sections }}
-    {{ if ne $ . }}
-    {{ range $cPage := .Pages }}
-    {{ range $cPage.Params.relatedTo }}
-    {{ if eq . (substr $.RelPermalink 1 (sub (len $.RelPermalink) 2)) }}
-    {{ $totalCards = add $totalCards 1 }}
-    {{ block "singleArticle" (dict "ctx" $cPage "dArticle" $defaultArticleSection "category" $category )}}
-    {{ end }}
-    {{ end }}
-    {{ end }}
-    {{ end }}
-    {{ end }}
-    {{ end }}
-  </div>
-  <div class="flex items-center mt-4 space-x-6">
-    <div>
-      <span class="number-category-page-article-card-1006">1</span>\{{ $totalCards }}
-    </div>
-    <div class="flex-grow h-1 bg-indigo bg-opacity-40">
-      <hr class="w-0 h-1 bg-opacity-100 border-none bg-indigo line-category-page-article-card-1006" />
-    </div>
-    <div class="flex items-center">
-      <span class="flex items-center justify-center w-12 h-12 p-3 mr-3 text-white duration-500 ease-in-out rounded-full cursor-pointer bg-g4 hover:bg-g1 btn-pre-category-page-article-card-1006 disable-card-button" onclick="App.articlePre();" role="button" tabindex="0" aria-label="previous">
-        <svg class="w-6 h-6">
-          <use xlink:href="#shape-previous-icon"></use>
-        </svg>
-      </span>
-      <span class="flex items-center justify-center w-12 h-12 p-3 text-white duration-500 ease-in-out rounded-full cursor-pointer bg-g4 hover:bg-g1 btn-next-category-page-article-card-1006" onclick="App.articleNext();" role="button" tabindex="0" aria-label="next">
-        <svg class="w-6 h-6">
-          <use xlink:href="#shape-next-icon"></use>
-        </svg>
-      </span>
-    </div>
-  </div>
-  </div>
 </section>
-{{ end }}
-{{/* category article section end  */}}
 
+<section class="container grid grid-cols-1 px-4 mx-auto mt-14 sm:grid-cols-2 lg:gap-x-14 xl:gap-x-20 gap-y-24 md:gap-y-28 lg:gap-y-36 xl:gap-y-48 lg:grid-cols-3">
+  {{ range .Pages }}
+  <a href="{{ .RelPermalink }}" class="flex flex-col h-full bg-white border-2 border-white rounded-3xl shadow-card2 hover:shadow-2xl hover:border-sky-blue" title="{{ .Title }}" aria-label="{{ .Title }}">
+    {{ with .Params }}
+    <div class="h-56">
+      <img src="{{ .coverImage }}" alt="{{ .Title }}" class="w-full h-full bg-center bg-no-repeat bg-cover rounded-xl">
+    </div>
+    <h2 class="flex-grow px-5 py-3 text-2xl text-indigo1">{{ .articleData.title }}</h2>
+    <div class="mt-1.5 px-5 text-sm">{{ truncate 200 "..." .shortDescription }}</div>
+    <div class="flex items-center justify-between pb-5 pl-5 text-xs mt-7">
+      <div>
+        {{ dateFormat "02 July 2006" $.Lastmod }}
+      </div>
+      <div class="flex justify-end">
+        <div class="py-2 pr-6 text-white rounded-l-full pl-7 bg-sky-blue -mr-0.5">{{ $.Params.article.readMore }}</div>
+      </div>
+    </div>
+    {{ end }}
+  </a>
+  {{ end }}
+</section>
 
 
 
