@@ -7,9 +7,9 @@ menuLinks:
   - title: Home
     url: "/"
   - title: Servizi
-    url: "/servizi"
+    url: "/servizi/"
   - title: Blog
-    url: "/blog"
+    url: "/blog/"
   - title: Chi Siamo
     url: "/#servizi"
 
