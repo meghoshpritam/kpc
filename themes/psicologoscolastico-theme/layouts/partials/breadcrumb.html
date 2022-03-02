@@ -1,6 +1,6 @@
-<div class="font-montserrat text-base font-semibold text-g3">
+<div class="text-xs font-normal font-openSans">
     <h6 class="">
-        <a href="{{ "/" | relLangURL }}" class="hover:text-current hover:underline text-g1">Home</a>
+        <a href="{{ "/" | relLangURL }}" class="underline hover:text-secondary">Home</a>
         {{ $relPermalink := .RelPermalink }}
         {{ $url := "" }}
         {{ $lng :=.Site.Language.Lang }}
@@ -12,11 +12,11 @@
         {{ if ne $ctx $lng  }}
         {{ $url = print $url "/" $ctx }}
         {{ if eq (len (split $relPermalink  "/") ) (add $idx 2 ) }}
-        > <span class="underline">
+        / <span class="">
             {{ humanize $ctx | title }}
         </span>
         {{ else }}
-        > <a href="{{ print $url "/" | relURL }}" class="hover:underline">
+        / <a href="{{ print $url "/" | relURL }}" class="underline hover:text-secondary">
             {{ humanize $ctx | title }}
         </a>
         {{ end }}
