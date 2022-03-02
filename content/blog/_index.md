@@ -1,7 +1,19 @@
 ---
 title: "Neuromarketing"
 description: "Il nostro team di esperti in Neuromarketing si occupa di trovare e sollecitare i canali di comunicazione al fine di comprendere le preferenze dei consumatori"
-date: 2021-05-29T18:51:10+01:00
+date: 2021-02-01
+
+articleData:
+  title: 
+    line1: "VUOI"
+    line2: "APPROFONDIRE?"
+  description:
+    Le letture consigliate dallo <span>Psicologo</span> Scolastico
+  image:
+    url:
+    alt: "Bisogni educativi speciali"
+
+
 highlight:
     title: "Esaurimento Emotivo"
 
