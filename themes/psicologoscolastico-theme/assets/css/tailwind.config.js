@@ -10,7 +10,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'articles': "url('/images/patterns/articles-pattern.svg')",
+        articles: "url('/images/patterns/articles-pattern.svg')",
         'contact-us': "url('/images/patterns/contact-us-pattern.svg')",
         'home-hero': "url('/images/patterns/homepage-bg-pattern.svg')",
         'single-article': "url('/images/patterns/single-article-pattern.svg')",
@@ -32,6 +32,7 @@ module.exports = {
         nunitoSans: ['NunitoSans', 'sans-serif'],
         openSans: ['OpenSans', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
+        rockSalt: ['RockSalt', 'cursive', 'sans-serif'],
       },
       fontSize: {
         3.75: '0.9375rem',

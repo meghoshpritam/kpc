@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ $pageData := .Site.Data.singlePageTemplate }}
+{{/* top section start  */}}
+<section class="bg-left-bottom bg-no-repeat bg-cover bg-dark">
+  {{ partial "header.html" . }}
+  {{/* hero section start  */}}
+  {{ with .Params.hero }}
+  <div class="container px-4 pt-24 mx-auto">
+    <div class="grid grid-cols-1 text-3xl font-rockSalt sm:grid-cols-2 lg:grid-cols-3">
+      {{ range $idx, $ctx := .highlights }}
+      {{ $cls := "text-right text-secondary" }}
+      {{ if eq $idx 0 }}
+      {{ $cls = "text-left text-sky-blue" }}
+      {{ end }}
+      {{ if eq $idx 1 }}
+      {{ $cls = "text-center text-sky-blue" }}
+      {{ end }}
+      <span class="{{ $cls }}">{{ $ctx }}</span>
+      {{ end }}
+    </div>
+    <div class="max-w-lg pb-12 mx-auto mt-14">
+      <img src="{{ .image.url }}" alt="{{ .image.alt }}" title="{{ .image.alt }}" class="w-full h-auto " height="566" width="612">
+    </div>
+  </div>
+  {{ end }}
+  {{/* hero section end  */}}
+</section>
+<section class="px-4 pb-20 mx-auto contauber mt-14"></section>
+{{ end }}
