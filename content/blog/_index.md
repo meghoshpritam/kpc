@@ -1,6 +1,6 @@
 ---
-title: "Neuromarketing"
-description: "Il nostro team di esperti in Neuromarketing si occupa di trovare e sollecitare i canali di comunicazione al fine di comprendere le preferenze dei consumatori"
+title: "Blog"
+description: "TODO: add description"
 date: 2021-02-01
 
 hero:
@@ -27,6 +27,36 @@ header:
 article:
   readMore: "Read more"
 
+studyMaterial:
+  image:
+    url: "/images/study-material.webp"
+    alt: "Tutto è più semplice"
+  title: "Tutto è più semplice"
+  details: >
+    Grazie al materiale fornito dallo Psicologo Scolastico ho acquisito un metodo di studio più adatto a me.
+  cta:
+    url: ""
+    label: "Scopri di più"
+
+mostAppreciatedArticle:
+  title: "Artcolo più apprezzato"
+  details: >
+    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution...
+  link: ""
+  image:
+    url: "/images/most-appreciated-article.webp"
+    alt: "Artcolo più apprezzato"
+
+downloadCenter:
+  title: "Scarica i nostri <span>contenuti</span>"
+  details: >
+    Grazie al materiale fornito dallo Psicologo Scolastico ho acquisito un metodo di studio più adatto a me.
+  cta:
+    link: ""
+    label: "Scopri di più"
+  image:
+    url: "/images/download-center.webp"
+    alt: "Artcolo più apprezzato"
 section2:
   heading: Neuromarketing
 

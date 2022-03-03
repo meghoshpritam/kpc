@@ -85,14 +85,14 @@
   {{ end }}
 </section>
 
-<section class="container grid grid-cols-1 px-4 mx-auto mt-14 sm:grid-cols-2 lg:gap-x-14 xl:gap-x-20 gap-y-24 md:gap-y-28 lg:gap-y-36 xl:gap-y-48 lg:grid-cols-3">
+<section class="container grid grid-cols-1 px-4 mx-auto mt-14 sm:grid-cols-2 gap-x-10 mb-28 lg:gap-x-14 xl:gap-x-20 gap-y-24 md:gap-y-28 lg:gap-y-36 xl:gap-y-48 lg:grid-cols-3">
   {{ range .Pages }}
   <a href="{{ .RelPermalink }}" class="flex flex-col h-full bg-white border-2 border-white rounded-3xl shadow-card2 hover:shadow-2xl hover:border-sky-blue" title="{{ .Title }}" aria-label="{{ .Title }}">
     {{ with .Params }}
     <div class="h-56">
       <img src="{{ .coverImage }}" alt="{{ .Title }}" class="w-full h-full bg-center bg-no-repeat bg-cover rounded-xl">
     </div>
-    <h2 class="flex-grow px-5 py-3 text-2xl text-indigo1">{{ .articleData.title }}</h2>
+    <h3 class="flex-grow px-5 py-3 text-2xl text-indigo1">{{ .articleData.title }}</h3>
     <div class="mt-1.5 px-5 text-sm">{{ truncate 200 "..." .shortDescription }}</div>
     <div class="flex items-center justify-between pb-5 pl-5 text-xs mt-7">
       <div>
@@ -107,7 +107,73 @@
   {{ end }}
 </section>
 
+{{ with .Params.studyMaterial }}
+<section class="text-white bg-sky-blue">
+  <div class="container grid grid-cols-1 px-4 py-20 mx-auto md:py-40 md:grid-cols-2">
+    <div class="mb-10 md:mb-0">
+      {{ with .image }}
+      <img src="{{ .url }}" alt="{{ .alt }}">
+      {{ end }}
+    </div>
+    <div class="flex flex-col justify-center sm:px-10 lg:px-16 xl:px-24">
+      <div>
+        <hr class="w-24 h-2 border-none bg-secondary mb-9">
+        <h2 class="mb-8 text-4xl font-bold">{{ .title }}</h2>
+        <div class="text-sm">{{ .details | markdownify }}</div>
+        {{ with .cta }}
+        <a href="{{ .url }}" aria-label="{{ .label }}" title="{{ .label }}" class="flex items-center mt-5 text-sm font-bold hover:text-dark">
+          <span>{{ .label }}</span>
+          <svg class="w-4 h-2">
+            <use xlink:href="#shape-sleek-arrow" />
+          </svg>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
 
+{{ with .Params.mostAppreciatedArticle }}
+<section class="mt-64">
+  <div class="container grid grid-cols-1 px-4 mx-auto lg:grid-cols-2 bg-white1">
+    <div class="flex flex-col justify-center sm:px-10 lg:px-14 xl:px-17">
+      <a class="block group" href="">
+        <h2 class="text-4xl font-bold mb-7 text-secondary">{{ .title }}</h2>
+        <div class="text-sm text-gray2">{{ .details | markdownify }}</div>
+        <div class="flex items-center justify-between text-sm mt-9">
+          <div class="text-gray2">May 20</div>
+          <span class="font-bold duration-300 ease-in-out text-dark group-hover:text-secondary">{{ $.Params.article.readMore }}</span>
+        </div>
+      </a>
+    </div>
+    <div>
+      {{ with .image }}
+      <img src="{{ .url }}" alt="{{ .alt }}" class="w-full h-full bg-left-top bg-no-repeat bg-cover">
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.downloadCenter }}
+<section class="container grid grid-cols-1 px-4 mx-auto mt-64 lg:grid-cols-2 mb-92">
+  <div>
+    {{ with .image }}
+    <img src="{{ .url }}" alt="{{ .alt }}" class="w-full h-auto">
+    {{ end }}
+  </div>
+  <div class="flex flex-col justify-center">
+    <div class="sm:px-10 lg:px-16">
+      <h2 class="text-5xl font-bold text-sky-blue span-text-secondary">{{ .title | markdownify }}</h2>
+      <div class="my-10 text-sm text-gray2">{{ .details | markdownify }}</div>
+      {{ with .cta }}
+      <a href="{{ .link }}" title="{{ .label }}" aria-label="{{ .label }}" class="inline-block text-white border-2 bg-secondary border-secondary text-sm px-7 py-1.5 font-medium rounded-full hover:bg-white hover:text-secondary">{{ .label }}</a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
 
 <script defer type="text/javascript">
   window.onload = function() {

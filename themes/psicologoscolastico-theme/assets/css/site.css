@@ -9,6 +9,10 @@ button {
   @apply duration-300 ease-in-out;
 }
 
+.span-text-secondary span {
+  @apply text-secondary;
+}
+
 /* ========================== single article style ============================= */
 .article-description span {
   @apply font-medium text-secondary;

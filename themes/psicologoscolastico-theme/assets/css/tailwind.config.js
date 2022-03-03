@@ -39,6 +39,7 @@ module.exports = {
         secondary: '#F48C06',
         'sky-blue': '#23BDEE',
         turquoise: '#29B9E7',
+        white1: '#f7fafc',
       },
       fontFamily: {
         nunitoSans: ['NunitoSans', 'sans-serif'],
