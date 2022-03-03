@@ -1,6 +1,9 @@
 const SCROLL_HEADER_SELECTOR = '.page-header-0203';
 const RELATIVE_HEADER_SELECTOR = '.page-relative-header-0203';
 const MENU_DRAWER_SELECTOR = '.menu-drawer-0303';
+const TAG_BLOG_CONTAINER_SELECTOR = '[data-id="blog-by-tag-0303"]';
+const TAG_BUTTON_SELECTOR = '[data-id="tag-selector-button-0303"]';
+const HIDDEN_CLASS = 'hidden';
 
 class Utils {
   static disableButtonClass = 'disable-card-button';
@@ -608,32 +611,61 @@ class App {
     });
   };
 
+  static getBlogContainerElementByTag = (tag) => {
+    return document.querySelector(`${TAG_BLOG_CONTAINER_SELECTOR}[data-tag="${tag}"]`);
+  };
+
+  static hideAllElements = (elements) => {
+    for (const element of elements) {
+      element.classList.add(HIDDEN_CLASS);
+    }
+  };
+
+  static showAllElements = (elements) => {
+    for (const element of elements) {
+      element.classList.remove(HIDDEN_CLASS);
+    }
+  };
+
   static showBlogsByTag = (tag) => {
-    const tagBlogContainerSelector = '[data-id="blog-by-tag-0303"]';
-    const tagButtonSelector = '[data-id="tag-selector-button-0303"]';
-    const hiddenClass = 'hidden';
     const searchSelector = 'input[data-id="search-blogs"]';
     const buttonActiveClasses = ['border-sky-blue', 'text-white', 'bg-sky-blue'];
     const buttonInactiveClass = 'border-light-gray3';
-    
-    const searchElement = document.querySelector(searchSelector);
-    const blogContainerElements = document.querySelectorAll(tagBlogContainerSelector);
-    const blogButtonElements = document.querySelectorAll(tagButtonSelector);
-    const targetContainerElement = document.querySelector(`${tagBlogContainerSelector}[data-tag="${tag}"]`);
-    const targetButtonElement = document.querySelector(`${tagButtonSelector}[data-tag="${tag}"]`);
-    
-    searchElement.setAttribute('data-active-tab', tag);
-    for (const blogContainerElement of blogContainerElements) {
-      blogContainerElement.classList.add(hiddenClass);
-    }
-    for (const blogButtonElement of blogButtonElements) {
-      blogButtonElement.classList.remove(...buttonActiveClasses);
-      blogButtonElement.classList.add(buttonInactiveClass);
-    }
 
-    targetContainerElement.classList.remove(hiddenClass);
+    const searchElement = document.querySelector(searchSelector);
+    const blogContainerElements = document.querySelectorAll(TAG_BLOG_CONTAINER_SELECTOR);
+    const blogButtonElements = document.querySelectorAll(TAG_BUTTON_SELECTOR);
+    const targetContainerElement = this.getBlogContainerElementByTag(tag);
+    const targetButtonElement = document.querySelector(`${TAG_BUTTON_SELECTOR}[data-tag="${tag}"]`);
+
+    searchElement.setAttribute('data-active-tab', tag);
+    this.hideAllElements(blogContainerElements);
+    this.hideAllElements(blogButtonElements);
+
+    targetContainerElement.classList.remove(HIDDEN_CLASS);
     targetButtonElement.classList.remove(buttonInactiveClass);
     targetButtonElement.classList.add(...buttonActiveClasses);
+  };
+
+  static searchBlog = (event) => {
+    const target = event.target;
+    const searchTerm = target.value || '';
+    const searchTerms = searchTerm
+      .toLowerCase()
+      .split(' ')
+      .filter((term) => term?.length > 0);
+    const selectedTag = target.dataset.activeTab;
+    const targetContainerElement = this.getBlogContainerElementByTag(selectedTag);
+    const blogElements = targetContainerElement.children || [];
+    this.hideAllElements(blogElements);
+
+    const matchElements =
+      Array.from(blogElements).filter((element) => {
+        const blogTitle = element.getAttribute('title').toLowerCase() || '';
+        return searchTerms.every((term) => blogTitle.includes(term));
+      }) || [];
+
+    this.showAllElements(matchElements);
   };
 }
 

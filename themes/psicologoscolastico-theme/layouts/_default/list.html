@@ -69,7 +69,7 @@
   <div class="flex flex-wrap mt-10 lg:mt-16 lg:flex-nowrap">
     <div class="relative order-2 w-full mb-7 lg:mb-0 md:w-180">
       {{ $activeTagButton := index .filterTags 0 }}
-      <input type="text" data-id="search-blogs" data-active-tab="{{ $activeTagButton.id }}" placeholder="{{ .search.placeholder }}" class="w-full px-2 py-2 text-sm border rounded-md placeholder-gray3 text-blue-gray border-gray3" />
+      <input type="text" data-id="search-blogs" oninput="App.searchBlog(event)" data-active-tab="{{ $activeTagButton.id }}" placeholder="{{ .search.placeholder }}" class="w-full px-2 py-2 text-sm border rounded-md placeholder-gray3 text-blue-gray border-gray3" />
       <svg class="w-3.5 h-3.5 absolute top-2.5 right-3.5 text-blue-gray">
         <use xlink:href="#shape-search"></use>
       </svg>
@@ -94,8 +94,8 @@
 <section data-tag="{{ $tag.id }}" data-id="blog-by-tag-0303" class="container {{ if ne $idx 0 }} hidden {{ end }} grid grid-cols-1 px-4 mx-auto mt-14 sm:grid-cols-2 gap-x-10 mb-28 lg:gap-x-14 xl:gap-x-20 gap-y-24 md:gap-y-28 lg:gap-y-36 xl:gap-y-48 lg:grid-cols-3">
   {{ range $.Pages }}
   {{ if in .Params.tags $tag.id }}
-  <a href="{{ .RelPermalink }}" class="flex flex-col h-full bg-white border-2 border-white rounded-3xl shadow-card2 hover:shadow-2xl hover:border-sky-blue" title="{{ .Title }}" aria-label="{{ .Title }}">
-    {{ with .Params }}
+  {{ with .Params }}
+  <a href="{{ .RelPermalink }}" class="flex flex-col h-full bg-white border-2 border-white rounded-3xl shadow-card2 hover:shadow-2xl hover:border-sky-blue" title="{{ .articleData.title | plainify }}" aria-label="{{ .articleData.title | plainify }}">
     <div class="h-56">
       <img src="{{ .coverImage }}" alt="{{ .Title }}" class="w-full h-full bg-center bg-no-repeat bg-cover rounded-xl">
     </div>
@@ -109,8 +109,8 @@
         <div class="py-2 pr-6 text-white rounded-l-full pl-7 bg-sky-blue -mr-0.5">{{ $.Params.article.readMore }}</div>
       </div>
     </div>
-    {{ end }}
   </a>
+  {{ end }}
   {{ end }}
   {{ end }}
 </section>
