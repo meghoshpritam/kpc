@@ -607,6 +607,34 @@ class App {
       });
     });
   };
+
+  static showBlogsByTag = (tag) => {
+    const tagBlogContainerSelector = '[data-id="blog-by-tag-0303"]';
+    const tagButtonSelector = '[data-id="tag-selector-button-0303"]';
+    const hiddenClass = 'hidden';
+    const searchSelector = 'input[data-id="search-blogs"]';
+    const buttonActiveClasses = ['border-sky-blue', 'text-white', 'bg-sky-blue'];
+    const buttonInactiveClass = 'border-light-gray3';
+    
+    const searchElement = document.querySelector(searchSelector);
+    const blogContainerElements = document.querySelectorAll(tagBlogContainerSelector);
+    const blogButtonElements = document.querySelectorAll(tagButtonSelector);
+    const targetContainerElement = document.querySelector(`${tagBlogContainerSelector}[data-tag="${tag}"]`);
+    const targetButtonElement = document.querySelector(`${tagButtonSelector}[data-tag="${tag}"]`);
+    
+    searchElement.setAttribute('data-active-tab', tag);
+    for (const blogContainerElement of blogContainerElements) {
+      blogContainerElement.classList.add(hiddenClass);
+    }
+    for (const blogButtonElement of blogButtonElements) {
+      blogButtonElement.classList.remove(...buttonActiveClasses);
+      blogButtonElement.classList.add(buttonInactiveClass);
+    }
+
+    targetContainerElement.classList.remove(hiddenClass);
+    targetButtonElement.classList.remove(buttonInactiveClass);
+    targetButtonElement.classList.add(...buttonActiveClasses);
+  };
 }
 
 window.App = App;

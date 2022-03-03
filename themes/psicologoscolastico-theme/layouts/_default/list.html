@@ -68,14 +68,19 @@
   {{ with .Params.header }}
   <div class="flex flex-wrap mt-10 lg:mt-16 lg:flex-nowrap">
     <div class="relative order-2 w-full mb-7 lg:mb-0 md:w-180">
-      <input type="text" placeholder="{{ .search.placeholder }}" class="w-full px-2 py-2 text-sm border rounded-md placeholder-gray3 text-blue-gray border-gray3" />
+      {{ $activeTagButton := index .filterTags 0 }}
+      <input type="text" data-id="search-blogs" data-active-tab="{{ $activeTagButton.id }}" placeholder="{{ .search.placeholder }}" class="w-full px-2 py-2 text-sm border rounded-md placeholder-gray3 text-blue-gray border-gray3" />
       <svg class="w-3.5 h-3.5 absolute top-2.5 right-3.5 text-blue-gray">
         <use xlink:href="#shape-search"></use>
       </svg>
     </div>
     <div class="flex items-center flex-wrap sm:flex-nowrap flex-grow order-2 -ml-3.5 tag-bluttons-container md:ml-11 justify-center md:justify-start">
-      {{ range .filterTags }}
-      <button class="mx-4 text-sm px-6 py-0.5 mb-4 sm:mb-0 shadow-button rounded-md border border-light-gray3" data-id="{{ .id }}">{{ .label }}</button>
+      {{ range  $idx, $tag := .filterTags }}
+      {{ $cls := "border-light-gray3" }}
+      {{ if eq $idx 0 }}
+      {{ $cls = "border-sky-blue text-white bg-sky-blue" }}
+      {{ end }}
+      <button onclick="App.showBlogsByTag('{{ $tag.id }}');" data-id="tag-selector-button-0303" class="mx-4 text-sm px-6 py-0.5 mb-4 sm:mb-0 shadow-button rounded-md border hover:bg-white hover:border-sky-blue hover:text-sky-blue {{ $cls }}" data-tag="{{ $tag.id }}">{{ $tag.label }}</button>
       {{ end }}
     </div>
     <div class="flex items-center justify-end flex-grow order-1 w-full sm:flex-nowrap lg:order-2 mb-7 lg:mb-0">
@@ -85,8 +90,10 @@
   {{ end }}
 </section>
 
-<section class="container grid grid-cols-1 px-4 mx-auto mt-14 sm:grid-cols-2 gap-x-10 mb-28 lg:gap-x-14 xl:gap-x-20 gap-y-24 md:gap-y-28 lg:gap-y-36 xl:gap-y-48 lg:grid-cols-3">
-  {{ range .Pages }}
+{{ range $idx, $tag := .Params.header.filterTags }}
+<section data-tag="{{ $tag.id }}" data-id="blog-by-tag-0303" class="container {{ if ne $idx 0 }} hidden {{ end }} grid grid-cols-1 px-4 mx-auto mt-14 sm:grid-cols-2 gap-x-10 mb-28 lg:gap-x-14 xl:gap-x-20 gap-y-24 md:gap-y-28 lg:gap-y-36 xl:gap-y-48 lg:grid-cols-3">
+  {{ range $.Pages }}
+  {{ if in .Params.tags $tag.id }}
   <a href="{{ .RelPermalink }}" class="flex flex-col h-full bg-white border-2 border-white rounded-3xl shadow-card2 hover:shadow-2xl hover:border-sky-blue" title="{{ .Title }}" aria-label="{{ .Title }}">
     {{ with .Params }}
     <div class="h-56">
@@ -105,8 +112,9 @@
     {{ end }}
   </a>
   {{ end }}
+  {{ end }}
 </section>
-
+{{ end }}
 {{ with .Params.studyMaterial }}
 <section class="text-white bg-sky-blue">
   <div class="container grid grid-cols-1 px-4 py-20 mx-auto md:py-40 md:grid-cols-2">
