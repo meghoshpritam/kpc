@@ -48,12 +48,8 @@ module.exports = {
         rockSalt: ['RockSalt', 'cursive', 'sans-serif'],
       },
       fontSize: {
-        3.75: '0.9375rem',
-        4.8: '1.2rem',
-        7: '1.75rem',
-        36: '9rem',
-        40: '10rem',
-        56: '14rem',
+        10: '0.625rem',
+        11: '0.6875rem',
       },
       gridTemplateRows: {
         7: 'repeat(7, minmax(0, 1fr))',

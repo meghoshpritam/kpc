@@ -657,6 +657,7 @@ class App {
     const selectedTag = target.dataset.activeTab;
     const targetContainerElement = this.getBlogContainerElementByTag(selectedTag);
     const blogElements = targetContainerElement.children || [];
+    const searchResult = document.querySelector('[data-id="blog-search-result"]');
     this.hideAllElements(blogElements);
 
     const matchElements =
@@ -664,6 +665,18 @@ class App {
         const blogTitle = element.getAttribute('title').toLowerCase() || '';
         return searchTerms.every((term) => blogTitle.includes(term));
       }) || [];
+    searchResult.classList.add(HIDDEN_CLASS);
+    if (searchTerm.length > 0) {
+      searchResult.classList.remove(HIDDEN_CLASS);
+    }
+    const nMatches = matchElements.length;
+    if (nMatches === 0) {
+      searchResult.innerHTML = searchResult.dataset.notFoundResult;
+    } else if (nMatches === 1) {
+      searchResult.innerHTML = searchResult.dataset.singleResult;
+    } else {
+      searchResult.innerHTML = searchResult.dataset.multipleResult.replace('{0}', nMatches);
+    }
 
     this.showAllElements(matchElements);
   };

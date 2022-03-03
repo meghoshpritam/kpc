@@ -16,6 +16,10 @@ hero:
 header:
   search:
     placeholder: "Search"
+  searchResult:
+    single: "1 result found"
+    multiple: "{0} results found"
+    notFound: "No result found"
   filterTags:
     - label: Studenti
       id: studenti

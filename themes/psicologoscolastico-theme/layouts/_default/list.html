@@ -73,6 +73,9 @@
       <svg class="w-3.5 h-3.5 absolute top-2.5 right-3.5 text-blue-gray">
         <use xlink:href="#shape-search"></use>
       </svg>
+      {{ with .searchResult }}
+      <p class="absolute -bottom-5 right-0 text-right text-11 text-secondary mt-1" data-id="blog-search-result" data-single-result="{{ .single }}" data-multiple-result="{{ .multiple }}" data-not-found-result="{{ .notFound }}"></p>
+      {{ end }}
     </div>
     <div class="flex items-center flex-wrap sm:flex-nowrap flex-grow order-2 -ml-3.5 tag-bluttons-container md:ml-11 justify-center md:justify-start">
       {{ range  $idx, $tag := .filterTags }}
