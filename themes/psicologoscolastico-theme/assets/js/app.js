@@ -640,7 +640,10 @@ class App {
 
     searchElement.setAttribute('data-active-tab', tag);
     this.hideAllElements(blogContainerElements);
-    this.hideAllElements(blogButtonElements);
+    for (const blogButtonElement of blogButtonElements) {
+      blogButtonElement.classList.remove(...buttonActiveClasses);
+      blogButtonElement.classList.add(buttonInactiveClass);
+    }
 
     targetContainerElement.classList.remove(HIDDEN_CLASS);
     targetButtonElement.classList.remove(buttonInactiveClass);
