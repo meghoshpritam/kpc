@@ -38,6 +38,59 @@ aboutPlatform:
       icon: users
       details: >
         Accoglie le richieste di insegnanti che osservano situazioni critiche o che desiderano un feedback rispetto alla gestione di casi delle loro classi
+
+ourFormula:
+  heading:
+    primary: La Nostra
+    secondary: Formula
+  details: >
+    SICUREZZA IN SE STESSI + MIGLIORE APPRENDIMENTO = STARE BENE A SCUOLA
+  youCanDo:
+    title: >
+      Cosa puoi <span>fare?</span>
+    image:
+      url: /images/meeting.webp
+      alt: Cosa puoi fare?
+    list:
+      - title: "Pensa alla tua domanda"
+        icon: "four-boxes"
+      - title: "Compila il questionario "
+        icon: "two-boxes"
+      - title: "Fissa un colloquio con noi!"
+        icon: "users"
+  tools:
+    title: >
+      <span>Strumenti</span> per insegnanti e studenti
+    details: >
+      In questa piattaforma puoi trovare  molti consigli e strumenti didattici costruiti per essere distribuiti e utilizzati durante le lezioni.
+    image:
+      url: /images/tools-for-teachers-and-students.webp
+      alt: Strumenti per insegnanti e studenti
+  location:
+    title: >
+      Consigli, <span>Schede didattiche</span>, Mappe 
+    details: >
+      Studiare non è mai stato così semplice. Siamo qui per rendere il tuo apprendimento divertente e stimolante.
+    image:
+      url: /images/advice-didactic-cards-maps.webp
+      alt: Consigli, Schede didattiche, Mappe
+  managementTools:
+    title: >
+      <span>Strumenti</span> di gestione della classe
+    details: >
+      Creare esperienze di apprendimento efficaci in classe non è mai stato semplice… oggi più che mai! Lo psicologo scolastico ti aiuta a trovare la strada giusta  per “contribuire” a migliorare il livello di motivazione di ogni studente.
+    image:
+      url: /images/classroom-management-tools.webp
+      alt: Strumenti di gestione della classe
+  about:
+    title: >
+      <span>Parliamone!</span>
+    details: >
+      Siamo pronti a rispondere alle tue domade in presenza o da remoto, cerchiamo insieme la soluzione al tuo problema.
+    image:
+      url: /images/lets-talk-about.webp
+      alt: Parliamone!
+
 statistics:
   heading: "Il nostro inconscio in cifre:"
   circles:
