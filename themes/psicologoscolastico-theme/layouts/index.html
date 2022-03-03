@@ -76,12 +76,63 @@
 {{ end }}
 {{/* about platform end  */}}
 
-{{/* out formula start */}}
-{{ with .Params.ourFormula }}
-<section class="container px-4 mx-auto mt-32">
+{{/* why us section start */}}
+{{ with .Params.whyUs }}
+<section class="container px-4 mx-auto mt-36">
   {{ with .heading }}
   <h2 class="text-3xl font-bold text-center">
-    <span class=" mr-1.5">{{ .primary }}</span>
+    <span class=" mr-1.5 text-primary">{{ .primary }}</span>
+    <span class="text-secondary">{{ .secondary }}</span>
+  </h2>
+  {{ end }}
+  <p class="max-w-2xl mx-auto text-xl text-center mt-7 text-gray2">{{ .details | markdownify }}</p>
+  <div class="grid grid-cols-1 mt-32 md:grid-cols-2 gap-x-28 gap-y-14">
+    {{ range .points }}
+    <a href="{{ .url }}" class="relative block bg-red-200 group rounded-2xl">
+      {{ with .image }}
+      <img src="{{ .url }}" alt="{{ .alt }}" class="w-full h-auto rounded-2xl">
+      {{ end }}
+      <div class="absolute inset-0 flex flex-col justify-center h-full text-center bg-black bg-opacity-40 rounded-2xl group-hover:bg-opacity-50">
+        <h3 class="text-2xl font-semibold text-white mb-3.5">{{ .title }}</h3>
+        <span class="px-16 py-5 mx-auto text-white border-2 border-white rounded-full max-w-min whitespace-nowrap hover:border-sky-blue hover:bg-sky-blue hover:bg-opacity-90">{{ .linkLabel }}</span>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+  <div class="grid grid-cols-1 mt-32 md:grid-cols-2 gap-x-28 gap-y-14">
+    {{ with .videoSection }}
+    <div class="flex flex-col justify-center">
+      <div class="pr-9">
+        <h3 class="text-3xl font-medium text-primary span-text-secondary">{{ .title | markdownify }}</h3>
+        <div class="mt-4 text-xl text-gray2">{{ .details }}</div>
+      </div>
+    </div>
+    <div class="relative p-4">
+      <div class="absolute top-0 left-0 bg-sky-blue rounded-2xl w-28 h-28"></div>
+      {{ with .video }}
+      <a href="{{ .url }}" class="block rounded-2xl group">
+        <img src="{{ .thumbnail }}" alt="{{ .alt }}" class="relative z-10 w-full h-auto rounded-2xl">
+        <div class="absolute inset-0 z-20 flex flex-col items-center justify-center m-4 bg-black group-hover:bg-opacity-20 rounded-2xl bg-opacity-10">
+          <svg class="w-20 h-20 text-primary">
+            <use xlink:href="#shape-play-button" />
+          </svg>
+        </div>
+      </a>
+      {{ end }}
+      <div class="absolute bottom-0 right-0 w-48 h-48 bg-secondary rounded-2xl"></div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{/* why us section end */}}
+
+{{/* out formula start */}}
+{{ with .Params.ourFormula }}
+<section class="container px-4 mx-auto mt-48">
+  {{ with .heading }}
+  <h2 class="text-3xl font-bold text-center">
+    <span class=" mr-1.5 text-primary">{{ .primary }}</span>
     <span class="text-secondary">{{ .secondary }}</span>
   </h2>
   {{ end }}

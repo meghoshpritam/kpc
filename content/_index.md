@@ -39,6 +39,35 @@ aboutPlatform:
       details: >
         Accoglie le richieste di insegnanti che osservano situazioni critiche o che desiderano un feedback rispetto alla gestione di casi delle loro classi
 
+whyUs:
+  heading:
+    primary: Perchè scegliere lo
+    secondary: Psicologo scolastico?
+  details: >
+    Il <span>90%</span> degli studenti grazie ai nostri consigli hanno risolto i loro problemi scolastici 
+  points:
+    - title: "PER INSEGNANTI E GENITORI"
+      url: ""
+      linkLabel: "Consigli utili"
+      image:
+        url: "/images/teachers-and-parents.webp"
+        alt: "Per insegnanti e genitori"
+    - title: "PER STUDENTI"
+      url: ""
+      linkLabel: "Consigli utili"
+      image:
+        url: "/images/students.webp"
+        alt: "Per studenti"
+  videoSection:
+    title: >
+      Crediamo fortemente nel lavoro di squadra <span>e insieme ti aiuteremo a vincere ogni sfida </span>
+    details: >
+      L’apprendimento passa attraverso le emozioni e la relazione. Pertanto ti aiuteremo a lavorare sul terreno delle emozioni per migliorare la tua esperienza scolastica.
+    video:
+      url: ""
+      thumbnail: "/images/confident-teacher-explaining.webp"
+      alt: "Crediamo fortemente nel lavoro di squadra e insieme ti aiuteremo a vincere ogni sfida "
+
 ourFormula:
   heading:
     primary: La Nostra
