@@ -1,173 +1,34 @@
-{{ define "mailIcon" }}
-{{ if .alternative }}
-{{ with $.ctx }}
-<div title="{{ .email.label }}" role="button" tabindex="0" onclick="App.contactFormScroll();">
-  <svg class="w-10 text-white duration-500 ease-in-out cursor-pointer h-7 hover:text-g3 hover:shadow-md">
-    <use xlink:href="#shape-mail" />
-  </svg>
-</div>
-{{ end }}
-{{ else }}
-<div title="{{ .email.label }}" role="button" tabindex="0" onclick="App.contactFormScroll();">
-  <svg class="w-10 duration-300 ease-in-out rounded-sm cursor-pointer h-7 hover:shadow-circle hover:bg-transparent">
-    <use xlink:href="#shape-mail-g10" />
-  </svg>
-</div>
-{{ end }}
-{{ end }}
-
-{{ define "ctaButton" }}
-{{ if .alternative }}
-{{ with $.ctx }}
-<a class="text-lavender bg-white px-4 py-3 rounded-full ease-in-out duration-500 hover:shadow-md hover:bg-g3 hover:text-white text-3.75 font-semibold" href="{{ .button.url | relURL }}" title="{{ .button.label }}" aria-label="{{ .button.label }}">
-  {{ .button.label }}
-</a>
-{{ end }}
-{{ else }}
-<a class="text-white single-template-page-hero-button-0506 px-4 py-3 rounded-full ease-in-out duration-300 hover:shadow-circle text-3.75 font-semibold" href="{{ .button.url | relURL }}" title="{{ .button.label }}" aria-label="{{ .button.label }}">
-  {{ .button.label }}
-</a>
-{{ end }}
-{{ end }}
-
-{{ define "aLink" }}
-{{ if .alternative }}
-{{ with .ctx.link }}
-<a href="{{ .url | relURL }}" aria-label="{{ .label }}" title="{{ .label }}" class="text-white hover:text-g3 ease-in-out duration-500 {{ if eq $.ctx.site (.url | relURL) }} underline font-bold text-g3 {{ end }}">
-  {{ .label }}
-</a>
-{{ end }}
-{{ else}}
-{{ with .link }}
-<a href="{{ .url | relURL }}" aria-label="{{ .label }}" title="{{ .label }}" class="hover:text-g1 ease-in-out duration-500 {{ if eq $.site (.url | relURL) }} underline font-bold {{ end }}">
-  {{ .label }}
-</a>
-{{ end }}
-{{ end }}
-{{ end }}
-
-
-{{ define "breadcrumb2" }}
-<div class="text-sm font-medium text-white font-montserrat">
-  <h6 class="pl-3">
-    <a href="{{ "/" | relLangURL }}" class="hover:text-current hover:text-g3">Home</a>
-    {{ $relPermalink := .RelPermalink }}
-    {{ $url := "" }}
-    {{ $lng :=.Site.Language.Lang }}
-    {{ range $idx, $ctx := (split .RelPermalink "/") }}
-    {{ if gt (len $ctx ) 0 }}
-    {{ $url = print $url "/" $ctx }}
-    {{ if eq (len (split $relPermalink  "/") ) (add $idx 2 ) }}
-    > <a href="{{ print $url "/" | relURL }}" class="underline text-purple2 hover:text-white">
-      {{ humanize $ctx | title }}
-    </a>
-    {{ else }}
-    > <a href="{{ print $url "/" | relURL }}" class="hover:text-g3">
-      {{ humanize $ctx | title }}
-    </a>
-    {{ end }}
-    {{ end }}
-    {{ end }}
-  </h6>
-</div>
-{{ end }}
-
-{{ define "scrollNav" }}
-{{ $siteLink := .RelPermalink }}
-<nav class="fixed top-0 left-0 right-0 z-50 hidden shadow-xl scroll-header-1206 gradient-rectangle-border">
-  <div class="container flex items-center flex-grow px-5 py-4 mx-auto -mt-2 space-x-3 md:py-5 lg:py-6">
-    <div class="lg:flex-grow">
-      <div class="flex items-center flex-grow">
-        <a href="{{- .Site.Home.RelPermalink -}}" title="psymargiotta" class="sm:mr-3">
-          <svg class="w-20 h-12 lg:w-24 lg:h-14">
-            <use xlink:href="#shape-logo-white" />
-          </svg>
-        </a>
-        {{ with .Site.Data.header }}
-        <div class="flex-grow hidden space-x-5 sm:flex">
-          {{ range $idx, $ctx := .primaryMenu }}
-          <div class="{{ if eq $idx 0 }} hidden sm:block {{ else if and (gt $idx 0) (lt $idx 2)  }} hidden md:block {{ else }} hidden lg:block {{ end }}">
-            {{ block "aLink" (dict "alternative" true "ctx" (dict "link" $ctx "site" $siteLink)) }}
-            {{ end }}
-          </div>
-          {{ end }}
-        </div>
-      </div>
-      <div class="hidden mt-3 xl:block">
-        {{ block "breadcrumb2" $ }}{{ end }}
-      </div>
-    </div>
-
-    {{ with .secondaryMenu }}
-    <div class="hidden grid-cols-2 gap-y-10 xl:grid xl:gap-x-5">
-      <div class="flex justify-end col-span-2 transform translate-y-4 space-x-7">
-        <div>
-          {{ block "mailIcon" (dict "alternative" true "ctx" . ) }}
-          {{ end }}
-        </div>
-        <div class="mt-1">
-          {{ block "ctaButton" (dict "alternative" true "ctx" . ) }}
-          {{ end }}
-        </div>
-      </div>
-      {{ range .links }}
-      <div class="items-center justify-between hidden space-x-5 xl:flex">
-        {{ block "aLink" (dict "alternative" true "ctx" (dict "link" . "site" $siteLink)) }}
-        {{ end }}
-      </div>
-      {{ end }}
-    </div>
-    <div class="flex justify-center flex-grow xl:hidden">
-      {{ block "ctaButton" (dict "alternative" true "ctx" . ) }}
-      {{ end }}
-    </div>
-    <div class="hidden mr-2 xm:block xl:hidden md:mr-0">
-      {{ block "mailIcon" (dict "alternative" true "ctx" . ) }}
-      {{ end }}
-    </div>
-    {{ end }}
-
-    {{/* <div class="flex-grow md:hidden"></div>  */}}
-
-    {{/* menu icon start */}}
-    <div class="text-white duration-500 ease-in-out cursor-pointer xl:hidden hover:text-g1" role="button" aria-label="menu" onclick="App.toggleMenu()">
-      <svg class="w-10 h-10">
-        <use xlink:href="#shape-menu-icon"></use>
-      </svg>
-    </div>
-    {{/* menu icon end */}}
-  </div>
-  <div class="container pl-5 pr-5 mx-auto mb-5 -mt-1 md:-mt-3 xl:hidden">
-    {{ block "breadcrumb2" $ }}{{ end }}
-  </div>
-</nav>
-{{ end }}
-</div>
-</nav>
-{{ end }}
-
 {{ $siteLink := $.RelPermalink }}
 {{ with .Site.Data.header }}
 <header class="text-white page-header">
   <div class="container flex px-4 mx-auto py-3.5 items-center">
     {{ with .logo }}
-    <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="flex items-center justify-center mr-20">
+    <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="flex items-center justify-center mr-7 sm:mr-16 md:mr-20">
       <svg class="flex-shrink-0 w-10 h-10 lg:w-12 xl:w-16 lg:h-12 xl:h-16">
         <use xlink:href="#shape-{{ .icon }}" />
       </svg>
-      <div class="flex flex-col ml-6 text-2xl leading-7">
+      <div class="flex flex-col ml-4 leading-5 sm:ml-6 sm:leading-5 md:leading-6 lg:leading-7 sm:text-lg md:text-xl lg:text-2xl">
         <span>Psicologo</span>
         <span>Scolastico</span>
       </div>
     </a>
     {{ end }}
-    {{ range .menuLinks }}
-    <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="mr-9 hover:underline decoration-2">{{ .title }}</a>
-    {{ end }}
+    <div class="items-center hidden lg:flex">
+      {{ range .menuLinks }}
+      <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="mr-9 hover:underline decoration-2">{{ .title }}</a>
+      {{ end }}
+    </div>
     <span class="flex-grow"></span>
     {{ with .contactButton }}
-    <label for="contact-us-dialog" aria-label="{{ .label }}" title="{{ .label }}" class="px-6 py-4 text-white duration-300 ease-in-out border-2 cursor-pointer border-sky-blue bg-sky-blue hover:bg-transparent hover:text-sky-blue rounded-2xl">{{ .label }}</label>
+    <label for="contact-us-dialog" aria-label="{{ .label }}" title="{{ .label }}" class="px-4 py-2.5 sm:px-5 sm:py-3 text-sm text-white duration-300 ease-in-out border-2 cursor-pointer lg:text-base lg:px-6 lg:py-4 border-sky-blue bg-sky-blue hover:bg-transparent hover:text-sky-blue rounded-2xl">{{ .label }}</label>
     {{ end }}
+
+    <button class="text-white duration-300 ease-in-out border-none outline-none cursor-pointer lg:hidden hover:text-sky-blue ml-9" aria-label="menu" onclick="App.toggleMenu()">
+      <svg class="w-10 h-10">
+        <use xlink:href="#shape-menu-icon"></use>
+      </svg>
+    </button>
   </div>
+
 </header>
 {{ end }}
