@@ -120,6 +120,47 @@ ourFormula:
       url: /images/lets-talk-about.webp
       alt: Parliamone!
 
+alwaysListening:
+  shortTitle: "SEMPRE IN ASCOLTO"
+  title: >
+    Parlare con lo <span>Psicologo Scolastico</span> non è mai stato cosi facile
+  details: >
+    Siamo presenti sulle migliori piattaforme di videoconferenza  per garantirti una comunicazione sicura e immediata.
+  cta:
+    label: "Fissa un colloquio"
+    url: ""
+  image:
+      url: /images/social.webp
+      alt: Parlare con lo Psicologo Scolastico non è mai stato cosi facile
+
+testimonial:
+  shortTitle: "TESTIMONIAL"
+  title: >
+    Cosa pensi di noi?
+  details: >
+    Abbiamo ottenuto numerose valutazioni positive dai nostri utenti in tutto il mondo. 
+
+
+    Alcuni studenti e insegnanti sono stati molto soddisfatti dei nostri consigli.
+  reviews: "{0} reviews"
+  list:
+    - image: "/images/testimonial.webp"
+      name: "Simona Russo"
+      review: >
+        "E’ stato fondamentale per affrontare un periodo difficile, grazie alla sua grande competenza, conoscenza ed esperienza professionale."
+      rating: 5
+    - image: "/images/testimonial.webp"
+      name: "Andrea Grasso"
+      review: >
+        "E’ stato fondamentale per affrontare un periodo difficile, grazie alla sua grande competenza, conoscenza ed esperienza professionale."
+      rating: 5
+
+news:
+  title: >
+    Ultime Notizie e Risorse
+  details: >
+    See the developments that have occurred to Skillines in the world
+
 layout: index
 ---
 

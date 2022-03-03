@@ -269,13 +269,107 @@
 {{ end }}
 {{/* out formula end */}}
 
-{{/* services section start */}}
-{{/* services section end */}}
+{{/* always listing section start */}}
+{{ with .Params.alwaysListening }}
+<section class="container grid grid-cols-1 px-4 mx-auto lg:grid-cols-2 mt-72">
+  <div class="pr-24">
+    {{ with .image }}
+    <img src="{{ .url }}" alt="{{ .alt }}" class="w-full h-auto">
+    {{ end }}
+  </div>
+  <div>
+    <div class="flex items-center mb-7">
+      <span class="h-px mr-3 w-17 bg-indigo2"></span>
+      <p class="text-base font-nunitoSans text-indigo2">{{ .shortTitle }}</p>
+    </div>
+    {{ with .title }}
+    <h3 class="text-4xl font-semibold text-primary span-text-secondary">
+      {{ . | markdownify }}
+    </h3>
+    {{ end }}
+    <div class="mt-4 mb-8 text-lg text-gray2">
+      {{ .details }}
+    </div>
+    {{ with .cta }}
+    <a href="{{ .url}}" title="{{ .label }}" aria-label="{{ .label }}" class="inline-block px-8 py-4 font-bold text-white border-2 rounded-full border-secondary bg-secondary hover:text-secondary hover:bg-white">{{ .label }}</a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{/* always listing section end */}}
 
-{{/* article section start */}}
-{{/* article section end */}}
+{{/* testimonial section start */}}
+{{ with .Params.testimonial }}
+<section class="container grid grid-cols-1 px-4 mx-auto lg:grid-cols-2 mt-72">
+  <div>
+    <div class="flex items-center mb-7">
+      <span class="h-px mr-3 w-17 bg-indigo2"></span>
+      <p class="text-base font-nunitoSans text-indigo2">{{ .shortTitle }}</p>
+    </div>
+    {{ with .title }}
+    <h3 class="text-4xl font-semibold text-primary span-text-secondary">
+      {{ . | markdownify }}
+    </h3>
+    {{ end }}
+    <div class="max-w-full mb-10 text-lg prose mt-9 text-gray2">
+      {{ .details | markdownify }}
+    </div>
+    {{ with .cta }}
+    <a href="{{ .url}}" title="{{ .label }}" aria-label="{{ .label }}" class="inline-block px-8 py-4 font-bold text-white border-2 rounded-full border-secondary bg-secondary hover:text-secondary hover:bg-white">{{ .label }}</a>
+    {{ end }}
+  </div>
+  {{ $review := .reviews }}
+  {{ $numReviews := len .list }}
+  <div class="">
+    {{ range $idx, $testimonial := .list }}
+    <div class="{{ if ne $idx 0 }} hidden {{ end }} relative pb-24 pr-36">
+      <div class="relative">
+        <img src="{{ .image }}" alt="{{ .name }}" class="w-full h-auto rounded-2xl">
+        <div class="absolute top-0 bottom-0 right-0 flex flex-col justify-center">
+          <button class="flex flex-col items-center justify-center w-16 h-16 bg-white rounded-full hover:text-white hover:bg-sky-blue text-sky-blue">
+            <svg class="w-4 h-7">
+              <use xlink:href="#shape-arrow" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="absolute bottom-0 right-0 py-8 ml-16 bg-white rounded-2xl px-14 shadow-card1">
+        <div class="text-lg font-nunitoSans text-gray2">{{ .review | markdownify }}</div>
+        <div class="flex items-center justify-between mt-9">
+          <div class="text-lg font-nunitoSans text-indigo3">{{ .name }}</div>
+          <div>
+            <div class="flex items-center">
+              {{ range seq .rating }}
+              <svg class="w-5 h-5 mr-1">
+                <use xlink:href="#shape-star5" />
+              </svg>
+              {{ end }}
+            </div>
+            <p class="mt-1 text-sm font-nunitoSans text-indigo4">{{ replace $review "{0}" $numReviews }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{/* testimonial section end */}}
 
-
+{{/* news section start */}}
+{{ with .Params.news }}
+<section class="container px-4 mx-auto mt-36 mb-44">
+  {{ with .title }}
+  <h3 class="text-4xl font-semibold text-center text-primary span-text-secondary">
+    {{ . | markdownify }}
+  </h3>
+  {{ end }}
+  <div class="max-w-full mb-10 text-lg prose text-center mt-9 text-gray2">
+    {{ .details | markdownify }}
+  </div>
+</section>
+{{ end }}
+{{/* news section end */}}
 
 {{ partial "schema/website.html" . }}
 
