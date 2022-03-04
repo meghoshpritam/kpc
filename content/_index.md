@@ -142,7 +142,7 @@ testimonial:
 
 
     Alcuni studenti e insegnanti sono stati molto soddisfatti dei nostri consigli.
-  reviews: "{0} reviews"
+  reviews: "{0}/{1} reviews"
   list:
     - image: "/images/testimonial.webp"
       name: "Simona Russo"

@@ -322,15 +322,23 @@
   {{ $numReviews := len .list }}
   <div class="">
     {{ range $idx, $testimonial := .list }}
-    <div class="{{ if ne $idx 0 }} hidden {{ end }} relative pb-24 pr-36">
+    <div class="{{ if ne $idx 0 }} hidden {{ end }} relative pb-24 pr-36" data-testimonial-id="{{ $idx }}">
       <div class="relative">
         <img src="{{ .image }}" alt="{{ .name }}" class="w-full h-auto rounded-2xl">
-        <div class="absolute top-0 bottom-0 right-0 flex flex-col justify-center">
-          <button class="flex flex-col items-center justify-center w-16 h-16 bg-white rounded-full hover:text-white hover:bg-sky-blue text-sky-blue">
-            <svg class="w-4 h-7">
-              <use xlink:href="#shape-arrow" />
-            </svg>
-          </button>
+        <div class="absolute inset-0 flex flex-col justify-center">
+          <div class="flex items-center">
+            <button type="button" aria-label="Previous testimonial" onclick="App.previousTestimonial(Number('{{ $idx }}'))" class="{{ if eq $idx 0 }} hidden {{ end }} flex flex-col items-center justify-center w-16 h-16 bg-white rounded-full hover:text-white hover:bg-sky-blue text-sky-blue">
+              <svg class="w-4 transform rotate-180 h-7">
+                <use xlink:href="#shape-arrow" />
+              </svg>
+            </button>
+            <span class="flex-grow"></span>
+            <button type="button" aria-label="Next testimonial" onclick="App.nextTestimonial(Number('{{ $idx }}'))" class="{{ if eq (add $idx 1) $numReviews }} hidden {{ end }} flex flex-col items-center justify-center w-16 h-16 bg-white rounded-full hover:text-white hover:bg-sky-blue text-sky-blue">
+              <svg class="w-4 h-7">
+                <use xlink:href="#shape-arrow" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
       <div class="absolute bottom-0 right-0 py-8 ml-16 bg-white rounded-2xl px-14 shadow-card1">
@@ -345,7 +353,9 @@
               </svg>
               {{ end }}
             </div>
-            <p class="mt-1 text-sm font-nunitoSans text-indigo4">{{ replace $review "{0}" $numReviews }}</p>
+            {{ $reviewString := replace $review "{0}" (add $idx 1) }}
+            {{ $reviewString = replace $reviewString "{1}" $numReviews }}
+            <p class="mt-1 text-sm font-nunitoSans text-indigo4">{{ $reviewString }}</p>
           </div>
         </div>
       </div>
