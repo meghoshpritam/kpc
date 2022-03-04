@@ -143,14 +143,14 @@ testimonial:
 
     Alcuni studenti e insegnanti sono stati molto soddisfatti dei nostri consigli.
   reviews: "{0}/{1} reviews"
+  image: "/images/testimonial.webp"
+  imageAlt: "testimonial image"
   list:
-    - image: "/images/testimonial.webp"
-      name: "Simona Russo"
+    - name: "Simona Russo"
       review: >
         "E’ stato fondamentale per affrontare un periodo difficile, grazie alla sua grande competenza, conoscenza ed esperienza professionale."
       rating: 5
-    - image: "/images/testimonial.webp"
-      name: "Andrea Grasso"
+    - name: "Andrea Grasso"
       review: >
         "E’ stato fondamentale per affrontare un periodo difficile, grazie alla sua grande competenza, conoscenza ed esperienza professionale."
       rating: 5
