@@ -129,7 +129,7 @@
 
 {{/* out formula start */}}
 {{ with .Params.ourFormula }}
-<section class="container px-4 mx-auto mt-48">
+<section class="container px-4 pt-48 mx-auto" id="chi-siamo">
   {{ with .heading }}
   <h2 class="text-3xl font-bold text-center">
     <span class=" mr-1.5 text-primary">{{ .primary }}</span>
@@ -291,7 +291,7 @@
       {{ .details }}
     </div>
     {{ with .cta }}
-    <a href="{{ .url}}" title="{{ .label }}" aria-label="{{ .label }}" class="inline-block px-8 py-4 font-bold text-white border-2 rounded-full border-secondary bg-secondary hover:text-secondary hover:bg-white">{{ .label }}</a>
+    <label for="contact-us-dialog" title="{{ .label }}" aria-label="{{ .label }}" class="inline-block px-8 py-4 font-bold text-white border-2 rounded-full cursor-pointer border-secondary bg-secondary hover:text-secondary hover:bg-white">{{ .label }}</label>
     {{ end }}
   </div>
 </section>

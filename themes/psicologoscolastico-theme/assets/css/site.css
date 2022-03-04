@@ -1,7 +1,9 @@
 /* ========================== Global style ============================= */
 html,
-body {
+body,
+* {
   @apply font-poppins;
+  scroll-behavior: smooth;
 }
 
 a,

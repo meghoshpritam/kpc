@@ -47,13 +47,13 @@ whyUs:
     Il <span>90%</span> degli studenti grazie ai nostri consigli hanno risolto i loro problemi scolastici 
   points:
     - title: "PER INSEGNANTI E GENITORI"
-      url: ""
+      url: "/blog/?rel=studenti"
       linkLabel: "Consigli utili"
       image:
         url: "/images/teachers-and-parents.webp"
         alt: "Per insegnanti e genitori"
     - title: "PER STUDENTI"
-      url: ""
+      url: "/blog/?rel=genitori+insegnanti"
       linkLabel: "Consigli utili"
       image:
         url: "/images/students.webp"
@@ -128,7 +128,6 @@ alwaysListening:
     Siamo presenti sulle migliori piattaforme di videoconferenza  per garantirti una comunicazione sicura e immediata.
   cta:
     label: "Fissa un colloquio"
-    url: ""
   image:
       url: /images/social.webp
       alt: Parlare con lo Psicologo Scolastico non è mai stato cosi facile

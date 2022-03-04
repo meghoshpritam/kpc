@@ -11,7 +11,7 @@ menuLinks:
   - title: Blog
     url: "/blog/"
   - title: Chi Siamo
-    url: "/#servizi"
+    url: "/#chi-siamo"
 
 contactButton:
   label: Contattaci
