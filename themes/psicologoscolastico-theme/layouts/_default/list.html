@@ -74,7 +74,7 @@
         <use xlink:href="#shape-search"></use>
       </svg>
       {{ with .searchResult }}
-      <p class="absolute -bottom-5 right-0 text-right text-11 text-secondary mt-1" data-id="blog-search-result" data-single-result="{{ .single }}" data-multiple-result="{{ .multiple }}" data-not-found-result="{{ .notFound }}"></p>
+      <p class="absolute right-0 mt-1 text-right -bottom-5 text-11 text-secondary" data-id="blog-search-result" data-single-result="{{ .single }}" data-multiple-result="{{ .multiple }}" data-not-found-result="{{ .notFound }}"></p>
       {{ end }}
     </div>
     <div class="flex items-center flex-wrap sm:flex-nowrap flex-grow order-2 -ml-3.5 tag-bluttons-container md:ml-11 justify-center md:justify-start">
@@ -97,8 +97,9 @@
 <section data-tag="{{ $tag.id }}" data-id="blog-by-tag-0303" class="container {{ if ne $idx 0 }} hidden {{ end }} grid grid-cols-1 px-4 mx-auto mt-14 sm:grid-cols-2 gap-x-10 mb-28 lg:gap-x-14 xl:gap-x-20 gap-y-24 md:gap-y-28 lg:gap-y-36 xl:gap-y-48 lg:grid-cols-3">
   {{ range $.Pages }}
   {{ if in .Params.tags $tag.id }}
+  {{ $pageLink := .RelPermalink }}
   {{ with .Params }}
-  <a href="{{ .RelPermalink }}" class="flex flex-col h-full bg-white border-2 border-white rounded-3xl shadow-card2 hover:shadow-2xl hover:border-sky-blue" title="{{ .articleData.title | plainify }}" aria-label="{{ .articleData.title | plainify }}">
+  <a href="{{ $pageLink }}" class="flex flex-col h-full bg-white border-2 border-white rounded-3xl shadow-card2 hover:shadow-2xl hover:border-sky-blue" title="{{ .articleData.title | plainify }}" aria-label="{{ .articleData.title | plainify }}">
     <div class="h-56">
       <img src="{{ .coverImage }}" alt="{{ .Title }}" class="w-full h-full bg-center bg-no-repeat bg-cover rounded-xl">
     </div>
