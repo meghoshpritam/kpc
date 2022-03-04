@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $pageData := .Site.Data.singlePageTemplate }}
 {{/* top section start  */}}
-<section class="bg-left-bottom bg-no-repeat bg-cover bg-dark">
+<section class="bg-green-300 bg-left-bottom bg-no-repeat bg-dark">
   {{ partial "header.html" . }}
   {{/* hero section start  */}}
   {{ with .Params.hero }}
@@ -25,5 +25,81 @@
   {{ end }}
   {{/* hero section end  */}}
 </section>
-<section class="px-4 pb-20 mx-auto contauber mt-14"></section>
+
+<section class="container px-4 mx-auto">
+  {{ with .Params.header }}
+  <div class="flex flex-wrap mt-10 lg:mt-16 lg:flex-nowrap">
+    <div class="relative order-2 w-full mb-7 lg:mb-0 md:w-180">
+      {{ $activeTagButton := index .filterTags 0 }}
+      <input type="text" data-id="search-blogs" oninput="App.searchBlog(event)" data-active-tab="{{ $activeTagButton.id }}" placeholder="{{ .search.placeholder }}" class="w-full px-2 py-2 text-sm border rounded-md placeholder-gray3 text-blue-gray border-gray3" />
+      <svg class="w-3.5 h-3.5 absolute top-2.5 right-3.5 text-blue-gray">
+        <use xlink:href="#shape-search"></use>
+      </svg>
+      {{ with .searchResult }}
+      <p class="absolute right-0 mt-1 text-right -bottom-5 text-11 text-secondary" data-id="blog-search-result" data-single-result="{{ .single }}" data-multiple-result="{{ .multiple }}" data-not-found-result="{{ .notFound }}"></p>
+      {{ end }}
+    </div>
+    <div class="flex items-center flex-wrap sm:flex-nowrap flex-grow order-2 -ml-3.5 tag-bluttons-container md:ml-11 justify-center md:justify-start">
+      {{ range  $idx, $tag := .filterTags }}
+      {{ $cls := "border-light-gray3" }}
+      {{ if eq $idx 0 }}
+      {{ $cls = "border-sky-blue text-white bg-sky-blue" }}
+      {{ end }}
+      <button onclick="App.showBlogsByTag('{{ $tag.id }}');" data-id="tag-selector-button-0303" class="mx-4 text-sm px-6 py-0.5 mb-4 sm:mb-0 shadow-button rounded-md border hover:bg-white hover:border-sky-blue hover:text-sky-blue {{ $cls }}" data-tag="{{ $tag.id }}">{{ $tag.label }}</button>
+      {{ end }}
+    </div>
+    <div class="flex items-center justify-end flex-grow order-1 w-full sm:flex-nowrap lg:order-2 mb-7 lg:mb-0">
+      {{ partial "breadcrumb.html" $ }}
+    </div>
+  </div>
+  {{ end }}
+</section>
+
+
+<section class="container px-4 pb-20 mx-auto text-sm mt-14 text-blue-gray2">
+  {{ with .Params.listHeader }}
+  <div class="hidden grid-cols-12 mb-8 font-bold lg:grid-cols-10 gap-x-5 md:grid">
+    <div class="col-span-2 lg:col-span-1">
+      {{ .area }}
+    </div>
+    <div class="col-span-4 lg:col-span-5">
+      {{ .description }}
+    </div>
+    <div class="col-span-2 lg:col-span-1">
+      {{ .age }}
+    </div>
+    <div class="col-span-2 lg:col-span-1">
+      {{ .date }}
+    </div>
+    <div class="col-span-2">
+      {{ .file }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ range .Params.lists }}
+  <div class="grid grid-cols-2 mb-14 md:mb-6 md:grid-cols-12 lg:grid-cols-10 gap-x-5 gap-y-2">
+    <div class="order-1 col-span-1 md:col-span-2 lg:col-span-1 text-sky-blue">
+      {{ .area }}
+    </div>
+    <div class="order-3 col-span-2 md:order-1 md:col-span-4 lg:col-span-5">
+      {{ .description }}
+    </div>
+    <div class="order-4 col-span-1 md:order-1 md:col-span-2 lg:col-span-1">
+      {{ .age }}
+    </div>
+    <div class="order-2 col-span-1 text-right md:order-1 md:text-left md:col-span-2 lg:col-span-1">
+      {{ .date }}
+    </div>
+    <div class="order-5 col-span-1 md:order-1 md:col-span-2">
+      <a href="{{ .file }}" download title="{{ .description }}" aria-label="{{ .description }}" class="flex justify-end md:justify-start group">
+        <svg class="w-3.5 h-3.5 text-sky-blue group-hover:text-secondary mr-1.5 ease-in-out duration-300">
+          <use xlink:href="#shape-download"></use>
+        </svg>
+        <span class="text-xs font-bold duration-300 ease-in-out text-secondary group-hover:underline">{{ $.Params.listHeader.downloadLabel }}</span>
+      </a>
+    </div>
+  </div>
+  {{ end }}
+</section>
 {{ end }}
