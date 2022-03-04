@@ -39,24 +39,17 @@ studyMaterial:
   details: >
     Grazie al materiale fornito dallo Psicologo Scolastico ho acquisito un metodo di studio più adatto a me.
   cta:
-    url: ""
+    url: "/servizi/"
     label: "Scopri di più"
 
-mostAppreciatedArticle:
-  title: "Artcolo più apprezzato"
-  details: >
-    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution...
-  link: ""
-  image:
-    url: "/images/most-appreciated-article.webp"
-    alt: "Artcolo più apprezzato"
+mostAppreciatedArticle: "/blog/strategie-educative-peer-tutoring/"
 
 downloadCenter:
   title: "Scarica i nostri <span>contenuti</span>"
   details: >
     Grazie al materiale fornito dallo Psicologo Scolastico ho acquisito un metodo di studio più adatto a me.
   cta:
-    link: ""
+    link: "/servizi/"
     label: "Scopri di più"
   image:
     url: "/images/download-center.webp"

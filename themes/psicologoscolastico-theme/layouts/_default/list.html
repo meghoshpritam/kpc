@@ -146,26 +146,27 @@
 </section>
 {{ end }}
 
-{{ with .Params.mostAppreciatedArticle }}
+{{ $mostAppreciatedArticle:= .Params.mostAppreciatedArticle }}
+{{ range $.Pages  }}
+{{ if eq $mostAppreciatedArticle .RelPermalink }}
 <section class="mt-64">
   <div class="container grid grid-cols-1 px-4 mx-auto lg:grid-cols-2 bg-white1">
-    <div class="flex flex-col justify-center sm:px-10 lg:px-14 xl:px-17">
+    <div class="flex flex-col justify-center py-10 sm:px-10 lg:px-14 xl:px-17">
       <a class="block group" href="">
-        <h2 class="text-4xl font-bold mb-7 text-secondary">{{ .title }}</h2>
-        <div class="text-sm text-gray2">{{ .details | markdownify }}</div>
+        <h2 class="text-4xl font-bold mb-7 text-secondary">{{ .Params.articleData.title }}</h2>
+        <div class="text-sm text-gray2">{{ truncate 250 "..." (.Params.shortDescription | plainify) }}</div>
         <div class="flex items-center justify-between text-sm mt-9">
-          <div class="text-gray2">May 20</div>
+          <div class="text-gray2">{{ dateFormat "02 July 2006" .Lastmod }}</div>
           <span class="font-bold duration-300 ease-in-out text-dark group-hover:text-secondary">{{ $.Params.article.readMore }}</span>
         </div>
       </a>
     </div>
     <div>
-      {{ with .image }}
-      <img src="{{ .url }}" alt="{{ .alt }}" class="w-full h-full bg-left-top bg-no-repeat bg-cover">
-      {{ end }}
+      <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" class="w-full h-full bg-left-top bg-no-repeat bg-cover">
     </div>
   </div>
 </section>
+{{ end }}
 {{ end }}
 
 {{ with .Params.downloadCenter }}
