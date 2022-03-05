@@ -37,145 +37,33 @@ listHeader:
   downloadLabel: "Download Gratis"
 
 lists:
-  - area: "Studente"
+  - area: studenti
     description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
+      Epica - L'ira di Achille in CAA
+    age: "11 - 16 anni"
+    date: "2021-02-27"
+    file: "/download/Epica - L_ira di Achille in CAA.pdf"
 
-  - area: "Studente"
+  - area: insegnanti
     description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
+     Linee guida per compilare il PEI (piano educativo individualizzato)
+    age: "11 - 16 anni"
+    date: "2021-02-28"
+    file: "/download/Linee guida per compilare il PEI (piano educativo individualizzato).pdf"
   
-  - area: "Studente"
+  - area: genitori
     description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
+      Come leggere il PEI (piano educativo individualizzato)
+    age: "11 - 16 anni"
+    date: "2021-03-01"
+    file: "/download/Come leggere il PEI (piano educativo individualizzato).pdf"
   
-  - area: "Studente"
+  - area: insegnanti
     description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
-  
-  - area: "Studente"
-    description: >
-      An unfaithful newly-wed wife, an estranged father, a priest and an angry son suddenly find themselves in the most unexpected predicaments, each poised to experience their destiny, all on one fateful day.
-    age: "10 - 15 anni"
-    date: "2022-02-01"
-    file: "/download/file.pdf"
+      Modello verifica intermedia del PEI
+    age: "11 - 16 anni"
+    date: "2021-03-01"
+    file: "/download/Modello verifica intermedia del PEI.pdf"
   
 
 layout: services
