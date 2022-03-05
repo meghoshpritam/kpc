@@ -332,13 +332,13 @@
         <img src="{{ .image }}" alt="{{ .imageAlt }}" class="w-full h-auto rounded-2xl">
         <div class="absolute inset-0 flex flex-col justify-center">
           <div class="flex items-center">
-            <button type="button" aria-label="Previous testimonial" onclick="App.previousTestimonial(Number('{{ $numReviews }}'));" class="flex flex-col items-center justify-center w-16 h-16 bg-white rounded-full hover:text-white hover:bg-sky-blue text-sky-blue">
+            <button type="button" aria-label="Previous testimonial" data-id="testimonial-previous-btn" onclick="App.previousTestimonial();" class="flex flex-col items-center justify-center hidden w-16 h-16 bg-white rounded-full hover:text-white hover:bg-sky-blue text-sky-blue">
               <svg class="w-4 transform rotate-180 h-7">
                 <use xlink:href="#shape-arrow" />
               </svg>
             </button>
             <span class="flex-grow"></span>
-            <button type="button" aria-label="Next testimonial" onclick="App.nextTestimonial(Number('{{ $numReviews }}'));" class="flex flex-col items-center justify-center w-16 h-16 bg-white rounded-full hover:text-white hover:bg-sky-blue text-sky-blue">
+            <button type="button" aria-label="Next testimonial" data-id="testimonial-next-btn" onclick="App.nextTestimonial(Number('{{ $numReviews }}'));" class="flex flex-col items-center justify-center w-16 h-16 bg-white rounded-full hover:text-white hover:bg-sky-blue text-sky-blue">
               <svg class="w-4 h-7">
                 <use xlink:href="#shape-arrow" />
               </svg>

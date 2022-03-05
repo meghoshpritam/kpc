@@ -684,20 +684,46 @@ class App {
     this.showAllElements(matchElements);
   };
 
-  static previousTestimonial = (currentIndex) => {
-    const testimonialElements = document.querySelectorAll(`[${TESTIMONIAL_ID}]`);
-    const targetTestimonialElement = document.querySelector(`[${TESTIMONIAL_ID}="${currentIndex - 1}"]`);
+  static getTestimonialElements = () => {
+    const previousBtnElement = document.querySelector('[data-id="testimonial-previous-btn"]');
+    const nextBtnElement = document.querySelector('[data-id="testimonial-next-btn"]');
+    const activeTestimonials = document.querySelectorAll(`[${TESTIMONIAL_ID}]:not(.hidden)`);
 
-    this.hideAllElements(testimonialElements);
-    targetTestimonialElement.classList.remove(HIDDEN_CLASS);
+    return {
+      previousBtnElement,
+      nextBtnElement,
+      activeTestimonials,
+    };
   };
 
-  static nextTestimonial = (currentIndex) => {
-    const testimonialElements = document.querySelectorAll(`[${TESTIMONIAL_ID}]`);
-    const targetTestimonialElement = document.querySelector(`[${TESTIMONIAL_ID}="${currentIndex + 1}"]`);
+  static previousTestimonial = () => {
+    const { previousBtnElement, nextBtnElement, activeTestimonials } = this.getTestimonialElements();
+    const activeTestimonial = activeTestimonials[0];
 
-    this.hideAllElements(testimonialElements);
-    targetTestimonialElement.classList.remove(HIDDEN_CLASS);
+    this.hideAllElements(activeTestimonials);
+    const currentIndex = Number(activeTestimonial.dataset.testimonialId);
+    if (currentIndex - 1 === 0) {
+      previousBtnElement.classList.add(HIDDEN_CLASS);
+    }
+    if (currentIndex > 0) {
+      nextBtnElement.classList.remove(HIDDEN_CLASS);
+      activeTestimonial.previousElementSibling.classList.remove(HIDDEN_CLASS);
+    }
+  };
+
+  static nextTestimonial = (totalTestimonial) => {
+    const { previousBtnElement, nextBtnElement, activeTestimonials } = this.getTestimonialElements();
+    const activeTestimonial = activeTestimonials[0];
+
+    this.hideAllElements(activeTestimonials);
+    const currentIndex = Number(activeTestimonial.dataset.testimonialId);
+    if (currentIndex + 2 === totalTestimonial) {
+      nextBtnElement.classList.add(HIDDEN_CLASS);
+    }
+    if (currentIndex + 1 < totalTestimonial) {
+      previousBtnElement.classList.remove(HIDDEN_CLASS);
+      activeTestimonial.nextElementSibling.classList.remove(HIDDEN_CLASS);
+    }
   };
 
   static playHpVideo = () => {
