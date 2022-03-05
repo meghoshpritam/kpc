@@ -54,7 +54,7 @@
       {{ if eq $idx 0 }}
       {{ $cls = "border-sky-blue text-white bg-sky-blue" }}
       {{ end }}
-      <button onclick="App.showBlogsByTag('{{ $tag.id }}');" data-id="tag-selector-button-0303" class="mx-4 text-sm px-6 py-0.5 mb-4 sm:mb-0 shadow-button rounded-md border hover:bg-white hover:border-sky-blue hover:text-sky-blue {{ $cls }}" data-tag="{{ $tag.id }}">{{ $tag.label }}</button>
+      <button onclick="App.showBlogsByTag('{{ $tag.id }}');" data-active="{{ if eq $idx 0 }} true {{ else }} false {{end}}" data-id="tag-selector-button-0303" class="mx-4 text-sm px-6 py-0.5 mb-4 sm:mb-0 shadow-button rounded-md border hover:bg-white hover:border-sky-blue hover:text-sky-blue {{ $cls }}" data-tag="{{ $tag.id }}">{{ $tag.label }}</button>
       {{ end }}
     </div>
     <div class="flex items-center justify-end flex-grow order-1 w-full sm:flex-nowrap lg:order-2 mb-7 lg:mb-0">
@@ -64,32 +64,30 @@
   {{ end }}
 </section>
 
-{{ range $idx, $tag := .Params.header.filterTags }}
-<section data-tag="{{ $tag.id }}" data-id="blog-by-tag-0303" class="container {{ if ne $idx 0 }} hidden {{ end }} grid grid-cols-1 px-4 mx-auto mt-14 sm:grid-cols-2 gap-x-10 mb-28 lg:gap-x-14 xl:gap-x-20 gap-y-24 md:gap-y-28 lg:gap-y-36 xl:gap-y-48 lg:grid-cols-3">
-  {{ range $.Pages }}
-  {{ if in .Params.tags $tag.id }}
+<section class="container grid grid-cols-1 px-4 mx-auto mt-14 sm:grid-cols-2 gap-x-10 mb-28 lg:gap-x-14 xl:gap-x-20 gap-y-24 md:gap-y-28 lg:gap-y-36 xl:gap-y-48 lg:grid-cols-3">
+  {{ $firstTag := index .Params.header.filterTags 0 }}
+  {{ range .Pages }}
   {{ $pageLink := .RelPermalink }}
   {{ with .Params }}
-  <a href="{{ $pageLink }}" class="flex flex-col h-full bg-white border-2 border-white rounded-3xl shadow-card2 hover:shadow-2xl hover:border-sky-blue" title="{{ .articleData.title | plainify }}" aria-label="{{ .articleData.title | plainify }}">
+  <a href="{{ $pageLink }}" data-id="blog-0503" data-tags='{{ delimit .tags "," }}' class="{{ if not (in .tags $firstTag.id) }} hidden {{ end }} flex flex-col h-full bg-white rounded-3xl shadow-card2 hover:shadow-2xl group" title="{{ .articleData.title | plainify }}" aria-label="{{ .articleData.title | plainify }}">
     <div class="h-56">
-      <img src="{{ .coverImage }}" alt="{{ .Title }}" class="object-cover object-center w-auto h-full rounded-xl">
+      <img src="{{ .coverImage }}" alt="{{ .Title }}" class="object-cover object-center w-full h-full rounded-xl">
     </div>
-    <h3 class="flex-grow px-5 py-3 text-2xl text-indigo1">{{ .articleData.title }}</h3>
+    <h3 class="flex-grow px-5 py-3 text-2xl duration-300 ease-in-out text-indigo1 group-hover:text-secondary">{{ .articleData.title }}</h3>
     <div class="mt-1.5 px-5 text-sm">{{ truncate 200 "..." .shortDescription }}</div>
     <div class="flex items-center justify-between pb-5 pl-5 text-xs mt-7">
       <div>
         {{ dateFormat "02 July 2006" $.Lastmod }}
       </div>
       <div class="flex justify-end">
-        <div class="py-2 pr-6 text-white rounded-l-full pl-7 bg-sky-blue -mr-0.5">{{ $.Params.article.readMore }}</div>
+        <div class="py-2 pr-6 text-white rounded-l-full pl-7 bg-sky-blue -mr-0.5 group-hover:pl-12 ease-in-out duration-300">{{ $.Params.article.readMore }}</div>
       </div>
     </div>
   </a>
   {{ end }}
   {{ end }}
-  {{ end }}
 </section>
-{{ end }}
+
 {{ with .Params.studyMaterial }}
 <section class="text-white bg-sky-blue">
   <div class="container grid grid-cols-1 px-4 py-20 mx-auto md:py-40 md:grid-cols-2">

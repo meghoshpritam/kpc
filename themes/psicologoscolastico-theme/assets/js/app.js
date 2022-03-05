@@ -630,26 +630,36 @@ class App {
   };
 
   static showBlogsByTag = (tag) => {
-    const searchSelector = 'input[data-id="search-blogs"]';
     const buttonActiveClasses = ['border-sky-blue', 'text-white', 'bg-sky-blue'];
     const buttonInactiveClass = 'border-light-gray3';
-
-    const searchElement = document.querySelector(searchSelector);
-    const blogContainerElements = document.querySelectorAll(TAG_BLOG_CONTAINER_SELECTOR);
-    const blogButtonElements = document.querySelectorAll(TAG_BUTTON_SELECTOR);
-    const targetContainerElement = this.getBlogContainerElementByTag(tag);
     const targetButtonElement = document.querySelector(`${TAG_BUTTON_SELECTOR}[data-tag="${tag}"]`);
 
-    searchElement.setAttribute('data-active-tab', tag);
-    this.hideAllElements(blogContainerElements);
-    for (const blogButtonElement of blogButtonElements) {
-      blogButtonElement.classList.remove(...buttonActiveClasses);
-      blogButtonElement.classList.add(buttonInactiveClass);
+    if (targetButtonElement.dataset.active === 'true') {
+      targetButtonElement.classList.remove(...buttonActiveClasses);
+      targetButtonElement.classList.add(buttonInactiveClass);
+      targetButtonElement.setAttribute('data-active', 'false');
+    } else {
+      targetButtonElement.classList.remove(buttonInactiveClass);
+      targetButtonElement.classList.add(...buttonActiveClasses);
+      targetButtonElement.setAttribute('data-active', 'true');
     }
 
-    targetContainerElement.classList.remove(HIDDEN_CLASS);
-    targetButtonElement.classList.remove(buttonInactiveClass);
-    targetButtonElement.classList.add(...buttonActiveClasses);
+    const activeButtonElements = document.querySelectorAll(`${TAG_BUTTON_SELECTOR}[data-active="true"]`);
+    const activeTags = Array.from(activeButtonElements).map((element) => element.dataset.tag);
+    const blogElements = document.querySelectorAll(`[data-id="blog-0503"]`);
+
+    if (activeTags?.length < 1) {
+      this.showAllElements(blogElements);
+      return;
+    }
+
+    for (const blogElement of blogElements) {
+      if (activeTags.some((_tag) => blogElement.dataset.tags.includes(_tag))) {
+        blogElement.classList.remove(HIDDEN_CLASS);
+      } else {
+        blogElement.classList.add(HIDDEN_CLASS);
+      }
+    }
   };
 
   static searchBlog = (event) => {

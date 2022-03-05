@@ -96,6 +96,7 @@ module.exports = {
     extend: {
       fontWeight: ['hover', 'focus'],
       gradientColorStops: ['group-hover'],
+      padding: ['group-hover'],
     },
   },
   plugins: [require('@tailwindcss/typography')],

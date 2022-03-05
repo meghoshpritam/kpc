@@ -1,12 +1,12 @@
 {{ define "main" }}
 {{ $pageData := .Site.Data.singlePageTemplate }}
 {{/* top section start  */}}
-<section class="bg-green-300 bg-left-bottom bg-no-repeat bg-dark">
+<section class="bg-left-bottom bg-no-repeat bg-dark">
   {{ partial "header.html" . }}
   {{/* hero section start  */}}
   {{ with .Params.hero }}
   <div class="container px-4 pt-24 mx-auto">
-    <div class="grid grid-cols-1 text-3xl font-rockSalt sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid grid-cols-1 text-3xl gap-y-6 font-rockSalt sm:grid-cols-2 lg:grid-cols-3">
       {{ range $idx, $ctx := .highlights }}
       {{ $cls := "text-right text-secondary" }}
       {{ if eq $idx 0 }}
