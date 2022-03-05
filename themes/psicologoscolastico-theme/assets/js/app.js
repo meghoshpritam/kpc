@@ -753,6 +753,31 @@ class App {
       thumbElement.classList.add('invisible');
     }, 500);
   };
+
+  static getURLParameterByName = (name, url = window.location.href) => {
+    const _name = name.replace(/[[\]]/g, '\\$&');
+    const regex = new RegExp(`[?&]${_name}(=([^&#]*)|&|#|$)`);
+    const results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  };
+
+  static onLoadBlogPage = () => {
+    let tags = this.getURLParameterByName('rel')?.split(' ') || [];
+    tags = tags.filter((tag) => tag?.length > 0);
+
+    if (tags.length > 0) {
+      const buttonElements = document.querySelectorAll(`${TAG_BUTTON_SELECTOR}[data-active="true"]`);
+      for (const buttonElement of buttonElements) {
+        buttonElement.click();
+      }
+      for (const tag of tags) {
+        const targetButtonElement = document.querySelector(`${TAG_BUTTON_SELECTOR}[data-tag="${tag}"]`);
+        targetButtonElement?.click();
+      }
+    }
+  };
 }
 
 window.App = App;
