@@ -656,8 +656,10 @@ class App {
     for (const blogElement of blogElements) {
       if (activeTags.some((_tag) => blogElement.dataset.tags.includes(_tag))) {
         blogElement.classList.remove(HIDDEN_CLASS);
+        blogElement.setAttribute('data-active', 'true');
       } else {
         blogElement.classList.add(HIDDEN_CLASS);
+        blogElement.setAttribute('data-active', 'false');
       }
     }
   };
@@ -669,9 +671,7 @@ class App {
       .toLowerCase()
       .split(' ')
       .filter((term) => term?.length > 0);
-    const selectedTag = target.dataset.activeTab;
-    const targetContainerElement = this.getBlogContainerElementByTag(selectedTag);
-    const blogElements = targetContainerElement.children || [];
+    const blogElements = document.querySelectorAll('[data-id="blog-0503"][data-active="true"]');
     const searchResult = document.querySelector('[data-id="blog-search-result"]');
     this.hideAllElements(blogElements);
 

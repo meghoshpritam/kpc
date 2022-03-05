@@ -69,7 +69,8 @@
   {{ range .Pages }}
   {{ $pageLink := .RelPermalink }}
   {{ with .Params }}
-  <a href="{{ $pageLink }}" data-id="blog-0503" data-tags='{{ delimit .tags "," }}' class="{{ if not (in .tags $firstTag.id) }} hidden {{ end }} flex flex-col h-full bg-white rounded-3xl shadow-card2 hover:shadow-2xl group" title="{{ .articleData.title | plainify }}" aria-label="{{ .articleData.title | plainify }}">
+  {{ $isActive := not (in .tags $firstTag.id)}}
+  <a href="{{ $pageLink }}" data-id="blog-0503" data-tags='{{ delimit .tags "," }}' class="{{ if $isActive }} hidden {{ end }} flex flex-col h-full bg-white rounded-3xl shadow-card2 hover:shadow-2xl group" title="{{ .articleData.title | plainify }}" aria-label="{{ .articleData.title | plainify }}" data-active="{{ if $isActive }}true{{ else }}false{{ end }}">
     <div class="h-56">
       <img src="{{ .coverImage }}" alt="{{ .Title }}" class="object-cover object-center w-full h-full rounded-xl">
     </div>
