@@ -286,7 +286,7 @@ class App {
     const header = document.querySelector(SCROLL_HEADER_SELECTOR);
     let headerHeight = header.clientHeight;
 
-    if (window.getComputedStyle(header, null).display === 'none' && window.innerWidth >= 768) {
+    if (window.getComputedStyle(header, null).display === 'none') {
       headerHeight = document.querySelector(RELATIVE_HEADER_SELECTOR).clientHeight;
     }
 
