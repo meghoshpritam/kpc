@@ -699,6 +699,18 @@ class App {
     this.hideAllElements(testimonialElements);
     targetTestimonialElement.classList.remove(HIDDEN_CLASS);
   };
+
+  static playHpVideo = () => {
+    const hpVideoThumbSelector = '.hp-video-thumb';
+    const hpVideoSelector = '.hp-video-container';
+    const thumbElement = document.querySelector(hpVideoThumbSelector);
+    const videoElement = document.querySelector(hpVideoSelector);
+
+    videoElement.innerHTML = `<iframe src="${videoElement.dataset.url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full z-10"></iframe>`;
+    window.setTimeout(() => {
+      thumbElement.classList.add('invisible');
+    }, 500);
+  };
 }
 
 window.App = App;

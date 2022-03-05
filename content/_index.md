@@ -64,7 +64,7 @@ whyUs:
     details: >
       L’apprendimento passa attraverso le emozioni e la relazione. Pertanto ti aiuteremo a lavorare sul terreno delle emozioni per migliorare la tua esperienza scolastica.
     video:
-      url: ""
+      url: "https://www.youtube.com/embed/sYcYNHx0B-I?controls=0&autoplay=1&rel=0&showinfo=0"
       thumbnail: "/images/confident-teacher-explaining.webp"
       alt: "Crediamo fortemente nel lavoro di squadra e insieme ti aiuteremo a vincere ogni sfida "
 
