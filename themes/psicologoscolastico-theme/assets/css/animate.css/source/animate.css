@@ -8,9 +8,9 @@
 /* @import 'attention_seekers/rubberBand.css';
 @import 'attention_seekers/shakeX.css';
 @import 'attention_seekers/shakeY.css';
-@import 'attention_seekers/headShake.css'; */
-/* @import 'attention_seekers/swing.css'; */
-/* @import 'attention_seekers/tada.css';
+@import 'attention_seekers/headShake.css';
+@import 'attention_seekers/swing.css';
+@import 'attention_seekers/tada.css';
 @import 'attention_seekers/wobble.css';
 @import 'attention_seekers/jello.css';
 @import 'attention_seekers/heartBeat.css'; */
@@ -105,8 +105,8 @@
 @import 'specials/rollOut.css'; */
 
 /* Zooming entrances */
-/* @import 'zooming_entrances/zoomIn.css'; */
-/* @import 'zooming_entrances/zoomInDown.css';
+/* @import 'zooming_entrances/zoomIn.css';
+@import 'zooming_entrances/zoomInDown.css';
 @import 'zooming_entrances/zoomInLeft.css';
 @import 'zooming_entrances/zoomInRight.css';
 @import 'zooming_entrances/zoomInUp.css'; */

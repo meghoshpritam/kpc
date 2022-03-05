@@ -61,7 +61,11 @@
       "prettier --write"
     ]
   },
-  "husky": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm-run-all start precommit"
+    }
+  },
   "files": [
     "animate.compat.css",
     "animate.min.css",
