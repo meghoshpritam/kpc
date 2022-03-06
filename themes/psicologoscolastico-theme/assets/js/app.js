@@ -778,6 +778,115 @@ class App {
       }
     }
   };
+
+  static sortDownloadList = (fieldName) => {
+    const inactiveClass = 'text-gray-300';
+    const listElements = document.querySelectorAll('[data-id="list-item"]');
+    const listContainer = document.querySelector('[data-id="list-item-container"]');
+    const sortButton = document.querySelector(`[data-id="list-sort-button"][data-field="${fieldName}"]`);
+    let newListElements;
+    let sortType = 'a';
+
+    if (sortButton.dataset.sort === 'a') {
+      let compareFunc = (a, b) => String(b.dataset[fieldName]).localeCompare(a.dataset[fieldName]);
+      if (fieldName === 'date') {
+        compareFunc = (a, b) => new Date(b.dataset.date) - new Date(a.dataset.date);
+      }
+      newListElements = Array.from(listElements).sort(compareFunc);
+      sortType = 'd';
+      sortButton.children[0].classList.add(inactiveClass);
+      sortButton.children[1].classList.remove(inactiveClass);
+    } else if (sortButton.dataset.sort === 'd') {
+      newListElements = Array.from(listElements).sort((a, b) =>
+        String(Number(a.dataset.index)).localeCompare(Number(b.dataset.index)),
+      );
+      sortType = '';
+      sortButton.children[0].classList.remove(inactiveClass);
+      sortButton.children[1].classList.remove(inactiveClass);
+    } else {
+      let compareFunc = (a, b) => String(a.dataset[fieldName]).localeCompare(b.dataset[fieldName]);
+      if (fieldName === 'date') {
+        compareFunc = (a, b) => new Date(a.dataset.date) - new Date(b.dataset.date);
+      }
+      newListElements = Array.from(listElements).sort(compareFunc);
+      sortButton.children[0].classList.remove(inactiveClass);
+      sortButton.children[1].classList.add(inactiveClass);
+    }
+
+    sortButton.setAttribute('data-sort', sortType);
+    let listElementHTML = '';
+    for (const listElement of newListElements) {
+      listElementHTML += listElement.outerHTML;
+    }
+    listContainer.innerHTML = listElementHTML;
+  };
+
+  static searchInDownloadList = (event) => {
+    const { target } = event;
+    const searchTerm = target.value || '';
+    const searchTerms = searchTerm
+      .toLowerCase()
+      .split(' ')
+      .filter((term) => term?.length > 0);
+    const listElements = document.querySelectorAll('[data-id="list-item"][data-active="true"]');
+    const searchResult = document.querySelector('[data-id="blog-search-result"]');
+    this.hideAllElements(listElements);
+
+    const matchElements =
+      Array.from(listElements).filter((element) => {
+        const blogTitle = element.dataset.description.toLowerCase() || '';
+        return searchTerms.every((term) => blogTitle.includes(term));
+      }) || [];
+    searchResult.classList.add(HIDDEN_CLASS);
+    if (searchTerm.length > 0) {
+      searchResult.classList.remove(HIDDEN_CLASS);
+    }
+    const nMatches = matchElements.length;
+    if (nMatches === 0) {
+      searchResult.innerHTML = searchResult.dataset.notFoundResult;
+    } else if (nMatches === 1) {
+      searchResult.innerHTML = searchResult.dataset.singleResult;
+    } else {
+      searchResult.innerHTML = searchResult.dataset.multipleResult.replace('{0}', nMatches);
+    }
+
+    this.showAllElements(matchElements);
+  };
+
+  static showDownloadByTag = (tag) => {
+    const buttonActiveClasses = ['border-sky-blue', 'text-white', 'bg-sky-blue'];
+    const buttonInactiveClass = 'border-light-gray3';
+    const targetButtonElement = document.querySelector(`${TAG_BUTTON_SELECTOR}[data-tag="${tag}"]`);
+
+    if (targetButtonElement.dataset.active === 'true') {
+      targetButtonElement.classList.remove(...buttonActiveClasses);
+      targetButtonElement.classList.add(buttonInactiveClass);
+      targetButtonElement.setAttribute('data-active', 'false');
+    } else {
+      targetButtonElement.classList.remove(buttonInactiveClass);
+      targetButtonElement.classList.add(...buttonActiveClasses);
+      targetButtonElement.setAttribute('data-active', 'true');
+    }
+
+    const activeButtonElements = document.querySelectorAll(`${TAG_BUTTON_SELECTOR}[data-active="true"]`);
+    const activeTags = Array.from(activeButtonElements).map((element) => element.dataset.tag);
+    const listElements = document.querySelectorAll(`[data-id="list-item"]`);
+
+    if (activeTags?.length < 1) {
+      this.showAllElements(listElements);
+      return;
+    }
+
+    for (const listElement of listElements) {
+      if (activeTags.some((_tag) => listElement.dataset.area === _tag)) {
+        listElement.classList.remove(HIDDEN_CLASS);
+        listElement.setAttribute('data-active', 'true');
+      } else {
+        listElement.classList.add(HIDDEN_CLASS);
+        listElement.setAttribute('data-active', 'false');
+      }
+    }
+  };
 }
 
 window.App = App;
