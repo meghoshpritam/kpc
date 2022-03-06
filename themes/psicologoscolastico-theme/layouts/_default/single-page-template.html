@@ -1,100 +1,116 @@
 {{ define "main" }}
 {{ $pageData := .Site.Data.singlePageTemplate }}
 
-<section class="single-template-page-hero-0506">
-    {{- partial "header.html" . -}}
-    <div class="container grid grid-cols-1 px-5 pb-20 mx-auto md:grid-cols-2 md:pb-48">
-        <div>
-            <h1 class="text-3xl font-semibold font-lato md:text-4xl lg:text-6xl text-g3">
-                {{ .Params.mainTitle.normal }}
-                <span class="text-deep-purple">
-                    {{ .Params.mainTitle.purple }}
-                </span>
-            </h1>
-
-            <div class="my-20 md:my-52 lg:my-72 ">
-                <a href="{{ $pageData.hero.button.link | relURL }}"
-                    aria-label="{{ $pageData.hero.button.label }}"
-                    title="{{ $pageData.hero.button.label }}"
-                    class="px-20 py-4 text-lg text-white rounded-full single-template-page-hero-button-0506 font-lato lg:text-xl hover:shadow-lg">
-                    {{ $pageData.hero.button.label }}
-                </a>
-            </div>
-        </div>
-        <div class="flex items-center">
-            <img src="{{ $pageData.hero.image.url }}" alt="{{ $pageData.hero.image.alt }}" title="{{ $pageData.hero.image.alt }}"
-                class="w-full h-auto" class="w-full h-auto" height="550" width="740">
-        </div>
+<section class="bg-left-bottom bg-no-repeat bg-cover bg-single-article">
+  {{ partial "header.html" . }}
+  {{/* hero section start  */}}
+  {{ with .Params.articleData }}
+  <div class="container grid grid-cols-1 px-4 pt-24 mx-auto text-white md:grid-cols-2">
+    <div class="py-20 pb-36">
+      <h1 class="text-6xl font-semibold">
+        {{ .title }}
+      </h1>
+      <div class="mt-8 text-7 article-description">
+        {{ .description | markdownify }}
+      </div>
     </div>
+    {{ $imageUrl := .image.url }}
+    {{ $imageAlt := .image.alt }}
+    {{ if not $imageUrl }}
+    {{ $imageUrl = $pageData.hero.image.url }}
+    {{ end }}
+    {{ if not $imageAlt }}
+    {{ $imageAlt = $pageData.hero.image.alt }}
+    {{ end }}
+    <div class="-mb-5 mt-14 md:mt-0">
+      <img src="{{ $imageUrl }}" alt="{{ $imageAlt }}" title="{{ $imageAlt }}" class="w-full h-auto" height="566" width="612">
+    </div>
+  </div>
+  {{ end }}
+  {{/* hero section end  */}}
 </section>
 
-<section class="container px-5 mx-auto mt-16 mb-20 text-g3 font-montserrat">
-    {{ with .Params.topSection }}
-    <h2 class="text-3xl font-semibold md:text-5xl lg:text-7xl">
-        {{ .title.normal }}
-        <span class="text-deep-purple">
-            {{ .title.purple }}
-        </span>
-    </h2>
-    <h3 class="my-12 text-xl font-semibold md:text-2xl lg:text-4xl">{{ .subtitle }}</h3>
-    <hr>
-    {{ with .section2 }}
-    <div class="flex flex-wrap items-center justify-between italic font-semibold mt-7">
-        <div class="mb-10 mr-10">{{ .left | markdownify }}</div>
-        <div class="mb-10">
-            <p>
-                {{ $pageData.topSection.date}}
-                {{ .date }}
-            </p>
-            <p>
 
-                {{ $pageData.topSection.time.before}}
-                {{ $.ReadingTime }}
-                {{ $pageData.topSection.time.after}}
-            </p>
-        </div>
-    </div>
-    {{ end }}
-    <p class="mb-12 italic font-lato">
-        {{ .description | markdownify }}
+{{ with .Params.articleData }}
+{{/* article data section start  */}}
+<section class="container px-4 mx-auto mt-14">
+  <div class="flex flex-wrap text-xs font-bold font-openSans text-secondary">
+    {{/* <p class="mb-1">
+      {{ $pageData.topSection.readingTime.before}}
+    {{ $.ReadingTime }}
+    {{ $pageData.topSection.readingTime.after}}
     </p>
-    {{ end }}
-
-    {{ with .Params.errorMessage }}
-    <div
-        class="max-w-5xl mx-auto text-3xl font-semibold single-template-page-error-message-0506 font-montserrat md:text-4xl lg:text-6xl">
-        <span class="text-deep-purple">
-            {{ .purple }}
-        </span>
-        {{ .normal | markdownify }}
+    <span class="mx-1.5 mb-1">|</span> */}}
+    <p class="mb-1">
+      {{ $.Params.articleData.left | markdownify }}
+    </p>
+    <span class="mx-1.5 mb-1">|</span>
+    <p class="mb-1">
+      {{ dateFormat "02 July 2006" $.Params.articleData.date }}
+    </p>
+    <span class="flex-grow"></span>
+    <div class="text-gray2">
+      {{ partial "breadcrumb.html" $ }}
     </div>
-    {{ end }}
+  </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3">
+  <hr class="w-full h-px mt-1.5 border-none bg-light-gray2">
+</section>
+{{/* article data section end  */}}
+{{ end }}
+
+{{/* top section end  */}}
+
+<section class="container px-4 pb-48 mx-auto pt-14 font-openSans text-gray2">
+  {{/* article section start  */}}
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+    <div class="lg:order-2">
+      <div class="lg:sticky lg:top-32 xl:top-40 toc-container">
         {{ if gt ( len .TableOfContents ) 50 }}
-        <div class="mb-10 lg:order-2 lg:mb-0">
-            <aside class="px-5 py-5 border-2 border-gray-200 lg:sticky lg:top-32 xl:top-40 font-lato text-g3 single-article-section-table-of-content0706 toc-container">
-                <p class="pt-4 text-xl font-semibold lg:text-2xl font-montserrat">
-                    {{ $pageData.tableOfContent.heading }}
-                </p>
-                <hr class="bg-gray-200 w-full h-0.5 my-4" />
-                {{ .TableOfContents }}
-            </aside>
+        <div class="mb-10 text-sm leading-7 lg:mb-0">
+          <aside class="px-4 pb-8 border-l-0 lg:border-l-2 border-secondary single-article-section-table-of-content0706">
+            <p class="pt-2 mb-5 text-xl font-semibold underline lg:text-2xl font-poppins">
+              {{ $pageData.tableOfContent.heading }}
+            </p>
+            {{ .TableOfContents }}
+          </aside>
         </div>
         {{ end }}
-
-        <article
-            class="prose font-lato lg:col-span-2 lg:order-1 single-article-section-content0706">
-            {{ .Content }}
-        </article>
+        <div class="pt-12">
+          {{ $aImgAlt := $pageData.defaultArticle.image.alt }}
+          {{ if .Params.articleData.image.alt }}
+          {{ $aImgAlt = .Params.articleData.image.alt }}
+          {{ end }}
+          {{ if .Params.articleData.image.url }}
+          <img src="{{ .Params.articleData.image.url }}" alt="{{ .Params.articleData.image.alt }}" title="{{ .Params.articleData.image.alt }}" class="w-full h-auto" width="470" height="380">
+          {{ else }}
+          <img src="{{ $pageData.defaultArticle.image.url }}" alt="{{ $aImgAlt }}" title="{{ $aImgAlt }}" class="w-full h-auto" width="470" height="380">
+          {{ end }}
+        </div>
+      </div>
     </div>
+    <article class="max-w-full prose single-article-section-content0706 font-openSans lg:col-span-2 lg:order-1">
+      <div class="italic font-light mb-9">
+        {{ $.Params.shortDescription | markdownify }}
+      </div>
+      <div class="mb-12 article-body-toc">
+        <div class="text-xl font-semibold">
+          {{ $pageData.tableOfContent.heading }}
+        </div>
+        {{ .TableOfContents }}
+      </div>
+      {{ .Content }}
+    </article>
+  </div>
+  {{/* article section end  */}}
 </section>
+
 
 <!-- page script start -->
 <script defer type="text/javascript">
-    window.onload = function () {
-        App.tocHighlight();
-    }
+  window.onload = function() {
+    App.tocHighlight();
+  }
 </script>
 <!-- page script end -->
 
