@@ -159,6 +159,24 @@ news:
     Ultime Notizie e Risorse
   details: >
     See the developments that have occurred to Skillines in the world
+  downloadLabel: Download
+  readMoreLabel: Read more
+  defaultDownloadTitle: "Categoria dowload"
+  list:
+    - url: /blog/bisogni-educativi-speciali/
+      type: blog
+    - id: 3
+      type: download
+    - url: /blog/circle-time-a-scuola/
+      type: blog
+    - id: 2
+      type: download
+    - url: /blog/lanimale-co-terapeuta-come-supporto-educativo/
+      type: blog
+    - url: /blog/strategie-educative-peer-tutoring/
+      type: blog
+    - id: 1
+      type: download
 
 layout: index
 ---

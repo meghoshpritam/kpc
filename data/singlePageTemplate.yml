@@ -19,4 +19,15 @@ tableOfContent:
 defaultArticle:
   image:
     url: /images/article-right.webp
-    label: default article
+    label: default article image
+
+defaultImagesByTag:
+  studenti:
+    url: /images/blog/default-studenti.webp
+    label: default studenti article image
+  genitori:
+    url: /images/blog/default-genitori.webp
+    label: default genitori article image
+  insegnanti:
+    url: /images/blog/default-insegnanti.webp
+    label: default insegnanti article image

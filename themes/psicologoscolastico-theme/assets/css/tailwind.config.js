@@ -25,6 +25,7 @@ module.exports = {
         button: '0px 0px 5px #C4C4C4',
       },
       colors: {
+        black1: '#252641',
         blue1: '#5b72ee',
         'blue-gray': '#69788c',
         'blue-gray2': '#2D3540',
@@ -45,6 +46,7 @@ module.exports = {
         'sky-blue': '#23BDEE',
         turquoise: '#29B9E7',
         white1: '#f7fafc',
+        yellow1: '#F4C467',
       },
       fontFamily: {
         nunitoSans: ['NunitoSans', 'sans-serif'],
