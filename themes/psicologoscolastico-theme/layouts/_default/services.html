@@ -124,7 +124,12 @@
     {{ range .Params.lists }}
     <div class="grid grid-cols-2 mb-14 md:mb-6 md:grid-cols-12 lg:grid-cols-10 gap-x-5 gap-y-2 {{ if ne $activeTagButton.id .area }} hidden {{ end }}" data-active="{{ if eq $activeTagButton.id .area }}true{{ else }}false{{ end }}" data-id="list-item" data-index="{{ $index }}" data-area="{{ .area }}" data-description="{{ .description }}" data-age="{{ .age }}" data-date="{{ .date }}">
       <div class="order-1 col-span-1 md:col-span-2 lg:col-span-1 text-sky-blue">
-        {{ .area }}
+        {{ $area := .area }}
+        {{ range $.Params.header.filterTags }}
+        {{ if eq .id $area }}
+        {{ .label }}
+        {{ end }}
+        {{ end }}
       </div>
       <div class="order-3 col-span-2 md:order-1 md:col-span-4 lg:col-span-5">
         {{ .description }}
