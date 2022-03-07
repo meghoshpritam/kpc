@@ -117,7 +117,7 @@
   </div>
   {{ end }}
 
-  <div data-id="list-item-container">
+  <div data-id="list-item-container" class="download-list-item-container">
     {{ $activeTagButton := index .Params.header.filterTags 0 }}
     {{ $index := 0 }}
     {{ range .Params.lists }}

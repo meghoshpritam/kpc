@@ -364,10 +364,12 @@ class App {
     }
 
     const hightLight = (index) => {
+      const highlightColor = 'text-secondary';
+
       if (index < tocLinks.length) {
         for (let idx = 0; idx < tocLinks.length; idx += 1) {
-          if (index === idx) tocLinks[idx].classList.add('text-g1');
-          else tocLinks[idx].classList.remove('text-g1');
+          if (index === idx) tocLinks[idx].classList.add(highlightColor);
+          else tocLinks[idx].classList.remove(highlightColor);
         }
       }
     };
