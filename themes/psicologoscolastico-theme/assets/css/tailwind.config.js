@@ -81,16 +81,32 @@ module.exports = {
         70: 70,
       },
       typography: {
-        // ============= OLD SECTION START ==============
         DEFAULT: {
           css: {
-            color: '#313062',
+            color: '#696984',
             strong: {
-              color: '#313062',
+              color: '#696984',
+            },
+            h1: {
+              color: '#696984',
+            },
+            h2: {
+              color: '#696984',
+            },
+            h3: {
+              color: '#696984',
+            },
+            h4: {
+              color: '#696984',
+            },
+            h5: {
+              color: '#696984',
+            },
+            h6: {
+              color: '#696984',
             },
           },
         },
-        // ============= OLD SECTION END ==============
       },
     },
   },
