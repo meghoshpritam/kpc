@@ -47,13 +47,11 @@ class Utils {
 
     let maxHeight = 0;
     let displayed = 0;
-    // let lastDisplayed = -1;
 
     for (const card of cards) {
       const cDisplay = window.getComputedStyle(cards, null).display;
 
       if (cDisplay !== 'none') {
-        // lastDisplayed = idx;
         displayed += 1;
       }
 
@@ -89,8 +87,6 @@ class Utils {
     for (const card of cards) {
       card.style.minHeight = `${maxHeight}px`;
     }
-
-    // document.querySelector(containerSelector).style.minHeight = `${2 * maxHeight + hrHeight}px`;
   };
 
   // change cards
@@ -432,125 +428,12 @@ class App {
     });
   };
 
-  // go to the next article card
-  static articleNext = () => {
-    Utils.changeContentButton({
-      selector: '.category-page-article-card-1006',
-      direction: 'next',
-      previousButton: '.btn-pre-category-page-article-card-1006',
-      nextButton: '.btn-next-category-page-article-card-1006',
-      lineSelector: '.line-category-page-article-card-1006',
-      numberSelector: '.number-category-page-article-card-1006',
-    });
-  };
-
-  // go back to the previous article card
-  static articlePre = () => {
-    Utils.changeContentButton({
-      selector: '.category-page-article-card-1006',
-      direction: 'previous',
-      previousButton: '.btn-pre-category-page-article-card-1006',
-      nextButton: '.btn-next-category-page-article-card-1006',
-      lineSelector: '.line-category-page-article-card-1006',
-      numberSelector: '.number-category-page-article-card-1006',
-    });
-  };
-
-  // initialize the home article function
-  static homepageArticleInit = () => {
-    Utils.initDotCards({
-      selector: '.home-page-article-card1106',
-      containerSelector: '.container-home-page-article-card1106',
-      nextButton: '.btn-next-home-page-article-card1106',
-      indicatorsSelector: '.indicator-home-page-article-card1106',
-    });
-  };
-
-  // previous article button
-  static homepageArticlePre = () => {
-    Utils.dotCardChangeButton({
-      selector: '.home-page-article-card1106',
-      direction: 'previous',
-      previousButton: '.btn-pre-home-page-article-card1106',
-      nextButton: '.btn-next-home-page-article-card1106',
-      indicatorsSelector: '.indicator-home-page-article-card1106',
-      containerSelector: '.container-home-page-article-card1106',
-    });
-  };
-
-  // next article button
-  static homepageArticleNext = () => {
-    Utils.dotCardChangeButton({
-      selector: '.home-page-article-card1106',
-      direction: 'next',
-      previousButton: '.btn-pre-home-page-article-card1106',
-      nextButton: '.btn-next-home-page-article-card1106',
-      indicatorsSelector: '.indicator-home-page-article-card1106',
-      containerSelector: '.container-home-page-article-card1106',
-    });
-  };
-
-  static homepageArticleDotBtn = (position) => {
-    Utils.dotCardChangeButton({
-      selector: '.home-page-article-card1106',
-      direction: 'next',
-      previousButton: '.btn-pre-home-page-article-card1106',
-      nextButton: '.btn-next-home-page-article-card1106',
-      indicatorsSelector: '.indicator-home-page-article-card1106',
-      containerSelector: '.container-home-page-article-card1106',
-      position,
-    });
-  };
-
-  // scroll to contact form section
-  static contactFormScroll = (event) => {
-    const header = document.querySelector(SCROLL_HEADER_SELECTOR);
-    let headerHeight = header.clientHeight;
-    const formSection = document.querySelector('.mobile-shape-0406');
-    const drawer = document.querySelector('.menu-drawer-0421');
-
-    if (window.getComputedStyle(header, null).display === 'none') {
-      header.classList.remove('hidden');
-      headerHeight = header.clientHeight;
-      header.classList.add('hidden');
-    }
-
-    const headerOffset = (window.innerHeight - headerHeight - formSection.clientHeight) / 3;
-
-    event?.preventDefault();
-
-    if (window.getComputedStyle(drawer, null).display !== 'none') App.toggleMenu();
-
-    window.scrollTo({
-      top: window.pageYOffset + formSection.getBoundingClientRect().top - headerOffset - headerHeight,
-      behavior: 'smooth',
-    });
-  };
-
   // scroll to top of the page
   static scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
-  };
-
-  // change current visible map
-  static changeSelectedMap = (select) => {
-    const maps = document.querySelectorAll('.g-map-1906');
-    const mapCards = document.querySelectorAll('.map-selector-card2206');
-
-    if (Number(select) > -1 && Number(select) < maps.length)
-      for (let idx = 0; idx < maps.length; idx += 1) {
-        if (Number(select) === idx) {
-          maps[idx].classList.remove('hidden');
-          mapCards[idx].classList?.remove('text-g4');
-          mapCards[idx].classList?.add('from-g5-f', 'to-g5-t', 'text-white');
-        } else {
-          maps[idx].classList.add('hidden');
-          mapCards[idx].classList?.remove('from-g5-f', 'to-g5-t', 'text-white');
-        }
-      }
   };
 
   // check the element is visible in viewport or not
@@ -566,54 +449,6 @@ class App {
     } catch {
       return false;
     }
-  };
-
-  // animation on scroll init
-  static onScrollAnimation = (
-    selector,
-    animationClasses = [],
-    increasingClasses = [],
-    removedClasses = [],
-    remain = false,
-  ) => {
-    const elements = document.querySelectorAll(selector);
-    let modified = [];
-
-    animationClasses.forEach(() => {
-      modified = [...modified, false];
-    });
-
-    window.addEventListener('scroll', () => {
-      let increaseClassIdx = 0;
-
-      const getClasses = () => {
-        let newClasses = [...animationClasses];
-        if (
-          increasingClasses.length > increaseClassIdx &&
-          increasingClasses[increaseClassIdx] &&
-          increasingClasses[increaseClassIdx] !== ''
-        ) {
-          newClasses = [...newClasses, increasingClasses[increaseClassIdx]];
-        }
-
-        return newClasses;
-      };
-
-      let modifiedIdx = 0;
-      elements.forEach((element) => {
-        if (App.isInViewport(element)) {
-          if (!(remain && modified[modifiedIdx])) {
-            if (removedClasses.length > 0) {
-              element.classList.remove(...removedClasses);
-            }
-            element.classList.add(...getClasses());
-            modified[modifiedIdx] = true;
-          }
-        } else if (!(remain && modified[modifiedIdx])) element.classList.remove(...getClasses());
-        modifiedIdx += 1;
-        increaseClassIdx += 1;
-      });
-    });
   };
 
   static getBlogContainerElementByTag = (tag) =>
