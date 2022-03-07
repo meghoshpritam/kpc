@@ -2,119 +2,93 @@ fonts:
 staticPaths:
   - template: index
     fonts:
-      - href: /fonts/Lato/Lato-Regular.woff2
+      - href: /fonts/Poppins/Poppins-Medium.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-Bold.woff2
+      - href: /fonts/Poppins/Poppins-Bold.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
+      - href: /fonts/Poppins/Poppins-Regular.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-Regular.woff2
+      - href: /fonts/Poppins/Poppins-SemiBold.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-Italic.woff2
-        type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-ExtraBold.woff2
+      - href: /fonts/NunitoSans/NunitoSans-Regular.woff2
         type: font/woff2
 
-  - template: digital-psychologist
+  - template: services
     fonts:
-      - href: /fonts/Lato/Lato-Regular.woff2
+      - href: /fonts/Poppins/Poppins-Regular.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-Bold.woff2
+      - href: /fonts/Poppins/Poppins-Bold.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
+      - href: /fonts/OpenSans/OpenSans-Bold.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-Regular.woff2
+      - href: /fonts/OpenSans/OpenSans-Regular.woff2
+        type: font/woff2
+      - href: /fonts/RockSalt/RockSalt-Regular.woff2
         type: font/woff2
 
-  - template: we-can-help-you
+  - template: error
     fonts:
-      - href: /fonts/Lato/Lato-Regular.woff2
+      - href: /fonts/Poppins/Poppins-Medium.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-Bold.woff2
+      - href: /fonts/Poppins/Poppins-SemiBold.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-BoldItalic.woff2
-        type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-SemiBoldItalic.woff2
-        type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
-        type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-Regular.woff2
-        type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-ExtraBold.woff2
-        type: font/woff2
-      - href: /fonts/PlayfairDisplay/static/PlayfairDisplay-Bold.woff2
+      - href: /fonts/Poppins/Poppins-Regular.woff2
         type: font/woff2
 
-  - template: who-we-are
+  - template: 404
     fonts:
-      - href: /fonts/Lato/Lato-Regular.woff2
+      - href: /fonts/Poppins/Poppins-Medium.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-Bold.woff2
+      - href: /fonts/Poppins/Poppins-SemiBold.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-Italic.woff2
-        type: font/woff2
-      - href: /fonts/Lato/Lato-BoldItalic.woff2
-        type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-SemiBoldItalic.woff2
-        type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
-        type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-Regular.woff2
-        type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-ExtraBold.woff2
-        type: font/woff2
-      - href: /fonts/PlayfairDisplay/static/PlayfairDisplay-Bold.woff2
+      - href: /fonts/Poppins/Poppins-Regular.woff2
         type: font/woff2
 
   - template: list
     fonts:
-      - href: /fonts/Lato/Lato-Regular.woff2
+      - href: /fonts/Poppins/Poppins-Medium.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-Italic.woff2
+      - href: /fonts/Poppins/Poppins-Bold.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-Bold.woff2
+      - href: /fonts/Poppins/Poppins-Regular.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-BoldItalic.woff2
+      - href: /fonts/Poppins/Poppins-SemiBold.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
+      - href: /fonts/NunitoSans/NunitoSans-Regular.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-Regular.woff2
+      - href: /fonts/OpenSans/OpenSans-Bold.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-ExtraBold.woff2
+      - href: /fonts/OpenSans/OpenSans-Regular.woff2
         type: font/woff2
 
   - template: single
     fonts:
-      - href: /fonts/Lato/Lato-Regular.woff2
+      - href: /fonts/Poppins/Poppins-SemiBold.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-Italic.woff2
+      - href: /fonts/OpenSans/OpenSans-Regular.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-Bold.woff2
+      - href: /fonts/OpenSans/OpenSans-SemiBold.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-BoldItalic.woff2
+      - href: /fonts/OpenSans/OpenSans-LightItalic.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-SemiBoldItalic.woff2
+      - href: /fonts/OpenSans/OpenSans-Bold.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
-        type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-Regular.woff2
-        type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-ExtraBold.woff2
+      - href: /fonts/Poppins/Poppins-Regular.woff2
         type: font/woff2
 
   - template: single-page-template
     fonts:
-      - href: /fonts/Lato/Lato-Regular.woff2
+      - href: /fonts/Poppins/Poppins-SemiBold.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-Italic.woff2
+      - href: /fonts/OpenSans/OpenSans-Regular.woff2
         type: font/woff2
-      - href: /fonts/Lato/Lato-Bold.woff2
+      - href: /fonts/OpenSans/OpenSans-SemiBold.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-SemiBoldItalic.woff2
+      - href: /fonts/OpenSans/OpenSans-LightItalic.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-SemiBold.woff2
+      - href: /fonts/OpenSans/OpenSans-Bold.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-Regular.woff2
+      - href: /fonts/Poppins/Poppins-Regular.woff2
         type: font/woff2
-      - href: /fonts/Montserrat/Montserrat-ExtraBold.woff2
+      - href: /fonts/Poppins/Poppins-Medium.woff2
         type: font/woff2

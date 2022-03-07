@@ -1,6 +1,9 @@
 @font-face {
   font-family: NunitoSans;
-  src: local('NunitoSans-Regular'), local('NunitoSans Regular'), url('/fonts/NunitoSans/NunitoSans-Regular.woff2')  format('woff2'), url('/fonts/NunitoSans/NunitoSans-Regular.woff')  format('woff'), url('/fonts/NunitoSans/NunitoSans-Regular.ttf')  format('ttf');
+  src: local('NunitoSans-Regular'), local('NunitoSans Regular'),
+    url('/fonts/NunitoSans/NunitoSans-Regular.woff2') format('woff2'),
+    url('/fonts/NunitoSans/NunitoSans-Regular.woff') format('woff'),
+    url('/fonts/NunitoSans/NunitoSans-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,7 +11,10 @@
 
 @font-face {
   font-family: NunitoSans;
-  src: local('NunitoSans-Medium'), local('NunitoSans Medium'), url('/fonts/NunitoSans/NunitoSans-Medium.woff2')  format('woff2'), url('/fonts/NunitoSans/NunitoSans-Medium.woff')  format('woff'), url('/fonts/NunitoSans/NunitoSans-Medium.ttf')  format('ttf');
+  src: local('NunitoSans-Medium'), local('NunitoSans Medium'),
+    url('/fonts/NunitoSans/NunitoSans-Medium.woff2') format('woff2'),
+    url('/fonts/NunitoSans/NunitoSans-Medium.woff') format('woff'),
+    url('/fonts/NunitoSans/NunitoSans-Medium.ttf') format('ttf');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -16,7 +22,10 @@
 
 @font-face {
   font-family: NunitoSans;
-  src: local('NunitoSans-SemiBold'), local('NunitoSans SemiBold'), url('/fonts/NunitoSans/NunitoSans-SemiBold.woff2')  format('woff2'), url('/fonts/NunitoSans/NunitoSans-SemiBold.woff')  format('woff'), url('/fonts/NunitoSans/NunitoSans-SemiBold.ttf')  format('ttf');
+  src: local('NunitoSans-SemiBold'), local('NunitoSans SemiBold'),
+    url('/fonts/NunitoSans/NunitoSans-SemiBold.woff2') format('woff2'),
+    url('/fonts/NunitoSans/NunitoSans-SemiBold.woff') format('woff'),
+    url('/fonts/NunitoSans/NunitoSans-SemiBold.ttf') format('ttf');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -24,7 +33,10 @@
 
 @font-face {
   font-family: NunitoSans;
-  src: local('NunitoSans-Bold'), local('NunitoSans Bold'), url('/fonts/NunitoSans/NunitoSans-Bold.woff2')  format('woff2'), url('/fonts/NunitoSans/NunitoSans-Bold.woff')  format('woff'), url('/fonts/NunitoSans/NunitoSans-Bold.ttf')  format('ttf');
+  src: local('NunitoSans-Bold'), local('NunitoSans Bold'),
+    url('/fonts/NunitoSans/NunitoSans-Bold.woff2') format('woff2'),
+    url('/fonts/NunitoSans/NunitoSans-Bold.woff') format('woff'),
+    url('/fonts/NunitoSans/NunitoSans-Bold.ttf') format('ttf');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -32,7 +44,10 @@
 
 @font-face {
   font-family: NunitoSans;
-  src: local('NunitoSans-ExtraBlack'), local('NunitoSans ExtraBlack'), url('/fonts/NunitoSans/NunitoSans-ExtraBlack.woff2')  format('woff2'), url('/fonts/NunitoSans/NunitoSans-ExtraBlack.woff')  format('woff'), url('/fonts/NunitoSans/NunitoSans-ExtraBlack.ttf')  format('ttf');
+  src: local('NunitoSans-ExtraBlack'), local('NunitoSans ExtraBlack'),
+    url('/fonts/NunitoSans/NunitoSans-ExtraBlack.woff2') format('woff2'),
+    url('/fonts/NunitoSans/NunitoSans-ExtraBlack.woff') format('woff'),
+    url('/fonts/NunitoSans/NunitoSans-ExtraBlack.ttf') format('ttf');
   font-weight: 950;
   font-style: normal;
   font-display: swap;
@@ -40,7 +55,10 @@
 
 @font-face {
   font-family: NunitoSans;
-  src: local('NunitoSans-Black'), local('NunitoSans Black'), url('/fonts/NunitoSans/NunitoSans-Black.woff2')  format('woff2'), url('/fonts/NunitoSans/NunitoSans-Black.woff')  format('woff'), url('/fonts/NunitoSans/NunitoSans-Black.ttf')  format('ttf');
+  src: local('NunitoSans-Black'), local('NunitoSans Black'),
+    url('/fonts/NunitoSans/NunitoSans-Black.woff2') format('woff2'),
+    url('/fonts/NunitoSans/NunitoSans-Black.woff') format('woff'),
+    url('/fonts/NunitoSans/NunitoSans-Black.ttf') format('ttf');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -48,7 +66,8 @@
 
 @font-face {
   font-family: Poppins;
-  src: local('Poppins-Regular'), local('Poppins Regular'), url('/fonts/Poppins/Poppins-Regular.woff2')  format('woff2'), url('/fonts/Poppins/Poppins-Regular.woff')  format('woff'), url('/fonts/Poppins/Poppins-Regular.ttf')  format('ttf');
+  src: local('Poppins-Regular'), local('Poppins Regular'), url('/fonts/Poppins/Poppins-Regular.woff2') format('woff2'),
+    url('/fonts/Poppins/Poppins-Regular.woff') format('woff'), url('/fonts/Poppins/Poppins-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -56,7 +75,8 @@
 
 @font-face {
   font-family: Poppins;
-  src: local('Poppins-Medium'), local('Poppins Medium'), url('/fonts/Poppins/Poppins-Medium.woff2')  format('woff2'), url('/fonts/Poppins/Poppins-Medium.woff')  format('woff'), url('/fonts/Poppins/Poppins-Medium.ttf')  format('ttf');
+  src: local('Poppins-Medium'), local('Poppins Medium'), url('/fonts/Poppins/Poppins-Medium.woff2') format('woff2'),
+    url('/fonts/Poppins/Poppins-Medium.woff') format('woff'), url('/fonts/Poppins/Poppins-Medium.ttf') format('ttf');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -64,7 +84,9 @@
 
 @font-face {
   font-family: Poppins;
-  src: local('Poppins-SemiBold'), local('Poppins SemiBold'), url('/fonts/Poppins/Poppins-SemiBold.woff2')  format('woff2'), url('/fonts/Poppins/Poppins-SemiBold.woff')  format('woff'), url('/fonts/Poppins/Poppins-SemiBold.ttf')  format('ttf');
+  src: local('Poppins-SemiBold'), local('Poppins SemiBold'),
+    url('/fonts/Poppins/Poppins-SemiBold.woff2') format('woff2'),
+    url('/fonts/Poppins/Poppins-SemiBold.woff') format('woff'), url('/fonts/Poppins/Poppins-SemiBold.ttf') format('ttf');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -72,7 +94,8 @@
 
 @font-face {
   font-family: Poppins;
-  src: local('Poppins-Bold'), local('Poppins Bold'), url('/fonts/Poppins/Poppins-Bold.woff2')  format('woff2'), url('/fonts/Poppins/Poppins-Bold.woff')  format('woff'), url('/fonts/Poppins/Poppins-Bold.ttf')  format('ttf');
+  src: local('Poppins-Bold'), local('Poppins Bold'), url('/fonts/Poppins/Poppins-Bold.woff2') format('woff2'),
+    url('/fonts/Poppins/Poppins-Bold.woff') format('woff'), url('/fonts/Poppins/Poppins-Bold.ttf') format('ttf');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -80,7 +103,10 @@
 
 @font-face {
   font-family: Poppins;
-  src: local('Poppins-ExtraBlack'), local('Poppins ExtraBlack'), url('/fonts/Poppins/Poppins-ExtraBlack.woff2')  format('woff2'), url('/fonts/Poppins/Poppins-ExtraBlack.woff')  format('woff'), url('/fonts/Poppins/Poppins-ExtraBlack.ttf')  format('ttf');
+  src: local('Poppins-ExtraBlack'), local('Poppins ExtraBlack'),
+    url('/fonts/Poppins/Poppins-ExtraBlack.woff2') format('woff2'),
+    url('/fonts/Poppins/Poppins-ExtraBlack.woff') format('woff'),
+    url('/fonts/Poppins/Poppins-ExtraBlack.ttf') format('ttf');
   font-weight: 950;
   font-style: normal;
   font-display: swap;
@@ -88,7 +114,8 @@
 
 @font-face {
   font-family: Poppins;
-  src: local('Poppins-Black'), local('Poppins Black'), url('/fonts/Poppins/Poppins-Black.woff2')  format('woff2'), url('/fonts/Poppins/Poppins-Black.woff')  format('woff'), url('/fonts/Poppins/Poppins-Black.ttf')  format('ttf');
+  src: local('Poppins-Black'), local('Poppins Black'), url('/fonts/Poppins/Poppins-Black.woff2') format('woff2'),
+    url('/fonts/Poppins/Poppins-Black.woff') format('woff'), url('/fonts/Poppins/Poppins-Black.ttf') format('ttf');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -96,7 +123,10 @@
 
 @font-face {
   font-family: OpenSans;
-  src: local('OpenSans-LightItalic'), local('OpenSans LightItalic'), url('/fonts/OpenSans/OpenSans-LightItalic.woff2')  format('woff2'), url('/fonts/OpenSans/OpenSans-LightItalic.woff')  format('woff'), url('/fonts/OpenSans/OpenSans-LightItalic.ttf')  format('ttf');
+  src: local('OpenSans-LightItalic'), local('OpenSans LightItalic'),
+    url('/fonts/OpenSans/OpenSans-LightItalic.woff2') format('woff2'),
+    url('/fonts/OpenSans/OpenSans-LightItalic.woff') format('woff'),
+    url('/fonts/OpenSans/OpenSans-LightItalic.ttf') format('ttf');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -104,7 +134,8 @@
 
 @font-face {
   font-family: OpenSans;
-  src: local('OpenSans-Light'), local('OpenSans Light'), url('/fonts/OpenSans/OpenSans-Light.woff2')  format('woff2'), url('/fonts/OpenSans/OpenSans-Light.woff')  format('woff'), url('/fonts/OpenSans/OpenSans-Light.ttf')  format('ttf');
+  src: local('OpenSans-Light'), local('OpenSans Light'), url('/fonts/OpenSans/OpenSans-Light.woff2') format('woff2'),
+    url('/fonts/OpenSans/OpenSans-Light.woff') format('woff'), url('/fonts/OpenSans/OpenSans-Light.ttf') format('ttf');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -112,7 +143,10 @@
 
 @font-face {
   font-family: OpenSans;
-  src: local('OpenSans-Regular'), local('OpenSans Regular'), url('/fonts/OpenSans/OpenSans-Regular.woff2')  format('woff2'), url('/fonts/OpenSans/OpenSans-Regular.woff')  format('woff'), url('/fonts/OpenSans/OpenSans-Regular.ttf')  format('ttf');
+  src: local('OpenSans-Regular'), local('OpenSans Regular'),
+    url('/fonts/OpenSans/OpenSans-Regular.woff2') format('woff2'),
+    url('/fonts/OpenSans/OpenSans-Regular.woff') format('woff'),
+    url('/fonts/OpenSans/OpenSans-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -120,15 +154,10 @@
 
 @font-face {
   font-family: OpenSans;
-  src: local('OpenSans-Medium'), local('OpenSans Medium'), url('/fonts/OpenSans/OpenSans-Medium.woff2')  format('woff2'), url('/fonts/OpenSans/OpenSans-Medium.woff')  format('woff'), url('/fonts/OpenSans/OpenSans-Medium.ttf')  format('ttf');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: OpenSans;
-  src: local('OpenSans-SemiBold'), local('OpenSans SemiBold'), url('/fonts/OpenSans/OpenSans-SemiBold.woff2')  format('woff2'), url('/fonts/OpenSans/OpenSans-SemiBold.woff')  format('woff'), url('/fonts/OpenSans/OpenSans-SemiBold.ttf')  format('ttf');
+  src: local('OpenSans-SemiBold'), local('OpenSans SemiBold'),
+    url('/fonts/OpenSans/OpenSans-SemiBold.woff2') format('woff2'),
+    url('/fonts/OpenSans/OpenSans-SemiBold.woff') format('woff'),
+    url('/fonts/OpenSans/OpenSans-SemiBold.ttf') format('ttf');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -136,7 +165,8 @@
 
 @font-face {
   font-family: OpenSans;
-  src: local('OpenSans-Bold'), local('OpenSans Bold'), url('/fonts/OpenSans/OpenSans-Bold.woff2')  format('woff2'), url('/fonts/OpenSans/OpenSans-Bold.woff')  format('woff'), url('/fonts/OpenSans/OpenSans-Bold.ttf')  format('ttf');
+  src: local('OpenSans-Bold'), local('OpenSans Bold'), url('/fonts/OpenSans/OpenSans-Bold.woff2') format('woff2'),
+    url('/fonts/OpenSans/OpenSans-Bold.woff') format('woff'), url('/fonts/OpenSans/OpenSans-Bold.ttf') format('ttf');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -144,7 +174,10 @@
 
 @font-face {
   font-family: RockSalt;
-  src: local('RockSalt-Regular'), local('RockSalt Regular'), url('/fonts/RockSalt/RockSalt-Regular.woff2')  format('woff2'), url('/fonts/RockSalt/RockSalt-Regular.woff')  format('woff'), url('/fonts/RockSalt/RockSalt-Regular.ttf')  format('ttf');
+  src: local('RockSalt-Regular'), local('RockSalt Regular'),
+    url('/fonts/RockSalt/RockSalt-Regular.woff2') format('woff2'),
+    url('/fonts/RockSalt/RockSalt-Regular.woff') format('woff'),
+    url('/fonts/RockSalt/RockSalt-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
