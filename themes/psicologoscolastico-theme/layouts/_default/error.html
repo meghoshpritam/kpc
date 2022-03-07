@@ -7,7 +7,7 @@
   <div class="container grid grid-cols-1 px-4 pt-24 mx-auto text-white md:grid-cols-2">
     <div class="py-20 pb-36">
       <h1 class="text-6xl font-semibold">
-        {{ .Site.Data.notFoundPage.title }}
+        {{ .Params.mainTitle }}
       </h1>
       <div class="mt-16">
         <a href="{{ $pageData.hero.button.link | relURL }}" aria-label="{{ $pageData.hero.button.label }}" title="{{ $pageData.hero.button.label }}" class="py-4 text-lg text-white border-2 px-14 rounded-2xl bg-sky-blue lg:text-xl hover:shadow-lg border-sky-blue hover:text-sky-blue hover:bg-transparent">
@@ -15,8 +15,8 @@
         </a>
       </div>
     </div>
-    {{ $imageUrl := $pageData.image.url }}
-    {{ $imageAlt := $pageData.image.alt }}
+    {{ $imageUrl := .Params.image.url }}
+    {{ $imageAlt := .Params.image.alt }}
     {{ if not $imageUrl }}
     {{ $imageUrl = $pageData.hero.image.url }}
     {{ end }}
@@ -31,7 +31,7 @@
 </section>
 
 <section class="container px-5 mx-auto mb-20 mt-28 text-dark error-message-details min-h-50-screen">
-  {{ with .Site.Data.notFoundPage.errorMessage }}
+  {{ with .Params.errorMessage }}
   <div class="max-w-5xl mx-auto text-3xl font-semibold leading-loose article-description md:text-4xl lg:text-6xl">
     {{ . | markdownify }}
   </div>

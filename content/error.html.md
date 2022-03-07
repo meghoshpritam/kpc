@@ -1,15 +1,15 @@
 ---
-title: "Examdown - Something went wrong"
+title: "Psicologo Scolastico - Something went wrong"
 description: "An unexpected error happened"
 private: true
 
-mainTitle: 
-  normal: Ops 500 error
+mainTitle: Ops 500 error
 
-errorMessage:
-  purple: Ci Dispiace
-  normal: >
-    , la Pagina Che Cerchi Ha Generato Un   
-     Errore - [Torna in Homepage](/) 
-layout: single-page-template
+image:
+  alt: "error"
+
+errorMessage: >
+  <span>Ci Dispiace</span>, la Pagina Che Cerchi Ha Generato Un Errore - [Torna in Homepage](/) 
+
+layout: error
 ---

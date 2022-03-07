@@ -2,7 +2,9 @@ hero:
   image:
     url: /images/article-template.webp
     alt: article-hero-image
-
+  button:
+    label: Homepage
+    url: "/"
 
 topSection:
   publishDate: "Publish Date: "
