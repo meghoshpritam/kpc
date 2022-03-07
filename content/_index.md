@@ -47,13 +47,13 @@ whyUs:
     Il <span>90%</span> degli studenti grazie ai nostri consigli hanno risolto i loro problemi scolastici 
   points:
     - title: "PER INSEGNANTI E GENITORI"
-      url: "/blog/?rel=studenti"
+      url: "/blog/?rel=genitori+insegnanti"
       linkLabel: "Consigli utili"
       image:
         url: "/images/teachers-and-parents.webp"
         alt: "Per insegnanti e genitori"
     - title: "PER STUDENTI"
-      url: "/blog/?rel=genitori+insegnanti"
+      url: "/blog/?rel=studenti"
       linkLabel: "Consigli utili"
       image:
         url: "/images/students.webp"
