@@ -1,8 +1,7 @@
-mainTitle:
-  normal: Ops 404 error
+title: Ops 404 error
 
-errorMessage:
-  purple: Ci Dispiace
-  normal: >
-    ,la Pagina Che Cerchi Non Può Essere    
-     Trovata - [torna in homepage](/)
+image:
+  alt: "404"
+
+errorMessage: >
+  <span>Ci Dispiace</span>,la Pagina Che Cerchi Non Può Essere Trovata - [torna in homepage](/)
