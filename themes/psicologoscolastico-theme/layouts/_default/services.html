@@ -7,7 +7,7 @@
   {{/* hero section start  */}}
   {{ with .Params.hero }}
   <div class="container px-4 pt-24 mx-auto">
-    <div class="grid grid-cols-1 text-3xl font-normal gap-y-10 sm:grid-cols-2 lg:grid-cols-3 font-rockSalt">
+    <h1 class="grid grid-cols-1 text-3xl font-normal gap-y-10 sm:grid-cols-2 lg:grid-cols-3 font-rockSalt">
       {{ range $idx, $ctx := .highlights }}
       {{ $cls := "text-right text-secondary" }}
       {{ if eq $idx 0 }}
@@ -18,7 +18,7 @@
       {{ end }}
       <span class="{{ $cls }}">{{ $ctx }}</span>
       {{ end }}
-    </div>
+    </h1>
     <div class="max-w-lg pb-12 mx-auto mt-14">
       <img src="{{ .image.url }}" alt="{{ .image.alt }}" title="{{ .image.alt }}" class="w-full h-auto " height="566" width="612">
     </div>

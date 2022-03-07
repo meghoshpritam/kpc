@@ -1,142 +1,148 @@
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="ahrefs-site-verification" content="{{ .Site.Params.ahrefsSiteVerification }}">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="ahrefs-site-verification" content="{{ .Site.Params.ahrefsSiteVerification }}">
 
-    <title>
-        {{ block "title" . }}
-        {{- .Title }}
-        {{ end }}
-    </title>
-
-    {{ if ne .Params.private true }}
-    {{ partial "structured-data-elements.html" . }}
-    {{ partial "opengraph.html" . }}
-    {{ template "_internal/twitter_cards.html" . }}
+  <title>
+    {{ block "title" . }}
+    {{- .Title }}
     {{ end }}
+  </title>
 
-    {{ if .Description }}
-    <meta name="description" content="{{ .Description }}">
-    {{ else if .IsPage }}
-    <meta name="description" content="{{ .Summary | plainify }}">
-    {{ else }}
-    <meta name="description" content="{{ .Site.Data.default.description }}">
-    {{ end }}
+  {{ if ne .Params.private true }}
+  {{ partial "structured-data-elements.html" . }}
+  {{ partial "opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+  {{ end }}
 
-
-    {{ partial "google-analytics.html" .Site.GoogleAnalytics }}
-
-    <meta name="language" content="{{ .Language.LanguageName }}">
-
-    {{ if .Params.private }}
-    <meta name="robots" content="noindex,none" />
-    {{ else }}
-    <meta name="robots" content="index,follow" />
-    {{ end }}
-
-    {{- if .Keywords }}
-    <meta name="keywords" content="{{ delimit .Keywords ',' }}" />
-    {{ end -}}
-    {{- if .Params.Author }}
-    <meta name="author" content="{{ .Params.Author }}" />
-    {{ end -}}
-
-    {{ if ne .Params.private true }}
-    {{ if .IsTranslated }}
-    {{ range .Translations }}
-    <link rel="alternate" hreflang="{{ .Lang }}"
-        href='{{ replace .Permalink "http://" "https://" }}' />
-    {{ end }}
-    {{ else }}
-    <link rel="alternate" hreflang="{{ .Lang }}"
-        href='{{ replace .Permalink "http://" "https://" }}' />
-    <link rel="alternate" hreflang="x-default"
-        href='{{ replace .Permalink "http://" "https://" }}' />
-    {{ end }}
-    {{ end }}
-
-    {{ if ne .Params.private true }}
-    <link rel="canonical" href="{{  replace .Permalink "http://" "https://"  }}">
-    {{ end }}
-
-    <link rel="shortcut icon" type="image/icon" href='{{ "favicon.png" | absURL | lower }}'>
+  {{ if .Description }}
+  <meta name="description" content="{{ .Description }}">
+  {{ else if .IsPage }}
+  <meta name="description" content="{{ .Summary | plainify }}">
+  {{ else }}
+  <meta name="description" content="{{ .Site.Data.default.description }}">
+  {{ end }}
 
 
-    <!-- font preload start -->
-    {{ range .Site.Data.preloadConfig.staticPaths }}
-    {{ if eq .template $.Layout }}
+  {{ partial "google-analytics.html" .Site.GoogleAnalytics }}
 
-    {{ range .fonts }}
-    <link rel="preload" href="{{ .href }}" as="font" type="{{ .type }}" crossorigin />
-    {{ end }}
+  <meta name="language" content="{{ .Language.LanguageName }}">
 
-    {{ end }}
-    {{ end }}
-    <!-- font preload end -->
+  {{ if .Params.private }}
+  <meta name="robots" content="noindex,none" />
+  {{ else }}
+  <meta name="robots" content="index,follow" />
+  {{ end }}
 
-    {{ if .Site.Params.enableRecaptcha }}
-    <script async src="https://www.google.com/recaptcha/api.js"></script>
-    {{ end }}
+  {{- if .Keywords }}
+  <meta name="keywords" content="{{ delimit .Keywords ',' }}" />
+  {{ end -}}
+  {{- if .Params.Author }}
+  <meta name="author" content="{{ .Params.Author }}" />
+  {{ end -}}
 
-    <!-- Iubenda Integration START -->
-    {{ if .Site.Params.enableiubenda }}
-    <!-- Privacy -->
-    <script defer type="text/javascript">
-        (function (w, d) {
-            var loader = function () {
-                var s = d.createElement("script"),
-                    tag = d.getElementsByTagName("script")[0];
-                s.src = "https://cdn.iubenda.com/iubenda.js";
-                tag.parentNode.insertBefore(s, tag);
-            };
-            if (w.addEventListener) {
-                w.addEventListener("load", loader, false);
-            } else if (w.attachEvent) {
-                w.attachEvent("onload", loader);
-            } else {
-                w.onload = loader;
-            }
-        })(window, document);
-    </script>
+  {{ if ne .Params.private true }}
+  {{ if .IsTranslated }}
+  {{ range .Translations }}
+  <link rel="alternate" hreflang="{{ .Lang }}" href='{{ replace .Permalink "http://" "https://" }}' />
+  {{ end }}
+  {{ else }}
+  <link rel="alternate" hreflang="{{ .Lang }}" href='{{ replace .Permalink "http://" "https://" }}' />
+  <link rel="alternate" hreflang="x-default" href='{{ replace .Permalink "http://" "https://" }}' />
+  {{ end }}
+  {{ end }}
 
-    <!-- Cookie -->
-    <script defer type="text/javascript">
-        var _iub = _iub || [];
-        _iub.csConfiguration = {
-            "consentOnContinuedBrowsing": false,
-            "whitelabel": false,
-            "lang": "it",
-            "siteId": 2283818,
-            "cookiePolicyId": 49358839,
-            "banner": {
-                "acceptButtonDisplay": true,
-                "customizeButtonDisplay": true,
-                "acceptButtonColor": "rgba(145, 71, 160, 0.9019607843137255)",
-                "acceptButtonCaptionColor": "white",
-                "customizeButtonColor": "#212121",
-                "customizeButtonCaptionColor": "white",
-                "position": "float-bottom-center",
-                "textColor": "white",
-                "backgroundColor": "#000001"
-            }
-        };
-    </script>
-    <script async type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8">
-    </script>
-    {{ end }}
-    <!-- Iubenda Integration END -->
+  {{ if ne .Params.private true }}
+  <link rel="canonical" href="{{  replace .Permalink "http://" "https://"  }}">
+  {{ end }}
 
-    {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
-    {{- $animation := resources.Get "css/animate.css/animate.min.css" -}}
-    {{ $styles := slice $styles  $animation | resources.Concat "css/style.min.css" }}
-    {{- if .Site.IsServer }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
-    {{ else }}
-    {{- $styles := $styles | minify | fingerprint | resources.PostProcess -}}
-    <link rel="preload" href="{{ $styles.RelPermalink }}" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
-    {{ end -}}
+  <link rel="shortcut icon" type="image/icon" href='{{ "favicon.png" | absURL | lower }}'>
 
-    <meta name="wot-verification" content="f1bf274173f22e6297ce"/>
+
+  <!-- font preload start -->
+  {{ range .Site.Data.preloadConfig.staticPaths }}
+  {{ if eq .template $.Layout }}
+
+  {{ range .fonts }}
+  <link rel="preload" href="{{ .href }}" as="font" type="{{ .type }}" crossorigin />
+  {{ end }}
+
+  {{ end }}
+
+  {{ if eq $.RelPermalink "/404.html" }}
+  {{ if eq .template "404" }}
+
+  {{ range .fonts }}
+  <link rel="preload" href="{{ .href }}" as="font" type="{{ .type }}" crossorigin />
+  {{ end }}
+
+  {{ end }}
+  {{ end }}
+  {{ end }}
+  <!-- font preload end -->
+
+  {{ if .Site.Params.enableRecaptcha }}
+  <script async src="https://www.google.com/recaptcha/api.js"></script>
+  {{ end }}
+
+  <!-- Iubenda Integration START -->
+  {{ if .Site.Params.enableiubenda }}
+  <!-- Privacy -->
+  <script defer type="text/javascript">
+    (function(w, d) {
+      var loader = function() {
+        var s = d.createElement("script"),
+          tag = d.getElementsByTagName("script")[0];
+        s.src = "https://cdn.iubenda.com/iubenda.js";
+        tag.parentNode.insertBefore(s, tag);
+      };
+      if (w.addEventListener) {
+        w.addEventListener("load", loader, false);
+      } else if (w.attachEvent) {
+        w.attachEvent("onload", loader);
+      } else {
+        w.onload = loader;
+      }
+    })(window, document);
+  </script>
+
+  <!-- Cookie -->
+  <script defer type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {
+      "consentOnContinuedBrowsing": false,
+      "whitelabel": false,
+      "lang": "it",
+      "siteId": 2283818,
+      "cookiePolicyId": 49358839,
+      "banner": {
+        "acceptButtonDisplay": true,
+        "customizeButtonDisplay": true,
+        "acceptButtonColor": "rgba(145, 71, 160, 0.9019607843137255)",
+        "acceptButtonCaptionColor": "white",
+        "customizeButtonColor": "#212121",
+        "customizeButtonCaptionColor": "white",
+        "position": "float-bottom-center",
+        "textColor": "white",
+        "backgroundColor": "#000001"
+      }
+    };
+  </script>
+  <script async type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8">
+  </script>
+  {{ end }}
+  <!-- Iubenda Integration END -->
+
+  {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
+  {{- $animation := resources.Get "css/animate.css/animate.min.css" -}}
+  {{ $styles := slice $styles  $animation | resources.Concat "css/style.min.css" }}
+  {{- if .Site.IsServer }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+  {{ else }}
+  {{- $styles := $styles | minify | fingerprint | resources.PostProcess -}}
+  <link rel="preload" href="{{ $styles.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+  {{ end -}}
+
+  <meta name="wot-verification" content="f1bf274173f22e6297ce" />
 </head>
