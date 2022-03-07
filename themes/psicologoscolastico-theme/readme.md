@@ -1,4 +1,4 @@
-# psymargiotta Theme with Tailwind CSS
+# Psicologo Scolastico Theme with Tailwind CSS
 
 ## Prerequisites
 
