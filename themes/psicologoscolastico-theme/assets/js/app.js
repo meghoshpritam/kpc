@@ -8,271 +8,8 @@ const HIDDEN_CLASS = 'hidden';
 const TESTIMONIAL_ID = 'data-testimonial-id';
 const L_TO_R_ANIMATION = 'animate__fadeInRight';
 const R_TO_L_ANIMATION = 'animate__fadeInLeft';
-
-class Utils {
-  static disableButtonClass = 'disable-card-button';
-
-  //  fix the card container height
-  static articleCarsInit = ({ selector, wrapperSelector, nextButton, lineSelector, numberSelector }) => {
-    const cards = document.querySelectorAll(selector);
-    let maxHeight = 0;
-    let displayed = 0;
-    let lastDisplayed = -1;
-
-    for (let idx = 0; idx < cards.length; idx += 1) {
-      const cDisplay = window.getComputedStyle(cards[idx], null).display;
-
-      if (cDisplay !== 'none') {
-        lastDisplayed = idx;
-        displayed += 1;
-      }
-
-      cards[idx].style.display = 'grid';
-      if (maxHeight < cards[idx].clientHeight) maxHeight = cards[idx].clientHeight;
-
-      cards[idx].style.display = cDisplay;
-    }
-
-    // disable next button if all cards are displayed initially
-    if (cards.length === displayed) document.querySelector(nextButton).classList.add(Utils.disableButtonClass);
-
-    document.querySelector(numberSelector).innerHTML = `${lastDisplayed + 1}`;
-    document.querySelector(lineSelector).style.width = `${Math.ceil((100 * (lastDisplayed + 1)) / cards.length)}%`;
-    document.querySelector(wrapperSelector).style.minHeight = `${maxHeight}px`;
-  };
-
-  // initialize height and dot of cars
-  static initDotCards = ({ selector, containerSelector, nextButton, indicatorsSelector }) => {
-    const cards = document.querySelectorAll(selector);
-
-    let maxHeight = 0;
-    let displayed = 0;
-
-    for (const card of cards) {
-      const cDisplay = window.getComputedStyle(cards, null).display;
-
-      if (cDisplay !== 'none') {
-        displayed += 1;
-      }
-
-      card.style.display = 'flex';
-      if (maxHeight < card.clientHeight) maxHeight = card.clientHeight;
-
-      card.style.display = cDisplay;
-    }
-
-    // disable next button if all cards are displayed initially
-    if (cards.length === displayed) document.querySelector(nextButton).classList.add(Utils.disableButtonClass);
-
-    // get all the indicators
-    const indicators = document.querySelectorAll(indicatorsSelector);
-
-    for (let idx = 0; idx < indicators.length; idx += 1) {
-      if (idx < Math.ceil(cards.length / displayed)) indicators[idx].classList.remove('hidden');
-      else {
-        indicators[idx].classList.add('hidden');
-      }
-    }
-
-    // hr height
-    let hrHeight = 0;
-    const hrs = document.querySelectorAll(`${containerSelector} > hr`);
-
-    for (const hr of hrs) {
-      if (hrHeight < window.getComputedStyle(hr).height) {
-        hrHeight = window.getComputedStyle(hr).height;
-      }
-    }
-
-    for (const card of cards) {
-      card.style.minHeight = `${maxHeight}px`;
-    }
-  };
-
-  // change cards
-  static changeContentButton = ({
-    selector,
-    direction = 'next',
-    previousButton,
-    nextButton,
-    lineSelector,
-    numberSelector,
-  }) => {
-    const cards = document.querySelectorAll(selector);
-    let currentScreenCards = [];
-
-    for (let idx = 0; idx < cards.length; idx += 1) {
-      if (window.getComputedStyle(cards[idx], null).display !== 'none') {
-        currentScreenCards = [...currentScreenCards, idx];
-      }
-    }
-
-    const changeNewState = (states = [], add, remove) => {
-      for (let idx = 0; idx < cards.length; idx += 1) {
-        document.querySelector(previousButton).classList.add(Utils.disableButtonClass);
-        if (states[0] !== 0) document.querySelector(previousButton).classList.remove(Utils.disableButtonClass);
-
-        document.querySelector(nextButton).classList.add(Utils.disableButtonClass);
-        if (states[states.length - 1] !== cards.length - 1)
-          document.querySelector(nextButton).classList.remove(Utils.disableButtonClass);
-
-        document.querySelector(numberSelector).innerHTML = `${states[states.length - 1] + 1}`;
-        document.querySelector(lineSelector).style.width = `${Math.ceil(
-          (100 * (states[states.length - 1] + 1)) / cards.length,
-        )}%`;
-
-        if (states.indexOf(idx) !== -1) {
-          cards[idx].classList.remove('animate__animated', `animate__fadeIn${remove}`);
-          cards[idx].classList.add('animate__animated', `animate__fadeIn${add}`);
-          cards[idx].style.display = 'grid';
-        } else {
-          cards[idx].style.display = 'none';
-        }
-      }
-    };
-
-    if (direction === 'next') {
-      let newScreenCards = [];
-      let newLastNum = currentScreenCards[currentScreenCards.length - 1] + currentScreenCards.length;
-
-      if (newLastNum >= cards.length) newLastNum = cards.length - 1;
-
-      for (let idx = currentScreenCards.length - 1; idx > -1; idx -= 1) {
-        newScreenCards = [...newScreenCards, newLastNum - idx];
-      }
-
-      changeNewState(newScreenCards, 'Right', 'Left');
-    } else if (direction === 'previous') {
-      let newScreenCards = [];
-
-      let newFirstNum = currentScreenCards[0] - currentScreenCards.length;
-
-      if (newFirstNum < 0) newFirstNum = 0;
-
-      for (let idx = 0; idx < currentScreenCards.length; idx += 1) {
-        newScreenCards = [...newScreenCards, newFirstNum + idx];
-      }
-
-      changeNewState(newScreenCards, 'Left', 'Right');
-    }
-  };
-
-  // dot card change button
-  static dotCardChangeButton = ({
-    selector,
-    direction = 'next',
-    previousButton,
-    nextButton,
-    indicatorsSelector,
-    containerSelector,
-    position,
-  }) => {
-    const cards = document.querySelectorAll(selector);
-    let currentScreenCards = [];
-
-    for (let idx = 0; idx < cards.length; idx += 1) {
-      if (window.getComputedStyle(cards[idx], null).display !== 'none') {
-        currentScreenCards = [...currentScreenCards, idx];
-      }
-    }
-
-    const changeNewState = (states = [], add, remove) => {
-      // change the hr tag
-      if (Number(window.getComputedStyle(document.querySelector('body')).width.split('px')[0]) >= 768) {
-        const hrs = document.querySelectorAll(`${containerSelector} > hr`);
-
-        for (let index = 0; index < hrs.length; index += 1) {
-          if (index === states[states.length - 1] - 1) {
-            hrs[index].style.display = 'block';
-          } else {
-            hrs[index].style.display = 'none';
-          }
-        }
-      }
-
-      // highlight the current indicator
-      const indicators = document.querySelectorAll(indicatorsSelector);
-      for (let idx = 0; idx < indicators.length; idx += 1) {
-        if (idx === Math.floor(states[states.length - 1] / states.lenguh)) {
-          indicators[idx].classList.remove('shadow-sm', 'bg-ice-blue2');
-          indicators[idx].classList.add('shadow-lg', 'bg-g4');
-        } else {
-          indicators[idx].classList.remove('shadow-lg', 'bg-g4');
-          indicators[idx].classList.add('shadow-sm', 'bg-ice-blue2');
-        }
-      }
-
-      for (let idx = 0; idx < cards.length; idx += 1) {
-        document.querySelector(previousButton).classList.add(Utils.disableButtonClass);
-        if (states[0] !== 0) document.querySelector(previousButton).classList.remove(Utils.disableButtonClass);
-
-        document.querySelector(nextButton).classList.add(Utils.disableButtonClass);
-        if (states[states.length - 1] !== cards.length - 1)
-          document.querySelector(nextButton).classList.remove(Utils.disableButtonClass);
-
-        // document.querySelector(numberSelector).innerHTML = `${states[states.length - 1] + 1}`;
-        // document.querySelector(lineSelector).style.width = `${Math.ceil(100 * (states[states.length - 1] + 1) / (cards.length))}%`;
-
-        if (states.indexOf(idx) !== -1) {
-          cards[idx].classList.remove('animate__animated', `animate__fadeIn${remove}`);
-          cards[idx].classList.add('animate__animated', `animate__fadeIn${add}`);
-          cards[idx].style.display = 'flex';
-        } else {
-          cards[idx].style.display = 'none';
-        }
-      }
-    };
-
-    if (position) {
-      let max = position * currentScreenCards.length - 1;
-
-      if (max > cards.length - 1) max = cards.length - 1;
-
-      if (max - currentScreenCards.length - 1 < 0) {
-        max = currentScreenCards.length - 1;
-      }
-
-      let newStates = [];
-      for (let idx = currentScreenCards.length - 1; idx > -1; idx -= 1) {
-        newStates = [...newStates, max - idx];
-      }
-
-      // check previous or next move by the position difference
-      let next = false;
-      for (let idx = 0; idx < currentScreenCards.length; idx += 1) {
-        if (currentScreenCards[idx] < newStates[idx]) {
-          next = true;
-        }
-      }
-
-      if (next) changeNewState(newStates, 'Right', 'Left');
-      else changeNewState(newStates, 'Left', 'Right');
-    } else if (direction === 'next') {
-      let newScreenCards = [];
-      let newLastNum = currentScreenCards[currentScreenCards.length - 1] + currentScreenCards.length;
-
-      if (newLastNum >= cards.length) newLastNum = cards.length - 1;
-
-      for (let idx = currentScreenCards.length - 1; idx > -1; idx -= 1) {
-        newScreenCards = [...newScreenCards, newLastNum - idx];
-      }
-
-      changeNewState(newScreenCards, 'Right', 'Left');
-    } else if (direction === 'previous') {
-      let newScreenCards = [];
-
-      let newFirstNum = currentScreenCards[0] - currentScreenCards.length;
-
-      if (newFirstNum < 0) newFirstNum = 0;
-
-      for (let idx = 0; idx < currentScreenCards.length; idx += 1) {
-        newScreenCards = [...newScreenCards, newFirstNum + idx];
-      }
-
-      changeNewState(newScreenCards, 'Left', 'Right');
-    }
-  };
-}
+const PAGINATION_BREAKPOINT = 640;
+const PAGINATION_LIST_BLOG_ELEMENTS = 6;
 
 class App {
   static menu = false;
@@ -434,17 +171,6 @@ class App {
         }
       }
       lastScrollTop = st <= 0 ? 0 : st;
-    });
-  };
-
-  // fix the height of the article list page on page load
-  static fixHeightListPage = () => {
-    Utils.articleCarsInit({
-      selector: '.category-page-article-card-1006',
-      wrapperSelector: '.wrapper-category-page-article-card-1006',
-      nextButton: '.btn-next-category-page-article-card-1006',
-      lineSelector: '.line-category-page-article-card-1006',
-      numberSelector: '.number-category-page-article-card-1006',
     });
   };
 
@@ -739,6 +465,102 @@ class App {
         document.head.appendChild(scriptElement);
       }
     }
+  };
+
+  static getActiveElements = (selector) => {
+    let listElements = document.querySelectorAll(selector);
+    listElements = Array.from(listElements || []);
+
+    const isSearchEnable = listElements.some((listElement) => listElement.dataset.activeSearch === 'true');
+    let activeElements = listElements.filter((listElement) => listElement.dataset.active === 'true');
+    if (isSearchEnable) {
+      activeElements = activeElements.filter((listElement) => listElement.dataset.activeSearch === 'true');
+    }
+
+    return activeElements;
+  };
+
+  static getActiveButtonIndex = (buttons) => {
+    let index = 1;
+    for (const button of buttons) {
+      if (button.includes('data-active="true"')) {
+        return index;
+      }
+      index += 1;
+    }
+
+    return index;
+  };
+
+  static getPerviousAndNextButtons = (paginationContainer, activeButtonIdx, nPages) => {
+    const previousButtonElement = paginationContainer.children[0];
+    const nextButtonElement = paginationContainer.children[paginationContainer.children.length - 1];
+
+    previousButtonElement.removeAttribute('disabled');
+    if (activeButtonIdx === 1) {
+      previousButtonElement.setAttribute('disabled', true);
+    }
+
+    nextButtonElement.removeAttribute('disabled');
+    if (activeButtonIdx === nPages) {
+      nextButtonElement.setAttribute('disabled', true);
+    }
+
+    return {
+      previousButtonElement,
+      nextButtonElement,
+    };
+  };
+
+  static showCurrentListElements = (listElements, activePage, elementsPerPage) => {
+    this.hideAllElements(listElements);
+    const start = (activePage - 1) * elementsPerPage;
+    let end = start + elementsPerPage;
+    if (end > listElements.length) {
+      end = listElements.length;
+    }
+    listElements[0].classList.add(HIDDEN_CLASS);
+
+    const targetElements = listElements.slice(start, end);
+    this.showAllElements(targetElements);
+  };
+
+  static getBlogElementsPerPage = () => {
+    if (window.innerWidth >= PAGINATION_BREAKPOINT) {
+      return PAGINATION_LIST_BLOG_ELEMENTS * 2;
+    }
+    return PAGINATION_LIST_BLOG_ELEMENTS;
+  };
+
+  static showPagination = () => {
+    const paginationContainer = document.querySelector('.pagination-btn-container');
+    paginationContainer.classList.add('invisible');
+
+    const activeElements = this.getActiveElements('[data-id="blog-0503"]');
+
+    const nActiveElements = activeElements.length;
+    const elementsPerPage = this.getBlogElementsPerPage();
+    const nPages = Math.ceil(nActiveElements / elementsPerPage);
+
+    const buttons = [];
+    for (let index = 1; index <= nPages; index += 1) {
+      buttons.push(
+        `<button data-id="pagination-btn" data-btn-index="${index}" class="pagination-button" data-active="false">${index}</button>`,
+      );
+    }
+    buttons[0] = buttons[0].replace('data-active="false"', 'data-active="true"');
+
+    const activeButtonIdx = this.getActiveButtonIndex(buttons);
+
+    const { previousButtonElement, nextButtonElement } = this.getPerviousAndNextButtons(
+      paginationContainer,
+      activeButtonIdx,
+      nPages,
+    );
+
+    paginationContainer.innerHTML = previousButtonElement.outerHTML + buttons.join('\n') + nextButtonElement.outerHTML;
+    paginationContainer.classList.remove('invisible');
+    this.showCurrentListElements(activeElements, activeButtonIdx, elementsPerPage);
   };
 }
 

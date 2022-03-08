@@ -70,8 +70,11 @@
   {{ $pageLink := .RelPermalink }}
   {{ with .Params }}
   {{ $firstArticleTag := index .tags 0 }}
-  {{ $isActive := not (in .tags $firstTag.id)}}
-  <a href="{{ $pageLink }}" data-id="blog-0503" data-tags='{{ delimit .tags "," }}' class="{{ if $isActive }} hidden {{ end }} flex flex-col h-full bg-white rounded-3xl shadow-card2 hover:shadow-2xl group" title="{{ .articleData.title | plainify }}" aria-label="{{ .articleData.title | plainify }}" data-active="{{ if $isActive }}true{{ else }}false{{ end }}">
+  {{ $isInActive := not (in .tags $firstTag.id)}}
+  <a href="{{ $pageLink }}" data-id="blog-0503" data-tags='{{ delimit .tags "," }}'
+   class="{{ if $isInActive }} hidden {{ end }} flex flex-col h-full bg-white rounded-3xl shadow-card2 hover:shadow-2xl group" 
+   title="{{ .articleData.title | plainify }}" aria-label="{{ .articleData.title | plainify }}"
+   data-active="{{ if $isInActive }}false{{ else }}true{{ end }}">
     <div class="h-56">
       {{ $image := .coverImage }}
       {{ if not $image }}
@@ -103,7 +106,7 @@
         <use xlink:href="#shape-arrow" />
       </svg>
     </button>
-    {{ range seq 25 }}
+    {{ range seq 5 }}
     <button data-id="pagination-btn" data-btn-index="{{ . }}" class="pagination-button" data-active="false">
       {{ . }}
     </button>
@@ -198,6 +201,7 @@
 <script defer type="text/javascript">
   window.onload = function() {
     App.onLoadBlogPage();
+    App.showPagination();
   }
 </script>
 <!-- page script end -->
