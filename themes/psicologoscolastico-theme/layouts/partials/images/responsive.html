@@ -1,13 +1,14 @@
 {{ $imagePath := .src }}
-{{ $image := resources.Get $imagePath }}
+{{ $splits := split $imagePath "/" }}
+{{ $fileName := index $splits (sub (len $splits) 1) }}
+{{ $fileName = replace $fileName ".webp" ""  }}
 
-{{ $tiny := ($image.Resize "480x q90") }}
-{{ $small := ($image.Resize "768x q90") }}
-{{ $medium := ($image.Resize "1024x q90") }}
-{{ $large := ($image.Resize "1366x q90") }}
+{{ $sizes := (slice "360" "480" "768" "1024" "1336") }}
 
-<img srcset="
-          {{- with $tiny.RelPermalink -}}{{.}} 480w{{- end -}}
-          {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
-          {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
-          {{- with $large.RelPermalink -}}, {{.}} 1366w{{- end -}}" src="{{ $image.RelPermalink }}" title="{{ .alt }}" alt="{{ .alt }}" class="{{ .class }}" height="{{ .height }}" width="{{ .width }}">
+{{ $srcset := "" }}
+{{ range $sizes }}
+{{ $path := replace $imagePath $fileName (print $fileName "x" . "w") }}
+{{ $srcset = print $srcset $path " x" . "w," }}
+{{ end }}
+
+<img srcset="{{ $srcset }}" src="{{ $imagePath }}" title="{{ .alt }}" alt="{{ .alt }}" class="{{ .class }}" height="{{ .height }}" width="{{ .width }}">
