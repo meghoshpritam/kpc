@@ -1,4 +1,4 @@
-<input type="checkbox" id="contact-us-dialog" class="hidden">
+<input type="checkbox" id="contact-us-dialog" class="hidden" oninput="App.onOpenContactForm(event)">
 <section class="fixed inset-0 h-screen overflow-y-auto bg-left-bottom bg-no-repeat bg-cover bg-contact-us z-70 contact-us-dialog">
   <label for="contact-us-dialog" class="absolute cursor-pointer lg:text-white text-dark2 right-7 top-7 hover:text-secondary">
     <svg class="w-8 h-8 sm:w-9 sm:h-9">
@@ -22,7 +22,7 @@
           {{ .confirm.label | markdownify }}
         </label>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 pt-9">
-          <div class="relative z-10 flex justify-center sm:justify-start {{ if ne site.Params.enableRecaptcha true }} h-20 {{ end }}">
+          <div class="relative z-10 flex justify-center h-20 sm:justify-start">
             {{ if site.Params.enableRecaptcha }}
             <div class="g-recaptcha" data-sitekey="{{ site.Params.recaptchaKey }}"></div>
             {{ end }}

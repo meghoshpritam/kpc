@@ -744,6 +744,20 @@ class App {
       }
     }
   };
+
+  static onOpenContactForm = (event) => {
+    const recaptchaId = 'google-recaptcha-script';
+    if (event.target.checked) {
+      if (document.querySelector(`meta[name="google-recaptcha"]`) && !document.querySelector(`script#${recaptchaId}`)) {
+        const scriptElement = document.createElement('script');
+
+        scriptElement.setAttribute('id', recaptchaId);
+        scriptElement.setAttribute('src', 'https://www.google.com/recaptcha/api.js');
+
+        document.head.appendChild(scriptElement);
+      }
+    }
+  };
 }
 
 window.App = App;

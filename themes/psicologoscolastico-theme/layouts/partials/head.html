@@ -82,7 +82,7 @@
   <!-- font preload end -->
 
   {{ if .Site.Params.enableRecaptcha }}
-  <script async src="https://www.google.com/recaptcha/api.js"></script>
+  <meta name="google-recaptcha" content="true" />
   {{ end }}
 
   {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
