@@ -319,7 +319,9 @@ class App {
       inputElement.value = '';
     }
 
-    document.querySelector(`${contactFormId} input[type="checkbox"]`).checked = false;
+    const checkboxElement = document.querySelector(`${contactFormId} input[type="checkbox"]`);
+    checkboxElement.removeAttribute('value');
+    checkboxElement.checked = false;
   };
 
   static onLoad = () => {
