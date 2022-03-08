@@ -498,6 +498,7 @@ class App {
       .split(' ')
       .filter((term) => term?.length > 0);
     const blogElements = document.querySelectorAll('[data-id="blog-0503"][data-active="true"]');
+    const searchElements = document.querySelectorAll('[data-id="blog-0503"][data-active-search="true"]');
     this.hideAllElements(blogElements);
 
     const matchElements =
@@ -506,8 +507,7 @@ class App {
         return searchTerms.every((term) => blogTitle.includes(term));
       }) || [];
 
-    this.updateSearchResult(searchTerm, matchElements);
-    this.showAllElements(matchElements);
+    this.searchInLists(searchTerm, searchElements, matchElements);
   };
 
   static getTestimonialElements = () => {
@@ -652,6 +652,19 @@ class App {
     }
   };
 
+  static searchInLists = (searchTerm, searchElements, matchElements) => {
+    for (const listElement of searchElements) {
+      listElement.removeAttribute('data-active-search');
+    }
+
+    this.updateSearchResult(searchTerm, matchElements);
+    this.showAllElements(matchElements);
+
+    for (const listElement of matchElements) {
+      listElement.setAttribute('data-active-search', 'true');
+    }
+  };
+
   static searchInDownloadList = (event) => {
     const { target } = event;
     const searchTerm = target.value || '';
@@ -660,6 +673,7 @@ class App {
       .split(' ')
       .filter((term) => term?.length > 0);
     const listElements = document.querySelectorAll('[data-id="list-item"][data-active="true"]');
+    const listElementsWithSearch = document.querySelectorAll('[data-id="list-item"][data-active-search="true"]');
     this.hideAllElements(listElements);
 
     const matchElements =
@@ -668,8 +682,7 @@ class App {
         return searchTerms.every((term) => blogTitle.includes(term));
       }) || [];
 
-    this.updateSearchResult(searchTerm, matchElements);
-    this.showAllElements(matchElements);
+    this.searchInLists(searchTerm, listElementsWithSearch, matchElements);
   };
 
   static showElementsByTag = (tag, listSelector, elementSelectorFunction) => {
