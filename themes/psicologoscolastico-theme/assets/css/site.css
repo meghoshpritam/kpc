@@ -103,3 +103,8 @@ input#contact-us-dialog ~ section.contact-us-dialog {
 input#contact-us-dialog:checked ~ section.contact-us-dialog {
   @apply block;
 }
+
+/* ========================== contact form style ============================= */
+.checkbox-label a {
+  @apply underline hover:text-sky-blue;
+}

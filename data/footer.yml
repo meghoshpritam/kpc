@@ -12,10 +12,14 @@ links:
 contactUs:
   heading: Contact Us
   form:
-    name:
-      placeholder: Name *
-      id: name
+    fName:
+      placeholder: Your Name *
+      id: first-name
       required: true
+    lName:
+      placeholder: Your Surname
+      id: last-name
+      required: false
     email:
       placeholder: Email*
       id: email
@@ -29,7 +33,7 @@ contactUs:
       id: message
       required: true
     confirm:
-      id: confirm
+      id: confirmation
       label: >
         Accetto Il Trattamento [Dei Dati Personali](/privacy-policy/).
     submitBtn: Invia

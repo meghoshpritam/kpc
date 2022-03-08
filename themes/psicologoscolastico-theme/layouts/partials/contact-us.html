@@ -9,27 +9,31 @@
     <div class="h-full px-4 py-8 lg:px-24 bg-light-gray">
       <h2 class="py-6 text-3xl leading-10 text-center text-dark">{{ .heading }}</h2>
       {{ with .form }}
-      <form action="">
-        <input type="text" name="{{ .name.id }}" id="{{ .name.id }}" placeholder="{{ .name.placeholder }}" required="{{ .name.required }}" oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" class="border-transparent outline-none border-2 focus:border-dark bg-white px-5 py-3.5 placeholder-opacity-50 placeholder-black text-dark rounded-lg mb-6 text-sm w-full">
-        <input type="email" name="{{ .email.id }}" id="{{ .email.id }}" placeholder="{{ .email.placeholder }}" required="{{ .email.required }}" oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" class="border-transparent border-2 focus:border-dark outline-none bg-white px-5 py-3.5 placeholder-opacity-50 placeholder-black text-dark rounded-lg mb-6 text-sm w-full">
-        <input type="text" name="{{ .subject.id }}" id="{{ .subject.id }}" placeholder="{{ .subject.placeholder }}" required="{{ .subject.required }}" oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" class="border-transparent border-2  focus:border-dark outline-none bg-white px-5 py-3.5 placeholder-opacity-50 placeholder-black text-dark rounded-lg mb-6 text-sm w-full">
-        <textarea name="{{ .message.id }}" id="{{ .message.id }}" placeholder="{{ .message.placeholder }}" rows="5" required="{{ .message.required }}" oninvalid="this.setCustomValidity('{{ .invalidEmailMessage }}');" class="border-transparent border-2 focus:border-dark outline-none bg-white px-5 py-3.5 placeholder-opacity-50 placeholder-black text-dark rounded-lg mb-6 text-sm w-full"></textarea>
-        <label for="confirmation" class="text-dark">
+      <form action="{{ site.Params.contactFormUrl }}" onsubmit="onSubmitContactForm(event);" method="POST" id="contact-us-form">
+        <div class="grid grid-cols-2 gap-x-3">
+          <input type="text" value="123" name="{{ .fName.id }}" id="{{ .fName.id }}" placeholder="{{ .fName.placeholder }}" {{ if .fName.required }} required oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" oninput="this.setCustomValidity('');" {{ end }} class="border-transparent outline-none border-2 focus:border-dark bg-white px-5 py-3.5 placeholder-opacity-50 placeholder-black text-dark rounded-lg mb-6 text-sm w-full">
+          <input type="text" name="{{ .lName.id }}" id="{{ .lName.id }}" placeholder="{{ .lName.placeholder }}" {{ if .lName.required }} required oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" oninput="this.setCustomValidity('');" {{ end }} class="border-transparent outline-none border-2 focus:border-dark bg-white px-5 py-3.5 placeholder-opacity-50 placeholder-black text-dark rounded-lg mb-6 text-sm w-full">
+        </div>
+        <input type="email" name="{{ .email.id }}" id="{{ .email.id }}" placeholder="{{ .email.placeholder }}" {{ if .email.required }} required oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" oninput="onInputFormEmail(this);" {{ end }} class="border-transparent border-2 focus:border-dark outline-none bg-white px-5 py-3.5 placeholder-opacity-50 placeholder-black text-dark rounded-lg mb-6 text-sm w-full">
+        <input type="text" name="{{ .subject.id }}" id="{{ .subject.id }}" placeholder="{{ .subject.placeholder }}" {{ if .subject.required }} required oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" oninput="this.setCustomValidity('');" {{ end }} class="border-transparent border-2  focus:border-dark outline-none bg-white px-5 py-3.5 placeholder-opacity-50 placeholder-black text-dark rounded-lg mb-6 text-sm w-full">
+        <textarea name="{{ .message.id }}" id="{{ .message.id }}" placeholder="{{ .message.placeholder }}" rows="5" {{ if .message.required }} required oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" oninput="this.setCustomValidity('');" {{ end }} class="border-transparent border-2 focus:border-dark outline-none bg-white px-5 py-3.5 placeholder-opacity-50 placeholder-black text-dark rounded-lg mb-6 text-sm w-full"></textarea>
+        <label for="{{ .confirm.id }}" class="checkbox-label text-dark">
           <input type="checkbox" name="{{ .confirm.id }}" id="{{ .confirm.id }}" required oninvalid="this.setCustomValidity('{{ .requiredMessage }}');" onchange="this.setCustomValidity('');">
           {{ .confirm.label | markdownify }}
         </label>
-        <div class="grid grid-cols-2 pt-7">
-          <div class="{{ if ne $.Site.Params.enableRecaptcha true }} h-20 {{ end }}">
-            {{ if $.Site.Params.enableRecaptcha }}
-            <div class="g-recaptcha" data-sitekey="{{ $.Site.Params.recaptchaKey }}"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 pt-9">
+          <div class="relative z-10 flex justify-center sm:justify-start {{ if ne site.Params.enableRecaptcha true }} h-20 {{ end }}">
+            {{ if site.Params.enableRecaptcha }}
+            <div class="g-recaptcha" data-sitekey="{{ site.Params.recaptchaKey }}"></div>
             {{ end }}
           </div>
-          <div class="self-center justify-self-end">
-            <button type="submit" class="text-lg bg-white text-dark hover:text-white hover:bg-dark py-1.5 px-7">
+          <div class="relative z-0 flex self-center justify-start w-full sm:justify-end">
+            <button type="submit" class="w-full px-10 py-2 text-lg bg-white sm:w-auto text-dark hover:text-white hover:bg-dark">
               {{ .submitBtn }}
             </button>
           </div>
         </div>
+        <input type="text" id="site" name="site" readonly required hidden value="psicologoscolastico" class="hidden">
       </form>
       {{ end }}
     </div>

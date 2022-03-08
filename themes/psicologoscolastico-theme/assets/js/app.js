@@ -309,9 +309,27 @@ class App {
     }
   };
 
+  static clearContactForm = () => {
+    const contactFormId = 'form#contact-us-form';
+
+    document.querySelector(`${contactFormId} > textarea`).value = '';
+    const inputElements = document.querySelectorAll(`${contactFormId} input:not([readonly])`);
+
+    for (const inputElement of inputElements) {
+      inputElement.value = '';
+    }
+
+    document.querySelector(`${contactFormId} input[type="checkbox"]`).checked = false;
+  };
+
   static onLoad = () => {
     // change current year
     document.querySelector('.current-year-footer-0102').innerHTML = new Date().getFullYear();
+
+    // onload clear and close contact form
+    document.querySelector('input#contact-us-dialog').checked = false;
+    App.clearContactForm();
+
     App.onScroll();
   };
 

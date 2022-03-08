@@ -35,7 +35,7 @@ googleAnalytics = "G-WYPF9BDN7Y"
 
 [params]
     contactFormUrl = "https://getform.io/f/f9dd923a-c85d-4bdb-b1a5-0ed4108f507a"
-    recaptchaKey = "6LdNcyobAAAAAC0I4HixUkZExdHP_Td_YO0YX8GH"
+    recaptchaKey = "6LeAP8EeAAAAACoSrA97pdumqhG8MS1ZGtAiW21W"
     ogImage = "logo.svg"
     ahrefsSiteVerification = "db33085043a2bb7da1d94bef763d8ab5074838837d68250eb12fda61c32588f5"
     enableChat = false
