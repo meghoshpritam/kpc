@@ -487,38 +487,7 @@ class App {
   };
 
   static showBlogsByTag = (tag) => {
-    const buttonActiveClasses = ['border-sky-blue', 'text-white', 'bg-sky-blue'];
-    const buttonInactiveClass = 'border-light-gray3';
-    const targetButtonElement = document.querySelector(`${TAG_BUTTON_SELECTOR}[data-tag="${tag}"]`);
-
-    if (targetButtonElement.dataset.active === 'true') {
-      targetButtonElement.classList.remove(...buttonActiveClasses);
-      targetButtonElement.classList.add(buttonInactiveClass);
-      targetButtonElement.setAttribute('data-active', 'false');
-    } else {
-      targetButtonElement.classList.remove(buttonInactiveClass);
-      targetButtonElement.classList.add(...buttonActiveClasses);
-      targetButtonElement.setAttribute('data-active', 'true');
-    }
-
-    const activeButtonElements = document.querySelectorAll(`${TAG_BUTTON_SELECTOR}[data-active="true"]`);
-    const activeTags = Array.from(activeButtonElements).map((element) => element.dataset.tag);
-    const blogElements = document.querySelectorAll(`[data-id="blog-0503"]`);
-
-    if (activeTags?.length < 1) {
-      this.showAllElements(blogElements);
-      return;
-    }
-
-    for (const blogElement of blogElements) {
-      if (activeTags.some((_tag) => blogElement.dataset.tags.includes(_tag))) {
-        blogElement.classList.remove(HIDDEN_CLASS);
-        blogElement.setAttribute('data-active', 'true');
-      } else {
-        blogElement.classList.add(HIDDEN_CLASS);
-        blogElement.setAttribute('data-active', 'false');
-      }
-    }
+    this.showElementsByTag(tag, `[data-id="blog-0503"]`, (element, tagName) => element.dataset.tags.includes(tagName));
   };
 
   static searchBlog = (event) => {
@@ -529,7 +498,6 @@ class App {
       .split(' ')
       .filter((term) => term?.length > 0);
     const blogElements = document.querySelectorAll('[data-id="blog-0503"][data-active="true"]');
-    const searchResult = document.querySelector('[data-id="blog-search-result"]');
     this.hideAllElements(blogElements);
 
     const matchElements =
@@ -537,19 +505,8 @@ class App {
         const blogTitle = element.getAttribute('title').toLowerCase() || '';
         return searchTerms.every((term) => blogTitle.includes(term));
       }) || [];
-    searchResult.classList.add(HIDDEN_CLASS);
-    if (searchTerm.length > 0) {
-      searchResult.classList.remove(HIDDEN_CLASS);
-    }
-    const nMatches = matchElements.length;
-    if (nMatches === 0) {
-      searchResult.innerHTML = searchResult.dataset.notFoundResult;
-    } else if (nMatches === 1) {
-      searchResult.innerHTML = searchResult.dataset.singleResult;
-    } else {
-      searchResult.innerHTML = searchResult.dataset.multipleResult.replace('{0}', nMatches);
-    }
 
+    this.updateSearchResult(searchTerm, matchElements);
     this.showAllElements(matchElements);
   };
 
@@ -678,22 +635,9 @@ class App {
     listContainer.innerHTML = listElementHTML;
   };
 
-  static searchInDownloadList = (event) => {
-    const { target } = event;
-    const searchTerm = target.value || '';
-    const searchTerms = searchTerm
-      .toLowerCase()
-      .split(' ')
-      .filter((term) => term?.length > 0);
-    const listElements = document.querySelectorAll('[data-id="list-item"][data-active="true"]');
+  static updateSearchResult = (searchTerm, matchElements) => {
     const searchResult = document.querySelector('[data-id="blog-search-result"]');
-    this.hideAllElements(listElements);
 
-    const matchElements =
-      Array.from(listElements).filter((element) => {
-        const blogTitle = element.dataset.description.toLowerCase() || '';
-        return searchTerms.every((term) => blogTitle.includes(term));
-      }) || [];
     searchResult.classList.add(HIDDEN_CLASS);
     if (searchTerm.length > 0) {
       searchResult.classList.remove(HIDDEN_CLASS);
@@ -706,11 +650,29 @@ class App {
     } else {
       searchResult.innerHTML = searchResult.dataset.multipleResult.replace('{0}', nMatches);
     }
+  };
 
+  static searchInDownloadList = (event) => {
+    const { target } = event;
+    const searchTerm = target.value || '';
+    const searchTerms = searchTerm
+      .toLowerCase()
+      .split(' ')
+      .filter((term) => term?.length > 0);
+    const listElements = document.querySelectorAll('[data-id="list-item"][data-active="true"]');
+    this.hideAllElements(listElements);
+
+    const matchElements =
+      Array.from(listElements).filter((element) => {
+        const blogTitle = element.dataset.description.toLowerCase() || '';
+        return searchTerms.every((term) => blogTitle.includes(term));
+      }) || [];
+
+    this.updateSearchResult(searchTerm, matchElements);
     this.showAllElements(matchElements);
   };
 
-  static showDownloadByTag = (tag) => {
+  static showElementsByTag = (tag, listSelector, elementSelectorFunction) => {
     const buttonActiveClasses = ['border-sky-blue', 'text-white', 'bg-sky-blue'];
     const buttonInactiveClass = 'border-light-gray3';
     const targetButtonElement = document.querySelector(`${TAG_BUTTON_SELECTOR}[data-tag="${tag}"]`);
@@ -727,15 +689,18 @@ class App {
 
     const activeButtonElements = document.querySelectorAll(`${TAG_BUTTON_SELECTOR}[data-active="true"]`);
     const activeTags = Array.from(activeButtonElements).map((element) => element.dataset.tag);
-    const listElements = document.querySelectorAll(`[data-id="list-item"]`);
+    const listElements = document.querySelectorAll(listSelector);
 
     if (activeTags?.length < 1) {
       this.showAllElements(listElements);
+      for (const listElement of listElements) {
+        listElement.setAttribute('data-active', 'true');
+      }
       return;
     }
 
     for (const listElement of listElements) {
-      if (activeTags.some((_tag) => listElement.dataset.area === _tag)) {
+      if (activeTags.some((tagName) => elementSelectorFunction(listElement, tagName))) {
         listElement.classList.remove(HIDDEN_CLASS);
         listElement.setAttribute('data-active', 'true');
       } else {
@@ -743,6 +708,10 @@ class App {
         listElement.setAttribute('data-active', 'false');
       }
     }
+  };
+
+  static showDownloadByTag = (tag) => {
+    this.showElementsByTag(tag, `[data-id="list-item"]`, (element, tagName) => element.dataset.area === tagName);
   };
 
   static onOpenContactForm = (event) => {
