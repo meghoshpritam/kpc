@@ -5,10 +5,10 @@
 
 {{ $sizes := (slice "360" "480" "768" "1024" "1336") }}
 
-{{ $srcset := "" }}
-{{ range $sizes }}
-{{ $path := replace $imagePath $fileName (print $fileName "x" . "w") }}
-{{ $srcset = print $srcset $path " x" . "w," }}
-{{ end }}
-
-<img srcset="{{ $srcset }}" src="{{ $imagePath }}" title="{{ .alt }}" alt="{{ .alt }}" class="{{ .class }}" height="{{ .height }}" width="{{ .width }}">
+<picture>
+  {{ range $sizes }}
+  {{ $path := replace $imagePath $fileName (print $fileName "x" . "w") }}
+  <source srcset="{{ $path }}" media="(min-width: {{ . }}px)" />
+  {{ end }}
+  <img src="{{ $imagePath }}" title="{{ .alt }}" alt="{{ .alt }}" class="{{ .class }}" height="{{ .height }}" width="{{ .width }}">
+</picture>
