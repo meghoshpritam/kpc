@@ -6,7 +6,7 @@ defaultContentLanguage = "it"
 google_verification = "123"
 disableKinds = ["taxonomy", "term"]
 enableRobotsTXT = true
-googleAnalytics = "G-WYPF9BDN7Y"
+googleAnalytics = "G-VLRQ226NHR"
 
 
 [languages]
