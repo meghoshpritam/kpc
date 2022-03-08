@@ -30,6 +30,22 @@ button {
 .min-h-50-screen {
   min-height: 50vh;
 }
+
+button.pagination-button {
+  @apply flex items-center justify-center flex-shrink-0 w-8 h-8 mx-2 mb-3 text-sm font-semibold border-2 border-transparent rounded-lg hover:bg-white text-dark hover:border-sky-blue;
+}
+
+button.pagination-button[data-active='true'] {
+  @apply text-white border-sky-blue bg-sky-blue hover:bg-white hover:text-sky-blue;
+}
+
+button.pagination-button:disabled {
+  @apply text-white bg-gray-300 border-gray-300 cursor-not-allowed hover:border-gray-300 hover:bg-gray-300 hover:text-white;
+}
+
+button.pagination-active-button {
+  @apply text-white bg-sky-blue;
+}
 /* ========================== homepage style ============================= */
 .hp-video-container::after {
   padding-top: 56.25%;

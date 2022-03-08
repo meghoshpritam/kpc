@@ -85,54 +85,6 @@
   <script async src="https://www.google.com/recaptcha/api.js"></script>
   {{ end }}
 
-  <!-- Iubenda Integration START -->
-  {{ if .Site.Params.enableiubenda }}
-  <!-- Privacy -->
-  <script defer type="text/javascript">
-    (function(w, d) {
-      var loader = function() {
-        var s = d.createElement("script"),
-          tag = d.getElementsByTagName("script")[0];
-        s.src = "https://cdn.iubenda.com/iubenda.js";
-        tag.parentNode.insertBefore(s, tag);
-      };
-      if (w.addEventListener) {
-        w.addEventListener("load", loader, false);
-      } else if (w.attachEvent) {
-        w.attachEvent("onload", loader);
-      } else {
-        w.onload = loader;
-      }
-    })(window, document);
-  </script>
-
-  <!-- Cookie -->
-  <script defer type="text/javascript">
-    var _iub = _iub || [];
-    _iub.csConfiguration = {
-      "consentOnContinuedBrowsing": false,
-      "whitelabel": false,
-      "lang": "it",
-      "siteId": 2283818,
-      "cookiePolicyId": 49358839,
-      "banner": {
-        "acceptButtonDisplay": true,
-        "customizeButtonDisplay": true,
-        "acceptButtonColor": "rgba(145, 71, 160, 0.9019607843137255)",
-        "acceptButtonCaptionColor": "white",
-        "customizeButtonColor": "#212121",
-        "customizeButtonCaptionColor": "white",
-        "position": "float-bottom-center",
-        "textColor": "white",
-        "backgroundColor": "#000001"
-      }
-    };
-  </script>
-  <script async type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8">
-  </script>
-  {{ end }}
-  <!-- Iubenda Integration END -->
-
   {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
   {{- $animation := resources.Get "css/animate.css/animate.min.css" -}}
   {{ $styles := slice $styles  $animation | resources.Concat "css/style.min.css" }}

@@ -5,9 +5,6 @@
 <body class="overflow-x-hidden">
     {{- partial "sprites.html" -}}
     <main>
-        {{ if .Site.Params.initialAnimation }}
-        {{ partial "overlay-animation.html" . }}
-        {{ end }}
         {{- block "main" . }}{{- end }}
     </main>
 </body>

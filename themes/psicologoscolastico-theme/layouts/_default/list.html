@@ -64,7 +64,7 @@
   {{ end }}
 </section>
 
-<section class="container grid grid-cols-1 px-4 mx-auto mt-14 sm:grid-cols-2 gap-x-10 mb-28 lg:gap-x-14 xl:gap-x-20 gap-y-24 md:gap-y-28 lg:gap-y-36 xl:gap-y-48 lg:grid-cols-3">
+<section class="container grid grid-cols-1 px-4 mx-auto mt-14 sm:grid-cols-2 gap-x-10 mb-28 lg:gap-x-14 xl:gap-x-20 gap-y-24 md:gap-y-28 lg:gap-y-36 xl:gap-y-48 lg:grid-cols-3 2xl:grid-cols-4">
   {{ $firstTag := index .Params.header.filterTags 0 }}
   {{ range .Pages }}
   {{ $pageLink := .RelPermalink }}
@@ -95,8 +95,30 @@
   {{ end }}
 </section>
 
+{{/* pagination section start  */}}
+<section class="container px-4 mx-auto">
+  <div class="flex flex-wrap items-center justify-center invisible max-w-3xl mx-auto text-dark pagination-btn-container">
+    <button data-id="pagination-previous-btn" class="transform rotate-180 pagination-button">
+      <svg class="w-3 h-3">
+        <use xlink:href="#shape-arrow" />
+      </svg>
+    </button>
+    {{ range seq 25 }}
+    <button data-id="pagination-btn" data-btn-index="{{ . }}" class="pagination-button" data-active="false">
+      {{ . }}
+    </button>
+    {{ end }}
+    <button data-id="pagination-next-btn" class="pagination-button" disabled>
+      <svg class="w-3 h-3">
+        <use xlink:href="#shape-arrow" />
+      </svg>
+    </button>
+  </div>
+</section>
+{{/* pagination section end  */}}
+
 {{ with .Params.studyMaterial }}
-<section class="text-white bg-sky-blue">
+<section class="mt-24 text-white bg-sky-blue">
   <div class="container grid grid-cols-1 px-4 py-20 mx-auto md:py-40 md:grid-cols-2">
     <div class="mb-10 md:mb-0">
       {{ with .image }}
