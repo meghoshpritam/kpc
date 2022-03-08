@@ -7,7 +7,7 @@
 
 <picture>
   {{ range $sizes }}
-  {{ $path := replace $imagePath $fileName (print $fileName "x" . "w") }}
+  {{ $path := replace $imagePath $fileName (print $fileName "@" . "w") }}
   <source srcset="{{ $path }}" media="(min-width: {{ . }}px)" />
   {{ end }}
   <img src="{{ $imagePath }}" title="{{ .alt }}" alt="{{ .alt }}" class="{{ .class }}" height="{{ .height }}" width="{{ .width }}">
