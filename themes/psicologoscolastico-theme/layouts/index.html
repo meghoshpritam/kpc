@@ -21,7 +21,7 @@
     </div>
     <div class="flex flex-col justify-center">
       {{ with .image }}
-      <img src="{{ .url }}" title="{{ .alt }}" alt="{{ .alt }}" class="w-full h-auto max-w-lg mx-auto" width="525" height="742">
+      {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto max-w-lg mx-auto" "width" "525" "height" "742") }}
       {{ end }}
     </div>
   </div>
@@ -92,7 +92,7 @@
     {{ range .points }}
     <a href="{{ .url }}" class="relative block group rounded-2xl">
       {{ with .image }}
-      <img src="{{ .url }}" title="{{ .alt }}" alt="{{ .alt }}" class="w-full h-auto rounded-2xl" width="1010" height="674">
+      {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto rounded-2xl" "width" "1010" "height" "674") }}
       {{ end }}
       <div class="absolute inset-0 flex flex-col justify-center h-full text-center bg-black bg-opacity-40 rounded-2xl group-hover:bg-opacity-50">
         <h3 class="text-2xl font-semibold text-white mb-3.5">{{ .title }}</h3>
@@ -114,7 +114,7 @@
       <div class="relative">
         {{ with .video }}
         <div role="button" class="relative block border-none outline-none cursor-pointer rounded-2xl group hp-video-thumb" onclick="App.playHpVideo()">
-          <img src="{{ .thumbnail }}" title="{{ .alt }}" alt="{{ .alt }}" class="relative z-10 w-full h-auto rounded-2xl" width="1187" height="793">
+          {{ partial "images/responsive" (dict "src" .thumbnail "alt" .alt "class" "relative z-10 w-full h-auto rounded-2xl" "width" "1187" "height" "793") }}
           <div class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black group-hover:bg-opacity-20 rounded-2xl bg-opacity-10">
             <svg class="w-20 h-20 text-primary">
               <use xlink:href="#shape-play-button" />
@@ -151,7 +151,7 @@
   <div class="grid grid-cols-1 mt-20 lg:grid-cols-2">
     <div>
       {{ with .image }}
-      <img src="{{ .url }}" title="{{ .alt }}" alt="{{ .alt }}" class="w-full h-auto" width="1464" height="1109" />
+      {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto" "width" "1464" "height" "1109") }}
       {{ end }}
     </div>
     <div class="px-5 pt-12">
@@ -194,7 +194,7 @@
     </div>
     <div>
       {{ with .image }}
-      <img src="{{ .url }}" title="{{ .alt }}" alt="{{ .alt }}" class="w-full h-auto" width="1024" height="1029" />
+      {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto" "width" "1024" "height" "1029") }}
       {{ end }}
     </div>
   </div>
@@ -206,7 +206,7 @@
   <div class="grid grid-cols-1 mt-20 lg:grid-cols-2">
     <div>
       {{ with .image }}
-      <img src="{{ .url }}" title="{{ .alt }}" alt="{{ .alt }}" class="w-full h-auto" width="1097" height="1219" />
+      {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto" "width" "1097" "height" "1219") }}
       {{ end }}
     </div>
     <div class="flex flex-col justify-center px-5">
@@ -242,7 +242,7 @@
     </div>
     <div>
       {{ with .image }}
-      <img src="{{ .url }}" title="{{ .alt }}" alt="{{ .alt }}" class="w-full h-auto" width="1396" height="1049" />
+      {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto" "width" "1396" "height" "1049") }}
       {{ end }}
     </div>
   </div>
@@ -254,7 +254,7 @@
   <div class="grid grid-cols-1 mt-20 lg:grid-cols-2">
     <div>
       {{ with .image }}
-      <img src="{{ .url }}" title="{{ .alt }}" alt="{{ .alt }}" class="w-full h-auto" width="1251" height="952" />
+      {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto" "width" "1251" "height" "952") }}
       {{ end }}
     </div>
     <div class="flex flex-col justify-center px-5">
@@ -282,7 +282,7 @@
 <section class="container grid grid-cols-1 px-4 mx-auto lg:grid-cols-2 mt-72">
   <div class="pr-24">
     {{ with .image }}
-    <img src="{{ .url }}" title="{{ .alt }}" alt="{{ .alt }}" class="w-full h-auto" width="774" height="726">
+    {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto" "width" "774" "height" "726") }}
     {{ end }}
   </div>
   <div class="py-10 lg:py-0">
@@ -331,7 +331,7 @@
   <div class="">
     <div class="relative pb-24 md:pr-36">
       <div class="relative">
-        <img src="{{ .image }}" title="{{ .imageAlt }}" alt="{{ .imageAlt }}" class="w-full h-auto rounded-2xl" width="943" height="1179">
+        {{ partial "images/responsive" (dict "src" .image "alt" .imageAlt "class" "w-full h-auto rounded-2xl" "width" "943" "height" "1179") }}
         <div class="absolute inset-0 flex flex-col justify-center">
           <div class="flex items-center">
             <button type="button" aria-label="Previous testimonial" data-id="testimonial-previous-btn" onclick="App.previousTestimonial();" class="flex flex-col items-center justify-center hidden w-16 h-16 bg-white rounded-full hover:text-white hover:bg-sky-blue text-sky-blue">
@@ -392,7 +392,7 @@
       {{ with $.Site.GetPage (print (substr $ctx.url 0 -1) ".md") }}
       <a href="{{ .RelPermalink }}" title="{{ .Title }}" aria-label="{{ .Title }}" class="group hover:shadow-card2 grid {{ if eq $idx 0 }}grid-rows-5 gap-y-4{{ else }}grid-cols-5{{ end }} w-full h-full rounded-2xl">
         <div class="relative {{ if gt $idx 0 }}col-span-2{{ else }}row-span-3{{ end }}">
-          <img src="{{ .Params.coverImage }}" title="{{ .Title }}" alt="{{ .Title }}" class="object-cover object-center w-full h-full rounded-2xl" width="1060" height="640">
+          {{ partial "images/responsive" (dict "src" .Params.coverImage "alt" .Title "class" "object-cover object-center w-full h-full rounded-2xl" "width" "1060" "height" "640") }}
           <span class="absolute px-4 py-1 text-xs font-medium rounded-full shadow-md text-black1 bg-yellow1 bottom-4 right-4">{{ index .Params.tags 0 | title }}</span>
         </div>
         <div class="{{ if gt $idx 0 }}col-span-3{{ else }}row-span-2{{ end }} flex flex-col px-2">
@@ -416,7 +416,7 @@
       <a href="{{ .file }}" download title="{{ .description | plainify }}" aria-label="{{ .description | plainify }}" class="group hover:shadow-card2 grid {{ if eq $idx 0 }}grid-rows-2 gap-y-4{{ else }}grid-cols-5{{ end }} w-full h-full rounded-2xl">
         <div class="relative {{ if gt $idx 0 }}col-span-2{{ end }}">
           {{ $image := index $pageData.defaultImagesByTag .area }}
-          <img src="{{ $image.url }}" title="{{ .description }}" alt="{{ .description }}" class="object-cover object-center w-full h-full rounded-2xl" width="1060" height="640">
+          {{ partial "images/responsive" (dict "src"  $image.url "alt" .description "class" "object-cover object-center w-full h-full rounded-2xl" "width" "1060" "height" "640") }}
           <span class="absolute px-4 py-1 text-xs font-medium rounded-full shadow-md text-black1 bg-yellow1 bottom-4 right-4">{{ .area | title }}</span>
         </div>
         <div class="{{ if gt $idx 0 }}col-span-3{{ end }} flex flex-col px-2">

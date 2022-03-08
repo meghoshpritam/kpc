@@ -23,7 +23,7 @@
     {{ $imageAlt = $pageData.hero.image.alt }}
     {{ end }}
     <div class="-mb-5 mt-14 md:mt-0">
-      <img src="{{ $imageUrl }}" alt="{{ $imageAlt }}" title="{{ $imageAlt }}" class="w-full h-auto" height="566" width="612">
+      {{ partial "images/responsive" (dict "src" $imageUrl "alt" $imageAlt "class" "w-full h-auto" "width" "566" "height" "612") }}
     </div>
   </div>
   {{ end }}
@@ -86,9 +86,13 @@
           {{ $aImgAlt = .Params.articleData.image.alt }}
           {{ end }}
           {{ if .Params.articleData.image.url }}
-          <img src="{{ .Params.articleData.image.url }}" alt="{{ .Params.articleData.image.alt }}" title="{{ .Params.articleData.image.alt }}" class="w-full h-auto" width="470" height="380">
+          {{ with .Params.articleData.image }}
+          {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto" "width" "470" "height" "380") }}
+          {{ end }}
           {{ else }}
-          <img src="{{ $pageData.defaultArticle.image.url }}" alt="{{ $aImgAlt }}" title="{{ $aImgAlt }}" class="w-full h-auto" width="513" height="515">
+          {{ with .Params.defaultArticle.image }}
+          {{ partial "images/responsive" (dict "src" .url "alt" $aImgAlt "class" "w-full h-auto" "width" "513" "height" "515") }}
+          {{ end }}
           {{ end }}
         </div>
       </div>

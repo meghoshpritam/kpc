@@ -28,7 +28,7 @@
     {{ $imageAlt = $pageData.hero.image.alt }}
     {{ end }}
     <div class="-mb-5 mt-14 md:mt-0">
-      <img src="{{ $imageUrl }}" alt="{{ $imageAlt }}" title="{{ $imageAlt }}" class="w-full h-auto" height="566" width="612">
+      {{ partial "images/responsive" (dict "src" $imageUrl "alt" $imageAlt "class" "w-full h-auto" "width" "566" "height" "612") }}
     </div>
   </div>
   {{ end }}
@@ -78,7 +78,7 @@
       {{ $defaultImage := index $pageData.defaultImagesByTag $firstArticleTag }}
       {{ $image = $defaultImage.url }}
       {{ end }}
-      <img src="{{ $image }}" alt="{{ .Title }}" title="{{ .Title }}" class="object-cover object-center w-full h-full rounded-xl" width="1068" height="645">
+      {{ partial "images/responsive" (dict "src" $image "alt" .Title "class" "object-cover object-center w-full h-full rounded-xl" "width" "1068" "height" "645") }}
     </div>
     <h3 class="flex-grow px-5 py-3 text-2xl duration-300 ease-in-out text-indigo1 group-hover:text-secondary">{{ .articleData.title }}</h3>
     <div class="mt-1.5 px-5 text-sm">{{ truncate 200 "..." .shortDescription }}</div>
@@ -122,7 +122,7 @@
   <div class="container grid grid-cols-1 px-4 py-20 mx-auto md:py-40 md:grid-cols-2">
     <div class="mb-10 md:mb-0">
       {{ with .image }}
-      <img src="{{ .url }}" alt="{{ .alt }}" title="{{ .alt }}" width="1026" height="980">
+      {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto" "width" "1026" "height" "980") }}
       {{ end }}
     </div>
     <div class="flex flex-col justify-center sm:px-10 lg:px-16 xl:px-24">
@@ -160,7 +160,7 @@
       </a>
     </div>
     <div>
-      <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" title="{{ .Title }}" class="object-cover object-center w-full h-auto lg:h-full" width="1068" height="645">
+      {{ partial "images/responsive" (dict "src" .Params.coverImage "alt" .Title "class" "object-cover object-center w-full h-auto lg:h-full" "width" "1068" "height" "645") }}
     </div>
   </div>
 </section>
@@ -171,7 +171,7 @@
 <section class="container grid grid-cols-1 px-4 mx-auto mt-64 lg:grid-cols-2 mb-92">
   <div>
     {{ with .image }}
-    <img src="{{ .url }}" alt="{{ .alt }}" title="{{ .alt }}" class="object-cover object-center w-full h-auto" width="1266" height="1159">
+    {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "object-cover object-center w-full h-auto" "width" "1266" "height" "1159") }}
     {{ end }}
   </div>
   <div class="flex flex-col justify-center">
