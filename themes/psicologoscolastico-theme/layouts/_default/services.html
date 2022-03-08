@@ -46,7 +46,7 @@
       {{ if eq $idx 0 }}
       {{ $cls = "border-sky-blue text-white bg-sky-blue" }}
       {{ end }}
-      <button onclick="App.showDownloadByTag('{{ $tag.id }}');" data-id="tag-selector-button-0303" class="mx-4 text-sm px-6 py-0.5 mb-4 sm:mb-0 shadow-button rounded-md border hover:bg-white hover:border-sky-blue hover:text-sky-blue {{ $cls }}" data-tag="{{ $tag.id }}">{{ $tag.label }}</button>
+      <button onclick="App.showDownloadByTag('{{ $tag.id }}');" data-id="tag-selector-button-0303" data-active="{{ if eq $idx 0 }}true{{ else }}false{{ end }}" class="mx-4 text-sm px-6 py-0.5 mb-4 sm:mb-0 shadow-button rounded-md border hover:bg-white hover:border-sky-blue hover:text-sky-blue {{ $cls }}" data-tag="{{ $tag.id }}">{{ $tag.label }}</button>
       {{ end }}
     </div>
     <div class="flex items-center justify-end flex-grow order-1 w-full sm:flex-nowrap lg:order-2 mb-7 lg:mb-0">
