@@ -153,4 +153,15 @@
     {{ end }}
   </div>
 </section>
+
+{{ partial "schema/website.html" . }}
+
+<!-- page script start -->
+<script defer type="text/javascript">
+  window.onload = function() {
+    App.onLoadBlogPage();
+  }
+</script>
+<!-- page script end -->
+
 {{ end }}

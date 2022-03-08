@@ -30,14 +30,17 @@ aboutPlatform:
       icon: file-invoice
       details: >
         Lo psicologo scolastico aiuta lo studente a fare luce su ciò che sta vivendo e a costruisce con lui un percorso per stare meglio, affrontando il problema in modo personalizzato
+      url: "/servizi/?rel=studenti"
     - title: Genitori
       icon: calendar
       details: >
         Offre uno spazio di ascolto in cui  esprimere le fatiche del ruolo genitoriale e gettare le basi per la creazione di un rapporto di fiducia con la scuola nella crescita dei propri figli.
+      url: "/servizi/?rel=genitori"
     - title: Insegnanti
       icon: users
       details: >
         Accoglie le richieste di insegnanti che osservano situazioni critiche o che desiderano un feedback rispetto alla gestione di casi delle loro classi
+      url: "/servizi/?rel=insegnanti"
 
 whyUs:
   heading:
