@@ -46,6 +46,7 @@ button.pagination-button:disabled {
 button.pagination-active-button {
   @apply text-white bg-sky-blue;
 }
+
 /* ========================== homepage style ============================= */
 .hp-video-container::after {
   padding-top: 56.25%;
@@ -53,6 +54,13 @@ button.pagination-active-button {
   content: '';
 }
 
+.news-article {
+  max-height: 12rem;
+}
+
+.news-article:first-of-type {
+  max-height: 38rem;
+}
 /* ========================== single article style ============================= */
 .article-description span {
   @apply font-medium text-secondary;
