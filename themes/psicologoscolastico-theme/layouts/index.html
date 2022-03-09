@@ -280,9 +280,9 @@
 {{/* always listing section start */}}
 {{ with .Params.alwaysListening }}
 <section class="container grid grid-cols-1 px-4 mx-auto lg:grid-cols-2 mt-72">
-  <div class="pr-24">
+  <div class="pr-0 mx-auto lg:mx-0 lg:pr-24">
     {{ with .image }}
-    {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto" "width" "774" "height" "726") }}
+    {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto max-w-md" "width" "774" "height" "726") }}
     {{ end }}
   </div>
   <div class="py-10 lg:py-0">
