@@ -404,8 +404,9 @@ class App {
 
     const matchElements =
       Array.from(listElements).filter((element) => {
-        const blogTitle = element.dataset.description.toLowerCase() || '';
-        return searchTerms.every((term) => blogTitle.includes(term));
+        const title = element.dataset.title.toLowerCase() || '';
+        const description = element.dataset.description.toLowerCase() || '';
+        return searchTerms.every((term) => title.includes(term) || description.includes(term));
       }) || [];
 
     this.searchInLists(searchTerm, listElementsWithSearch, matchElements);

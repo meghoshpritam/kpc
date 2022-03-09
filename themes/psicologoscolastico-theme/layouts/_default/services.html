@@ -59,8 +59,8 @@
 
 <section class="container px-4 pb-20 mx-auto text-sm mt-14 text-blue-gray2">
   {{ with .Params.listHeader }}
-  <div class="hidden grid-cols-12 mb-8 lg:grid-cols-10 gap-x-5 md:grid">
-    <button class="flex items-center col-span-2 font-bold border-none outline-none lg:col-span-1" onclick="App.sortDownloadList('area')">
+  <div class="hidden grid-cols-12 mb-8 gap-x-5 md:grid">
+    <button class="flex items-center col-span-1 font-bold border-none outline-none lg:col-span-1" onclick="App.sortDownloadList('area')">
       <span>
         {{ .area }}
       </span>
@@ -73,7 +73,20 @@
         </svg>
       </div>
     </button>
-    <button class="flex items-center col-span-4 font-bold border-none outline-none lg:col-span-5" onclick="App.sortDownloadList('description')">
+    <button class="flex items-center col-span-3 font-bold border-none outline-none lg:col-span-3" onclick="App.sortDownloadList('title')">
+      <span>
+        {{ .title }}
+      </span>
+      <div class="flex flex-col ml-3" data-id="list-sort-button" data-field="area" data-sort="">
+        <svg class="w-1.5 h-1.5 transform -rotate-90" data-id="assending">
+          <use xlink:href="#shape-arrow"></use>
+        </svg>
+        <svg class="w-1.5 h-1.5 transform rotate-90" data-id="decending">
+          <use xlink:href="#shape-arrow"></use>
+        </svg>
+      </div>
+    </button>
+    <button class="flex items-center col-span-3 font-bold border-none outline-none lg:col-span-4" onclick="App.sortDownloadList('description')">
       <span>
         {{ .description }}
       </span>
@@ -86,7 +99,7 @@
         </svg>
       </div>
     </button>
-    <button class="flex items-center col-span-2 font-bold border-none outline-none lg:col-span-1" onclick="App.sortDownloadList('age')">
+    <button class="flex items-center col-span-1 font-bold border-none outline-none lg:col-span-1" onclick="App.sortDownloadList('age')">
       <span>
         {{ .age }}
       </span>
@@ -122,8 +135,8 @@
     {{ $activeTagButton := index .Params.header.filterTags 0 }}
     {{ $index := 0 }}
     {{ range .Params.lists }}
-    <div class="grid grid-cols-2 mb-14 md:mb-6 md:grid-cols-12 lg:grid-cols-10 gap-x-5 gap-y-2 {{ if ne $activeTagButton.id .area }} hidden {{ end }}" data-active="{{ if eq $activeTagButton.id .area }}true{{ else }}false{{ end }}" data-id="list-item" data-index="{{ $index }}" data-area="{{ .area }}" data-description="{{ .description }}" data-age="{{ .age }}" data-date="{{ .date }}">
-      <div class="order-1 col-span-1 md:col-span-2 lg:col-span-1 text-sky-blue">
+    <div class="grid grid-cols-2 mb-14 md:mb-6 md:grid-cols-12 lg:grid-cols-12 gap-x-5 gap-y-2 {{ if ne $activeTagButton.id .area }} hidden {{ end }}" data-active="{{ if eq $activeTagButton.id .area }}true{{ else }}false{{ end }}" data-id="list-item" data-index="{{ $index }}" data-area="{{ .area }}" data-title="{{ .title }}" data-description="{{ .description }}" data-age="{{ .age }}" data-date="{{ .date }}">
+      <div class="order-1 col-span-1 md:col-span-1 lg:col-span-1 text-sky-blue">
         {{ $area := .area }}
         {{ range $.Params.header.filterTags }}
         {{ if eq .id $area }}
@@ -131,10 +144,13 @@
         {{ end }}
         {{ end }}
       </div>
-      <div class="order-3 col-span-2 md:order-1 md:col-span-4 lg:col-span-5">
+      <div class="order-3 col-span-2 font-semibold md:order-1 md:col-span-3 lg:col-span-3 md:font-normal">
+        {{ .title }}
+      </div>
+      <div class="order-3 col-span-2 md:order-1 md:col-span-3 lg:col-span-4">
         {{ .description }}
       </div>
-      <div class="order-4 col-span-1 md:order-1 md:col-span-2 lg:col-span-1">
+      <div class="order-4 col-span-1 md:order-1 md:col-span-1 lg:col-span-1">
         {{ .age }}
       </div>
       <div class="order-2 col-span-1 text-right md:order-1 md:text-left md:col-span-2 lg:col-span-1">

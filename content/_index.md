@@ -164,7 +164,6 @@ news:
     See the developments that have occurred to Skillines in the world
   downloadLabel: Download
   readMoreLabel: Read more
-  defaultDownloadTitle: "Categoria dowload"
   list:
     - url: /blog/bisogni-educativi-speciali/
       type: blog

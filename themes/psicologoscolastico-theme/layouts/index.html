@@ -420,7 +420,7 @@
           <span class="absolute px-4 py-1 text-xs font-medium rounded-full shadow-md text-black1 bg-yellow1 bottom-4 right-4">{{ .area | title }}</span>
         </div>
         <div class="{{ if gt $idx 0 }} col-span-3 {{ end }} flex flex-col px-2">
-          <h3 class="pt-1.5 text-xl font-semibold duration-300 ease-in-out text-black1 group-hover:text-secondary">{{ $.Params.news.defaultDownloadTitle }}</h3>
+          <h3 class="pt-1.5 text-xl font-semibold duration-300 ease-in-out text-black1 group-hover:text-secondary">{{ .title }}</h3>
           {{ $truncate := 120 }}
           {{ if eq $idx 0 }}
           {{ $truncate = 500 }}

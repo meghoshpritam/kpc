@@ -30,6 +30,7 @@ header:
 
 listHeader:
   area: "Area"
+  title: "Titolo"
   description: "Descrizione"
   age: "Età"
   date: "Data"
@@ -39,6 +40,7 @@ listHeader:
 lists:
   - id: 1
     area: studenti
+    title: "Epica - L'ira di Achille in CAA"
     description: >
       Epica - L'ira di Achille in CAA
     age: "11 - 16 anni"
@@ -47,6 +49,7 @@ lists:
 
   - id: 2
     area: insegnanti
+    title: "Linee guida per compilare il PEI"
     description: >
      Linee guida per compilare il PEI (piano educativo individualizzato)
     age: "11 - 16 anni"
@@ -55,6 +58,7 @@ lists:
   
   - id: 3
     area: genitori
+    title: "Come leggere il PEI"
     description: >
       Come leggere il PEI (piano educativo individualizzato)
     age: "11 - 16 anni"
@@ -63,6 +67,7 @@ lists:
   
   - id: 4 
     area: insegnanti
+    title: "Modello verifica intermedia del PEI"
     description: >
       Modello verifica intermedia del PEI
     age: "11 - 16 anni"
