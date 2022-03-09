@@ -98,6 +98,9 @@ ourFormula:
     image:
       url: /images/tools-for-teachers-and-students.webp
       alt: Strumenti per insegnanti e studenti
+    cta:
+      label: Scopri di più
+      url: /servizi/?rel=studenti+insegnanti
   location:
     title: >
       Consigli, <span>Schede didattiche</span>, Mappe 
@@ -106,6 +109,9 @@ ourFormula:
     image:
       url: /images/advice-didactic-cards-maps.webp
       alt: Consigli, Schede didattiche, Mappe
+    cta:
+      label: Scopri di più
+      url: /servizi/?rel=studenti+insegnanti+genitori
   managementTools:
     title: >
       <span>Strumenti</span> di gestione della classe
