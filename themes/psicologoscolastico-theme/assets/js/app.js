@@ -331,6 +331,22 @@ class App {
     });
   };
 
+  static onLoadDownloadPage = () => {
+    let tags = this.getURLParameterByName('rel')?.split(' ') || [];
+    tags = tags.filter((tag) => tag?.length > 0);
+
+    if (tags.length > 0) {
+      const buttonElements = document.querySelectorAll(`${TAG_BUTTON_SELECTOR}[data-active="true"]`);
+      for (const buttonElement of buttonElements) {
+        buttonElement.click();
+      }
+      for (const tag of tags) {
+        const targetButtonElement = document.querySelector(`${TAG_BUTTON_SELECTOR}[data-tag="${tag}"]`);
+        targetButtonElement?.click();
+      }
+    }
+  };
+
   static sortDownloadList = (fieldName) => {
     const inactiveClass = 'text-gray-300';
     const listElements = document.querySelectorAll('[data-id="list-item"]');

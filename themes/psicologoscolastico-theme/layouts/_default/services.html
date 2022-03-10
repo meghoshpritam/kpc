@@ -177,12 +177,32 @@
   </div>
 </section>
 
+{{/* pagination section start  */}}
+<section class="container px-4 mx-auto mb-20">
+  <div class="flex flex-wrap items-center justify-center max-w-3xl mx-auto text-dark pagination-btn-container">
+    <button data-id="pagination-previous-btn" class="transform rotate-180 pagination-button" disabled>
+      <svg class="w-3 h-3">
+        <use xlink:href="#shape-arrow" />
+      </svg>
+    </button>
+    <button data-id="pagination-btn" data-btn-index="1" class="pagination-button" data-active="true">
+      1
+    </button>
+    <button data-id="pagination-next-btn" class="pagination-button" disabled>
+      <svg class="w-3 h-3">
+        <use xlink:href="#shape-arrow" />
+      </svg>
+    </button>
+  </div>
+</section>
+{{/* pagination section end  */}}
+
 {{ partial "schema/website.html" . }}
 
 <!-- page script start -->
 <script defer type="text/javascript">
   window.onload = function() {
-    App.onLoadBlogPage();
+    App.onLoadDownloadPage();
   }
 </script>
 <!-- page script end -->
