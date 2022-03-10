@@ -71,10 +71,7 @@
   {{ with .Params }}
   {{ $firstArticleTag := index .tags 0 }}
   {{ $isInActive := not (in .tags $firstTag.id)}}
-  <a href="{{ $pageLink }}" data-id="blog-0503" data-tags='{{ delimit .tags "," }}'
-   class="{{ if $isInActive }} hidden {{ end }} flex flex-col h-full bg-white rounded-3xl shadow-card2 hover:shadow-2xl group" 
-   title="{{ .articleData.title | plainify }}" aria-label="{{ .articleData.title | plainify }}"
-   data-active="{{ if $isInActive }}false{{ else }}true{{ end }}">
+  <a href="{{ $pageLink }}" data-id="blog-0503" data-tags='{{ delimit .tags "," }}' class="{{ if $isInActive }} hidden {{ end }} flex flex-col h-full bg-white rounded-3xl shadow-card2 hover:shadow-2xl group" title="{{ .articleData.title | plainify }}" aria-label="{{ .articleData.title | plainify }}" data-active="{{ if $isInActive }}false{{ else }}true{{ end }}">
     <div class="h-56">
       {{ $image := .coverImage }}
       {{ if not $image }}
@@ -201,7 +198,6 @@
 <script defer type="text/javascript">
   window.onload = function() {
     App.onLoadBlogPage();
-    App.showPagination();
   }
 </script>
 <!-- page script end -->

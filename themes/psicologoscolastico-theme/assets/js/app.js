@@ -214,6 +214,10 @@ class App {
 
   static showBlogsByTag = (tag) => {
     this.showElementsByTag(tag, `[data-id="blog-0503"]`, (element, tagName) => element.dataset.tags.includes(tagName));
+    this.showPagination({
+      context: 'blog',
+      listSelector: '[data-id="blog-0503"]',
+    });
   };
 
   static searchBlog = (event) => {
@@ -234,6 +238,10 @@ class App {
       }) || [];
 
     this.searchInLists(searchTerm, searchElements, matchElements);
+    this.showPagination({
+      context: 'blog',
+      listSelector: '[data-id="blog-0503"]',
+    });
   };
 
   static getTestimonialElements = () => {
@@ -317,6 +325,10 @@ class App {
         targetButtonElement?.click();
       }
     }
+    this.showPagination({
+      context: 'blog',
+      listSelector: '[data-id="blog-0503"]',
+    });
   };
 
   static sortDownloadList = (fieldName) => {
@@ -533,11 +545,11 @@ class App {
     return PAGINATION_LIST_BLOG_ELEMENTS;
   };
 
-  static showPagination = () => {
+  static showPagination = ({ context, listSelector }) => {
     const paginationContainer = document.querySelector('.pagination-btn-container');
     paginationContainer.classList.add('invisible');
 
-    const activeElements = this.getActiveElements('[data-id="blog-0503"]');
+    const activeElements = this.getActiveElements(listSelector);
 
     const nActiveElements = activeElements.length;
     const elementsPerPage = this.getBlogElementsPerPage();
@@ -546,7 +558,7 @@ class App {
     const buttons = [];
     for (let index = 1; index <= nPages; index += 1) {
       buttons.push(
-        `<button data-id="pagination-btn" data-btn-index="${index}" class="pagination-button" data-active="false">${index}</button>`,
+        `<button data-context='${context}' data-id="pagination-btn" data-btn-index="${index}" class="pagination-button" data-active="false" onclick="App.changePage(this);">${index}</button>`,
       );
     }
     buttons[0] = buttons[0].replace('data-active="false"', 'data-active="true"');
@@ -561,6 +573,23 @@ class App {
 
     paginationContainer.innerHTML = previousButtonElement.outerHTML + buttons.join('\n') + nextButtonElement.outerHTML;
     paginationContainer.classList.remove('invisible');
+    this.showCurrentListElements(activeElements, activeButtonIdx, elementsPerPage);
+  };
+
+  static changePage = (element) => {
+    const { context } = element.dataset;
+    const oldActiveButton = document.querySelector(
+      `[data-context="${context}"][data-id="pagination-btn"][data-active="true"]`,
+    );
+    const activeButtonIdx = element.dataset.btnIndex;
+    if (oldActiveButton.dataset.btnIndex === activeButtonIdx) {
+      return;
+    }
+
+    const activeElements = this.getActiveElements('[data-id="blog-0503"]');
+    oldActiveButton.setAttribute('data-active', 'false');
+    element.setAttribute('data-active', 'true');
+    const elementsPerPage = this.getBlogElementsPerPage();
     this.showCurrentListElements(activeElements, activeButtonIdx, elementsPerPage);
   };
 }
