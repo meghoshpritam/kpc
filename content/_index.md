@@ -179,12 +179,6 @@ news:
       type: blog
     - id: 2
       type: download
-    - url: /blog/lanimale-co-terapeuta-come-supporto-educativo/
-      type: blog
-    - url: /blog/strategie-educative-peer-tutoring/
-      type: blog
-    - id: 1
-      type: download
 
 layout: index
 ---
