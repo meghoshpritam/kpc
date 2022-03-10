@@ -22,6 +22,7 @@ module.exports = {
         card1: '0px 8.4157px 50.4942px rgba(38, 45, 118, 0.08)',
         card2: '0px 10px 60px rgba(38, 45, 118, 0.08)',
         card3: '0px 12.6235px 37.0291px rgba(13, 15, 28, 0.12)',
+        card4: '0px 13.4651px 33.6628px rgba(37, 44, 113, 0.1)',
         button: '0px 0px 5px #C4C4C4',
       },
       colors: {
@@ -62,6 +63,11 @@ module.exports = {
       },
       gridTemplateRows: {
         7: 'repeat(7, minmax(0, 1fr))',
+      },
+      lineHeight: {
+        1.6: '1.6',
+        1.8: '1.8',
+        17: '4.25rem',
       },
       spacing: {
         1.25: '0.3125rem',

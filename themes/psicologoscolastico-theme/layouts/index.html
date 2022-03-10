@@ -3,16 +3,14 @@
 
 {{/* homie hero start */}}
 {{ with .Params.hero }}
-<section class="relative bg-left-bottom bg-no-repeat bg-cover pt-28 bg-home-hero">
-  <div class="absolute top-0 left-0 right-0 overflow-hidden">
-    {{ partial "header" $ }}
-  </div>
+<section class="relative bg-left-bottom bg-no-repeat bg-cover bg-home-hero">
+  {{ partial "header" $ }}
   <div class="container grid grid-cols-1 px-4 mx-auto text-white lg:grid-cols-2">
     <div class="flex flex-col justify-center py-20">
-      <h1 class="text-4xl font-semibold md:max-w-xs md:text-5xl">{{ .heading }}</h1>
-      <p class="mt-2 text-base md:text-lg md:max-w-md font-nunitoSans">{{ .details }}</p>
+      <h1 class="text-4xl font-semibold leading-17 md:max-w-xs md:text-5xl">{{ .heading }}</h1>
+      <p class="mt-6 text-base md:text-lg md:max-w-md font-nunitoSans leading-1.8">{{ .details }}</p>
       {{ with .button }}
-      <div class="mt-8">
+      <div class="mt-9">
         <label for="contact-us-dialog" class="inline-block px-8 py-3 text-sm text-white duration-300 ease-in-out border-2 cursor-pointer md:text-base md:px-12 md:py-5 hover:bg-white hover:text-sky-blue border-sky-blue bg-sky-blue rounded-xl md:rounded-3xl">
           {{ .label }}
         </label>
@@ -49,8 +47,8 @@
     <span class="text-secondary">{{ .secondary }}</span>
   </h2>
   {{ end }}
-  <p class="max-w-2xl mx-auto mt-3 text-xl text-center text-gray2">{{ .details }}</p>
-  <div class="grid grid-cols-1 mt-20 grid-row-3 sm:grid-row-2 sm:grid-cols-2 gap-y-20 lg:grid-rows-1 lg:grid-cols-3">
+  <p class="max-w-3xl mx-auto mt-5 text-xl text-center text-gray2 leading-1.8">{{ .details }}</p>
+  <div class="grid max-w-6xl grid-cols-1 mx-auto mt-24 grid-row-3 sm:grid-row-2 sm:grid-cols-2 gap-y-20 lg:grid-rows-1 lg:grid-cols-3">
     {{ range $idx, $ctx := .features }}
     {{ $iconBg := "bg-turquoise" }}
     {{ if eq $idx 0 }}
@@ -59,9 +57,9 @@
     {{ if eq $idx 1 }}
     {{ $iconBg = "bg-gold" }}
     {{ end }}
-    <a href="{{ $ctx.url }}" class="relative h-full px-6 pt-32 pb-5 mx-4 hover:shadow-2xl rounded-2xl shadow-card1" title="{{ $ctx.title }}" aria-label="{{ $ctx.title }}">
+    <a href="{{ $ctx.url }}" class="relative h-full px-6 pt-32 pb-5 mx-4 lg:mx-3 hover:shadow-2xl rounded-2xl shadow-card1" title="{{ $ctx.title }}" aria-label="{{ $ctx.title }}">
       <div class="absolute left-0 right-0 flex justify-center -top-10">
-        <div class="flex items-center justify-center w-20 h-20 text-white {{ $iconBg }} rounded-full">
+        <div class="flex items-center justify-center w-20 h-20 text-white shadow-card4 {{ $iconBg }} rounded-full">
           <svg class="w-10 h-10">
             <use xlink:href="#shape-{{ $ctx.icon }}" />
           </svg>
@@ -87,7 +85,7 @@
     <span class="text-secondary">{{ .secondary }}</span>
   </h2>
   {{ end }}
-  <p class="max-w-2xl mx-auto text-xl text-center mt-7 text-gray2">{{ .details | markdownify }}</p>
+  <p class="mx-auto text-xl text-center mt-7 text-gray2 leading-1.8">{{ .details | markdownify }}</p>
   <div class="grid grid-cols-1 mt-32 md:grid-cols-2 gap-x-28 gap-y-14">
     {{ range .points }}
     <a href="{{ .url }}" class="relative block group rounded-2xl">
@@ -105,8 +103,8 @@
     {{ with .videoSection }}
     <div class="flex flex-col justify-center">
       <div class="pr-9">
-        <h3 class="text-3xl font-medium text-primary span-text-secondary">{{ .title | markdownify }}</h3>
-        <div class="mt-4 text-xl text-gray2">{{ .details }}</div>
+        <h3 class="text-3xl font-medium text-primary span-text-secondary leading-1.6">{{ .title | markdownify }}</h3>
+        <div class="mt-6 leading-1.8 text-xl text-gray2">{{ .details }}</div>
       </div>
     </div>
     <div class="relative p-4">
@@ -144,7 +142,7 @@
     <span class="text-secondary">{{ .secondary }}</span>
   </h2>
   {{ end }}
-  <p class="mx-auto mt-3 text-xl text-center text-gray2">{{ .details }}</p>
+  <p class="mx-auto mt-6 text-xl text-center text-gray2">{{ .details }}</p>
 
   {{/* you can do section start  */}}
   {{ with .youCanDo }}
@@ -156,7 +154,7 @@
     </div>
     <div class="px-5 pt-12">
       {{ with .title }}
-      <h3 class="text-4xl font-semibold text-primary span-text-secondary">
+      <h3 class="text-4xl font-semibold text-primary span-text-secondary leading-1.6">
         {{ . | markdownify }}
       </h3>
       {{ end }}
@@ -183,11 +181,11 @@
     <div class="flex flex-col justify-center pt-12">
       <div class="mr-0 lg:mr-10">
         {{ with .title }}
-        <h3 class="text-4xl font-semibold text-primary span-text-secondary">
+        <h3 class="text-4xl font-semibold text-primary span-text-secondary leading-1.6">
           {{ . | markdownify }}
         </h3>
         {{ end }}
-        <div class="mt-6 mb-8 text-lg text-gray2">
+        <div class="mt-6 mb-8 text-lg text-gray2 leading-1.8">
           {{ .details }}
         </div>
         {{ with .cta }}
@@ -215,11 +213,11 @@
     <div class="flex flex-col justify-center px-5">
       <div>
         {{ with .title }}
-        <h3 class="text-4xl font-semibold text-primary span-text-secondary">
+        <h3 class="text-4xl font-semibold text-primary span-text-secondary leading-1.6">
           {{ . | markdownify }}
         </h3>
         {{ end }}
-        <div class="mt-6 mb-8 text-lg text-gray2">
+        <div class="mt-6 mb-8 text-lg text-gray2 leading-1.8">
           {{ .details }}
         </div>
         {{ with .cta }}
@@ -237,11 +235,11 @@
     <div class="flex flex-col justify-center px-5">
       <div>
         {{ with .title }}
-        <h3 class="text-4xl font-semibold text-primary span-text-secondary">
+        <h3 class="text-4xl font-semibold text-primary span-text-secondary leading-1.6">
           {{ . | markdownify }}
         </h3>
         {{ end }}
-        <div class="mt-4 text-lg text-gray2">
+        <div class="mt-5 text-lg text-gray2 leading-1.8">
           {{ .details }}
         </div>
       </div>
@@ -266,11 +264,11 @@
     <div class="flex flex-col justify-center px-5">
       <div>
         {{ with .title }}
-        <h3 class="text-4xl font-semibold text-primary span-text-secondary">
+        <h3 class="text-4xl font-semibold text-primary span-text-secondary leading-1.6">
           {{ . | markdownify }}
         </h3>
         {{ end }}
-        <div class="mt-4 text-lg text-gray2">
+        <div class="mt-5 leading-1.8 text-lg text-gray2">
           {{ .details }}
         </div>
       </div>
@@ -297,11 +295,11 @@
       <p class="text-base font-nunitoSans text-indigo2">{{ .shortTitle }}</p>
     </div>
     {{ with .title }}
-    <h3 class="text-4xl font-semibold text-primary span-text-secondary">
+    <h3 class="text-4xl font-semibold text-primary span-text-secondary leading-1.6">
       {{ . | markdownify }}
     </h3>
     {{ end }}
-    <div class="mt-4 mb-8 text-lg text-gray2">
+    <div class="mt-6 mb-8 text-lg text-gray2 leading-1.8">
       {{ .details }}
     </div>
     {{ with .cta }}
@@ -321,7 +319,7 @@
       <p class="text-base font-nunitoSans text-indigo2">{{ .shortTitle }}</p>
     </div>
     {{ with .title }}
-    <h3 class="text-4xl font-semibold text-primary span-text-secondary">
+    <h3 class="text-4xl leading-1.6 font-semibold text-primary span-text-secondary">
       {{ . | markdownify }}
     </h3>
     {{ end }}
@@ -356,7 +354,7 @@
       </div>
       {{ range $idx, $testimonial := .list }}
       <div class="absolute bottom-0 right-0 py-4 sm:py-8 sm:ml-16 bg-white rounded-2xl px-5 sm:px-14 shadow-card1 animate__animated animate__faster {{ if ne $idx 0 }} hidden {{ end }}" data-testimonial-id="{{ $idx }}">
-        <div class="text-lg font-nunitoSans text-gray2">{{ .review | markdownify }}</div>
+        <div class="text-lg font-nunitoSans text-gray2 leading-1.8">{{ .review | markdownify }}</div>
         <div class="flex items-center justify-between mt-9">
           <div class="text-lg font-nunitoSans text-indigo3">{{ .name }}</div>
           <div>
@@ -384,11 +382,11 @@
 {{ with .Params.news }}
 <section class="container px-4 mx-auto mt-36 mb-44">
   {{ with .title }}
-  <h3 class="text-4xl font-semibold text-center text-primary span-text-secondary">
+  <h3 class="text-4xl font-semibold text-center text-primary leading-1.6 span-text-secondary">
     {{ . | markdownify }}
   </h3>
   {{ end }}
-  <div class="max-w-full mb-10 text-lg prose text-center mt-9 text-gray2">
+  <div class="max-w-full mb-10 leading-1.8 text-lg prose text-center mt-9 text-gray2">
     {{ .details | markdownify }}
   </div>
   <div class="grid grid-cols-1 gap-3 lg:grid-cols-2">
@@ -402,12 +400,12 @@
           <span class="absolute px-4 py-1 text-xs font-medium rounded-full shadow-md text-black1 bg-yellow1 bottom-4 right-4">{{ index .Params.tags 0 | title }}</span>
         </div>
         <div class="{{ if gt $idx 0 }} col-span-3 {{ else }} row-span-2 {{ end }} flex flex-col px-2">
-          <h3 class="text-xl font-semibold pt-1.5 duration-300 ease-in-out text-black1 group-hover:text-secondary">{{ .Params.articleData.title | plainify }}</h3>
+          <h3 class="text-xl font-semibold leading-1.6 pt-1.5 duration-300 ease-in-out text-black1 group-hover:text-secondary">{{ .Params.articleData.title | plainify }}</h3>
           {{ $truncate := 120 }}
           {{ if eq $idx 0 }}
           {{ $truncate = 500 }}
           {{ end }}
-          <div class="py-4 text-sm text-gray2">{{ truncate $truncate "..." .Params.shortDescription }}</div>
+          <div class="py-4 text-sm text-gray2 leading-1.8">{{ truncate $truncate "..." .Params.shortDescription }}</div>
           <span class="flex-grow"></span>
           <span class="mb-4 text-sm underline duration-300 ease-in-out text-gray2 group-hover:text-sky-blue">{{ $.Params.news.readMoreLabel }}</span>
         </div>
