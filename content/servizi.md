@@ -8,6 +8,9 @@ hero:
     - Cambiamento
     - INSICUREZZA
     - Evoluzione
+    - SVILUPPO
+    - Trasformazione
+    - Ricerca d’identità
 
   image:
     url: "/images/servizi.webp"
