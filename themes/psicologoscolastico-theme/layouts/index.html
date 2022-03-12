@@ -6,8 +6,8 @@
 <section class="relative bg-left-bottom bg-no-repeat bg-cover bg-home-hero">
   {{ partial "header" $ }}
   <div class="container grid grid-cols-1 px-4 mx-auto text-white lg:grid-cols-2">
-    <div class="flex flex-col justify-center py-20">
-      <h1 class="text-4xl font-semibold leading-17 md:max-w-xs md:text-5xl">{{ .heading }}</h1>
+    <div class="flex flex-col justify-center py-10 md:py-20">
+      <h1 class="text-4xl font-semibold leading-normal md:leading-17 md:max-w-xs md:text-5xl">{{ .heading }}</h1>
       <p class="mt-6 text-base md:text-lg md:max-w-md font-nunitoSans leading-1.8">{{ .details }}</p>
       {{ with .button }}
       <div class="mt-9">
@@ -29,7 +29,7 @@
 
 {{/* trusted by start */}}
 {{ with .Params.trustedBy }}
-<section class="container px-4 mx-auto mt-44">
+<section class="container px-4 mx-auto mt-20 md:mt-44">
   <p class="mb-16 text-2xl font-medium text-center text-gray2">{{ .heading }}</p>
   {{ with .image }}
   <img src="{{ .url }}" title="{{ .alt }}" alt="{{ .alt }}" class="w-full h-auto" width="1194" height="68">
@@ -40,7 +40,7 @@
 
 {{/* about platform start  */}}
 {{ with .Params.aboutPlatform }}
-<section class="container px-4 mx-auto mt-24">
+<section class="container px-4 mx-auto mt-16 md:mt-24">
   {{ with .heading }}
   <h2 class="text-3xl font-bold text-center">
     <span class="text-primary mr-1.5">{{ .primary }}</span>
@@ -177,7 +177,7 @@
 
   {{/* tools section start  */}}
   {{ with .tools }}
-  <div class="grid grid-cols-1 mt-20 lg:grid-cols-2">
+  <div class="grid grid-cols-1 mt-0 lg:mt-20 lg:grid-cols-2">
     <div class="flex flex-col justify-center pt-12">
       <div class="mr-0 lg:mr-10">
         {{ with .title }}
@@ -283,7 +283,7 @@
 
 {{/* always listing section start */}}
 {{ with .Params.alwaysListening }}
-<section class="container grid grid-cols-1 px-4 mx-auto lg:grid-cols-2 mt-72">
+<section class="container grid grid-cols-1 px-4 mx-auto lg:grid-cols-2 mt-17 sm:mt-28 lg:mt-72">
   <div class="pr-0 mx-auto lg:mx-0 lg:pr-24">
     {{ with .image }}
     {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto max-w-md" "width" "774" "height" "726") }}
@@ -312,7 +312,7 @@
 
 {{/* testimonial section start */}}
 {{ with .Params.testimonial }}
-<section class="container grid grid-cols-1 px-4 mx-auto lg:grid-cols-2 mt-72">
+<section class="container grid grid-cols-1 px-4 mx-auto mt-17 sm:mt-28 lg:mt-72">
   <div>
     <div class="flex items-center mb-7">
       <span class="h-px mr-3 w-17 bg-indigo2"></span>
