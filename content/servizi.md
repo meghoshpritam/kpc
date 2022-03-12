@@ -4,13 +4,9 @@ description: "Perché vai dallo psicologo? Lo psicologo è un professionista del
 date: 2022-02-01
 
 hero:
-  highlights:
-    - Cambiamento
-    - INSICUREZZA
-    - Evoluzione
-    - SVILUPPO
-    - Trasformazione
-    - Ricerca d’identità
+  heading: RISORSE E ATTIVITÀ
+  details: > 
+    Puoi scaricare gratuitamente materiali e strumenti didattici consigliati dallo <span>Psicologo</span> Scolastico
 
   image:
     url: "/images/servizi.webp"

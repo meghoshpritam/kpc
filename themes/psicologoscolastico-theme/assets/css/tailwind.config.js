@@ -14,6 +14,7 @@ module.exports = {
         'contact-us': "url('/images/patterns/contact-us-pattern.svg')",
         'home-hero': "url('/images/patterns/homepage-bg-pattern.svg')",
         'single-article': "url('/images/patterns/single-article-pattern.svg')",
+        services: "url('/images/patterns/services-pattern.svg')",
       },
       borderWidth: {
         1: '1px',
