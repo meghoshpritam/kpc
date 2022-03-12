@@ -120,6 +120,9 @@ ourFormula:
     image:
       url: /images/classroom-management-tools.webp
       alt: Strumenti di gestione della classe
+    cta:
+      label: Scopri di più
+      url: /servizi/?rel=studenti+insegnanti+genitori
   about:
     title: >
       <span>Parliamone!</span>
