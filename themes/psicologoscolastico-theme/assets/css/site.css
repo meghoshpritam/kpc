@@ -47,6 +47,15 @@ button.pagination-active-button {
   @apply text-white bg-sky-blue;
 }
 
+.footer-last span,
+a {
+  @apply mx-1;
+}
+
+.footer-last a {
+  @apply hover:text-secondary;
+}
+
 /* ========================== homepage style ============================= */
 .hp-video-container::after {
   padding-top: 56.25%;
