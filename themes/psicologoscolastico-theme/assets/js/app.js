@@ -594,7 +594,9 @@ class App {
     );
 
     previousButtonElement.setAttribute('data-context', context);
+    previousButtonElement.setAttribute('onclick', `App.onClickPreviousPageButton('${context}', '${listSelector}');`);
     nextButtonElement.setAttribute('data-context', context);
+    nextButtonElement.setAttribute('onclick', `App.onClickNextPageButton('${context}', '${listSelector}');`);
 
     paginationContainer.innerHTML = previousButtonElement.outerHTML + buttons.join('\n') + nextButtonElement.outerHTML;
     this.showCurrentListElements(activeElements, activeButtonIdx, elementsPerPage);
@@ -626,6 +628,20 @@ class App {
 
   static changeDownloadPage = (event) => {
     this.changePage(event, '[data-id="list-item"]');
+  };
+
+  static onClickPreviousPageButton = (context, selector) => {
+    const activeButton = document.querySelector(
+      `[data-id="pagination-btn"][data-context="${context}"][data-active="true"]`,
+    );
+    this.changePage(activeButton.previousElementSibling, selector);
+  };
+
+  static onClickNextPageButton = (context, selector) => {
+    const activeButton = document.querySelector(
+      `[data-id="pagination-btn"][data-context="${context}"][data-active="true"]`,
+    );
+    this.changePage(activeButton.nextElementSibling, selector);
   };
 }
 
