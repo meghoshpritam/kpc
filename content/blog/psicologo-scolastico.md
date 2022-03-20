@@ -2,87 +2,91 @@
 title: "Strategie educative: Peer Tutoring"
 description: "TODO: add description"
 author: Giusy Margiotta
-date: 2022-03-01
-lastmod: 2022-03-02
+date: 2022-03-20
+lastmod: 2022-03-20
 tags:
   - insegnanti
   - genitori
 
 articleData:
-  title: "Strategie educative: Peer Tutoring"
+  title: "Psicologo scolastico: una figura, mille risorse!"
   description: >
-    Cosè il tutoraggio tra pari
+    Chi è lo psicologo scolastico
   image:
     url:
-    alt: "Strategie educative: Peer Tutoring"
+    alt: "Psicologo scolastico: una figura, mille risorse!"
 
 shortDescription: >
-  Sebbene la frase sia senza senso, ha una lunga storia. La frase è stata utilizzata per vari secoli dai tipografi per mostrare più peculiari dei tipi di carattere. Infatti, le lettere e gli spazi coinvolti in questa frase consentono di evidenziare nel miglior modo possibile, il peso, il design e altre importanti caratteristiche del carattere tipografico.
-
-
-  Sebbene la frase sia senza senso, ha una lunga storia. La frase è stata utilizzata per vari secoli dai tipografi per mostrare più peculiari dei tipi di carattere. Infatti, le lettere e gli spazi coinvolti in questa frase consentono di evidenziare nel miglior modo possibile, il peso, il design e altre importanti caratteristiche del carattere tipografico.
+  Negli ultimi decenni i problemi di emergenza educativa e di crescente abbandono scolastico hanno visto un incremento notevole, lo si può notare dagli episodi di bullismo presenti quotidianamente sulle pagine di cronaca. Ma ad oggi non è solo il bullismo che preoccupa gli studenti, i genitori e gli insegnanti ma bensì le difficoltà relazionali, di diffusione di droghe, dall’incapacità di fronteggiare i momenti di frustrazione che spesso sfociano in suicidi.
 
 coverImage: "/images/blog/strategie-educative-peer-tutoring.webp"
 
 layout: single
 ---
 
-Sia il **peer tutoring** o **tutoraggio tra pari** ovvero il passaggio di conoscenze tra pari, è un aiuto reciproco che avviene in ambito scolastico. Sia il **peer tutoring** che l'apprendimento cooperativo sono tipi di apprendimento **peer assisted**. Il tutoraggio tra pari di solito coinvolge coppie di studenti, uno nel ruolo di tutor e l'altro come tutee, con il membro più abile o esperto che aiuta l'altro ad apprendere argomenti nuovi. Al contrario, l'apprendimento cooperativo viene solitamente svolto in piccoli gruppi di circa quattro studenti, spesso con diversi livelli di conoscenza. Il gruppo lavora per raggiungere un obiettivo. Poiché è più facile nascondersi in un gruppo, i ruoli vengono spesso assegnati ad ogni singolo membro.
+# Lo psicologo scolastico
 
-In generale, sia il **tutoraggio tra pari** che l'apprendimento cooperativo "lavorano", in un'ampia gamma di materie curricolari e con studenti di tutte le età. Data la forma appropriata di organizzazione, ne derivano guadagni cognitivi sia per i tutor che per coloro che vengono aiutati.
+## Cosa cambia dopo la proposta di legge 
+  
+Nelle scuole, tra gli studenti si può constatare un’incapacità e grande difficoltà di porsi degli obiettivi a breve e lungo termine che richiedono impegno e costanza. Proprio per questi motivi e per altri che stanno insorgendo giorno dopo giorno la psicologia nella scuola è sempre più necessaria non solo per i ragazzi ma anche per la rete di professionisti con i quali entrano in contatto ogni giorno. 
+  
+Finalmente dallo scorso settembre lo psicologo scolastico ha visto riconosciuto la sua importanza ed ha assunto una connotazione definitiva all’interno dell’istituzione scolastica ricevendo una qualificazione più specifica ed un posizionamento adeguato rispetto al servizio che è in grado di offrire, abbandonando i pregiudizi che per decenni hanno accompagnato questa figura professionale. 
+  
+Occuparsi del mondo della scuola oggi significa lavorare con costanza e coerenza, ascoltando e cercando un punto di incontro tra idee, esigenze, gravi problemi sociali e carenze educative. Il mondo della scuola ha bisogno sempre più di in iniziative per migliorare le relazioni interpersonali, arginare il malessere scolastico, affiancare e supportare lo studente a orientarsi nel percorso di apprendimento E a superare gli ostacoli che potrebbero insorgere durante gli anni a scuola. 
+  
+Lo psicologo a scuola rappresenta uno spazio che mette a disposizione dei ragazzi informazioni e consulenze, affianca e sollecita alla soluzione dei problemi scolastici e personali, offre consulenze ai singoli e ai gruppi. Si pone come obiettivo di affiancare bambini e adolescenti durante il percorso di crescita aiutandoli ad adottare un approccio basato sul problem solving e di sviluppare una relazione di fiducia Nei confronti dei protagonisti del sistema scolastico a cui appartengono. 
+  
+Lo psicologo scolastico vuole essere una risorsa fondamentale che interviene non solo sul singolo ma sui protagonisti dell’ambiente scolastico ovvero gli studenti, i docenti e le famiglie mettendo in campo e fornendo delle strategie efficaci nel perseguimento degli obiettivi educativi e orientativi. Questo approccio si fonda sul presupposto che bisogna lavorare su tutti i protagonisti dell’organizzazione scolastica per migliorare il processo di relazione, insegnamento e apprendimento. 
+  
+È necessario che si attivi un lavoro di rete tra le diverse figure educative per intervenire in modo efficace laddove siano presenti delle difficoltà, ma anche in via preventiva per evitare che si creino delle situazioni di disagio. La collaborazione tra i diversi ruoli è importante per avere soluzioni ai diversi problemi. 
+  
+Andiamo a capire in sintesi quali sono le funzioni dello sportello d’ascolto psicologico a scuola: 
+ 
+- Interventi nelle classi 
 
-Il peer tutoring coinvolge gli studenti che lavorano insieme per raggiungere obiettivi condivisi, ed è questo senso di interdipendenza che motiva i membri del gruppo ad aiutarsi e sostenersi a vicenda. Quando gli studenti lavorano in modo cooperativo, imparano ad ascoltare ciò che gli altri hanno da dire, dare e ricevere aiuto, riconciliare le differenze e risolvere i problemi democraticamente.
+- Interventi con i docenti 
 
-Tuttavia, collocare gli studenti in coppia e dire loro di lavorare insieme non garantisce il funzionamento in modo cooperativo. le coppie devono essere strutturati in modo da garantire che i membri lavorino in modo interdipendente se vogliono raccogliere i benefici didattici e sociali ampiamente attribuiti a questo approccio di apprendimento.
+- Partecipazione ad attività di organizzazione scolastica
 
-Il ruolo svolto dall'insegnante nell'organizzazione è di fondamentale importanza per il suo successo. Ciò implica essere consapevoli di come strutturare il peer tutoring, comprese le loro dimensioni e composizione, il tipo di task set; aspettative per il comportamento degli studenti; responsabilità individuali e di coppia; e il ruolo dell'insegnante nel monitoraggio sia del processo che dei risultati dell'esperienza di gruppo.
+- Interventi con il personale ata 
 
-## Definizione e contesto
+- Interventi con i genitori 
+ 
+Come si può notare gli interventi coinvolgono tutti gli attori del sistema scolastico ed è proprio per questo che non si può fare a meno di ribadire l’importanza dell’instaurarsi di uno spirito di fiducia, di collaborazione, di condivisione di ascolto reciproco. 
+  
+## Cosa può fare lo psicologo scolastico? 
+ 
+Come affermato da più parti, l’intervento che lo psicologo mette in atto a scuola può coinvolgere tre differenti aree dell’istituzione, ovvero: 
+ 
+- Lo studente. In questo caso lo psicologo è chiamato a prevenire o arginare comportamenti problematici, mancati successi scolastici, problemi di autostima Al fine di migliorare loro adattamento scolastico e il loro profitto. Lo psicologo si impegna ad identificare i casi atipici, a fornire assistenza agli alunni in difficoltà e offrire supporto agli insegnanti della classe; 
 
-Il **peer tutoring** ha lo scopo principale di coinvolgere attivamente gli studenti nel processo di apprendimento; un livello di empowerment degli studenti che non è possibile durante la lezione tradizionale. La premessa di fondo è fondata nell'epistemologia costruttivista.
-Questo processo richiede che le conoscenze siano scoperte dagli studenti e trasformate in concetti che gli studenti possono apprndere facilmente. La conoscenza viene quindi ricostruita e ampliata attraverso nuove esperienze di apprendimento.
+- Il sistema educativo. Gli interventi in quest’ambito possono riguardare solo il singolo studente ho lavorare sull’intero gruppo classe. Ma i protagonisti del sistema educativo sono anche ai docenti e come tali possono usufruire dei servizi dello psicologo scolastico ad esempio per migliorare la comunicazione tra colleghi e identificare le fonti di stress organizzativo per permetterne la riduzione; 
 
-L'apprendimento avviene attraverso il dialogo tra gli studenti in un ambiente familiare.
-Il **peer tutoring** è una metodologia che impiega una varietà di attività di apprendimento per migliorare la comprensione di una materia da parte degli studenti utilizzando un approccio strutturato che prevede una serie di passaggi, invita gli studenti a creare, analizzare e applicare concetti (Kagan, 1990).
+- La famiglia. L’intervento psicologico scolastico però non si ferma solo tra le mura della scuola ma piuttosto va oltre, infatti risponde anche alle richieste su tematiche che coinvolgono le famiglie degli alunni come, ad esempio, per agevolare la comunicazione e la collaborazione educativa fra la scuola e la famiglia. 
+  
+## Le strategie più utilizzate dallo psicologo scolastico 
+  
+Lo psicologo scolastico può dare una valutazione sulle difficoltà di apprendimento, l’adattamento dei curricoli, sui problemi di comportamento, offrire un supporto psicologico al personale scolastico, agli studenti e ai genitori. Un altro ruolo che viene riconosciuto allo psicologo scolastico è quello di dare una formazione adeguata agli insegnanti che si trovano ad affrontare giornalmente problemi di entità psicologica dei propri studenti.  
+  
+Il lavoro può differenziarsi in base alle fasce di età dei soggetti che chiedono al supporto dello psicologo. Se ci soffermiamo sul lavoro dello psicologo scolastico nella scuola dell’infanzia e primaria possiamo soffermarci sul lavoro di prevenzione per un’individuazione precoce del problema, se invece stiamo parlando di scuola secondaria i problemi più rilevati sono quelli di orientamento, problemi comportamentali, l’abbandono scolastico, le violenze, le difficoltà legate all’adolescenza. 
+  
+Possiamo definire questa figura come uno strumento che la scuola può utilizzare per agevolare lo sviluppo personale sociale degli allievi Come incentivo nel raggiungimento dei propri obiettivi formativi, aiutando l’individuo a mantenere uno stato di benessere nel contesto scolastico. 
+  
+La metodologia che viene utilizzata con più frequenza e con la quale si sono rilevati dei progressi notevoli è sicuramente l’educazione socio affettiva, finalizzata al potenziamento delle proprie risorse e allo sviluppo di competenze sociali nuove. Questo intervento agevola la comunicazione tra i membri, promuove la cooperazione la solidarietà, il rispetto dell’altro, riconoscendo e accettando le differenze di ognuno. 
+  
+L’educazione socio affettiva non viene utilizzata solo con i ragazzi ma anche per la formazione degli insegnanti, ad esempio attraverso il “metodo Gordon”, ideato da Edwin E. Gordon ricercatore, autore e professore presso la South Carolina University. 
+Questo intervento si basa sullo studio tutti hanno un’attitudine musicale, ovvero la capacità di apprendimento musicale, sin dalla nascita, che varia di persona in persona e si pone come obiettivo di promuovere un’efficacia relazione tra i docenti e gli studenti. 
+ 
+Quando si parla di educazione socio affettiva spesso viene annoverato tra i metodi più efficaci il “Circle Time” o anche definito tempo del cerchio. Questo è un intervento utilizzato spesso con il gruppo classe, mirato a migliorare la relazione tra gli alunni e la loro conoscenza reciproca. 
+  
+Lo psicologo scolastico utilizza l’educazione socio affettiva per: 
+ 
+- Favorire il benessere psicofisico dei docenti e degli studenti;
 
-Il **peer tutoring** utilizza le idee di Vygotsky, Piaget e Kohlberg in quanto sia l'individuo che l'ambiente sociale sono dinamiche attive nel processo di apprendimento mentre gli studenti tentano di imitare l'apprendimento della vita reale.
+- Stimolare la motivazione a raggiungimento degli obiettivi didattici e l’autostima degli studenti; 
 
-Combinando lavoro di squadra e responsabilità individuale, gli studenti lavorano per acquisire conoscenze e abilità sociali. È una strategia didattica che consente agli studenti di lavorare insieme in piccoli gruppi con individui di vari talenti, abilità e background per raggiungere un obiettivo comune. Ogni singolo membro è responsabile dell'apprendimento dell'argomento trattato.
+- Promuovere la cooperazione tra scuola e famiglia; 
 
-La coppia lavora fino a quando lo studente non comprende e completa con successo l'incarico, creando così una "atmosfera di successo" (Panitz, 1996). Di conseguenza, inquadrano nuovi obiettivi basando le loro conclusioni su conoscenze precedenti.
+- Accompagnare l’alunno, che si trova davanti ad una scelta relativa al percorso scolastico o professionale, in un processo di orientamento; 
 
-## Quadro teorico per il peer tutoring
-
-Ci sono due importanti prospettive teoriche associate al **peer tutoring**: motivazionale e cognitivo. In primo luogo, poiché gli studenti percepiscono che il loro successo o fallimento dipende dalla loro capacità di lavorare insieme, è probabile che si incoraggino a vicenda al fine di raggiungere il risultato prefissato. Pertanto, il **peer tutoring** aumenta la motivazione degli studenti.
-
-L'altra teoria vede il **peer tutoring** come un aiuto ad acquisire capacità di pensiero critico. Poiché crea una situazione in cui gli studenti devono spiegare e discutere vari argomenti, si ottiene una maggiore comprensione. Il pensiero elaborativo è promosso perché gli studenti danno e ricevono spiegazioni più frequenti (Johnson, Johnson, & Holubec, 1986).
-
-L'uso del **peer tutoring** aiuta anche gli studenti a chiarire concetti e idee attraverso la discussione e il dibattito. Poiché il livello di discussione all'interno dei gruppi è significativamente maggiore rispetto alle discussioni guidate dagli istruttori, gli studenti ricevono un feedback immediato, facendo avanzare così il livello di discussione.
-
-È attraverso questo processo di interazione di studenti con diversi punti di vista che viene stimolata la crescita cognitiva. L'accento è posto sull'apprendimento di come cooperare al fine di trovare la migliore soluzione possibile a un problema. Secondo l'approccio costruttivista, quando gli studenti formulano le proprie soluzioni in questo modo, stanno davvero pensando criticamente (Davis, Mahler & Noddings, 1990).
-
-## Come si organizza il peer tutoring?
-
-1. La prima fase è la fase di *pre-implementazione*, che comprende: specificare obiettivi didattici, assegnare gli studenti ai gruppi, organizzare l'aula, pianificare materiali didattici per promuovere l'interdipendenza, assegnare i ruoli, assegnare compiti, spiegare i criteri di successo, strutturare l'interdipendenza positiva e la responsabilità e specificare i comportamenti desiderati.
-
-2. La seconda fase è *l'implementazione* che include: monitoraggio del comportamento, intervento se necessario, assistenza alle esigenze e lode.
-
-3. La terza fase è la *post-implementazione* che comprende: la chiusura attraverso la sintesi, la valutazione dell'apprendimento degli studenti e la riflessione su ciò che è accaduto.
-
-## Quali sono i principali vantaggi?
-
-Come accennato in precedenza nel tempo sono stati rilevanti grandi vantaggi da questa strategia, durante le attività di **peer tutoring**:
-
-- Gli studenti ricevono più tempo per l'apprendimento individualizzato.
-
-- L'interazione diretta tra gli studenti promuove l'apprendimento attivo.
-
-- Gli insegnanti tutor rafforzano il proprio apprendimento istruendo gli altri.
-
-- Gli studenti si sentono più a proprio agio e aperti quando interagiscono con un pari.
-
-- Colleghi e studenti condividono un discorso simile, consentendo una maggiore comprensione.
-
-- L'insegnamento tra pari è un'alternativa finanziariamente efficiente all'assunzione di più membri del personale.
-
-La ricerca indica anche che le attività di **peer tutoring** producono in genere i seguenti risultati sia per il tutor che per il tutee: spirito di team building e relazioni più di supporto; maggiore benessere psicologico, competenza sociale, migliore capacità comunicative e aumento dell'autostima; maggiori risultati e maggiore produttività in termini di migliori risultati di apprendimento.
+- Costruire un ambiente pronto a prevenire il disagio evolutivo e l’abbandono scolastico. 
