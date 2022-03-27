@@ -214,10 +214,12 @@ class App {
 
   static showBlogsByTag = (tag) => {
     this.showElementsByTag(tag, `[data-id="blog-0503"]`, (element, tagName) => element.dataset.tags.includes(tagName));
-    this.showPagination({
-      context: 'blog',
-      listSelector: '[data-id="blog-0503"]',
-    });
+    this.showBlogPagination();
+  };
+
+  static showDownloadByTag = (tag) => {
+    this.showElementsByTag(tag, `[data-id="list-item"]`, (element, tagName) => element.dataset.area === tagName);
+    this.showDownloadPagination();
   };
 
   static searchBlog = (event) => {
@@ -238,10 +240,29 @@ class App {
       }) || [];
 
     this.searchInLists(searchTerm, searchElements, matchElements);
-    this.showPagination({
-      context: 'blog',
-      listSelector: '[data-id="blog-0503"]',
-    });
+    this.showBlogPagination();
+  };
+
+  static searchInDownloadList = (event) => {
+    const { target } = event;
+    const searchTerm = target.value || '';
+    const searchTerms = searchTerm
+      .toLowerCase()
+      .split(' ')
+      .filter((term) => term?.length > 0);
+    const listElements = document.querySelectorAll('[data-id="list-item"][data-active="true"]');
+    const listElementsWithSearch = document.querySelectorAll('[data-id="list-item"][data-active-search="true"]');
+    this.hideAllElements(listElements);
+
+    const matchElements =
+      Array.from(listElements).filter((element) => {
+        const title = element.dataset.title.toLowerCase() || '';
+        const description = element.dataset.description.toLowerCase() || '';
+        return searchTerms.every((term) => title.includes(term) || description.includes(term));
+      }) || [];
+
+    this.searchInLists(searchTerm, listElementsWithSearch, matchElements);
+    this.showDownloadPagination();
   };
 
   static getTestimonialElements = () => {
@@ -311,7 +332,7 @@ class App {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
   };
 
-  static onLoadBlogPage = () => {
+  static updateSelectedFiltersFromURL = () => {
     let tags = this.getURLParameterByName('rel')?.split(' ') || [];
     tags = tags.filter((tag) => tag?.length > 0);
 
@@ -325,26 +346,16 @@ class App {
         targetButtonElement?.click();
       }
     }
-    this.showPagination({
-      context: 'blog',
-      listSelector: '[data-id="blog-0503"]',
-    });
+  };
+
+  static onLoadBlogPage = () => {
+    this.updateSelectedFiltersFromURL();
+    this.showBlogPagination();
   };
 
   static onLoadDownloadPage = () => {
-    let tags = this.getURLParameterByName('rel')?.split(' ') || [];
-    tags = tags.filter((tag) => tag?.length > 0);
-
-    if (tags.length > 0) {
-      const buttonElements = document.querySelectorAll(`${TAG_BUTTON_SELECTOR}[data-active="true"]`);
-      for (const buttonElement of buttonElements) {
-        buttonElement.click();
-      }
-      for (const tag of tags) {
-        const targetButtonElement = document.querySelector(`${TAG_BUTTON_SELECTOR}[data-tag="${tag}"]`);
-        targetButtonElement?.click();
-      }
-    }
+    this.updateSelectedFiltersFromURL();
+    this.showDownloadPagination();
   };
 
   static sortDownloadList = (fieldName) => {
@@ -419,27 +430,6 @@ class App {
     }
   };
 
-  static searchInDownloadList = (event) => {
-    const { target } = event;
-    const searchTerm = target.value || '';
-    const searchTerms = searchTerm
-      .toLowerCase()
-      .split(' ')
-      .filter((term) => term?.length > 0);
-    const listElements = document.querySelectorAll('[data-id="list-item"][data-active="true"]');
-    const listElementsWithSearch = document.querySelectorAll('[data-id="list-item"][data-active-search="true"]');
-    this.hideAllElements(listElements);
-
-    const matchElements =
-      Array.from(listElements).filter((element) => {
-        const title = element.dataset.title.toLowerCase() || '';
-        const description = element.dataset.description.toLowerCase() || '';
-        return searchTerms.every((term) => title.includes(term) || description.includes(term));
-      }) || [];
-
-    this.searchInLists(searchTerm, listElementsWithSearch, matchElements);
-  };
-
   static showElementsByTag = (tag, listSelector, elementSelectorFunction) => {
     const buttonActiveClasses = ['border-sky-blue', 'text-white', 'bg-sky-blue'];
     const buttonInactiveClass = 'border-light-gray3';
@@ -476,10 +466,6 @@ class App {
         listElement.setAttribute('data-active', 'false');
       }
     }
-  };
-
-  static showDownloadByTag = (tag) => {
-    this.showElementsByTag(tag, `[data-id="list-item"]`, (element, tagName) => element.dataset.area === tagName);
   };
 
   static onOpenContactForm = (event) => {
@@ -526,12 +512,12 @@ class App {
     const nextButtonElement = paginationContainer.children[paginationContainer.children.length - 1];
 
     previousButtonElement.removeAttribute('disabled');
-    if (activeButtonIdx === 1) {
+    if (Number(activeButtonIdx) === 1) {
       previousButtonElement.setAttribute('disabled', true);
     }
 
     nextButtonElement.removeAttribute('disabled');
-    if (activeButtonIdx === nPages) {
+    if (Number(activeButtonIdx) === Number(nPages)) {
       nextButtonElement.setAttribute('disabled', true);
     }
 
@@ -561,7 +547,23 @@ class App {
     return PAGINATION_LIST_BLOG_ELEMENTS;
   };
 
-  static showPagination = ({ context, listSelector }) => {
+  static showBlogPagination = () => {
+    this.showPagination({
+      context: 'blog',
+      listSelector: '[data-id="blog-0503"]',
+      changeButtonFunctionName: 'changeBlogPage',
+    });
+  };
+
+  static showDownloadPagination = () => {
+    this.showPagination({
+      context: 'download-list',
+      listSelector: '[data-id="list-item"]',
+      changeButtonFunctionName: 'changeDownloadPage',
+    });
+  };
+
+  static showPagination = ({ context, listSelector, changeButtonFunctionName }) => {
     const paginationContainer = document.querySelector('.pagination-btn-container');
     paginationContainer.classList.add('invisible');
 
@@ -574,7 +576,11 @@ class App {
     const buttons = [];
     for (let index = 1; index <= nPages; index += 1) {
       buttons.push(
-        `<button data-context='${context}' data-id="pagination-btn" data-btn-index="${index}" class="pagination-button" data-active="false" onclick="App.changePage(this);">${index}</button>`,
+        `<button data-context='${context}' data-id="pagination-btn" data-btn-index="${index}" 
+                    class="pagination-button" data-active="false" 
+                    onclick="App.${changeButtonFunctionName}(this);">
+                    ${index}
+                  </button>`,
       );
     }
     buttons[0] = buttons[0].replace('data-active="false"', 'data-active="true"');
@@ -587,12 +593,18 @@ class App {
       nPages,
     );
 
+    previousButtonElement.setAttribute('data-context', context);
+    previousButtonElement.setAttribute('onclick', `App.onClickPreviousPageButton('${context}', '${listSelector}');`);
+    nextButtonElement.setAttribute('data-context', context);
+    nextButtonElement.setAttribute('onclick', `App.onClickNextPageButton('${context}', '${listSelector}');`);
+
     paginationContainer.innerHTML = previousButtonElement.outerHTML + buttons.join('\n') + nextButtonElement.outerHTML;
-    paginationContainer.classList.remove('invisible');
     this.showCurrentListElements(activeElements, activeButtonIdx, elementsPerPage);
+    paginationContainer.classList.remove('invisible');
   };
 
-  static changePage = (element) => {
+  static changePage = (element, elementSelector) => {
+    const paginationContainer = document.querySelector('.pagination-btn-container');
     const { context } = element.dataset;
     const oldActiveButton = document.querySelector(
       `[data-context="${context}"][data-id="pagination-btn"][data-active="true"]`,
@@ -602,11 +614,34 @@ class App {
       return;
     }
 
-    const activeElements = this.getActiveElements('[data-id="blog-0503"]');
+    const activeElements = this.getActiveElements(elementSelector);
     oldActiveButton.setAttribute('data-active', 'false');
     element.setAttribute('data-active', 'true');
     const elementsPerPage = this.getBlogElementsPerPage();
     this.showCurrentListElements(activeElements, activeButtonIdx, elementsPerPage);
+    this.getPerviousAndNextButtons(paginationContainer, activeButtonIdx, paginationContainer.children.length - 2);
+  };
+
+  static changeBlogPage = (event) => {
+    this.changePage(event, '[data-id="blog-0503"]');
+  };
+
+  static changeDownloadPage = (event) => {
+    this.changePage(event, '[data-id="list-item"]');
+  };
+
+  static onClickPreviousPageButton = (context, selector) => {
+    const activeButton = document.querySelector(
+      `[data-id="pagination-btn"][data-context="${context}"][data-active="true"]`,
+    );
+    this.changePage(activeButton.previousElementSibling, selector);
+  };
+
+  static onClickNextPageButton = (context, selector) => {
+    const activeButton = document.querySelector(
+      `[data-id="pagination-btn"][data-context="${context}"][data-active="true"]`,
+    );
+    this.changePage(activeButton.nextElementSibling, selector);
   };
 }
 

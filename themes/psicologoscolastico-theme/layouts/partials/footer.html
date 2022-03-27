@@ -30,9 +30,9 @@
     {{ end }}
   </div>
   {{ with .bottom }}
-  <div class="flex items-center justify-center mt-4">
+  <div class="flex items-center justify-center mt-4 footer-last">
     {{ .before | markdownify }}
-    <span class="mx-1 current-year-footer-0102">2022</span>
+    <span class="current-year-footer-0102">2022</span>
     {{ .after | markdownify }}
   </div>
   {{ end }}

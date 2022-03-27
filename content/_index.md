@@ -30,17 +30,17 @@ aboutPlatform:
       icon: file-invoice
       details: >
         Lo psicologo scolastico aiuta lo studente a fare luce su ciò che sta vivendo e a costruisce con lui un percorso per stare meglio, affrontando il problema in modo personalizzato
-      url: "/servizi/?rel=studenti"
+      url: "/blog/bisogni-educativi-speciali/"
     - title: Genitori
       icon: calendar
       details: >
         Offre uno spazio di ascolto in cui  esprimere le fatiche del ruolo genitoriale e gettare le basi per la creazione di un rapporto di fiducia con la scuola nella crescita dei propri figli.
-      url: "/servizi/?rel=genitori"
+      url: "/blog/circle-time-a-scuola/"
     - title: Insegnanti
       icon: users
       details: >
         Accoglie le richieste di insegnanti che osservano situazioni critiche o che desiderano un feedback rispetto alla gestione di casi delle loro classi
-      url: "/servizi/?rel=insegnanti"
+      url: "/blog/lanimale-co-terapeuta-come-supporto-educativo/"
 
 whyUs:
   heading:
@@ -120,6 +120,9 @@ ourFormula:
     image:
       url: /images/classroom-management-tools.webp
       alt: Strumenti di gestione della classe
+    cta:
+      label: Scopri di più
+      url: /servizi/?rel=studenti+insegnanti+genitori
   about:
     title: >
       <span>Parliamone!</span>
