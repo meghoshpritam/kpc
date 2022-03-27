@@ -118,5 +118,14 @@ lists:
     date: "2021-03-23"
     file: "/download/modello-verifica-intermedia-PEI.pdf"
 
+  - id: 10
+    area: insegnanti
+    title: "Esseri viventi e non viventi"
+    description: >
+      Essere viventi e non viventi in CAA
+    age: "7 - 16 anni"
+    date: "2021-03-23"
+    file: "/download/esseri-viventi-o-non-viventi-in-CAA.pdf"
+
 layout: services
 ---
