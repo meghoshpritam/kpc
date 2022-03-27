@@ -72,7 +72,51 @@ lists:
     age: "11 - 16 anni"
     date: "2021-03-01"
     file: "/download/Modello verifica intermedia del PEI.pdf"
-  
+
+  - id: 5
+    area: insegnanti
+    title: "English in CAA"
+    description: >
+      Saluti in Inglese in CAA - Tabelle CAA da stampare (Insegnanti)
+    age: "7 - 16 anni"
+    date: "2021-03-23"
+    file: "/download/english-in-caa.pdf"
+    
+  - id: 6
+    area: studenti
+    title: "English in CAA"
+    description: >
+      Saluti in Inglese in CAA - Tabelle CAA da stampare (Studenti)
+    age: "7 - 16 anni"
+    date: "2021-03-23"
+    file: "/download/english-in-caa.pdf"    
+
+  - id: 7
+    area: insegnanti
+    title: "Esercitazioni anti incendio in CAA"
+    description: >
+      Esercitazioni anti incendio in CAA (Insegnanti)
+    age: "7 - 16 anni"
+    date: "2021-03-23"
+    file: "/download/esercitazioni-antincendio-in-CAA.pdf"
+
+  - id: 8
+    area: studenti
+    title: "Esercitazioni anti incendio in CAA"
+    description: >
+      Esercitazioni anti incendio in CAA (Studenti)
+    age: "7 - 16 anni"
+    date: "2021-03-23"
+    file: "/download/esercitazioni-antincendio-in-CAA.pdf"
+
+  - id: 9
+    area: insegnanti
+    title: "Modello verifica intermedia del PEI"
+    description: >
+      Modello verifica intermedia del PEI anno 2022
+    age: "7 - 16 anni"
+    date: "2021-03-23"
+    file: "/download/modello-verifica-intermedia-PEI.pdf"
 
 layout: services
 ---
