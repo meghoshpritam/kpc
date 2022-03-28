@@ -56,13 +56,13 @@ lists:
     file: "/download/Linee guida per compilare il PEI (piano educativo individualizzato).pdf"
   
   - id: 3
-    area: genitori
-    title: "Come leggere il PEI"
+    area: insegnanti
+    title: "Modello PEI compilato"
     description: >
       Come leggere il PEI (piano educativo individualizzato)
     age: "11 - 16 anni"
     date: "2021-03-01"
-    file: "/download/Come leggere il PEI (piano educativo individualizzato).pdf"
+    file: "/download/modello-PEI-compilato.pdf"
   
   - id: 4 
     area: insegnanti
@@ -71,7 +71,7 @@ lists:
       Modello verifica intermedia del PEI
     age: "11 - 16 anni"
     date: "2021-03-01"
-    file: "/download/Modello verifica intermedia del PEI.pdf"
+    file: "/download/modello-verifica-intermedia-del-PEI.pdf"
 
   - id: 5
     area: insegnanti
@@ -80,7 +80,7 @@ lists:
       Saluti in Inglese in CAA - Tabelle CAA da stampare (Insegnanti)
     age: "7 - 16 anni"
     date: "2021-03-23"
-    file: "/download/english-in-caa.pdf"
+    file: "/download/english-in-CAA.pdf"
     
   - id: 6
     area: studenti
@@ -89,7 +89,7 @@ lists:
       Saluti in Inglese in CAA - Tabelle CAA da stampare (Studenti)
     age: "7 - 16 anni"
     date: "2021-03-23"
-    file: "/download/english-in-caa.pdf"    
+    file: "/download/english-in-CAA.pdf"    
 
   - id: 7
     area: insegnanti
@@ -116,7 +116,7 @@ lists:
       Modello verifica intermedia del PEI anno 2022
     age: "7 - 16 anni"
     date: "2021-03-23"
-    file: "/download/modello-verifica-intermedia-PEI.pdf"
+    file: "/download/modello-verifica-intermedia-del-PEI.pdf"
 
   - id: 10
     area: insegnanti
@@ -125,7 +125,34 @@ lists:
       Essere viventi e non viventi in CAA
     age: "7 - 16 anni"
     date: "2021-03-23"
-    file: "/download/esseri-viventi-o-non-viventi-in-CAA.pdf"
+    file: "/download/esseri-viventi-e-non-viventi-in-CAA.pdf"
+
+  - id: 11
+    area: studenti
+    title: "Pinocchio in CAA"
+    description: >
+      Pinocchio in CAA (Comunicazione aumentativa alternativa)
+    age: "5 - 16 anni"
+    date: "2021-03-23"
+    file: "/download/pinocchio-in-CAA.pdf"
+
+  - id: 12
+    area: studenti
+    title: "Sottrazioni in colonna"
+    description: >
+      Sottrazioni in colonna con cambio in CAA
+    age: "5 - 16 anni"
+    date: "2021-03-23"
+    file: "/download/sottrazione-in-colonna-con-cambio-in-CAA.pdf"
+
+  - id: 13
+    area: studenti
+    title: "Sottrazioni in colonna"
+    description: >
+      Sottrazioni in colonna in CAA
+    age: "5 - 16 anni"
+    date: "2021-03-23"
+    file: "/download/sottrazione-in-colonna-in-CAA.pdf"    
 
 layout: services
 ---
