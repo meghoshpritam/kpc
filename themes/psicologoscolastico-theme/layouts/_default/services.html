@@ -20,7 +20,7 @@
   {{ end }}
   {{/* hero section start  */}}
 
-  
+
   {{/* hero section end  */}}
 </section>
 
@@ -39,11 +39,8 @@
     </div>
     <div class="flex items-center flex-wrap sm:flex-nowrap flex-grow order-2 -ml-3.5 tag-bluttons-container md:ml-11 justify-center md:justify-start">
       {{ range  $idx, $tag := .filterTags }}
-      {{ $cls := "border-light-gray3" }}
-      {{ if eq $idx 0 }}
-      {{ $cls = "border-sky-blue text-white bg-sky-blue" }}
-      {{ end }}
-      <button onclick="App.showDownloadByTag('{{ $tag.id }}');" data-id="tag-selector-button-0303" data-active="{{ if eq $idx 0 }}true{{ else }}false{{ end }}" class="mx-4 text-sm px-6 py-0.5 mb-4 sm:mb-0 shadow-button rounded-md border hover:bg-white hover:border-sky-blue hover:text-sky-blue {{ $cls }}" data-tag="{{ $tag.id }}">{{ $tag.label }}</button>
+      {{ $cls := "border-sky-blue text-white bg-sky-blue" }}
+      <button onclick="App.showDownloadByTag('{{ $tag.id }}');" data-id="tag-selector-button-0303" data-active="true" class="mx-4 text-sm px-6 py-0.5 mb-4 sm:mb-0 shadow-button rounded-md border hover:bg-white hover:border-sky-blue hover:text-sky-blue {{ $cls }}" data-tag="{{ $tag.id }}">{{ $tag.label }}</button>
       {{ end }}
     </div>
     <div class="flex items-center justify-end flex-grow order-1 w-full sm:flex-nowrap lg:order-2 mb-7 lg:mb-0">
@@ -129,10 +126,9 @@
   {{ end }}
 
   <div data-id="list-item-container" class="download-list-item-container">
-    {{ $activeTagButton := index .Params.header.filterTags 0 }}
     {{ $index := 0 }}
     {{ range .Params.lists }}
-    <div class="grid grid-cols-2 mb-14 md:mb-6 md:grid-cols-12 lg:grid-cols-12 gap-x-5 gap-y-2 {{ if ne $activeTagButton.id .area }} hidden {{ end }}" data-active="{{ if eq $activeTagButton.id .area }}true{{ else }}false{{ end }}" data-id="list-item" data-index="{{ $index }}" data-area="{{ .area }}" data-title="{{ .title }}" data-description="{{ .description }}" data-age="{{ .age }}" data-date="{{ .date }}">
+    <div class="grid grid-cols-2 mb-14 md:mb-6 md:grid-cols-12 lg:grid-cols-12 gap-x-5 gap-y-2" data-active="true" data-id="list-item" data-index="{{ $index }}" data-area="{{ .area }}" data-title="{{ .title }}" data-description="{{ .description }}" data-age="{{ .age }}" data-date="{{ .date }}">
       <div class="order-1 col-span-1 md:col-span-1 lg:col-span-1 text-sky-blue">
         {{ $area := .area }}
         {{ range $.Params.header.filterTags }}

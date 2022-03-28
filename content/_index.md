@@ -111,7 +111,7 @@ ourFormula:
       alt: Consigli, Schede didattiche, Mappe
     cta:
       label: Scopri di più
-      url: /servizi/?rel=studenti+insegnanti+genitori
+      url: /servizi/
   managementTools:
     title: >
       <span>Strumenti</span> di gestione della classe
@@ -122,7 +122,7 @@ ourFormula:
       alt: Strumenti di gestione della classe
     cta:
       label: Scopri di più
-      url: /servizi/?rel=studenti+insegnanti+genitori
+      url: /servizi/
   about:
     title: >
       <span>Parliamone!</span>
