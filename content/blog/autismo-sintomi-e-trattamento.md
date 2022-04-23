@@ -1,7 +1,7 @@
 ---
 title: "Autismo: sintomi e trattamento"
 description: "TODO: add description"
-author: Giusy Margiotta
+author: 
 date: 2022-03-01
 lastmod: 2022-04-23
 tags:
@@ -11,16 +11,15 @@ tags:
 articleData:
   title: "Autismo: sintomi e trattamento"
   description: >
-    Cosè il tutoraggio tra pari
+    Conoscere per intervenire precocemente
   image:
     url:
-    alt: "Strategie educative: Peer Tutoring"
+    alt: "Autismo: sintomi e trattamento"
 
 shortDescription: >
-  Sebbene la frase sia senza senso, ha una lunga storia. La frase è stata utilizzata per vari secoli dai tipografi per mostrare più peculiari dei tipi di carattere. Infatti, le lettere e gli spazi coinvolti in questa frase consentono di evidenziare nel miglior modo possibile, il peso, il design e altre importanti caratteristiche del carattere tipografico.
+  I disturbi dello spettro autistico sono un insieme di diverse alterazioni del neurosviluppo che si presenta in modo soggettivo, ma in generale è caratterizzato dalla compromissione della comunicazione e dell'interazione sociale e dalla presenza di interessi e comportamenti ristretti e ripetitivi.
 
-
-  Sebbene la frase sia senza senso, ha una lunga storia. La frase è stata utilizzata per vari secoli dai tipografi per mostrare più peculiari dei tipi di carattere. Infatti, le lettere e gli spazi coinvolti in questa frase consentono di evidenziare nel miglior modo possibile, il peso, il design e altre importanti caratteristiche del carattere tipografico.
+  Prima di approfondire la sintomatologia che caratterizza il disturbo dello spettro autistico andiamo a scoprire la storia che sta alla base di questo disturbo. Inizialmente questo disturbo era considerato una forma di schizofrenia che si manifestava a causa di una genitorialità fredda, da questa concezione nasce il concetto di “mamma frigorifero” ormai superato dalla ricerca scientifica. 
 
 coverImage: "/images/blog/strategie-educative-peer-tutoring.webp"
 
@@ -39,18 +38,21 @@ Il disturbo dello spettro autistico viene considerato uno dei disturbi del neuro
 
 - Fissazione per interessi particolari o ristretti in modo anormale nella durata o nell’intensità 
  
-Dato che il disturbo dello spettro autistico influenza in qualche modo la crescita stessa del bambino possiamo affermare che il suo esordio è molto precoce, vedremo che i primi segnali sono evidenti già dopo il primo anno di vita.  
- 
-Prima di approfondire la sintomatologia che caratterizza il disturbo dello spettro autistico andiamo a scoprire Un po di storia che sta alla base di questo disturbo. Inizialmente questo disturbo era considerato una forma di schizofrenia che si manifestava a causa di una genitorialità fredda, da questa concezione nasce il concetto di “mamma frigorifero” ormai superato dalla ricerca scientifica.  
+Dato che il disturbo dello spettro autistico influenza in qualche modo la crescita stessa del bambino possiamo affermare che il suo esordio è molto precoce, vedremo che i primi segnali sono evidenti già dopo il primo anno di vita.   
  
 L'autismo fu identificato da Leo Kanner, uno psichiatra austriaco, in un articolo del 1943 Intitolato “disturbi autistici del contatto affettivo”, in cui descrisse una decina di casi di bambini che aveva avuto in cura precedentemente e che presentavano una sintomatologia comune. Questi bambini manifestavano: 
  
-Un'evidente chiusura relazionale 
-Esternavano disinteresse o apparente mancanza di consapevolezza del mondo circostante 
-Non mostravano capacità di gioco immaginativo 
-Mostravano in modo ansioso il bisogno di mantenere inalterate le proprie routine 
-Difficoltà ad acquisire il concetto delle parole si e no 
-Una generalizzata incapacità di comunicare con evidente presenza di ecolalia. 
+- Un'evidente chiusura relazionale 
+
+- Disinteresse o apparente mancanza di consapevolezza del mondo circostante 
+
+- Non mostravano capacità di gioco immaginativo 
+
+- Mostravano in modo ansioso il bisogno di mantenere inalterate le proprie routine 
+
+- Difficoltà ad acquisire il concetto delle parole si e no 
+
+- Una generalizzata incapacità di comunicare con evidente presenza di ecolalia. 
  
 L’ ecolalia, consiste nella ripetizione di frasi meccaniche, di parole, filastrocche, liste di animali e molte altre parole udite anche in passato. Spesso queste frasi vengono pronunciate senza intento comunicativo e senza apparente comprensione del significato. 
  
@@ -58,21 +60,21 @@ Kanner osservo anche l'aspetto fisico dei bambini e descrisse un apparente norma
  
 I criteri diagnostici hanno subito enormi cambiamenti negli ultimi decenni ma le manifestazioni e le caratteristiche individuate dallo psichiatra sono molto simili a quelle che tutt'oggi descrivono i sintomi del disturbo tanto da essere presenti nei manuali di classificazione odierna. Il lavoro di Kanner è stato fondamentale per abbandonare l'idea che l'autismo fosse la manifestazione precoce di una psicosi o schizofrenia dell'età adulta. 
  
-
+## Caratteristiche tipiche dell'autismo
  
 Per descrivere le caratteristiche tipiche del disturbo proveremo a mettere a confronto lo sviluppo tipico di un bambino di circa 14 mesi che chiameremo Joas e poi vedremo subito dopo un bambino con degli elementi di rischio che chiameremo Andrea. 
  
-Primo caso 
+*Primo caso* 
  
 Joas si trova nella sua cameretta con la mamma, quest'ultima prende una pallina e la fa rotolare verso di lui, il bambino afferra la pallina e gliela restituisce. Con queste semplici azioni si crea una sorta di gioco condiviso. Subito dopo la mamma si accorge che nella cameretta è presente una pallina uguale a quella con cui stanno giocando, si volta verso l'oggetto e lo indica. Il bambino segue le indicazioni date con lo sguardo, condividendo quindi l'attenzione che la mamma ha per quell'oggetto.  
  
-Secondo caso 
+*Secondo caso* 
  
 Andrea si trova Nella sua cameretta con la mamma, quest’ultima prende un gioco e lo avvicina verso di lui cercando di richiamare la sua attenzione. Il bambino mostra dell’interesse verso Quell’oggetto, Inizia ad osservarlo ignorando tutto il resto. Subito subito dopo la mamma chiama il bambino egli fa vedere che in mano aveva Un altro oggetto simile a quello con cui stava giocando, lo chiama ripetutamente indicando l’oggetto che tiene in mano. Al contrario del primo caso, Andrea non mostra nessuna interazione al seguito della chiamata per nome E non alza lo sguardo nemmeno per vedere il gioco che la mamma tiene in mano. Il comportamento è nettamente diverso, nel secondo caso risultano tipici del disturbo. 
  
 Abbiamo parlato inizialmente di comportamenti a rischio e non di patologia vera e proprio perché abbiamo messo a confronto due bambini con età inferiore ai tre anni. Facciamo riferimento ai tre anni proprio perché in questo primo periodo di vita i bambini possono presentare comportamenti del genere che recuperano in modo particolarmente brillante senza riportare conseguenze.  
  
-Parlando di disturbo dello spettro autistico il DSM 5, che appunto è l’ultimo sistema di classificazione delle malattie mentali pubblicato nel 2013, oltre alla diagnosi categoriale ci aiuta a descrivere la gravità del disturbo, quindi a dare un aspetto anche più dimensionale. Per esempio se un bambino con autismo presenta anche una disabilità intellettiva oppure una compromissione del linguaggio e chiaro che quel bambino avrà una forma di autismo sicuramente più grave rispetto a Bambini con quoziente intellettivo nella norma e una buona capacità di produzione orale. 
+Parlando dell'**autismo** il DSM 5, che appunto è l’ultimo sistema di classificazione delle malattie mentali pubblicato nel 2013, oltre alla diagnosi categoriale ci aiuta a descrivere la gravità del disturbo, quindi a dare un aspetto anche più dimensionale. Per esempio se un bambino con autismo presenta anche una disabilità intellettiva oppure una compromissione del linguaggio e chiaro che quel **bambino autistico** avrà una forma di disturbo sicuramente più grave rispetto a Bambini con quoziente intellettivo nella norma e una buona capacità di produzione orale. 
  
 Un’altra comorbilità molto frequente e sicuramente l'ADHD. Quindi, sulla base della gravità legata alla compromissione del funzionamento sociale del bambino, possiamo indicare diversi livelli di gravità del disturbo. 
  
@@ -104,7 +106,7 @@ I disturbi del sonno meritano un approfondimento perché sono molto frequenti, f
  
 ## Qual è la causa dell’autismo?
  
-Bene, certamente è un disturbo che riconosce non un solo fattore come gran parte delle malattie di cui noi possiamo soffrire. Le cause dell’autismo, oggi, sono ancora sconosciute ma sono molti i fattori che intervengono. La maggioranza dei ricercatori, comunque, è d’accordo nell’affermare che esse possano essere genetiche ma che alla comparsa di questa patologia concorrano ancora causa neurobiologiche e fattori di rischio ambientali. Quindi come abbiamo già detto è un disturbo biologicamente determinato. Su questo abbiamo molti dati che sono incontrovertibili, direi ormai anche le alterazioni anatomiche che noi troviamo già nel feto potrebbero essere associate all’autismo. 
+Bene, certamente è un disturbo che riconosce non un solo fattore come gran parte delle malattie di cui noi possiamo soffrire. Le **cause dell’autismo**, oggi, sono ancora sconosciute ma sono molti i fattori che intervengono. La maggioranza dei ricercatori, comunque, è d’accordo nell’affermare che esse possano essere genetiche ma che alla comparsa di questa patologia concorrano ancora causa neurobiologiche e fattori di rischio ambientali. Quindi come abbiamo già detto è un disturbo biologicamente determinato. Su questo abbiamo molti dati che sono incontrovertibili, direi ormai anche le alterazioni anatomiche che noi troviamo già nel feto potrebbero essere associate all’autismo. 
  
 Le osservazioni alla base delle cause genetiche sono:  
  
@@ -119,23 +121,22 @@ Studi più recenti fanno pensare che i disturbi dello spettro autistico possano 
 Le reti neuronali si formano soprattutto durante la fase di sviluppo fetale, per questo si ipotizza che la causa di questo disturbo sia dovuta a una combinazione tra fattori genetici e alterazioni congenite. 
 Anche se mancano evidenze scientifiche a supporto, per fattori di rischio ambientali, invece, si intendono eventi che potrebbero incidere sulla comparsa dell'autismo come: 
  
-parto prematuro è un fattore di rischio fino al 9%; 
+- parto prematuro è un fattore di rischio fino al 9%; 
  
-abuso di alcool e farmaci da parte della madre durante la gravidanza; 
+- abuso di alcool e farmaci da parte della madre durante la gravidanza; 
  
-l'esposizione del feto ad inquinamento continuo; 
+- l'esposizione del feto ad inquinamento continuo; 
  
-eventuali infezioni contratte dalla mamma durante il periodo di gestazione; 
+- eventuali infezioni contratte dalla mamma durante il periodo di gestazione; 
  
-l'età avanzata dei genitori al momento del concepimento. 
+- l'età avanzata dei genitori al momento del concepimento. 
  
- 
-Quindi la genetica sicuramente gioca un ruolo fondamentale nella determinazione di questo disturbo però ci possono essere i fattori ambientali che modulano questo rischio genetico sono molti, ovviamente nessuno di questi fattori di per sé è sufficiente a determinare il disturbo, ma tutti concorrono insieme per aumentare la probabilità che l’autismo si manifesta.  
+Quindi la genetica sicuramente gioca un ruolo fondamentale tra le **cause dell'autismo** però ci possono essere i fattori ambientali che modulano questo rischio genetico sono molti, ovviamente nessuno di questi fattori di per sé è sufficiente a determinare il disturbo, ma tutti concorrono insieme per aumentare la probabilità che l’autismo si manifesta.  
  
 ## Autismo e vaccini: cosa c’è di vero?  
  
  
-Alla base di questi dubbi troviamo un articolo scientifico che fece molto scalpore e che favorì lo sviluppo di ulteriori e numerosi studi in differenti paesi del mondo, possiamo dire con certezza che in nessun caso furono in grado di confermare questa osservazione. 
+Alla base dei dubbi riguardo al vaccino tra le **cause dell'autismo** troviamo un articolo scientifico che fece molto scalpore e che favorì lo sviluppo di ulteriori e numerosi studi in differenti paesi del mondo, possiamo dire con certezza che in nessun caso furono in grado di confermare questa osservazione. 
 Lo studio inglese su cui si basava l’articolo si dimostrò in seguito un'operazione fraudolenta nella quale i dati scientifici erano stati falsificati. Proprio per l'accesa discussione che questo evento suscitò in passato, oggi abbiamo a disposizione molti dati che ci permettono di stabilire con sicurezza che non esiste alcuna associazione tra alcun tipo di vaccino e l'autismo. 
  
 ## Come si cura l’autismo?  
