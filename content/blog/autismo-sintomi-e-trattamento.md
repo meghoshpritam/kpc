@@ -70,7 +70,7 @@ Joas si trova nella sua cameretta con la mamma, quest'ultima prende una pallina 
  
 *Secondo caso* 
  
-Andrea si trova Nella sua cameretta con la mamma, quest’ultima prende un gioco e lo avvicina verso di lui cercando di richiamare la sua attenzione. Il bambino mostra dell’interesse verso Quell’oggetto, Inizia ad osservarlo ignorando tutto il resto. Subito subito dopo la mamma chiama il bambino egli fa vedere che in mano aveva Un altro oggetto simile a quello con cui stava giocando, lo chiama ripetutamente indicando l’oggetto che tiene in mano. Al contrario del primo caso, Andrea non mostra nessuna interazione al seguito della chiamata per nome E non alza lo sguardo nemmeno per vedere il gioco che la mamma tiene in mano. Il comportamento è nettamente diverso, nel secondo caso risultano tipici del disturbo. 
+Andrea si trova nella sua cameretta con la mamma, quest’ultima prende un gioco e lo avvicina verso di lui cercando di richiamare la sua attenzione. Il bambino mostra dell’interesse verso Quell’oggetto, Inizia ad osservarlo ignorando tutto il resto. Subito subito dopo la mamma chiama il bambino egli fa vedere che in mano aveva Un altro oggetto simile a quello con cui stava giocando, lo chiama ripetutamente indicando l’oggetto che tiene in mano. Al contrario del primo caso, Andrea non mostra nessuna interazione al seguito della chiamata per nome E non alza lo sguardo nemmeno per vedere il gioco che la mamma tiene in mano. Il comportamento è nettamente diverso, nel secondo caso risultano tipici del disturbo. 
  
 Abbiamo parlato inizialmente di comportamenti a rischio e non di patologia vera e proprio perché abbiamo messo a confronto due bambini con età inferiore ai tre anni. Facciamo riferimento ai tre anni proprio perché in questo primo periodo di vita i bambini possono presentare comportamenti del genere che recuperano in modo particolarmente brillante senza riportare conseguenze.  
  
@@ -171,4 +171,4 @@ Le attività più apprezzate sono:
 
 - il tavolo colmo di riso in cui tuffare le mani
 
-Nel nostro portale potrai scaricare giochi, fiabe e molto altro ancora iN CAA (Comunicazione Aumentativa Alternativa), con lo scopo univoco di offrire alle persone autistiche la possibilità di comunicare tramite canali che si affiancano a quello orale.
+Nel nostro portale potrai scaricare giochi, fiabe e molto altro ancora iN [CAA](https://www.psicologoscolastico.it/servizi/) (Comunicazione Aumentativa Alternativa), con lo scopo univoco di offrire alle persone autistiche la possibilità di comunicare tramite canali che si affiancano a quello orale.
