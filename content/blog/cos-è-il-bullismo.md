@@ -1,5 +1,5 @@
 ---
-title: "Che cos'è il bullismo?"
+title: "Cos'è il bullismo?"
 description: "TODO: add description"
 author: 
 date: 2022-05-11
@@ -10,7 +10,7 @@ tags:
   - studenti
 
 articleData:
-  title: "Autismo: sintomi e trattamento"
+  title: "Cos'è il bullismo? "
   description: >
     Cos'è il bullismo? 
   image:
