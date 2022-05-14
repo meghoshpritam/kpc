@@ -1,180 +1,72 @@
 ---
-title: "Centri estivi 2022"
+title: "Ansia da esame"
 description: "TODO: add description"
 author: 
 date: 2022-05-13
-lastmod: 2022-05-13
+lastmod: 2022-05-14
 tags:
   - insegnanti
   - genitori
   - studenti
 
 articleData:
-  title: "Centri estivi 2022 "
+  title: "Ansia da esame "
   description: >
-    Cos'è il bullismo? 
+    Ansia da esame 
   image:
     url:
-    alt: "Centri estivi 2022"
+    alt: "Ansia da esame"
 
 shortDescription: >
-  La fine della scuola si avvicina e i centri estivi diventano un’opportunità, sia per i genitori, che impegnati tutto il giorno con il lavoro non possono occuparsi dei figli, sia per i figli, che hanno l’opportunità di apprendere, divertirsi e stare con i coetanei.
-  
-  Oggi i bambini, nella maggior parte dei casi, hanno interessi che troppo spesso li spingono a stare chiusi in casa, creando una situazione di sedentarietà, sovrappeso e conseguente isolamento.
+  L’esame si avvicina, la pressione aumenta e le aspettative, le paure, le speranze si mescolano insieme e si aggrovigliano tra loro. La posta in gioco è alta e di fronte al professore o al foglio di carta dell’esame l’ansia paralizza, a chi non è mai accaduto di provare queste sensazioni sulla propria pelle. 
+
+  Generalmente un briciolo di ansia ci tiene attenti e  lucidi, costringe a tirare fuori il meglio di noi quando il gioco si fa duro.  Purtroppo,  però, capita spesso che ne perdiamo il controllo e da opportunità l’ansia si trasforma in un ostacolo davvero difficile da abbattere. In questo articolo parleremo strategie efficaci e sperimentate nel corso del tempo, che sono supportati da dati scientifici. 
 
 coverImage: "/images/blog/lanimale-co-terapeuta-come-supporto-educativo.webp"
 
 layout: single
 ---
 
-La fine della scuola si avvicina e i centri estivi diventano un’opportunità, sia per i genitori, che impegnati tutto il giorno con il lavoro non possono occuparsi dei figli, sia per i figli, che hanno l’opportunità di apprendere, divertirsi e stare con i coetanei.
 
-Oggi i bambini, nella maggior parte dei casi, hanno interessi che troppo spesso li spingono a stare chiusi in casa, creando una situazione di sedentarietà, sovrappeso e conseguente isolamento. L'uso continuo dei mezzi elettronici può avere effetti negativi sui ragazzi sia per la loro salute fisica che psicologica. La situazione attuale ha notevolmente contribuito all’insorgenza di disagi e disturbi che quotidianamente affliggono i più piccoli. 
+# Come combattere l’ansia e trasformarla in forza
 
-La primavera e l’estate sono i periodi dell’anno perfetti per sperimentare nuove attività e sport all’aria aperta, il momento giusto per spingere i bambini al contatto con la natura e al gioco di gruppo. 
-Soprattutto dopo la chiusura delle scuole, è importante spronare i bambini a trascorrere del tempo in compagnia Invogliandoli a partecipare e numerosi centri estivi che ogni paese organizza.
+Attenzione, prima di iniziare voglio chiarire una cosa, come dico sempre, quando affrontiamo temi che toccano la psicologia, ognuno è diverso. Le reazioni all’ansia e allo stress sono tra le più varie, si va dal mal di testa al tremore, dalla nausea alla sudorazione eccessiva e 1000 altri sintomi e qui poi non parleremo di condizioni davvero importanti, ma della classica ansia pre esami e test. 
 
-### Le opportunità di un centro estivo
+Se soffri di ansia in modo grave, se te la porti dietro, in tutta la tua vita ed è diventata un ostacolo concreto non solo allo studio ma al tuo benessere generale, l’unica soluzione veramente efficace è rivolgerti a uno psicologo psicoterapeuta che possa guidarti in un percorso fatto apposta per te. Contattaci e saremo lieti di aiutarti a gestire al meglio il tuo problema.
 
-Spesso viene sottovalutata l’importanza dei **centri estivi**, dove, i bambini hanno la possibilità di mettere in gioco liberamente le proprie abilità In diversi contesti di gioco, di movimento, relazione sociale e scambio.
+Detto questo, via con la carrellata dei consigli che ho divisi in quattro aree tematiche: t familiarizzazione, stato fisico, psicologia e preparazione.
 
-In questi luoghi educativi tutte le attività passano attraverso il gioco, si apprende senza il timore della valutazione come accade a scuola, rispettando comunque gli altri e le regole.
+Familiarizzazione: cerca di reperire più informazioni possibili sul contesto e sulla modalità dell’esame in modo tale da acquisire più familiarità con quello che stai per fare, in questo modo l’ansia avrà meno appigli su cui aggrapparsi. Ricorda che l’incertezza, l’aspettativa, l’ignoto, favoriscono e amplificano l’ansia e quindi cerca di fare più chiarezza possibile prima del grande giorno.
 
-Proviamo ad elencare di seguito i vantaggi da un punto di vista educativo e di crescita psicologica Da valutare nel momento dell’iscrizione:
+Consigli per familiarizzare:
 
--	Conoscere nuove persone stringere amicizie
+-	chiedere informazioni direttamente all’insegnante. Spesso gli studenti, sia a scuola che all’università, si trovano in difficoltà perché non hanno un’idea dettagliata di come si svolgerà l’esame del programma richiesto, del tipo di domande o addirittura della modalità di esame.  Fissa un appuntamento e vai al ricevimento oppure ferma il professore due minuti dopo una lezione. Scambiarci due parole chiedendo ulteriori dettagli dell’esame, questo avrà il duplice scopo di darti qualche informazione in più di prima mano e al tempo stesso rompere il ghiaccio col professore. 
 
--	Sperimentare attività diverse da quelle già note
+-	Simula l’esame durante la tua preparazione, metti insieme le informazioni raccolte tramite i consigli precedenti e costruisci vere e proprie simulazioni d’esame con tutti gli elementi identici alla performance vera e propria. Il tempo ma anche il tipo di esercizi, la pressione, magari qualcuno che ti aiuti e ti interroghi in maniera anche cattivissima nel caso di un esame orale. Sfrutta queste simulazioni nella fase di ripasso il più possibile, come se fossero delle vere e proprie prove generali dell’esame. 
 
--	Praticare nuovi sport
+-	Fai un giro nel luogo d’esame, magari quando non c’è nessuno e familiarizza anche con il po con il luogo. Trovarsi in un luogo del tutto sconosciuto può aumentare l’ansia, mentre invece se dedichi una mezz’oretta a prendere confidenza con l’aula e con tutto il resto tornarci sarà più facile, più accogliente, meno stressante. 
 
--	Uscire dalla logica della valutazione scolastica
 
--	Seguire i propri ritmi e non quelli del programma didattico
+Stato fisico: se è vero che di sicuro l’ansia non è scatenata da motivi fisici, è altrettanto vero che il tuo stato fisico, se debilitato, ha il potere di peggiorarla e facilitarla. Proverò a fornirti di seguito dei consigli per curare il tuo stato fisico e metterti nelle condizioni migliori prima dell’esame. 
+Età, una dieta bilanciata sui macronutrienti, cioè carboidrati, proteine, grassi e una buona idratazione sono sempre la cosa ottimale. Le diete estreme, sbilanciate, ipocaloriche o ipercaloriche non sono mai utili al nostro benessere. Quando devi chiedere al tuo cervello di essere tranquillo ed efficiente, prediligi prima il consumo di carboidrati e fibre e se si tratta di un esame scritto anche portarsi uno snack, un succo da bere, qualche cosa di energetico e di facilmente assimilabile da consumare durante l’esame, male non fa. 
 
--	Mettere in campo abilità cognitive psicologiche inespresse
+-	Ormai sono decenni che si conosce il rapporto strettissimo che c’è tra il sonno, la cognizione, l’apprendimento e il benessere generale della persona. Curare il sonno non vuol dire soltanto. Aumentare la performance all’esame e la qualità del ricordo, ma anche assicurare al tuo organismo la resistenza e la lucidità necessaria per contrastare l’ansia meglio possibile. Assicurati di dormire almeno 7 ore la sera prima dell’esame, anche di più se senti di averne bisogno. 
 
-Sono molteplici le attività che vengono offerte nei centri estivi, di seguito proveremo ad qualcuna:
+-	Esercizio fisico, spesso non ti sarà possibile fare movimento poco prima dell’esame, ma quantomeno il giorno prima un po' di allenamento ti rilasserà e scaricherà la tensione. Evita allenamenti eccessivamente pesanti, specie la sera e potrebbero presentare uno stress cognitivo o rovinare la qualità del sonno. 
 
--	Laboratori di scrittura
+Se si tratta di un esame scritto sempre, prenditi delle piccole pause, stacca tutto, respira e cerca di rimanere un minuto senza fare niente. Lo so, è controintuitivo soprattutto quando c’è la pressione del tempo, ma devi lasciare tempo anche alla tua mente di riprendersi. Evitare a tutti i costi di buttarti a capofitto sul tuo test senza mai fermarti, questo è deleterio per la performance e per l’ansia stessa.
 
--	Disegno
+Psicologia: circondati prima dell’esame di sole, persone calme, positive, amichevoli. Tutti noi conosciamo quei compagni che basta vederli in un nanosecondo e ti fanno dubitare anche della tua preparazione su esami che hai già dato, quelli che ti attaccano anche le loro di ansia come se non ne avessi già abbastanza, quelli che prospettano gli scenari apocalittici e così via così, non permettere loro di incoraggiare la tua ansia. Magari evitali per qualche giorno. 
 
--	Pittura
+Un altro modo di gestire l’ansia è quello di sfruttare la visualizzazione per tranquillizzarsi, immaginare un momento felice e rilassato, un luogo che ci piace particolarmente, una situazione divertente e stimolare una reazione emotiva. Vera, per quanto simulata, è un ottimo modo per allontanare lo spettro dell’ansia. Puoi farlo prima e durante l’esame stesso. Usando tutta la potenza della nostra immaginazione, riusciamo ad attivare le stesse aree del cervello che si attiverebbero se fossimo davvero in quel contesto. Insomma, un sogno ad occhi aperti o chiusi, perché non sfruttarlo a nostro vantaggio? 
+Questo è un consiglio interessante per chi ha delle insicurezze specifiche come la paura di non riuscire ad esprimersi bene, di bloccarsi, vuoti di memoria, la timidezza ecc… 
 
--	Musica
+Prima dell’esame, scrivi su un foglio di carta queste tue insicurezze, concretizzate con la scrittura, scendendo il più possibile nello specifico, e poi quando hai finito butta via il pezzo di carta come se non fosse mai esistito, scrivere aiuta a dare un orizzonte preciso, reale, concreto alle nostre preoccupazioni e ci permette di vederle per quello che sono, in modo più lucido e distaccato. Inoltre, anche il gesto simbolico di gettare via il foglio con le tue insicurezze può sembrare una stupidaggine ma è di grande aiuto. 
 
--	Corso di lingua
+Un’altra strategia efficace è la recitazione. Recitare la parte dello studente sicuro permette di superare più di ogni altra cosa l’ ansia da esame. Immaginati lo studente perfetto, preparato, bravo a parlare a suo agio e interpreta la sua parte con passati esattamente come se fossi lui. Prendilo sul serio come esercizio, non tanto per dire. Sei un attore e comincia lo spettacolo, stringi la mano al professore, ti presenti come un vero professionista dello studio e cominci a parlare. Se è vero che l’ansia influenza le nostre azioni, è anche vero il contrario, agire in modo sicuro, anche se stai solo recitando, ti aiuterà a ricacciare l’ansia da dove è venuta. Se la tua ansia deriva da precedenti fallimenti, ricordati del cosiddetto bias negativo, cioè la tendenza della nostra mente a dare maggiore importanza agli eventi negativi. In realtà il fatto che tu abbia fallito l’esame precedente o addirittura l’intera sessione precedente non ha alcuna correlazione con l’esame che si terrà domani, sono eventi del tutto distinti e slegati tra loro. 
 
--	Teatro
+La preparazione: l’ultima grande categoria, quella forse che pone le basi per tutto il resto. Senza una preparazione veramente a prova di bomba, senza la sicurezza di aver studiato bene, sarai sempre in mania dell’ansia. 
 
--	Sport
-
--	Giochi all’aperto
-
--	Visite guidate
-
-E nonostante le numerose attività ludico educative non mancheranno i giusti momenti di riposo.
-
-### La prima volta al centro estivo
-
-È importante ricordare che alcuni bambini potrebbero essere titubanti all’idea di iniziare questa avventura estiva, soprattutto se si tratta della prima esperienza, Ma spesso basta essere certi di trovare qualche compagno di scuola o qualche amico che già si conosce, essere rassicurati dai genitori e avere maggiori informazioni circa le attività divertenti che lo aspettano. Questi, nella maggior parte dei casi sono i tasti giusti da toccare per aiutare il bambino a sciogliere il timore iniziale.
-
-### Centri estivi 2022
-
-Se siete ancora indecisi, vi aiutiamo noi nella scelta! Di seguito troverete una lista dei **centri estivi 2022** che potrebbero rispondere alle vostre esigenze. 
-
-Musical Camp Milano
-
-Canto, danza, recitazione, realizzazioni manuali di marionette, costumi, accessori ed elementi scenografici: il Musical Camp affronterà con insegnanti professionisti tutte le “materie” del mondo del musical. E’ organizzato dalla CMS Academy (Children’s Musical School) che unisce tutto l’anno nei suoi corsi e laboratori l’arte con il gioco, coinvolgendo i bambini fin dalla scuola primaria.
-Dalle ore 8.30 alle ore 16.30. Pranzo al sacco nel cortile privato.
-Via Soave 11 (Porta Romana), Milano
-Date 2022: 9/17 Giugno, 20/24 Giugno, 27 Giugno/1 Luglio, 4/8 Luglio, 11/15 Luglio, 18/22 Luglio, 25/29 Luglio, 29 Agosto/2 Settembre, 5/9 Settembre.
-Dai 7 ai 12 anni
-iscrizionicms.musicalschool@gmail.com
-
-Centro estivo Kikolle
-
-Quest’anno Kikolle propone ben 3 campi estivi!
-
-KIKOLLE SUMMER CAMP via Bronzetti
-
-Età: dai 3 ai 10 anni
-Quando: da Lunedì 13 Giugno a Venerdì 5 Agosto – da Lunedì 29 Agosto a Venerdì 9 Settembre 2022
-Orari: dalle 9.00 alle 16.00 oppure alle 18.00
-I Big Baby (dai 3 ai 4 anni e mezzo) hanno un’area all’aperto dedicata, su una terrazza condominiale sicura e situata su una delle sale interne del Kikolle.
-I Junior (dai 5 ai 10 anni) hanno la possibilità di giocare nei parchi della zona raggiungibili a piedi, di fare uscite sportive (Bagni Misteriosi) e uscite didattiche (con laboratori di educazione ambientale).
-
-Kikolle Lab offrirà a tutti i suoi ospiti la merenda del mattino e quella del pomeriggio. Il pranzo è compreso e sarà fornito da un’azienda esterna.
-
-KIKOLLE SUMMER CAMP via Cesare da Sesto
-
-Età: dai 6 ai 10 anni (bambini della scuola elementare)
-Quando: da Lunedì 13 Giugno a Venerdì 29 Luglio – da Lunedì 29 Agosto a Venerdì 9 Settembre 2022
-Orari: dalle 9.00 alle 16.00
-Si faranno uscite educative e sportive, giochi con l’acqua e laboratori a tema riciclo. Sono compresi il pranzo e le merende.
-
-SUMMER CAMP ai Bagni Misteriosi
-
-in collaborazione con Teatro Franco Parenti
-Età: dai 6 ai 10 anni
-Quando: 13 Giugno – 22 Luglio 2022
-Orari: dalle 9.00 alle 16.00
-Ogni settimana un focus differente sul tema della sostenibilità: vita sott’acqua, vita sulla terra, città e comunità
-sostenibili e molto altro. Ogni giorno, oltre ai laboratori, un momento di accoglienza, la pausa merenda e il pranzo seguito da un momento di relax. Le attività si terranno tra la piscina e le sale teatrali. I bambini avranno un Kids Corner dedicato nella palazzina dei Bagni Misteriosi.
-Contatti Kikolle: Tel 02 36696950 – info@kikollelab.com
-
-Centro Estivo Suanno Dance School
-
-Per bambine e bambini amanti della danza, la scuola di danza Suanno di Milano organizza un campo estivo che li farà immergere nella loro passione. Il programma prevede la suddivisione dei bambini in 2 gruppi a seconda dell’età: scuola elementare e scuole medie e superiori.
-Ci saranno lezioni di danza classica e moderna, yoga, stretching, canto, ginnastica artistica. Pranzo al sacco.
-Via Oldrado da Tresseno 5, Milano (zona Nolo)
-Dal 9 giugno al 1 luglio 2022
-Email info@suanno.com – tel. 0284576720
-
-**Centro Estivo 2022** Pro Patria
-
-Ginnastica artistica, ginnastica ritmica, multisport: lo sport è protagonista del campus estivo della celebre società sportiva milanese. Le attività sono svolte in totale sicurezza, il pranzo è previsto al sacco. Orario 8.30-16.30.
-Via Beato Angelico 2, Milano
-Dal 9 giugno all’8 luglio – dal 29 agosto al 9 settembre 2022
-Dai 5 ai 13 anni
-info@propatria1883.it
-
-Centro Estivo Rogoredo Tennis
-
-Per i bambini appassionati di tennis, ma anche per quelli che desiderano approcciarsi a questo sport.
-Centro Sportivo Ex Redaelli, via Pizzolpasso 25, Milano (650 metri dalla M Rogoredo)
-Dal 13 giugno 2022
-Dai 5 ai 17 anni
-rogoredotennis@gmail.com
-
-Centro Estivo Artemadia
-
-Musica, teatro, green, cucina, storytelling: sono i temi delle 4 settimane (uno per settimana) del campus estivo Artemadia. Ogni settimana è curata da un professionista del settore che condurrà i bambini e i ragazzi alla scoperta e alla sperimentazione.
-Dalle ore 8 alle 16.30 i bambini saranno impegnati in giochi e divertimento seguiti da educatori; il plus è che ogni settimana approfondiranno un tema specifico.
-Costo: 160 euro a settimana (pranzo incluso).
-Giardino della Madia, Via Pimentel 5, Milano (zona Parco Trotter).
-13-17 giugno, 20-24 giugno, 27 giugno-1 luglio, 29 agosto-2 settembre, 5-9 settembre 2022.
-Dai 5 agli 11 anni
-corsi@artemadia.org
-
-Centro Estivo Fa-Voliamo
-
-Un’esperienza per i più grandi: un summer camp residenziale sulle colline a Berzano di Tortona. Qui trascorreranno una settimana tra giochi, letture, lavoretti creativi, attività nella natura, giornate che li faranno divertire e crescere.
-Fa-Voliamo è da anni impegnata con laboratori nella sua sede e nelle scuole di tutta la Lombardia dedicati al tema della narrazione, della creatività.
-Dal 24 al 30 luglio 2022
-Dai 9 ai 13 anni
-E per i ragazzi ancora più grandi (dai 13 ai 17 anni), Fa-Voliamo propone anche un weekend a Berlino! Date: 10-12 giugno 2022.
-Info: info@favoliamo.net – 3391651511
-
-Centro Estivo Teatro Trebbo
-
-La compagnia del Teatro Trebbo propone un centro estivo con corsi di teatro, laboratori manuali, uscite didattiche, incontri con professionisti esterni, capoeira, lezioni d’inglese. Sono previste anche uscite didattiche (musei, planetario, etc.).
-Il focus del campus è ovviamente il teatro: ogni settimana avrà come tema uno degli spettacoli teatrali della compagnia.
-Via De Amicis 17, Milano
-Dal 13 giugno al 29 luglio 2022
-LUN-VEN dalle 8:30 alle 16:30
-Dai 6 agli 11 anni
-centroestivo.trebbo@gmail.com – 333.1487264
+Assicurati di portare avanti una autovalutazione su base oggettiva, il che significa ripassare non semplicemente rileggendo, riguardando i tuoi schemi, ma costruendo esercizi, quiz attraverso i quali poter controllare concretamente che sei preparato. Questo ti renderà più consapevole, ti darà gli strumenti per avere un’idea chiarissima del tuo livello. Lavorando sulla tua psicologia e su ciò che pensi, come lo pensi e come ti rapporti alla tua preoccupazione, assicurandoti uno studio di qualità e una preparazione impeccabile avrai messo in campo tutti gli strumenti necessari per ridurre l’ansia, dominarla e convogliarla in modo da non doverla più semplicemente subire. 
 
 
