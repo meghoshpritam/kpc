@@ -28,13 +28,15 @@ layout: single
 ---
 
 La fine della scuola si avvicina e i centri estivi diventano un’opportunità, sia per i genitori, che impegnati tutto il giorno con il lavoro non possono occuparsi dei figli, sia per i figli, che hanno l’opportunità di apprendere, divertirsi e stare con i coetanei.
+
 Oggi i bambini, nella maggior parte dei casi, hanno interessi che troppo spesso li spingono a stare chiusi in casa, creando una situazione di sedentarietà, sovrappeso e conseguente isolamento. L'uso continuo dei mezzi elettronici può avere effetti negativi sui ragazzi sia per la loro salute fisica che psicologica. La situazione attuale ha notevolmente contribuito all’insorgenza di disagi e disturbi che quotidianamente affliggono i più piccoli. 
+
 La primavera e l’estate sono i periodi dell’anno perfetti per sperimentare nuove attività e sport all’aria aperta, il momento giusto per spingere i bambini al contatto con la natura e al gioco di gruppo. 
 Soprattutto dopo la chiusura delle scuole, è importante spronare i bambini a trascorrere del tempo in compagnia Invogliandoli a partecipare e numerosi centri estivi che ogni paese organizza.
 
 ### Le opportunità di un centro estivo
 
-Spesso viene sottovalutata l’importanza dei centri estivi, dove, i bambini hanno la possibilità di mettere in gioco liberamente le proprie abilità In diversi contesti di gioco, di movimento, relazione sociale e scambio.
+Spesso viene sottovalutata l’importanza dei **centri estivi**, dove, i bambini hanno la possibilità di mettere in gioco liberamente le proprie abilità In diversi contesti di gioco, di movimento, relazione sociale e scambio.
 
 In questi luoghi educativi tutte le attività passano attraverso il gioco, si apprende senza il timore della valutazione come accade a scuola, rispettando comunque gli altri e le regole.
 
@@ -80,7 +82,7 @@ E nonostante le numerose attività ludico educative non mancheranno i giusti mom
 
 ### Centri estivi 2022
 
-Se siete ancora indecisi, vi aiutiamo noi nella scelta! Di seguito troverete una lista dei centri estivi che potrebbero rispondere alle vostre esigenze. 
+Se siete ancora indecisi, vi aiutiamo noi nella scelta! Di seguito troverete una lista dei **centri estivi 2022** che potrebbero rispondere alle vostre esigenze. 
 
 Musical Camp Milano
 
@@ -130,7 +132,7 @@ Via Oldrado da Tresseno 5, Milano (zona Nolo)
 Dal 9 giugno al 1 luglio 2022
 Email info@suanno.com – tel. 0284576720
 
-Centro Estivo Pro Patria
+**Centro Estivo 2022** Pro Patria
 
 Ginnastica artistica, ginnastica ritmica, multisport: lo sport è protagonista del campus estivo della celebre società sportiva milanese. Le attività sono svolte in totale sicurezza, il pranzo è previsto al sacco. Orario 8.30-16.30.
 Via Beato Angelico 2, Milano
