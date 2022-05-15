@@ -3,7 +3,7 @@ title: "Test autismo: quando fare la diagnosi e a chi rivolgersi"
 description: "TODO: add description"
 author: 
 date: 2022-03-01
-lastmod: 2022-04-23
+lastmod: 2022-05-15
 tags:
   - insegnanti
   - genitori
@@ -22,7 +22,7 @@ shortDescription: >
 
   Prima di approfondire la sintomatologia che caratterizza il disturbo dello spettro autistico andiamo a scoprire la storia che sta alla base di questo disturbo. Inizialmente questo disturbo era considerato una forma di schizofrenia che si manifestava a causa di una genitorialità fredda, da questa concezione nasce il concetto di “mamma frigorifero” ormai superato dalla ricerca scientifica. 
 
-coverImage: "/images/blog/strategie-educative-peer-tutoring.webp"
+coverImage: "/images/blog/test-autismo.webp"
 
 layout: single
 ---

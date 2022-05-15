@@ -15,32 +15,57 @@ articleData:
     Cos'è il bullismo? 
   image:
     url:
-    alt: "Autismo: sintomi e trattamento"
+    alt: "Cos'è il bullismo?"
 
 shortDescription: >
   Con il termine bullismo s’intende definire un comportamento aggressivo ripetitivo nei confronti di chi non è in grado di difendersi. 
   
   Solitamente, i ruoli del bullismo sono ben definiti: da una parte c’è il bullo, colui che attua dei comportamenti violenti fisicamente e/o psicologicamente e dall’altra parte la vittima, colui che invece subisce tali atteggiamenti. 
 
-coverImage: "/images/blog/strategie-educative-peer-tutoring.webp"
+coverImage: "/images/blog/cos-è-il-bullismo.webp"
 
 layout: single
 ---
 
 # Che cos’è il bullismo
 
-*Secondo le ultime statistiche il bullismo e il cyberbullismo sono una delle minacce più temute dagli adolescenti, un fenomeno che si è ingigantito durante il periodo di pandemia in cui i ragazzi sono stati più esposti al mondo digitale e hanno avvertono sempre di più un senso di solitudine.*
+Secondo le ultime statistiche il bullismo e il cyberbullismo sono una delle minacce più temute dagli adolescenti, un fenomeno che si è ingigantito durante il periodo di pandemia in cui i ragazzi sono stati più esposti al mondo digitale e hanno avvertono sempre di più un senso di solitudine.
 
 I dati rivelano che 6 ragazzi su 10 non si sentono sicuri sul web ed esprimono sofferenza per episodi di violenza psicologica subita online da parte di coetanei, quasi il 45% della ragazze segnala un forte disagio provato nel ricevere online commenti non graditi di carattere sessuale. Dall’altro lato il fenomeno è complesso perché l'8% delle ragazze e quasi il 15% dei ragazzi ammettono di aver compiuto atti di bullismo o di cyberbullismo, allora noi ci chiediamo di fronte a questa situazione:
 
+- **chi è il bullo?**
 - quali sono i segnali di allarmi a cui prestare attenzione in ogni contesto educativo?
 - a cosa prestare attenzione? 
 - Come aiutare i ragazzi per farli sentire più protetti e a farle navigare sereni nel web?
 
-Come aiutare non solo le vittime ma anche dare un supporto a chi si rende responsabile di tale azione perché fenomeno ha due facce, sono due i soggetti coinvolti e entrambi spesso minorenni.
+Come aiutare non solo le vittime ma anche capire **chi è il bullo** e dare un supporto a chi si rende responsabile di tale azione perché fenomeno ha due facce, sono due i soggetti coinvolti e entrambi spesso minorenni.
 
-## Come riconoscere il bullismo ?
+## Chi è il bullo? 
 
+Quando si sente parlare di bullismo sorge spontanea la domanda: **chi è il bullo**?
+A differenza delle vittime, i bulli appaiono spesso come persone caratterizzate da un’alta autostima Combinata anarchismo e manie di grandezza.
+
+Il bullo agisce per esercitare il suo potere e di solito viene condiviso con il gruppo è con gli altri soggetti che osservano, senza il loro pubblico i bulli perdono il loro ruolo di dominio e spesso perdono interesse a portare avanti le loro azioni prevaricatrici punto nella situazione in cui si subisce bullismo è molto importante non dare troppo peso al bullo, più gli dai peso più gli dai soddisfazione. Cerca di non farti invadere dalla negatività di quello che accade, per farlo può essere utile capire chi è davvero il bullo. Per rendere più chiaro questo concetto proviamo a fare un identikit del bullo, forse questo ti può aiutare a non subire completamente la sua presenza e a non essere invaso solo dalla paura e dall’impotenza punto i bulli sono ragazzi: 
+
+-	con personalità arrogante inclini al narcisismo
+
+-	hanno la tendenza a dominare
+
+-	Spesso hanno uno scarso rendimento scolastico
+
+-	Sono aggressivi e impulsivi
+
+-	Non rispettano le regole e usano la violenza per raggiungere i loro scopi
+
+-	Non sono empatici
+
+Scelgono di mettere in atto la parte del bullo come se fosse l’unica possibilità di scelta identitaria che al momento possa avere un senso per loro, altrimenti c’è il vuoto e la paura. In qualche modo non hanno scelta virgola non sanno fare altro punto di solito sono ragazzi che avrebbero bisogno di essere aiutati.
+
+Ciò che può sembrare strano è che proprio la vittima di bullismo oltre a maturare la probabilità dell’insorgenza di disturbi, può diventare un bullo a sua volta. 
+
+### Come riconoscere il bullismo ?
+
+Dopo aver capito **chi è il bullo**, proviamo a capire più nello specifico cos'è questa piaga sociale. 
 Il termine bullismo si riferisce a comportamenti aggressivi messi in pratica prevalentemente in ambito scolastico, un fenomeno sociale deviante e che sta diventando un’esperienza quotidiana sempre più diffusa tra i giovani. Si tratta di una forma di malessere sociale, un’esperienza di prevaricazione attraverso atti invalidanti che possano avere conseguenze negative sul ragazzo non solo nel momento in cui vengono subite ma anche nel lungo periodo perché possono lasciare un segno negativo nell’identità del giovane.
 
 Il bullismo prende forma attraverso azioni aggressive messe in atto da un singolo o da un gruppo a danno di una persona più fragile con l’intento di danneggiarla, è importante sapere che non sempre i comportamenti aggressivi possono rientrare nel bullismo perché si possa parlare di bullismo è necessario che vi siano le seguenti caratteristiche:
@@ -134,29 +159,7 @@ Se 6 1 giovane e subisci atti di bullismo, è possibile che tu stia provando in 
 
 È importante non isolarsi e cercare aiuto alle persone vicine.
 
-Parlare con una persona di fiducia e cercare una strategia per denunciare questi episodi, se gli atti di bullismo vengono subiti a scuola potrebbe essere utile parlarne con gli insegnanti, magari con l’insegnante che ti sembra più sensibile a questi temi e del quale ti sembra di poterti fidare.
-
-### Chi è il bullo? 
-
-A differenza delle vittime, i bulli appaiono spesso come persone caratterizzate da un’alta autostima Combinata anarchismo e manie di grandezza.
-
-Il bullo agisce per esercitare il suo potere e di solito viene condiviso con il gruppo è con gli altri soggetti che osservano, senza il loro pubblico i bulli perdono il loro ruolo di dominio e spesso perdono interesse a portare avanti le loro azioni prevaricatrici punto nella situazione in cui si subisce bullismo è molto importante non dare troppo peso al bullo, più gli dai peso più gli dai soddisfazione. Cerca di non farti invadere dalla negatività di quello che accade, per farlo può essere utile capire chi è davvero il bullo. Per rendere più chiaro questo concetto proviamo a fare un identikit del bullo, forse questo ti può aiutare a non subire completamente la sua presenza e a non essere invaso solo dalla paura e dall’impotenza punto i bulli sono ragazzi: 
-
--	con personalità arrogante inclini al narcisismo
-
--	hanno la tendenza a dominare
-
--	Spesso hanno uno scarso rendimento scolastico
-
--	Sono aggressivi e impulsivi
-
--	Non rispettano le regole e usano la violenza per raggiungere i loro scopi
-
--	Non sono empatici
-
-Scelgono di mettere in atto la parte del bullo come se fosse l’unica possibilità di scelta identitaria che al momento possa avere un senso per loro, altrimenti c’è il vuoto e la paura. In qualche modo non hanno scelta virgola non sanno fare altro punto di solito sono ragazzi che avrebbero bisogno di essere aiutati.
-
-Ciò che può sembrare strano è che proprio la vittima di bullismo oltre a maturare la probabilità dell’insorgenza di disturbi, può diventare un bullo a sua volta. 
+Parlare con una persona di fiducia e cercare una strategia per denunciare questi episodi, se gli atti di bullismo vengono subiti a scuola potrebbe essere utile parlarne con gli insegnanti, magari con l’insegnante che ti sembra più sensibile a questi temi e del quale ti sembra di poterti fidare. Nel prossimo paragrafo andremo a capire qual'è il compito degli adulti che si trovano a vedere da vicino il bullismo e a capire più da vicino **chi è il bullo** e perché mette in atto comportamenti che ledono il benessere degli altri.
 
 ### E gli adulti
 
@@ -183,5 +186,5 @@ Come genitori è importante non essere passivi il primo passo da compiere e di i
 
 -	 Ha un calo nel rendimento scolastico e può avere anche difficoltà nel sonno
 
-In presenza di questi sintomi è opportuno approfondire la situazione E non restare indifferenti. 
+In presenza di questi sintomi è opportuno approfondire la situazione e non restare indifferenti. 
 
