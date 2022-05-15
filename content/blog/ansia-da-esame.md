@@ -28,13 +28,48 @@ layout: single
 ---
 
 
-# Come combattere l’ansia e trasformarla in forza
+# Ansia da esame
 
-Attenzione, prima di iniziare voglio chiarire una cosa, come dico sempre, quando affrontiamo temi che toccano la psicologia, ognuno è diverso. Le reazioni all’ansia e allo stress sono tra le più varie, si va dal mal di testa al tremore, dalla nausea alla sudorazione eccessiva e 1000 altri sintomi e qui poi non parleremo di condizioni davvero importanti, ma della classica ansia pre esami e test. 
+L’ansia è un sentimento in parte fisiologico, nasce come difesa e può diventare, se non eccessiva, una forza. Il problema comincia però quando questa stessa ansia fisiologica si trasforma invece in un disturbo invasivo e invalidante che limita la nostra quotidianità. Tutti noi possiamo provare ansia ma l’importante sarà riuscire a gestirla, per poi sconfiggerla e vincerla.
+
+Prima di iniziare vorrei chiarire una cosa, come dico sempre, quando affrontiamo temi che toccano la psicologia, ognuno è diverso. L’ansia è un sentimento in parte fisiologico, nasce come difesa e può diventare, se non eccessiva, una forza. Il problema comincia però quando questa stessa ansia fisiologica si trasforma invece in un disturbo invasivo e invalidante che limita la nostra quotidianità. 
+
+## Come combattere l'ansia e trasformarla in forza
+
+In questo articolo ti aiuterò a **combattere l'ansia e trasformarla in forza** procedendo a piccoli passi, attraverso una serie di strategie semplici ma efficaci la tua vita migliorerà in poco tempo e gli esami insormontabili ti sembreranno una passeggiata. 
+
+Mi prima di tutto andiamo ad individuare i sintomi che potrebbero presentarsi il giorno della prova, riconoscere i primi segnali ti aiuta ad intervenire tempestivamente sulla tanto temuta **ansia da esame**.
+
+
+### Quali sono i sintomi dell'ansia
+
+Le reazioni all’ansia e allo stress sono tra le più varie, i sintomi tipici dell’ansia sono:
+
+- il senso di vuoto mentale
+- un senso crescente di allarme e di pericolo
+- l’induzione di immagini, ricordi e pensieri negativi
+- la messa in atto di  comportamenti protettivi cognitivi
+- la sensazione marcata di essere osservati e di essere al centro dell’attenzione altrui
+
+L’ansia inoltre, è spesso accompagnata da manifestazioni fisiche e fisiologiche quali:
+
+- tensione
+- tremore
+- sudore
+- palpitazione
+- aumento della frequenza cardiaca
+- vertigini
+- nausea
+- formicolii alle estremità ed intorno alla bocca
+derealizzazione e depersonalizzazione
+
+In questo articolo non parleremo di condizioni davvero importanti, ma della classica ansia pre esami e test. 
 
 Se soffri di ansia in modo grave, se te la porti dietro, in tutta la tua vita ed è diventata un ostacolo concreto non solo allo studio ma al tuo benessere generale, l’unica soluzione veramente efficace è rivolgerti a uno psicologo psicoterapeuta che possa guidarti in un percorso fatto apposta per te. Contattaci e saremo lieti di aiutarti a gestire al meglio il tuo problema.
 
-Detto questo, via con la carrellata dei consigli che ho divisi in quattro aree tematiche: t familiarizzazione, stato fisico, psicologia e preparazione.
+### Come gestire l'ansia da esame
+
+Detto questo, via con la carrellata dei consigli che ho divisi in quattro aree tematiche: familiarizzazione, stato fisico, psicologia e preparazione.
 
 Familiarizzazione: cerca di reperire più informazioni possibili sul contesto e sulla modalità dell’esame in modo tale da acquisire più familiarità con quello che stai per fare, in questo modo l’ansia avrà meno appigli su cui aggrapparsi. Ricorda che l’incertezza, l’aspettativa, l’ignoto, favoriscono e amplificano l’ansia e quindi cerca di fare più chiarezza possibile prima del grande giorno.
 
@@ -46,8 +81,7 @@ Consigli per familiarizzare:
 
 -	Fai un giro nel luogo d’esame, magari quando non c’è nessuno e familiarizza anche con il po con il luogo. Trovarsi in un luogo del tutto sconosciuto può aumentare l’ansia, mentre invece se dedichi una mezz’oretta a prendere confidenza con l’aula e con tutto il resto tornarci sarà più facile, più accogliente, meno stressante. 
 
-
-Stato fisico: se è vero che di sicuro l’ansia non è scatenata da motivi fisici, è altrettanto vero che il tuo stato fisico, se debilitato, ha il potere di peggiorarla e facilitarla. Proverò a fornirti di seguito dei consigli per curare il tuo stato fisico e metterti nelle condizioni migliori prima dell’esame. 
+Stato fisico: se è vero che di sicuro **l’ansia da esame** non è scatenata da motivi fisici, è altrettanto vero che il tuo stato fisico, se debilitato, ha il potere di peggiorarla e facilitarla. Proverò a fornirti di seguito dei consigli per curare il tuo stato fisico e metterti nelle condizioni migliori prima dell’esame. 
 Età, una dieta bilanciata sui macronutrienti, cioè carboidrati, proteine, grassi e una buona idratazione sono sempre la cosa ottimale. Le diete estreme, sbilanciate, ipocaloriche o ipercaloriche non sono mai utili al nostro benessere. Quando devi chiedere al tuo cervello di essere tranquillo ed efficiente, prediligi prima il consumo di carboidrati e fibre e se si tratta di un esame scritto anche portarsi uno snack, un succo da bere, qualche cosa di energetico e di facilmente assimilabile da consumare durante l’esame, male non fa. 
 
 -	Ormai sono decenni che si conosce il rapporto strettissimo che c’è tra il sonno, la cognizione, l’apprendimento e il benessere generale della persona. Curare il sonno non vuol dire soltanto. Aumentare la performance all’esame e la qualità del ricordo, ma anche assicurare al tuo organismo la resistenza e la lucidità necessaria per contrastare l’ansia meglio possibile. Assicurati di dormire almeno 7 ore la sera prima dell’esame, anche di più se senti di averne bisogno. 
@@ -63,10 +97,15 @@ Questo è un consiglio interessante per chi ha delle insicurezze specifiche come
 
 Prima dell’esame, scrivi su un foglio di carta queste tue insicurezze, concretizzate con la scrittura, scendendo il più possibile nello specifico, e poi quando hai finito butta via il pezzo di carta come se non fosse mai esistito, scrivere aiuta a dare un orizzonte preciso, reale, concreto alle nostre preoccupazioni e ci permette di vederle per quello che sono, in modo più lucido e distaccato. Inoltre, anche il gesto simbolico di gettare via il foglio con le tue insicurezze può sembrare una stupidaggine ma è di grande aiuto. 
 
-Un’altra strategia efficace è la recitazione. Recitare la parte dello studente sicuro permette di superare più di ogni altra cosa l’ ansia da esame. Immaginati lo studente perfetto, preparato, bravo a parlare a suo agio e interpreta la sua parte con passati esattamente come se fossi lui. Prendilo sul serio come esercizio, non tanto per dire. Sei un attore e comincia lo spettacolo, stringi la mano al professore, ti presenti come un vero professionista dello studio e cominci a parlare. Se è vero che l’ansia influenza le nostre azioni, è anche vero il contrario, agire in modo sicuro, anche se stai solo recitando, ti aiuterà a ricacciare l’ansia da dove è venuta. Se la tua ansia deriva da precedenti fallimenti, ricordati del cosiddetto bias negativo, cioè la tendenza della nostra mente a dare maggiore importanza agli eventi negativi. In realtà il fatto che tu abbia fallito l’esame precedente o addirittura l’intera sessione precedente non ha alcuna correlazione con l’esame che si terrà domani, sono eventi del tutto distinti e slegati tra loro. 
+Un’altra strategia efficace è la recitazione. Recitare la parte dello studente sicuro permette di superare più di ogni altra cosa l’ ansia da esame. Immaginati lo studente perfetto, preparato, bravo a parlare a suo agio e interpreta la sua parte con passati esattamente come se fossi lui. Prendilo sul serio come esercizio, non tanto per dire. Sei un attore e comincia lo spettacolo, stringi la mano al professore, ti presenti come un vero professionista dello studio e cominci a parlare. Se è vero che l’ansia influenza le nostre azioni, è anche vero il contrario, agire in modo sicuro, anche se stai solo recitando, ti aiuterà a ricacciare **l’ansia da esame** da dove è venuta. 
+
+Se la tua ansia deriva da precedenti fallimenti, ricordati del cosiddetto bias negativo, cioè la tendenza della nostra mente a dare maggiore importanza agli eventi negativi. In realtà il fatto che tu abbia fallito l’esame precedente o addirittura l’intera sessione precedente non ha alcuna correlazione con l’esame che si terrà domani, sono eventi del tutto distinti e slegati tra loro. 
 
 La preparazione: l’ultima grande categoria, quella forse che pone le basi per tutto il resto. Senza una preparazione veramente a prova di bomba, senza la sicurezza di aver studiato bene, sarai sempre in mania dell’ansia. 
 
-Assicurati di portare avanti una autovalutazione su base oggettiva, il che significa ripassare non semplicemente rileggendo, riguardando i tuoi schemi, ma costruendo esercizi, quiz attraverso i quali poter controllare concretamente che sei preparato. Questo ti renderà più consapevole, ti darà gli strumenti per avere un’idea chiarissima del tuo livello. Lavorando sulla tua psicologia e su ciò che pensi, come lo pensi e come ti rapporti alla tua preoccupazione, assicurandoti uno studio di qualità e una preparazione impeccabile avrai messo in campo tutti gli strumenti necessari per ridurre l’ansia, dominarla e convogliarla in modo da non doverla più semplicemente subire. 
+Assicurati di portare avanti una autovalutazione su base oggettiva, il che significa ripassare non semplicemente rileggendo, riguardando i tuoi schemi, ma costruendo esercizi, quiz attraverso i quali poter controllare concretamente che sei preparato. Questo ti renderà più consapevole, ti darà gli strumenti per avere un’idea chiarissima del tuo livello. Lavorando sulla tua psicologia e su ciò che pensi, come lo pensi e come ti rapporti alla tua preoccupazione, assicurandoti uno studio di qualità e una preparazione impeccabile avrai messo in campo tutti gli strumenti necessari per **combattere l'ansia e trasformarla in forza** in modo da non doverla più semplicemente subire. 
+
+
+
 
 
