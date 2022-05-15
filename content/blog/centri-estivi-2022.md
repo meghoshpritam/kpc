@@ -12,7 +12,7 @@ tags:
 articleData:
   title: "Centri estivi 2022 "
   description: >
-    Cos'è il bullismo? 
+    Centri estivi per bambini e ragazzi a Milano
   image:
     url:
     alt: "Centri estivi 2022"
@@ -27,12 +27,27 @@ coverImage: "/images/blog/lanimale-co-terapeuta-come-supporto-educativo.webp"
 layout: single
 ---
 
-La fine della scuola si avvicina e i centri estivi diventano un’opportunità, sia per i genitori, che impegnati tutto il giorno con il lavoro non possono occuparsi dei figli, sia per i figli, che hanno l’opportunità di apprendere, divertirsi e stare con i coetanei.
-
-Oggi i bambini, nella maggior parte dei casi, hanno interessi che troppo spesso li spingono a stare chiusi in casa, creando una situazione di sedentarietà, sovrappeso e conseguente isolamento. L'uso continuo dei mezzi elettronici può avere effetti negativi sui ragazzi sia per la loro salute fisica che psicologica. La situazione attuale ha notevolmente contribuito all’insorgenza di disagi e disturbi che quotidianamente affliggono i più piccoli. 
+# Centri estivi 2022
 
 La primavera e l’estate sono i periodi dell’anno perfetti per sperimentare nuove attività e sport all’aria aperta, il momento giusto per spingere i bambini al contatto con la natura e al gioco di gruppo. 
 Soprattutto dopo la chiusura delle scuole, è importante spronare i bambini a trascorrere del tempo in compagnia Invogliandoli a partecipare e numerosi centri estivi che ogni paese organizza.
+
+## Cosa sono i centri estivi
+
+I centri estivi o Summer Camp sono delle strutture concepite per accogliere ed intrattenere bambini e ragazzi (fino ai 18 anni) che non possono rimanere soli a casa o che scelgono (per volere loro o dei genitori) di trascorrere piacevolmente i mesi più caldi: quelli in cui non devono andare a scuola e possono dedicarsi ad attività ricreative di vario tipo.
+
+Alcuni centri estivi scelgono di specializzarsi nell’accoglienza di bambini piccoli e piccolissimi (dai 3 mesi ai 4-5 anni), altri (la maggior parte) preferiscono puntare sulla fascia che va dai 3 ai 12 anni, mentre quelli più attrezzati ammettono anche i ragazzi più grandi (fino ai 18 anni). In base alla clientela che sceglierete di accogliere, dovrete progettare attività di vario tipo perché ciò che riesce a coinvolgere un ragazzo di 15 anni non può essere proposto ad un bambino di 4 (e viceversa). I servizi che si possono offrire sono parecchi:
+
+- baby parking
+- ludoteca
+- organizzazione di attività ricreative
+- organizzazione di attività sportive
+- organizzazione di attività didattiche
+- organizzazione di laboratori artistici e creativi
+- organizzazione di brevi gite o passeggiate
+- eventuale pernottamento nella struttura
+- organizzazione di feste
+- consulenza e supporto ai genitori
 
 ### Le opportunità di un centro estivo
 
@@ -80,7 +95,7 @@ E nonostante le numerose attività ludico educative non mancheranno i giusti mom
 
 È importante ricordare che alcuni bambini potrebbero essere titubanti all’idea di iniziare questa avventura estiva, soprattutto se si tratta della prima esperienza, Ma spesso basta essere certi di trovare qualche compagno di scuola o qualche amico che già si conosce, essere rassicurati dai genitori e avere maggiori informazioni circa le attività divertenti che lo aspettano. Questi, nella maggior parte dei casi sono i tasti giusti da toccare per aiutare il bambino a sciogliere il timore iniziale.
 
-### Centri estivi 2022
+### Centri estivi milano 2022
 
 Se siete ancora indecisi, vi aiutiamo noi nella scelta! Di seguito troverete una lista dei **centri estivi 2022** che potrebbero rispondere alle vostre esigenze. 
 
@@ -124,7 +139,7 @@ Ogni settimana un focus differente sul tema della sostenibilità: vita sott’ac
 sostenibili e molto altro. Ogni giorno, oltre ai laboratori, un momento di accoglienza, la pausa merenda e il pranzo seguito da un momento di relax. Le attività si terranno tra la piscina e le sale teatrali. I bambini avranno un Kids Corner dedicato nella palazzina dei Bagni Misteriosi.
 Contatti Kikolle: Tel 02 36696950 – info@kikollelab.com
 
-Centro Estivo Suanno Dance School
+**Centro Estivo milano 2022** Suanno Dance School
 
 Per bambine e bambini amanti della danza, la scuola di danza Suanno di Milano organizza un campo estivo che li farà immergere nella loro passione. Il programma prevede la suddivisione dei bambini in 2 gruppi a seconda dell’età: scuola elementare e scuole medie e superiori.
 Ci saranno lezioni di danza classica e moderna, yoga, stretching, canto, ginnastica artistica. Pranzo al sacco.
@@ -132,7 +147,7 @@ Via Oldrado da Tresseno 5, Milano (zona Nolo)
 Dal 9 giugno al 1 luglio 2022
 Email info@suanno.com – tel. 0284576720
 
-**Centro Estivo 2022** Pro Patria
+**Centro Estivo milano 2022** Pro Patria
 
 Ginnastica artistica, ginnastica ritmica, multisport: lo sport è protagonista del campus estivo della celebre società sportiva milanese. Le attività sono svolte in totale sicurezza, il pranzo è previsto al sacco. Orario 8.30-16.30.
 Via Beato Angelico 2, Milano
