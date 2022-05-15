@@ -22,7 +22,7 @@ shortDescription: >
 
   Generalmente un briciolo di ansia ci tiene attenti e  lucidi, costringe a tirare fuori il meglio di noi quando il gioco si fa duro.  Purtroppo,  però, capita spesso che ne perdiamo il controllo e da opportunità l’ansia si trasforma in un ostacolo davvero difficile da abbattere. In questo articolo parleremo strategie efficaci e sperimentate nel corso del tempo, che sono supportati da dati scientifici. 
 
-coverImage: "/images/blog/lanimale-co-terapeuta-come-supporto-educativo.webp"
+coverImage: "/images/blog/ansia-da-esame-2022.webp"
 
 layout: single
 ---
