@@ -1,5 +1,5 @@
 ---
-title: "Test autismo: quando fare la diagnosi e a chi rivolgersi"
+title: "Test autismo"
 description: "TODO: add description"
 author: 
 date: 2022-03-01
@@ -10,7 +10,7 @@ tags:
   - studenti
 
 articleData:
-  title: "Test autismo: quando fare la diagnosi e a chi rivolgersi"
+  title: "Test autismo"
   description: >
     Conoscere per intervenire precocemente
   image:
