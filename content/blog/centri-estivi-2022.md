@@ -22,7 +22,7 @@ shortDescription: >
   
   Oggi i bambini, nella maggior parte dei casi, hanno interessi che troppo spesso li spingono a stare chiusi in casa, creando una situazione di sedentarietà, sovrappeso e conseguente isolamento.
 
-coverImage: "/images/blog/lanimale-co-terapeuta-come-supporto-educativo.webp"
+coverImage: "/images/blog/centri-estivi-2022.webp"
 
 layout: single
 ---
