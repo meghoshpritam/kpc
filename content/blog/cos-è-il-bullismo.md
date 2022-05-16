@@ -159,7 +159,7 @@ Se sei un giovane e subisci atti di bullismo, è possibile che tu stia provando 
 
 È importante non isolarsi e cercare aiuto alle persone vicine.
 
-Parlare con una persona di fiducia e cercare una strategia per denunciare questi episodi, se gli atti di bullismo vengono subiti a scuola potrebbe essere utile parlarne con gli insegnanti, magari con l’insegnante che ti sembra più sensibile a questi temi e del quale ti sembra di poterti fidare. Nel prossimo paragrafo andremo a capire qual'è il compito degli adulti che si trovano a vedere da vicino il bullismo e a capire più da vicino **chi è il bullo** e perché mette in atto comportamenti che ledono il benessere degli altri.
+Parlare con una persona di fiducia e cercare una strategia per denunciare questi episodi, se gli atti **aggressivi** di bullismo vengono subiti a scuola potrebbe essere utile parlarne con gli insegnanti, magari con l’insegnante che ti sembra più sensibile a questi temi e del quale ti sembra di poterti fidare. Nel prossimo paragrafo andremo a capire qual'è il compito degli adulti che si trovano a vedere da vicino il bullismo e a capire più da vicino **chi è il bullo** e perché mette in atto comportamenti che ledono il benessere degli altri.
 
 ### E gli adulti
 
@@ -185,6 +185,8 @@ Come genitori è importante non essere passivi, il primo passo da compiere e di 
 -	Ha gli oggetti danneggiati come ad esempio la cartella
 
 -	 Ha un calo nel rendimento scolastico e può avere anche difficoltà nel sonno
+
+- Atti di **aggressività** improvvisa e insolita
 
 In presenza di questi sintomi è opportuno approfondire la situazione e non restare indifferenti. 
 

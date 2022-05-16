@@ -29,7 +29,7 @@ layout: single
 
 # Test autismo: quando fare la diagnosi e a chi rivolgersi
  
-La diagnosi si fa a tre anni, ma possiamo notare alcuni segni caratteristici già in epoca precoce. La diagnosi è clinica, si basa solo sull’osservazione e sugli esami fondamentali (**test autismo**) di primo livello, cioè quelli che vanno richiesti immediatamente ovvero: 
+La diagnosi si fa a tre anni, ma possiamo notare alcune **stereotipie** caratteristici già in epoca precoce. La diagnosi è clinica, si basa solo sull’osservazione e sugli esami fondamentali (**test autismo**) di primo livello, cioè quelli che vanno richiesti immediatamente ovvero: 
  
 - Esame dell’udito 
  
@@ -51,7 +51,7 @@ Il disturbo dello spettro autistico viene considerato uno dei disturbi del neuro
  
 - Una compromissione generalizzata delle capacità comunicative di interazione sociale 
 
-- Uso stereotipato dei movimenti, del linguaggio o degli oggetti 
+- **Stereotipie** dei movimenti, del linguaggio o degli oggetti 
 
 - Eccessiva aderenza a routine, rituali motori o verbali e/o resistenza al cambiamento
 
@@ -98,8 +98,6 @@ Parlando dell'autismo il DSM 5, che appunto è l’ultimo sistema di classificaz
 Un’altra comorbilità molto frequente e sicuramente l'ADHD. Quindi, sulla base della gravità legata alla compromissione del funzionamento sociale del bambino, possiamo indicare diversi livelli di gravità del disturbo. 
  
 È un disturbo molto frequente, gli ultimi dati ci parlano del 2% della popolazione, con più incidenza sul sesso maschile. Negli ultimi anni stiamo notando un aumento della prevalenza del disturbo, probabilmente perché abbiamo modificato i criteri diagnostici ma anche perché siamo molto più consapevoli e allertati rispetto la possibilità che si presenti l’autismo. 
- 
-molto alta, almeno al 70%.  
  
 ### Quali sono questi disturbi associati all'autismo?  
  
