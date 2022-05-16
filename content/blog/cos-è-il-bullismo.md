@@ -68,7 +68,7 @@ Ciò che può sembrare strano è che proprio la vittima di bullismo oltre a matu
 Dopo aver capito **chi è il bullo**, proviamo a capire più nello specifico cos'è questa piaga sociale. 
 Il termine bullismo si riferisce a comportamenti aggressivi messi in pratica prevalentemente in ambito scolastico, un fenomeno sociale deviante e che sta diventando un’esperienza quotidiana sempre più diffusa tra i giovani. Si tratta di una forma di malessere sociale, un’esperienza di prevaricazione attraverso atti invalidanti che possano avere conseguenze negative sul ragazzo non solo nel momento in cui vengono subite ma anche nel lungo periodo perché possono lasciare un segno negativo nell’identità del giovane.
 
-Il bullismo prende forma attraverso azioni aggressive messe in atto da un singolo o da un gruppo a danno di una persona più fragile con l’intento di danneggiarla, è importante sapere che non sempre i comportamenti aggressivi possono rientrare nel bullismo perché si possa parlare di bullismo è necessario che vi siano le seguenti caratteristiche:
+Il bullismo prende forma attraverso **aggressività** messa in atto da un singolo o da un gruppo a danno di una persona più fragile con l’intento di danneggiarla, è importante sapere che non sempre i comportamenti aggressivi possono rientrare nel bullismo perché si possa parlare di bullismo è necessario che vi siano le seguenti caratteristiche:
 
 -	La reiterazione nel tempo, si tratta di azioni continuative reiterate nel tempo E non una sola volta
 -	La persecutorietà, una forma di accanimento costante e prolungato nei confronti della stessa persona
@@ -83,7 +83,7 @@ Uno dei contesti principali del bullismo tra i giovani e la scuola ma non vi son
 
 Da un po di anni è sempre più diffuso anche il bullismo online ovvero il cyberbullismo, in questo caso il ragazzo viene preso di mira attraverso i social network, i giochi online, conversazione via chat oppure forum.
 
-Il cyberbullismo è definito come un atto aggressivo, intenzionale condotto da un individuo o un gruppo usando varie forme di contatto elettronico, ripetuto nel tempo contro una vittima che non può facilmente difendersi. Esso ha però delle caratteristiche identificative proprie: il bullo può mantenere nella rete l’anonimato, ha un pubblico più vasto, ossia il Web, e può controllare le informazioni personali della sua vittima.
+Il cyberbullismo è definito come un atto di **aggressività**, intenzionale condotto da un individuo o un gruppo usando varie forme di contatto elettronico, ripetuto nel tempo contro una vittima che non può facilmente difendersi. Esso ha però delle caratteristiche identificative proprie: il bullo può mantenere nella rete l’anonimato, ha un pubblico più vasto, ossia il Web, e può controllare le informazioni personali della sua vittima.
 
 Il cyberbullismo in genere rientra nel contesto del normale bullismo.
 
@@ -155,7 +155,7 @@ La maggior parte degli studi condotti nel settore si trova d’accordo nel soste
 
 La situazione è molto delicata e non può essere ignorata, è fondamentale la denuncia e la segnalazione di ogni atto di bullismo da parte degli adulti di riferimento. In questo caso giocano un ruolo fondamentale anche gli spettatori dell’episodio che sono tenuti a denunciare.
 
-Se 6 1 giovane e subisci atti di bullismo, è possibile che tu stia provando in questo momento vergogna e paura per quello che vivi giornalmente ma ti voglio dire anche che questi sentimenti sono normali. Purtroppo la paura la vergogna però giocano un ruolo pericoloso poiché spesso paralizzano e inibiscono la possibilità di parlare e chiedere aiuto, inoltre, peggiorano il senso di responsabilità per quello che ti sta succedendo spingendoti a sentirti in colpa. A questo punto è importante chiarire che la vittima non ha nessuna responsabilità di quello che subisce, non è colpa tua!
+Se sei un giovane e subisci atti di bullismo, è possibile che tu stia provando in questo momento vergogna e paura per quello che vivi giornalmente ma ti voglio dire anche che questi sentimenti sono normali. Purtroppo la paura la vergogna però giocano un ruolo pericoloso poiché spesso paralizzano e inibiscono la possibilità di parlare e chiedere aiuto, inoltre, peggiorano il senso di responsabilità per quello che ti sta succedendo spingendoti a sentirti in colpa. A questo punto è importante chiarire che la vittima non ha nessuna responsabilità di quello che subisce, non è colpa tua!
 
 È importante non isolarsi e cercare aiuto alle persone vicine.
 
@@ -169,7 +169,7 @@ Davanti al fenomeno del bullismo l’adulto è chiamato a svolgere compiti educa
 
 ### Come aiutare i propri figli
 
-Come genitori è importante non essere passivi il primo passo da compiere e di individuare il migliore alleato per affrontare questa situazione . È fondamentale non stare in silenzio e considerare la situazione come pericolosa e di estrema urgenza. Se questi episodi accadono a scuola Bisogna rivolgersi al personale scolastico preposto a questo tipo di interventi.
+Come genitori è importante non essere passivi, il primo passo da compiere e di individuare il migliore alleato per affrontare questa situazione . È fondamentale non stare in silenzio e considerare la situazione come pericolosa e di estrema urgenza. Se questi episodi accadono a scuola bisogna rivolgersi al personale scolastico preposto a questo tipo di interventi.
 È importante inoltre monitorare la condizione affettiva del ragazzo prestando attenzione a comportamenti o eventuali segnali di disagio che potrebbero fare ipotizzare ad una situazione di bullismo.  Alcuni segnali di malessere potrebbero essere:
 
 -	Si ammala spesso
