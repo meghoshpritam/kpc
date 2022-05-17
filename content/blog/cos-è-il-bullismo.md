@@ -22,7 +22,7 @@ shortDescription: >
   
   Solitamente, i ruoli del bullismo sono ben definiti: da una parte c’è il bullo, colui che attua dei comportamenti violenti fisicamente e/o psicologicamente e dall’altra parte la vittima, colui che invece subisce tali atteggiamenti. 
 
-coverImage: "/images/blog/cos-è-il-bullismo.webp"
+coverImage: "/images/blog/cosa-il-bullismo.webp"
 
 layout: single
 ---
