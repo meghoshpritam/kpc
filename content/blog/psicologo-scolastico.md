@@ -20,7 +20,7 @@ articleData:
 shortDescription: >
   Negli ultimi decenni i problemi di emergenza educativa e di crescente abbandono scolastico hanno visto un incremento notevole, lo si può notare dagli episodi di bullismo presenti quotidianamente sulle pagine di cronaca. Ma ad oggi non è solo il bullismo che preoccupa gli studenti, i genitori e gli insegnanti ma bensì le difficoltà relazionali, di diffusione di droghe, dall’incapacità di fronteggiare i momenti di frustrazione che spesso sfociano in suicidi.
 
-coverImage: "/images/blog/strategie-educative-peer-tutoring.webp"
+coverImage: "/images/blog/psicologo-scolastico.webp"
 
 layout: single
 ---
