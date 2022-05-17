@@ -73,3 +73,5 @@ In uno dei corsi di aggiornamento più belli ai quali abbia mai partecipato e ch
 In conclusione, condivido la riflessione dalla quale sono partita. Immaginiamo quanta influenza una docente esercita sulla vita di un alunno e quanto questa può condizionarne l'esistenza futura. La figura di insegnante prima di essere un formatore deve mostrarsi umano, saper ascoltare con una dose di empatia altrimenti non è un insegnante.
 
 Ecco, proprio da questa riflessione dovremmo partire prima di entrare in classe.
+
+*Maestra Maria Rosaria*
