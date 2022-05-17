@@ -161,7 +161,7 @@ Se sei un giovane e subisci atti di bullismo, è possibile che tu stia provando 
 
 Parlare con una persona di fiducia e cercare una strategia per denunciare questi episodi, se gli atti **aggressivi** di bullismo vengono subiti a scuola potrebbe essere utile parlarne con gli insegnanti, magari con l’insegnante che ti sembra più sensibile a questi temi e del quale ti sembra di poterti fidare. Nel prossimo paragrafo andremo a capire qual'è il compito degli adulti che si trovano a vedere da vicino il bullismo e a capire più da vicino **chi è il bullo** e perché mette in atto comportamenti che ledono il benessere degli altri.
 
-### E gli adulti
+### Cosa possono fare gli adulti
 
 Davanti al fenomeno del bullismo l’adulto è chiamato a svolgere compiti educativi complessi e per questo è importante che disponga di tutti gli elementi necessari per essere informato su come proteggere al meglio e aiutare i ragazzi vittime di bullismo. 
 
