@@ -5,9 +5,9 @@
   {{ partial "header.html" . }}
   {{/* hero section start  */}}
   {{ with .Params.hero }}
-  <div class="container grid grid-cols-1 px-4 pt-24 mx-auto text-white md:grid-cols-2">
-    <div class="py-20 pb-36">
-      <h1 class="text-5xl font-semibold break-words lg:text-5xl xl:text-6xl">
+  <div class="container grid grid-cols-1 px-4 mx-auto text-white md:pt-24 md:grid-cols-2">
+    <div class="py-10 md:pb-36 md:py-20">
+      <h1 class="text-4xl font-semibold break-words lg:text-5xl xl:text-6xl">
         <span>
           {{ .title.line1 }}
         </span>
@@ -15,7 +15,7 @@
           {{ .title.line2 }}
         </span>
       </h1>
-      <div class="mt-8 text-7 article-description">
+      <div class="mt-8 text-base sm:text-7 article-description">
         {{ .description | markdownify }}
       </div>
     </div>
