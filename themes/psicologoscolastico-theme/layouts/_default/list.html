@@ -81,10 +81,10 @@
       {{ partial "images/responsive" (dict "src" $image "alt" .Title "class" "object-cover object-center w-full h-full rounded-xl" "width" "1068" "height" "645") }}
     </div>
     <h3 class="flex-grow px-5 py-3 text-2xl duration-300 ease-in-out text-indigo1 group-hover:text-secondary">{{ .articleData.title }}</h3>
-    <div class="mt-1.5 px-5 text-sm">{{ truncate 200 "..." .shortDescription }}</div>
+    <div class="mt-1.5 px-5 text-sm">{{ truncate 200 "..." (.shortDescription | markdownify) | plainify }}</div>
     <div class="flex items-center justify-between pb-5 pl-5 text-xs mt-7">
       <div>
-        {{ dateFormat "02 July 2006" $.Lastmod }}
+        {{ dateFormat "02 January 2006" .Lastmod }}
       </div>
       <div class="flex justify-end">
         <div class="py-2 pr-6 text-white rounded-l-full pl-7 bg-sky-blue -mr-0.5 group-hover:pl-12 ease-in-out duration-300">{{ $.Params.article.readMore }}</div>
@@ -152,9 +152,9 @@
     <div class="flex flex-col justify-center py-14 sm:px-10 lg:px-14 xl:px-17">
       <a class="block group" href="{{ .RelPermalink }}" title="{{ .Params.articleData.title }}" aria-label="{{ .Params.articleData.title }}">
         <h2 class="text-4xl font-bold mb-7 text-secondary">{{ .Params.articleData.title }}</h2>
-        <div class="text-sm text-gray2">{{ truncate 250 "..." (.Params.shortDescription | plainify) }}</div>
+        <div class="text-sm text-gray2">{{ truncate 250 "..." (.Params.shortDescription | markdownify) | plainify }}</div>
         <div class="flex items-center justify-between text-sm mt-9">
-          <div class="text-gray2">{{ dateFormat "02 July 2006" .Lastmod }}</div>
+          <div class="text-gray2">{{ dateFormat "02 January 2006" .Lastmod }}</div>
           <span class="font-bold duration-300 ease-in-out text-dark group-hover:text-secondary">{{ $.Params.article.readMore }}</span>
         </div>
       </a>
