@@ -1,6 +1,6 @@
 ---
 title: "Ansia da esame"
-description: "TODO: add description"
+description: "Come gestire l'ansia da esame"
 author: 
 date: 2022-05-13
 lastmod: 2022-05-14

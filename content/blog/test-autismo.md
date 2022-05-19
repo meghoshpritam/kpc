@@ -1,6 +1,6 @@
 ---
 title: "Test autismo"
-description: "TODO: add description"
+description: "Autismo come riconoscerlo"
 author: 
 date: 2022-03-01
 lastmod: 2022-05-15

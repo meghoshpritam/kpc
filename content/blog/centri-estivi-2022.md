@@ -1,6 +1,6 @@
 ---
 title: "Centri estivi 2022"
-description: "TODO: add description"
+description: "Centri estivi 2022"
 author: 
 date: 2022-05-13
 lastmod: 2022-05-13

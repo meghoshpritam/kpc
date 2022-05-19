@@ -1,6 +1,6 @@
 ---
 title: "Cos'è il bullismo?"
-description: "TODO: add description"
+description: "Cos è il bullismo e chi è il bullo"
 author: 
 date: 2022-05-11
 lastmod: 2022-05-11

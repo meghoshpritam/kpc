@@ -1,6 +1,6 @@
 ---
 title: "Circle time a scuola"
-description: "TODO: add description"
+description: "Circle time come metodologia didattica, tecniche e significato"
 author: Giusy Margiotta
 date: 2022-03-01
 lastmod: 2022-03-02

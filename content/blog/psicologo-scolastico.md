@@ -1,6 +1,6 @@
 ---
 title: "Cosa fa lo Psicologo scolastico?"
-description: "TODO: add description"
+description: "Come diventare psicologo scolastico"
 author: Giusy Margiotta
 date: 2022-03-20
 lastmod: 2022-03-27

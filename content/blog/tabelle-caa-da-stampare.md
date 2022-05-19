@@ -1,6 +1,6 @@
 ---
 title: "Tabelle CAA da stampare"
-description: "TODO: add description"
+description: "La Comunicazione Aumentativa e Alternativa"
 author: 
 date: 2022-05-13
 lastmod: 2022-05-17

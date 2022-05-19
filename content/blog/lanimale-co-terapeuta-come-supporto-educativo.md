@@ -1,6 +1,6 @@
 ---
 title: "L’animale co-terapeuta come supporto educativo"
-description: "TODO: add description"
+description: "Gli Interventi Assistiti con gli Animali (IAA)"
 author: Giusy Margiotta
 date: 2022-03-01
 lastmod: 2022-03-02
