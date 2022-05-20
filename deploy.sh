@@ -1,9 +1,11 @@
-git clone git@github.com:meghoshpritam/kpc.git build
+npm i
+hugo --minify
+[ ! -d "./build" ] && git clone git@github.com:meghoshpritam/kpc.git build
 cd build
-rm -rf public
 git checkout build-prod
+rm -rf public
 cp ../public ./public -r
+git add .
 git commit -m "new update"
 git push origin -u build-prod
 cd ..
-rm -rf build

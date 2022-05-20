@@ -6,6 +6,7 @@ themes/**/node_modules/
 resources/_gen
 node_modules
 public
+build
 
 # Ignore IDE files
 .vscode/
