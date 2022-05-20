@@ -1,4 +1,4 @@
-baseURL = "https://www.psicologoscolastico.it/"
+baseURL = "https://kpc.technohubnetwork.com/"
 title = "psicologoscolastico"
 theme = "psicologoscolastico-theme"
 staticDir = ["assets"]
@@ -44,3 +44,17 @@ googleAnalytics = "G-VLRQ226NHR"
 
 [social]
   twitter = "CertQuestions"
+
+
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+
+  [security.funcs]
+    getenv = ['^HUGO_']
+
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
