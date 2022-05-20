@@ -3,6 +3,14 @@ logo:
   url: "/"
   title: Home
 
+menu:
+  - label: Home
+    url: "/"
+  - label:
+    submenu:
+      - label:
+        url:
+    
 menuLinks:
   - title: Home
     url: "/"
