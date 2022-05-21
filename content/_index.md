@@ -145,14 +145,11 @@ alwaysListening:
       alt: Parlare con lo Psicologo Scolastico non è mai stato cosi facile
 
 testimonial:
-  shortTitle: "TESTIMONIAL"
+  shortTitle: "Our Achievers"
   title: >
-    Cosa pensi di noi?
+    They make us proud
   details: >
-    Abbiamo ottenuto numerose valutazioni positive dai nostri utenti in tutto il mondo. 
-
-
-    Alcuni studenti e insegnanti sono stati molto soddisfatti dei nostri consigli.
+    Our students have cleared National Level Examinations, placed for higher studies in IITs, IISER and reputed Universities, won NCC and sports championships and prizes in competitions.
   reviews: "{0}/{1} reviews"
   image: "/images/testimonial.webp"
   imageAlt: "testimonial image"
