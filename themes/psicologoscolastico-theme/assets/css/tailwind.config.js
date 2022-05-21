@@ -61,6 +61,7 @@ module.exports = {
       fontSize: {
         10: '0.625rem',
         11: '0.6875rem',
+        13: '0.8125rem',
       },
       gridTemplateRows: {
         7: 'repeat(7, minmax(0, 1fr))',
@@ -127,6 +128,7 @@ module.exports = {
       fontWeight: ['hover', 'focus'],
       gradientColorStops: ['group-hover'],
       padding: ['group-hover'],
+      margin: ['first', 'last'],
     },
   },
   plugins: [require('@tailwindcss/typography')],

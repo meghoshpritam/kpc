@@ -1,25 +1,189 @@
 logo:
-  icon: logo
-  url: "/"
+  image: '/logo.svg'
+  url: '/'
   title: Home
+
+topHeader:
+  address: >
+    Kanchrapara, North 24-PGS,
+    
+    
+    West Bengal, India - 743145
 
 menu:
   - label: Home
-    url: "/"
-  - label:
+    url: '/'
+  - label: About us
     submenu:
-      - label:
-        url:
-    
-menuLinks:
-  - title: Home
-    url: "/"
-  - title: Servizi
-    url: "/servizi/"
-  - title: Blog
-    url: "/blog/"
-  - title: Chi Siamo
-    url: "/#chi-siamo"
-
-contactButton:
-  label: Contattaci
+      - label: About DGC
+        url: /
+      - label: Mission and Vision
+        url: /
+      - label: Objectives
+        url: /
+      - label: Principal’s Desk
+        url: /
+      - label: College Map
+        url: /
+      - label: Best Practices
+        url: /
+      - label: Institutional Distinctiveness
+        url: /
+      - label: Participative Management
+        url: /
+  - label: Administration
+    submenu:
+      - label: Administrative Structure
+        url: /
+      - label: Governing Body
+        url: /
+      - label: IQAC
+        url: /
+      - label: Teachers’ Council
+        url: /
+      - label: Faculty Members
+        url: /
+      - label: Non-Teaching Staff
+        url: /
+  - label: IQAC
+    submenu:
+      - label: About IQAC
+        url: /
+      - label: Composition
+        url: /
+      - label: IQAC Notices
+        url: /
+      - label: Meetings
+        url: /
+      - label: IQAC Activities
+        url: /
+      - label: AQAR
+        url: /
+  - label: Academics
+    submenu:
+      - label: Courses
+        url: /
+      - label: Outcome
+        url: /
+      - label: Academic Calendar
+        url: /
+      - label: Mentoring
+        url: /
+      - label: Online Learning
+        url: /
+      - label: NSOU
+        url: /
+      - label: Departments
+        url: /
+      - label: Arts
+        url: /
+      - label: Science
+        url: /
+      - label: Commerce
+        url: /
+      - label: Physical Education
+        url: /
+  - label: Beyond The Curriculum
+    submenu:
+      - label: NSS
+        url: /
+      - label: NCC
+        url: /
+      - label: Sports
+        url: /
+      - label: Cultural
+        url: /
+      - label: Educational Tours
+        url: /
+      - label: Skill Development
+        url: /
+      - label: Community Service
+        url: /
+      - label: Universal Values & Ethics
+        url: /
+      - label: Environmental Awareness
+        url: /
+  - label: Infrastructure
+    submenu:
+      - label: Library
+        url: /
+      - label: Hostels
+        url: /
+      - label: Seminar Halls
+        url: /
+      - label: Smart Classrooms
+        url: /
+      - label: Common Room
+        url: /
+      - label: Gymnasium
+        url: /
+      - label: Central Instrumental Facility
+        url: /
+      - label: Sick Room
+        url: /
+      - label: Differently-Abled Friendly
+        url: /
+      - label: Environment Friendly
+        url: /
+      - label: Maintenance
+        url: /
+  - label: Student Support
+    submenu:
+      - label: Student Diversity
+        url: /
+      - label: Scholarships
+        url: /
+      - label: Anti Ragging
+        url: /
+      - label: Career Counselling
+        url: /
+      - label: Internal Complaints Committee
+        url: /
+      - label: Grievance Redressal
+        url: /
+      - label: Students’ Union
+        url: /
+  - label: Research
+    submenu:
+      - label: Journal Publications
+        url: /
+      - label: Books & Proceedings
+        url: /
+      - label: Presentations
+        url: /
+      - label: Sponsored Projects
+        url: /
+      - label: PG Projects
+        url: /
+      - label: Research Guidance
+        url: /
+      - label: College Journal
+        url: /
+      - label: Collaborations
+        url: /
+  - label: Achievements
+    submenu:
+      - label: Competitive Exams
+        url: /
+      - label: Progression
+        url: /
+      - label: Sports
+        url: /
+      - label: NCC
+        url: /
+      - label: Cultural
+        url: /
+      - label: Achievers
+        url: /
+  - label: Feedback
+    submenu:
+      - label: Students
+        url: /
+      - label: Faculty
+        url: /
+      - label: Employer
+        url: /
+      - label: Alumni
+        url: /
+  - label: Contact Us
+    url: '/'

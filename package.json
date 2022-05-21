@@ -20,6 +20,8 @@
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.0",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.6.2",
+    "prettier-plugin-go-template": "^0.0.12",
     "tailwindcss": "^2.0.2"
   },
   "browserslist": [
