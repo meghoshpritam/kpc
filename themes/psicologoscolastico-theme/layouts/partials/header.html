@@ -1,26 +1,29 @@
 {{ define "sticky-menu" }}
-  <nav class="container hidden pb-3 mx-auto text-13 md:block">
-    <ul class="flex justify-between">
-      {{ range .menu }}
-        <li class="mr-1.5 last:m-0 relative">
-          {{ $classNme := "border-0 border-b-2 border-transparent hover:border-white ease-in-out duration-300" }}
-          {{ if .submenu }}
-            <input type="checkbox" name="{{ .label }}" id="{{ .label }}-nav-menu" hidden class="hidden nav-menu" />
-            <label for="{{ .label }}-nav-menu" class="cursor-pointer nav-menu {{ $classNme }}">{{ .label }}</label>
-            <ul class="absolute w-56 py-2 transform -translate-x-16 bg-white shadow-xl top-8 nav-menu">
-              {{ range .submenu }}
-                <li class="mb-1 text-black1">
-                  <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="mx-0 hover:text-white inline-flex w-full hover:bg-primary ease-in-out duration-300 px-2 py-1.5">{{ .label }}</a>
-                </li>
-              {{ end }}
-            </ul>
-          {{ else }}
-            <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="{{ $classNme }}">{{ .label }}</a>
-          {{ end }}
-        </li>
-      {{ end }}
-    </ul>
-  </nav>
+  {{ with .ctx }}
+    <nav class="container hidden pb-3 mx-auto text-13 md:block">
+      <ul class="flex justify-between">
+        {{ range .menu }}
+          <li class="mr-1.5 last:m-0 relative">
+            {{ $classNme := "border-0 border-b-2 border-transparent hover:border-white ease-in-out duration-300" }}
+            {{ if .submenu }}
+              {{ $inputId := print .label "-nav-menu" $.suffix }}
+              <input type="checkbox" name="{{ .label }}" id="{{ $inputId }}" hidden class="hidden nav-menu" />
+              <label for="{{ $inputId }}" class="cursor-pointer nav-menu {{ $classNme }}">{{ .label }}</label>
+              <ul class="absolute w-56 py-2 transform -translate-x-16 bg-white shadow-xl top-8 nav-menu">
+                {{ range .submenu }}
+                  <li class="mb-1 text-black1">
+                    <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="mx-0 hover:text-white inline-flex w-full hover:bg-primary ease-in-out duration-300 px-2 py-1.5">{{ .label }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+            {{ else }}
+              <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="{{ $classNme }}">{{ .label }}</a>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+  {{ end }}
 {{ end }}
 
 {{ define "menu" }}
@@ -48,11 +51,11 @@
 {{ with .Site.Data.header }}
   <div class="fixed top-0 left-0 right-0 hidden text-white z-60 page-header-0203 bg-primary">
     {{ block "menu" . }}{{ end }}
-    {{ block "sticky-menu" . }}{{ end }}
+    {{ block "sticky-menu" (dict "ctx" . "suffix" "") }}{{ end }}
   </div>
   <header class="text-white page-relative-header-0203">
     {{ block "menu" . }}{{ end }}
-    {{ block "sticky-menu" . }}{{ end }}
+    {{ block "sticky-menu" (dict "ctx" . "suffix" "-sticky") }}{{ end }}
   </header>
   <div class="fixed left-0 right-0 flex hidden h-full text-white menu-drawer-0303 z-60">
     <div class="flex-grow bg-black cursor-default bg-opacity-10" role="button" aria-label="close menu" onclick="App.toggleMenu()"></div>
