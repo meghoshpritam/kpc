@@ -1,0 +1,14 @@
+{{ define "main" }}
+{{ $pageData := .Site.Data.singlePageTemplate }}
+
+<section class="bg-sky-blue">
+  {{ partial "header.html" . }}
+</section>
+
+<section class="h-screen">
+  department section start
+</section>
+
+{{ partial "schema/website.html" . }}
+
+{{ end }}

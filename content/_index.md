@@ -1,5 +1,5 @@
 ---
-title: "Psicologo scolastico"
+title: "Kanchrapara College"
 description: "Perché vai dallo psicologo? Lo psicologo è un professionista del benessere psicofisico, qualificato nel fornire supporto in presenza o a distanza."
 date: 2022-02-01
 
