@@ -1,54 +1,44 @@
 {{/* scroll top top button start */}}
-{{ if and (not .Site.Params.enableChat) .Site.Params.enableScrollToTopButton }}
-<button class="fixed z-10 inline-flex items-center justify-center hidden text-white duration-300 ease-in-out border-2 rounded-full shadow-lg outline-none cursor-pointer bg-sky-blue scroll-to-top-1606 right-5 bottom-5 w-14 h-14 hover:shadow-2xl hover:bg-white hover:text-sky-blue border-sky-blue" onclick="App.scrollToTop()">
+<button
+  class="fixed z-10 inline-flex items-center justify-center hidden text-white duration-300 ease-in-out border-2 rounded-full shadow-lg outline-none cursor-pointer bg-sky-blue scroll-to-top-1606 right-5 bottom-5 w-14 h-14 hover:shadow-2xl hover:bg-white hover:text-sky-blue border-sky-blue"
+  onclick="App.scrollToTop()"
+>
   <svg class="w-8 h-5">
     <use xlink:href="#shape-arrow-up" />
   </svg>
 </button>
-{{ end }}
-{{/* scroll top top button end  */}}
+{{/* scroll top top button end */}}
 
 {{/* footer start */}}
 {{ with .Site.Data.footer }}
-{{ partial "contact-us.html" .contactUs }}
-<footer class="pt-10 pb-12 text-white bg-dark">
-  {{ with .logo }}
-  <div class="flex items-center justify-center mb-28">
-    <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="flex items-center justify-center">
-      <svg class="h-20 w-60">
-        <use xlink:href="#shape-{{ .icon }}" />
-      </svg>
-    </a>
-  </div>
-  {{ end }}
-  <div class="flex items-center justify-center">
-    {{ range $idx, $ctx := .links }}
-    {{ if ne $idx 0 }}
-    <span class="mx-1.5 text-gray2">|</span>
+  {{ partial "contact-us.html" .contactUs }}
+  <footer class="pt-10 pb-12 text-white bg-dark">
+    <div class="flex items-center justify-center">
+      {{ range $idx, $ctx := .links }}
+        {{ if ne $idx 0 }}
+          <span class="mx-1.5 text-gray2">|</span>
+        {{ end }}
+        <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="hover:text-secondary">{{ .title }}</a>
+      {{ end }}
+    </div>
+    {{ with .bottom }}
+      <div class="flex items-center justify-center mt-4 footer-last">
+        {{ .before | markdownify }}
+        <span class="current-year-footer-0102">2022</span>
+        {{ .after | markdownify }}
+      </div>
     {{ end }}
-    <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="hover:text-secondary">{{ .title }}</a>
-    {{ end }}
-  </div>
-  {{ with .bottom }}
-  <div class="flex items-center justify-center mt-4 footer-last">
-    {{ .before | markdownify }}
-    <span class="current-year-footer-0102">2022</span>
-    {{ .after | markdownify }}
-  </div>
-  {{ end }}
-</footer>
+  </footer>
 {{ end }}
 {{/* footer end */}}
 
 
 <!-- tidio chat script start -->
 {{ if .Site.Params.enableChat }}
-<script async src="//code.tidio.co/b1cpgwrn11trxczys4t7pjtlzp0jos4p.js"></script>
+  <script async src="//code.tidio.co/b1cpgwrn11trxczys4t7pjtlzp0jos4p.js"></script>
 {{ end }}
 <!-- tidio chat script end -->
 
 {{/* script start */}}
 {{ $opts := dict "config" "assets/js/babel.config.js" "noComments" true "minified" true }}
-{{- $transpiled := resources.Get "js/app.js" | babel $opts | resources.Minify -}}
-<script async src="{{ $transpiled.RelPermalink }}"></script>
-{{/* script end */}}
+{{- $transpiled := resources.Get "js/app.js" | babel $opts | resources.Minify -}}<script async src="{{ $transpiled.RelPermalink }}"></script> {{/* script end */}}

@@ -3,25 +3,15 @@
 
 {{/* homie hero start */}}
 {{ with .Params.hero }}
-<section class="relative bg-left-bottom bg-no-repeat bg-cover bg-home-hero">
+<section class="relative bg-left-bottom bg-no-repeat bg-cover bg-primary">
   {{ partial "header" $ }}
-  <div class="container grid grid-cols-1 px-4 mx-auto text-white lg:grid-cols-2">
-    <div class="flex flex-col justify-center py-10 md:py-20">
-      <h1 class="text-4xl font-semibold leading-normal md:leading-17 md:max-w-xs md:text-5xl">{{ .heading }}</h1>
-      <p class="mt-6 text-base md:text-lg md:max-w-md font-nunitoSans leading-1.8">{{ .details }}</p>
-      {{ with .button }}
-      <div class="mt-9">
-        <label for="contact-us-dialog" class="inline-block px-8 py-3 text-sm text-white duration-300 ease-in-out border-2 cursor-pointer md:text-base md:px-12 md:py-5 hover:bg-white hover:text-sky-blue border-sky-blue bg-sky-blue rounded-xl md:rounded-3xl">
-          {{ .label }}
-        </label>
+  <div class="">
+    <section>
+      <div class="flex flex-col items-center justify-center w-full bg-red-200" style="height: 40rem;">
+        cover image
       </div>
-      {{ end }}
-    </div>
-    <div class="flex flex-col justify-center">
-      {{ with .image }}
-      {{ partial "images/responsive" (dict "src" .url "alt" .alt "class" "w-full h-auto max-w-lg mx-auto" "width" "525" "height" "742") }}
-      {{ end }}
-    </div>
+    </section>
+    
   </div>
 </section>
 {{ end }}
