@@ -53,9 +53,12 @@ module.exports = {
         yellow1: '#F4C467',
       },
       fontFamily: {
+        lato: ['Lato', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
         nunitoSans: ['NunitoSans', 'sans-serif'],
         openSans: ['OpenSans', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
         rockSalt: ['RockSalt', 'cursive', 'sans-serif'],
       },
       fontSize: {
@@ -70,6 +73,9 @@ module.exports = {
         1.6: '1.6',
         1.8: '1.8',
         17: '4.25rem',
+      },
+      scale: {
+        60: '0.6',
       },
       spacing: {
         1.25: '0.3125rem',

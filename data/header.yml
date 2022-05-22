@@ -9,12 +9,35 @@ college:
   grade: Accredited by B+
 
 topHeader:
-  address: >
-    Kanchrapara, North 24-PGS,
+  middle:
+    top:
+      - label: RTI
+        url: /
+      - label: WBHED
+        url: /
+      - label: Kalyani University
+        url: /
+    bottom:
+      - label: NAAC SSR
+        url: /
+      - label: AISHE
+        url: /
+      - label: RUSA
+        url: /
+        
+  right:
+    menu:
+      ug:
+        label: UG Admission
+        url: /
+      pg:
+        label: PG Admission
+        url: /
+    address: >
+      Kanchrapara, North 24-PGS,
     
     
-    West Bengal, India - 743145
-
+      West Bengal, India - 743145
 menu:
   - label: Home
     url: '/'
