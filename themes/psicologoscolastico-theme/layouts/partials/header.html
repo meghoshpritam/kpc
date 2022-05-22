@@ -105,6 +105,9 @@
   </div>
   <header class="text-white page-relative-header-0203">
     {{ block "menu" . }}{{ end }}
+    <div class="py-1 pt-2 mb-3 text-sm bg-secondary">
+      <marquee behavior="" direction="left">Scrolling text </marquee>
+    </div>
     {{ block "sticky-menu" (dict "ctx" . "suffix" "-sticky") }}{{ end }}
   </header>
   <div class="fixed left-0 right-0 flex hidden h-full text-white menu-drawer-0303 z-60">
@@ -149,10 +152,12 @@
       <ul class="border-0 border-t border-white mt-2.5 pt-3.5 grid grid-cols-2 gap-4">
         {{ range .topHeader.right.menu }}
           <li class="mb-2.5 text-white">
-            <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="w-full text-center inline-block text-sm px-2.5 py-2 duration-300 ease-in-out border-2 rounded-md hover:bg-white hover:text-secondary border-secondary bg-secondary font-semibold hover:border-secondary">{{ .label }}</a>
+            <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="w-full text-center inline-block text-sm px-2.5 py-2 duration-300 ease-in-out border-2 rounded-md hover:bg-white hover:text-secondary border-secondary bg-secondary font-semibold hover:border-secondary"
+              >{{ .label }}</a
+            >
           </li>
         {{ end }}
-      
+
       </ul>
     </ul>
   </div>
