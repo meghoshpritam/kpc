@@ -109,7 +109,19 @@
   </header>
   <div class="fixed left-0 right-0 flex hidden h-full text-white menu-drawer-0303 z-60">
     <div class="flex-grow bg-black cursor-default bg-opacity-10" role="button" aria-label="close menu" onclick="App.toggleMenu()"></div>
-    <ul class="px-2 py-10 overflow-y-auto w-80 bg-primary">
+    <ul class="px-2 py-6 overflow-y-auto w-80 bg-primary">
+      <ul class="border-0 border-b border-white mb-2.5 text-sm">
+        {{ range .topHeader.middle.top }}
+          <li class="mb-1 text-white">
+            <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="mx-0 hover:text-white inline-flex w-full hover:bg-primary ease-in-out duration-300 px-2 py-1.5">{{ .label }}</a>
+          </li>
+        {{ end }}
+        {{ range .topHeader.middle.bottom }}
+          <li class="mb-1 text-gold">
+            <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="mx-0 hover:text-white inline-flex w-full hover:bg-primary ease-in-out duration-300 px-2 py-1.5">{{ .label }}</a>
+          </li>
+        {{ end }}
+      </ul>
       {{ range .menu }}
         <li class="mr-1.5 last:m-0">
           {{ if .submenu }}
@@ -134,6 +146,14 @@
           {{ end }}
         </li>
       {{ end }}
+      <ul class="border-0 border-t border-white mt-2.5 pt-3.5 grid grid-cols-2 gap-4">
+        {{ range .topHeader.right.menu }}
+          <li class="mb-2.5 text-white">
+            <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="w-full text-center inline-block text-sm px-2.5 py-2 duration-300 ease-in-out border-2 rounded-md hover:bg-white hover:text-secondary border-secondary bg-secondary font-semibold hover:border-secondary">{{ .label }}</a>
+          </li>
+        {{ end }}
+      
+      </ul>
     </ul>
   </div>
 {{ end }}
