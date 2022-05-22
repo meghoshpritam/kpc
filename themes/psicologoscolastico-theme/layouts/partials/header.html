@@ -30,8 +30,8 @@
   <div class="container flex px-4 mx-auto py-3.5 items-center">
     {{ with .logo }}
       <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="flex items-center justify-center mr-7 sm:mr-16 md:mr-20">
-        <img src="{{ .image }}" title="Kanchrapara College" alt="Kanchrapara College" class="w-16 h-16" />
-        <span class="ml-2.5 font-bold">Kanchrapara College</span>
+        <img src="{{ .image }}" title="{{ $.college.name }}" alt="{{ $.college.name }}" class="w-16 h-16" />
+        <span class="ml-2.5 font-bold">{{ $.college.name }}</span>
       </a>
     {{ end }}
     <span class="flex-grow"></span>

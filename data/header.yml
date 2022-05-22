@@ -3,6 +3,11 @@ logo:
   url: '/'
   title: Home
 
+college:
+  name: Kanchrapara College
+  affiliated: Affiliated to University of Kalyani
+  grade: Accredited by B+
+
 topHeader:
   address: >
     Kanchrapara, North 24-PGS,
