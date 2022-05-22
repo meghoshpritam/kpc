@@ -5,11 +5,17 @@
   {{ with .Params.hero }}
     <section class="relative bg-left-bottom bg-no-repeat bg-cover bg-primary">
       {{ partial "header" $ }}
-      <div class="">
-        <section>
-          <div class="flex flex-col items-center justify-center w-full bg-red-200" style="height: 40rem;">cover image</div>
-        </section>
-      </div>
+      <section class="grid grid-cols-1 lg:grid-cols-4">
+        <div class="flex flex-col items-center justify-center w-full bg-red-200 lg:col-span-3" style="height: 25rem;">cover image</div>
+        <div class="col-span-1 px-3 py-2 bg-white">
+          <p class="py-2 mb-2 text-xl font-bold text-center text-black1">Important Links</p>
+          <ul>
+            {{ range seq 4 }}
+              <li class="mb-2 border-b border-gray-400 py-1.5 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, architecto.</li>
+            {{ end }}
+          </ul>
+        </div>
+      </section>
     </section>
   {{ end }}
   {{/* home hero end */}}
