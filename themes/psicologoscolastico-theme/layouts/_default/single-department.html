@@ -1,12 +1,19 @@
 {{ define "main" }}
 {{ $pageData := .Site.Data.singlePageTemplate }}
 
-<section class="bg-sky-blue">
+<section class="bg-primary">
   {{ partial "header.html" . }}
 </section>
 
 <section class="h-screen">
-  department section start
+  <div class="relative flex flex-col items-center justify-center w-full h-48 bg-red-200">dept img
+    <div class="container absolute left-0 right-0 px-4 mx-auto text-4xl font-bold text-white top-20">Department Name</div>
+  </div>
+  <div class="container grid grid-cols-5 px-4 mx-auto">
+    {{ range seq 5 }}
+      <div class="px-2 py-3 font-bold text-center {{ if eq . 1 }}bg-primary text-white{{ else }}bg-gray-100{{ end }}">Tab Name</div>
+    {{ end }}
+  </div>
 </section>
 
 {{ partial "schema/website.html" . }}
