@@ -1,12 +1,44 @@
 {{ define "main" }}
   {{ $pageData := .Site.Data.singlePageTemplate }}
-
   {{/* homie hero start */}}
   {{ with .Params.hero }}
     <section class="relative bg-left-bottom bg-no-repeat bg-cover bg-primary">
       {{ partial "header" $ }}
       <section class="grid grid-cols-1 lg:grid-cols-4">
-        <div class="flex flex-col items-center justify-center w-full bg-red-200 lg:col-span-3" style="height: 25rem;">cover image</div>
+        <div class="bg-white lg:col-span-3">
+          <div class="h-full glider-contain">
+            <div class="h-full glider">
+              <div class="relative flex flex-col w-full text-center">
+                <img src="/images/kpc.jpg" alt="" class="w-full h-full" />
+                <span class="absolute left-0 right-0 text-xl font-bold text-center text-white font-montserrat bottom-10">Slide 1</span>
+              </div>
+              <div class="relative flex flex-col w-full text-center">
+                <img src="/images/kpc.jpg" alt="" class="w-full h-full" />
+                <span class="absolute left-0 right-0 text-xl font-bold text-center text-white font-montserrat bottom-10">Slide 2</span>
+              </div>
+              <div class="relative flex flex-col w-full text-center">
+                <img src="/images/kpc.jpg" alt="" class="w-full h-full" />
+                <span class="absolute left-0 right-0 text-xl font-bold text-center text-white font-montserrat bottom-10">Slide 3</span>
+              </div>
+              <div class="relative flex flex-col w-full text-center">
+                <img src="/images/kpc.jpg" alt="" class="w-full h-full" />
+                <span class="absolute left-0 right-0 text-xl font-bold text-center text-white font-montserrat bottom-10">Slide 4</span>
+              </div>
+            </div>
+
+            <button aria-label="Previous" class="flex flex-col items-center justify-center w-8 h-8 mt-10 ml-10 text-white rounded-full bg-sky-blue hover:bg-white glider-prev hover:text-secondary">
+              <svg class="flex-shrink-0 w-4 h-4 transform rotate-180">
+                <use xlink:href="#shape-arrow"></use>
+              </svg>
+            </button>
+            <button aria-label="Next" class="flex flex-col items-center justify-center w-8 h-8 mt-10 mr-10 text-white rounded-full bg-sky-blue hover:bg-white glider-next hover:text-secondary">
+              <svg class="flex-shrink-0 w-4 h-4 transform rotate-0">
+                <use xlink:href="#shape-arrow"></use>
+              </svg>
+            </button>
+            <div role="tablist" class="dots"></div>
+          </div>
+        </div>
         <div class="col-span-1 px-3 py-2 bg-white">
           <p class="py-2 mb-2 text-xl font-bold text-center text-black1">Important Links</p>
           <ul>
@@ -21,21 +53,43 @@
   {{/* home hero end */}}
 
 
-  <section class="py-4 bg-primary">
+  <section class="py-4 pt-8 mx-8 transform -translate-y-6 rounded-t-2xl bg-primary">
     <div class="container grid grid-cols-1 mx-auto md:grid-cols-2 gap-7 lg:grid-cols-3">
-      {{ range seq 3 }}
-        <div class="bg-white rounded-sm">
-          <p class="py-2 mb-2 text-xl font-bold text-center text-black1">News & Events</p>
-          <div class="bg-white">
-            {{ range seq 3 }}
-              <div class="flex mb-3">
-                <div class="flex flex-col items-center justify-center w-16 h-20 px-2 mr-3 font-bold text-center text-white bg-sky-blue rounded-r-md">24 Jan</div>
-                <p>Webinar on, “Basic Computer and Soft Skill Training for Physics and Philosophy Undergraduates” (ICT/Computing Skills) organized by the Career Counselling and Placement Cell</p>
-              </div>
-            {{ end }}
-          </div>
+      <div class="bg-white rounded-sm">
+        <p class="py-2 mb-2 text-xl font-bold text-center text-black1">Notices</p>
+        <div class="bg-white">
+          {{ range seq 3 }}
+            <a href="#" class="inline-flex items-center mb-4 hover:shadow-2xl">
+              <div class="flex flex-col items-center justify-center w-16 h-24 px-2 mr-3 font-bold text-center text-white bg-sky-blue rounded-r-md">24 Jan</div>
+              <p class="text-13 py-2.5 pr-1">Webinar on, “Basic Computer and Soft Skill Training for Physics and Philosophy Undergraduates” (ICT/Computing Skills) organized by the Career Counselling and Placement Cell</p>
+            </a>
+          {{ end }}
         </div>
-      {{ end }}
+      </div>
+
+      <div class="bg-white rounded-sm">
+        <p class="py-2 mb-2 text-xl font-bold text-center text-black1">Events</p>
+        <div class="bg-white">
+          {{ range seq 3 }}
+            <a href="#" class="inline-flex items-center mb-4 hover:shadow-2xl">
+              <div class="flex flex-col items-center justify-center w-16 h-24 px-2 mr-3 font-bold text-center text-white bg-sky-blue rounded-r-md">24 Jan</div>
+              <p class="text-13 py-2.5 pr-1">Webinar on, “Basic Computer and Soft Skill Training for Physics and Philosophy Undergraduates” (ICT/Computing Skills) organized by the Career Counselling and Placement Cell</p>
+            </a>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="bg-white rounded-sm">
+        <p class="py-2 mb-2 text-xl font-bold text-center text-black1">Tenders</p>
+        <div class="bg-white">
+          {{ range seq 3 }}
+            <a href="#" class="inline-flex items-center mb-4 hover:shadow-2xl">
+              <div class="flex flex-col items-center justify-center w-16 h-24 px-2 mr-3 font-bold text-center text-white bg-sky-blue rounded-r-md">24 Jan</div>
+              <p class="text-13 py-2.5 pr-1">Webinar on, “Basic Computer and Soft Skill Training for Physics and Philosophy Undergraduates” (ICT/Computing Skills) organized by the Career Counselling and Placement Cell</p>
+            </a>
+          {{ end }}
+        </div>
+      </div>
     </div>
   </section>
 
@@ -241,4 +295,21 @@
       </div>
     </div>
   </footer>
+
+  <script src="/plugins/glider_js/glider.min.js"></script>
+  <script>
+    const glider = new Glider(document.querySelector('.glider'), {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: '#dots',
+      rewind: true,
+      draggable: true,
+      arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next',
+      },
+    });
+
+    glider.refresh(true);
+  </script>
 {{ end }}
