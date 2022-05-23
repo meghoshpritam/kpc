@@ -93,24 +93,35 @@
     </div>
   </section>
 
-  <div class="container grid grid-cols-1 gap-10 mx-auto md:grid-cols-2 my-28">
+  <div class="container grid grid-cols-1 gap-10 mx-auto md:grid-cols-2 lg:grid-cols-3 my-28">
     <div class="max-w-md mx-auto">
-      <div class="flex flex-col items-center justify-center h-56 mb-3 bg-green-200">img</div>
-      <h3 class="mb-2 text-2xl font-bold">Our Mission & Vision</h3>
-      <p>Cultivating the sense of discipline and dedication in addition to the intellectual, moral and cultural development is the overall mission of Kancharapara College..</p>
-    </div>
-    <div class="max-w-md mx-auto">
-      <div class="flex flex-col items-center justify-center h-56 mb-3 bg-green-200">img</div>
+      <div class="flex flex-col items-center justify-center h-56 mb-4 bg-green-200">img</div>
       <h3 class="mb-2 text-2xl font-bold">Principal's Desk</h3>
-      <h4 class="text-xl font-bold">Dr. Pranab Kr. Bera</h4>
+      <h4 class="text-xl font-bold text-primary">Dr. Pranab Kr. Bera</h4>
       <p class="mt-1.5">
         Situated at the cross point between Kalyani and Kanchrapara, Kanchrapara College, established in 1972, under the entrepreneurship of the then MLA of the area, Hon’ble Sri Jagdish Chandra Das, Ex-teacher, Kanchrapara High School, is still now carrying the legacy of spreading of education
         among the common people of the locality.
       </p>
     </div>
+
+    <div class="max-w-md mx-auto">
+      <div class="flex flex-col items-center justify-center h-56 mb-4 bg-green-200">img</div>
+      <h3 class="mb-2 text-2xl font-bold">Our Mission & Vision</h3>
+      <p>Cultivating the sense of discipline and dedication in addition to the intellectual, moral and cultural development is the overall mission of Kancharapara College..</p>
+    </div>
+
+    <div class="max-w-md mx-auto">
+      <div class="flex flex-col items-center justify-center h-56 mb-4 bg-green-200">img</div>
+      <h3 class="mb-2 text-2xl font-bold">Our Objectives</h3>
+      <ul class="mt-1.5">
+        <li class="mb-1">• Holistic development of young adults enrolled as students.</li>
+        <li class="mb-1">• Providing quality higher education and taking care of intellectual, social, economic, emotional needs of students.</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="container grid grid-cols-1 gap-10 mx-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 my-28">
+  <h3 class="mb-10 text-4xl font-bold text-center mt-28 text-primary">Our Departments</h3>
+  <div class="container grid grid-cols-1 gap-10 mx-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-28">
     {{ range seq 4 }}
       <div>
         <div class="flex flex-col items-center justify-center h-56 mb-3 bg-yellow-200 rounded-sm">img</div>
@@ -119,64 +130,59 @@
     {{ end }}
   </div>
 
-  <div class="grid w-full grid-cols-1 bg-purple-200 my-28 md:grid-cols-2">
-    <div class="flex flex-col items-center justify-center bg-green-100">video</div>
-    <div class="bg-black bg-opacity-30">
-      <h4 class="py-6 text-3xl font-bold text-center text-white">Our Facilities</h4>
+  <div class="pb-12 bg-primary my-28 md:grid-cols-2">
+    <h4 class="py-6 pb-10 text-4xl font-bold text-center text-white">Our Facilities</h4>
 
-      <div>
-        <ul>
-          <li>
-            <div class="flex mb-8 ml-36 item-center justified-center">
-              <img src="https://durgapurgovtcollege.ac.in/wp-content/themes/dgc/images/all-icon/f-3.png" alt="icon" />
+    <ul class="container grid grid-cols-1 gap-10 px-4 mx-auto gap-y-14 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <li>
+        <div class="flex item-center justified-center">
+          <img src="https://durgapurgovtcollege.ac.in/wp-content/themes/dgc/images/all-icon/f-3.png" alt="icon" />
 
-              <h4 class="flex flex-col items-center justify-center text-xl font-semibold ml-2.5 text-white">Books &amp; Library</h4>
-            </div>
-            <!-- single feature -->
-          </li>
-          <li>
-            <div class="flex mb-8 ml-36 item-center justified-center">
-              <img src="https://durgapurgovtcollege.ac.in/wp-content/themes/dgc/images/all-icon/f-2.png" alt="icon" />
+          <h4 class="flex flex-col items-center justify-center text-xl font-semibold ml-2.5 text-white">Books &amp; Library</h4>
+        </div>
+        <!-- single feature -->
+      </li>
+      <li>
+        <div class="flex item-center justified-center">
+          <img src="https://durgapurgovtcollege.ac.in/wp-content/themes/dgc/images/all-icon/f-2.png" alt="icon" />
 
-              <h4 class="flex flex-col items-center justify-center text-xl font-semibold ml-2.5 text-white">Smart Classrooms</h4>
-            </div>
-            <!-- single feature -->
-          </li>
-          <li>
-            <div class="flex mb-8 ml-36 item-center justified-center">
-              <img src="https://durgapurgovtcollege.ac.in/wp-content/themes/dgc/images/all-icon/f-1.png" alt="icon" />
+          <h4 class="flex flex-col items-center justify-center text-xl font-semibold ml-2.5 text-white">Smart Classrooms</h4>
+        </div>
+        <!-- single feature -->
+      </li>
+      <li>
+        <div class="flex item-center justified-center">
+          <img src="https://durgapurgovtcollege.ac.in/wp-content/themes/dgc/images/all-icon/f-1.png" alt="icon" />
 
-              <h4 class="flex flex-col items-center justify-center text-xl font-semibold ml-2.5 text-white">Playgrounds</h4>
-            </div>
-            <!-- single feature -->
-          </li>
-          <li>
-            <div class="flex mb-8 ml-36 item-center justified-center">
-              <img src="https://durgapurgovtcollege.ac.in/wp-content/themes/dgc/images/all-icon/f-2.png" alt="icon" />
+          <h4 class="flex flex-col items-center justify-center text-xl font-semibold ml-2.5 text-white">Playgrounds</h4>
+        </div>
+        <!-- single feature -->
+      </li>
+      <li>
+        <div class="flex item-center justified-center">
+          <img src="https://durgapurgovtcollege.ac.in/wp-content/themes/dgc/images/all-icon/f-2.png" alt="icon" />
 
-              <h4 class="flex flex-col items-center justify-center text-xl font-semibold ml-2.5 text-white">Seminar Halls</h4>
-            </div>
-            <!-- single feature -->
-          </li>
-          <li>
-            <div class="flex mb-8 ml-36 item-center justified-center">
-              <img src="https://durgapurgovtcollege.ac.in/wp-content/themes/dgc/images/all-icon/f-1.png" alt="icon" />
+          <h4 class="flex flex-col items-center justify-center text-xl font-semibold ml-2.5 text-white">Seminar Halls</h4>
+        </div>
+        <!-- single feature -->
+      </li>
+      <li>
+        <div class="flex item-center justified-center">
+          <img src="https://durgapurgovtcollege.ac.in/wp-content/themes/dgc/images/all-icon/f-1.png" alt="icon" />
 
-              <h4 class="flex flex-col items-center justify-center text-xl font-semibold ml-2.5 text-white">Differently-abled friendly</h4>
-            </div>
-            <!-- single feature -->
-          </li>
-          <li>
-            <div class="flex mb-8 ml-36 item-center justified-center">
-              <img src="https://durgapurgovtcollege.ac.in/wp-content/themes/dgc/images/all-icon/f-2.png" alt="icon" />
+          <h4 class="flex flex-col items-center justify-center text-xl font-semibold ml-2.5 text-white">Differently-abled friendly</h4>
+        </div>
+        <!-- single feature -->
+      </li>
+      <li>
+        <div class="flex item-center justified-center">
+          <img src="https://durgapurgovtcollege.ac.in/wp-content/themes/dgc/images/all-icon/f-2.png" alt="icon" />
 
-              <h4 class="flex flex-col items-center justify-center text-xl font-semibold ml-2.5 text-white">Common Rooms</h4>
-            </div>
-            <!-- single feature -->
-          </li>
-        </ul>
-      </div>
-    </div>
+          <h4 class="flex flex-col items-center justify-center text-xl font-semibold ml-2.5 text-white">Common Rooms</h4>
+        </div>
+        <!-- single feature -->
+      </li>
+    </ul>
   </div>
 
   {{/* testimonial section start */}}
