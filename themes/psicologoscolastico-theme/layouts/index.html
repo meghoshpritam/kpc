@@ -93,6 +93,27 @@
     </div>
   </section>
 
+  <section class="container grid grid-cols-1 px-4 mx-auto gap-x-10 gap-y-14 my-28 md:grid-cols-2">
+    <div class="font-montserrat">
+      <p class="text-base font-bold">About us</p>
+      <hr class="outline-none border-none bg-secondary w-12 h-0.5 my-1.5" />
+      <h2 class="mt-2 mb-6 text-4xl font-bold">Welcome to KPC</h2>
+      <div class="font-semibold font-roboto">
+        <p>UGC 2(f) and 12 (B) status</p>
+        <p>NAAC Accredited College with A Grade in 2017 (2nd Cycle)</p>
+        <p>[CGPA=3.02]</p>
+        <p>DST-FIST Sponsored College</p>
+        <p>RUSA funded College</p>
+        <p>Affiliated to Kalyani University, Kalyani</p>
+        <p></p>
+      </div>
+      <div class="mt-5 text-sm font-medium leading-relaxed">
+        Kancharapara College, established in 1969, stood out at the time of its inception in being the only government college serving the intellectual needs of a whole generation of young learners from Burdwan (now Bardhaman) Bankura, Birbhum and Purulia. Despite experiencing overwhelming
+        changes, the institution continues to stand out as a distinguished house of learning, nurturing positive qualities of both students and staff and the only government college in the district of Paschim Bardhaman.
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-center w-full h-full bg-red-200">img</div>
+  </section>
   <div class="container grid grid-cols-1 gap-10 mx-auto md:grid-cols-2 lg:grid-cols-3 my-28">
     <div class="max-w-md mx-auto">
       <div class="flex flex-col items-center justify-center h-56 mb-4 bg-green-200">img</div>
@@ -123,10 +144,10 @@
   <h3 class="mb-10 text-4xl font-bold text-center mt-28 text-primary">Our Departments</h3>
   <div class="container grid grid-cols-1 gap-10 mx-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-28">
     {{ range seq 4 }}
-      <div>
-        <div class="flex flex-col items-center justify-center h-56 mb-3 bg-yellow-200 rounded-sm">img</div>
+      <a href="/departments/computer-science" class="inline-block pb-2 rounded-sm hover:shadow-2xl">
+        <div class="flex flex-col items-center justify-center mb-3 bg-yellow-200 rounded-sm h-44">img</div>
         <h3 class="text-xl font-medium text-center">Department Name</h3>
-      </div>
+      </a>
     {{ end }}
   </div>
 
@@ -207,47 +228,14 @@
       </div>
       {{ $review := .reviews }}
       {{ $numReviews := len .list }}
-      <div class="">
-        <div class="relative pb-24 md:pr-36">
-          <div class="relative">
-            {{ partial "images/responsive" (dict "src" .image "alt" .imageAlt "class" "w-full h-auto rounded-2xl" "width" "943" "height" "1179") }}
-            <div class="absolute inset-0 flex flex-col justify-center">
-              <div class="flex items-center">
-                <button type="button" aria-label="Previous testimonial" data-id="testimonial-previous-btn" onclick="App.previousTestimonial();" class="flex flex-col items-center justify-center hidden w-16 h-16 bg-white rounded-full hover:text-white hover:bg-sky-blue text-sky-blue">
-                  <svg class="w-4 transform rotate-180 h-7">
-                    <use xlink:href="#shape-arrow" />
-                  </svg>
-                </button>
-                <span class="flex-grow"></span>
-                <button type="button" aria-label="Next testimonial" data-id="testimonial-next-btn" onclick="App.nextTestimonial(Number('{{ $numReviews }}'));" class="flex flex-col items-center justify-center w-16 h-16 bg-white rounded-full hover:text-white hover:bg-sky-blue text-sky-blue">
-                  <svg class="w-4 h-7">
-                    <use xlink:href="#shape-arrow" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+        {{ range seq 4 }}
+          <div class="font-montserrat">
+            <div class="w-40 h-40 mx-auto bg-green-200 rounded-full"></div>
+            <p class="font-bold mt-2.5 mb-1 text-center">Student Name</p>
+            <p class="text-sm font-medium text-center text-secondary">Department</p>
           </div>
-          {{ range $idx, $testimonial := .list }}
-            <div class="absolute bottom-0 right-0 py-4 sm:py-8 sm:ml-16 bg-white rounded-2xl px-5 sm:px-14 shadow-card1 animate__animated animate__faster {{ if ne $idx 0 }}hidden{{ end }}" data-testimonial-id="{{ $idx }}">
-              <div class="text-lg font-nunitoSans text-gray2 leading-1.8">{{ .review | markdownify }}</div>
-              <div class="flex items-center justify-between mt-9">
-                <div class="text-lg font-nunitoSans text-indigo3">{{ .name }}</div>
-                <div>
-                  <div class="flex items-center">
-                    {{ range seq .rating }}
-                      <svg class="w-5 h-5 mr-1">
-                        <use xlink:href="#shape-star5" />
-                      </svg>
-                    {{ end }}
-                  </div>
-                  {{ $reviewString := replace $review "{0}" (add $idx 1) }}
-                  {{ $reviewString = replace $reviewString "{1}" $numReviews }}
-                  <p class="mt-1 text-sm font-nunitoSans text-indigo4">{{ $reviewString }}</p>
-                </div>
-              </div>
-            </div>
-          {{ end }}
-        </div>
+        {{ end }}
       </div>
     </section>
   {{ end }}
@@ -257,6 +245,17 @@
 
   {{ partial "schema/website.html" . }}
 
+
+  <div class="pb-16 bg-gray3 my-28">
+    <div class="container px-4 mx-auto">
+      <h4 class="py-6 pb-10 text-4xl font-bold text-center text-primary">Our Gallery</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-16 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        {{ range seq 8 }}
+          <div class="h-32 bg-red-400 rounded-lg"></div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
 
   <footer class="py-5 text-white footer bg-primary">
     <div class="container grid grid-cols-2 gap-10 mx-auto footer-container md:grid-cols-2 lg:grid-cols-4">

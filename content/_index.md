@@ -150,6 +150,9 @@ testimonial:
     They make us proud
   details: >
     Our students have cleared National Level Examinations, placed for higher studies in IITs, IISER and reputed Universities, won NCC and sports championships and prizes in competitions.
+  cta:
+      label: See all our achivers
+      url: /
   reviews: "{0}/{1} reviews"
   image: "/images/testimonial.webp"
   imageAlt: "testimonial image"
