@@ -1,24 +1,35 @@
 {{ define "main" }}
-{{ $pageData := .Site.Data.singlePageTemplate }}
+  {{ $pageData := .Site.Data.singlePageTemplate }}
 
-<section class="bg-sky-blue">
-  {{ partial "header.html" . }}
-</section>
-<div class="physics">
-  <div class="min-w-full font-bold h-92"
-  style="background-image: url('/images/physics.jpg')">
-  <h1>Physics</h1>
-</div>
-</div>
-<div class="min-w-full bg-gray-200 dept h-100">
-   <div style="background-color:white" class="justify-between mx-auto py-28 h-72 w-250" >
-    <h1 class="mx-10 text-4xl">Department of Physics</h1>
-   </div>
-</div>
-<section class="h-screen">
-  department section start
-</section>
 
-{{ partial "schema/website.html" . }}
+  <section class="bg-sky-blue">
+    {{ partial "header.html" . }}
+  </section>
+  <div class="physics">
+    <div class="min-w-full font-bold h-92" style="background-image: url('/images/physics.jpg')">
+      <h1>Physics</h1>
+    </div>
+  </div>
+  <div class="min-w-full bg-gray-200 dept h-100">
+    <div style="background-color:white" class="w-3/4 py-6 mx-auto h-5/6">
+      <h1 class="flex justify-center text-4xl">Department of Physics</h1>
+      <nav class="mx-6 bg-gray-200 h-1/6">
+        <ul class="flex justify-center my-4">
+          <li class="py-3 cursor-pointer mx-14">History</li>
+          <li class="py-3 cursor-pointer mx-14">Courses</li>
+          <li class="py-3 cursor-pointer mx-14">Outcome</li>
+          <li class="py-3 cursor-pointer mx-14">Faculty</li>
+          <li class="py-3 cursor-pointer mx-14">Intake</li>
+          <li class="py-3 cursor-pointer mx-14">Infrastructure</li>
+          <li class="py-3 cursor-pointer mx-14">Teaching</li>
+          <li class="py-3 cursor-pointer mx-14">Assessment</li>
+          <li class="py-3 cursor-pointer mx-14">Results</li>
+          <li class="py-3 cursor-pointer mx-14">Events</li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <section class="h-screen">department section start</section>
 
+  {{ partial "schema/website.html" . }}
 {{ end }}
