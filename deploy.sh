@@ -1,4 +1,4 @@
-npm i
+yarn
 hugo --minify
 [ ! -d "./build" ] && git clone git@github.com:meghoshpritam/kpc.git build
 cd build
