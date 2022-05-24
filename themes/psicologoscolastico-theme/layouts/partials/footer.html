@@ -75,5 +75,5 @@
 <!-- tidio chat script end -->
 
 {{/* script start */}}
-{{ $opts := dict "config" "assets/js/babepdepll.config.js" "noComments" true "minified" true }}
+{{ $opts := dict "config" "assets/js/babel.config.js" "noComments" true "minified" true }}
 {{- $transpiled := resources.Get "js/app.js" | babel $opts | resources.Minify -}}<script async src="{{ $transpiled.RelPermalink }}"></script> {{/* script end */}}
