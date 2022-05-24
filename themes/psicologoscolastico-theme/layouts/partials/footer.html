@@ -10,26 +10,61 @@
 {{/* scroll top top button end */}}
 
 {{/* footer start */}}
-{{ with .Site.Data.footer }}
-  {{ partial "contact-us.html" .contactUs }}
-  <footer class="py-1 text-white bg-dark">
-    {{/*  <div class="flex items-center justify-center">
-      {{ range $idx, $ctx := .links }}
-        {{ if ne $idx 0 }}
-          <span class="mx-1.5 text-gray2">|</span>
-        {{ end }}
-        <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="hover:text-secondary">{{ .title }}</a>
-      {{ end }}
-    </div>  */}}
-    {{ with .bottom }}
-      <div class="flex items-center justify-center mt-4 footer-last">
-        {{ .before | markdownify }}
-        <span class="current-year-footer-0102">2022</span>
-        {{ .after | markdownify }}
+<footer class="pt-5 text-white footer bg-primary">
+  <div class="container grid grid-cols-2 gap-10 pb-8 mx-auto footer-container md:grid-cols-2 lg:grid-cols-4">
+    <div class="box">
+      <div class="mb-2 text-xl font-bold heading">How to Find Us</div>
+      <p class="content">
+        <strong>Kanchrapara College </strong><br />
+        Kanchrapara <br />
+        North 24-PGS <br />
+        PIN- 743145 <br />
+        <br />
+        Tel: (033) 25858790/5159 <br />
+        Email: info@kpcoll.ac.in
+      </p>
+    </div>
+
+    <div class="box">
+      <div class="mb-2 text-xl font-bold heading">Quick Links</div>
+      <div class="flex flex-col space-y-3 links">
+        <a href="#" class="link">Login</a>
+        <a href="#" class="link">Department</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUj3uiumXJs88YyZJ2RJZTD5KYylcJJbwZDdjpWksuaGBnPg/viewform?usp=sf_link" class="link" target="_blank">Leave Details</a>
+        <a href="#" class="link">Sitemap</a>
       </div>
-    {{ end }}
-  </footer>
-{{ end }}
+    </div>
+    <div class="box">
+      <div class="mb-2 text-xl font-bold heading">Other Links</div>
+      <div class="flex flex-col space-y-3 links">
+        <a href="https://www.klyuniv.ac.in/" class="link" target="_blank">University of Kalyani</a>
+        <a href="https://www.ugc.ac.in/" class="link" target="_blank">University Grants Commission</a>
+        <a href="http://www.naac.gov.in/" class="link" target="_blank">NAAC</a>
+        <a href="https://wbhed.gov.in/" class="link" target="_blank">Highrt Education Dept.</a>
+      </div>
+    </div>
+    <div class="box">
+      <div class="mb-2 text-xl font-bold heading">Corner</div>
+      <div class="flex flex-col space-y-3 links">
+        <a href="#" class="link">College Corner</a>
+        <a href="#" class="link">Teacher Corner</a>
+        <a href="#" class="link">Student Corner</a>
+      </div>
+    </div>
+  </div>
+  {{ with .Site.Data.footer }}
+    {{ partial "contact-us.html" .contactUs }}
+    <div class="py-32 text-sm text-white bg-dark">
+      {{ with .bottom }}
+        <div class="flex items-center justify-center footer-last">
+          {{ .before | markdownify }}
+          <span class="current-year-footer-0102">2022</span>
+          {{ .after | markdownify }}
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+</footer>
 {{/* footer end */}}
 
 
