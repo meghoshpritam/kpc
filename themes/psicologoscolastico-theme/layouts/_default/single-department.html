@@ -1,21 +1,35 @@
 {{ define "main" }}
-{{ $pageData := .Site.Data.singlePageTemplate }}
+  {{ $pageData := .Site.Data.singlePageTemplate }}
 
-<section class="bg-primary">
-  {{ partial "header.html" . }}
-</section>
 
-<section class="h-screen">
-  <div class="relative flex flex-col items-center justify-center w-full h-48 bg-red-200">dept img
-    <div class="container absolute left-0 right-0 px-4 mx-auto text-4xl font-bold text-white top-20">Department Name</div>
+  <section class="bg-sky-blue">
+    {{ partial "header.html" . }}
+  </section>
+  <div class="physics">
+    <div class="font-bold h-92" style="background-image: url('/images/physics.jpg')">
+      <h1>Physics</h1>
+    </div>
   </div>
-  <div class="container grid grid-cols-5 px-4 mx-auto">
-    {{ range seq 5 }}
-      <div class="px-2 py-3 font-bold text-center {{ if eq . 1 }}bg-primary text-white{{ else }}bg-gray-100{{ end }}">Tab Name</div>
-    {{ end }}
+  <div class="min-w-full pt-16 bg-gray-100 dept h-200">
+    <div style="background-color:white" class="w-3/4 py-6 mx-auto h-5/6">
+      <h1 class="flex justify-center text-4xl">Department of Physics</h1>
+      <nav class="mx-6 bg-gray-100 h-11">
+        <ul class="flex justify-center my-4">
+          <li class="py-3 cursor-pointer mx-9">History</li>
+          <li class="py-3 cursor-pointer mx-9">Courses</li>
+          <li class="py-3 cursor-pointer mx-9">Outcome</li>
+          <li class="py-3 cursor-pointer mx-9">Faculty</li>
+          <li class="py-3 cursor-pointer mx-9">Intake</li>
+          <li class="py-3 cursor-pointer mx-9">Infrastructure</li>
+          <li class="py-3 cursor-pointer mx-9">Teaching</li>
+          <li class="py-3 cursor-pointer mx-9">Assessment</li>
+          <li class="py-3 cursor-pointer mx-9">Results</li>
+          <li class="py-3 cursor-pointer mx-9">Events</li>
+        </ul>
+      </nav>
+    </div>
   </div>
-</section>
+  <section class="h-screen">department section start</section>
 
-{{ partial "schema/website.html" . }}
-
+  {{ partial "schema/website.html" . }}
 {{ end }}
