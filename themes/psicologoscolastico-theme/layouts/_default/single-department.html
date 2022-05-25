@@ -6,29 +6,79 @@
     {{ partial "header.html" . }}
   </section>
   <div class="physics">
-    <div class="font-bold h-92" style="background-image: url('/images/physics.jpg')">
-      <h1>Physics</h1>
+    <div class="relative font-bold h-92" style="background-image: url('/images/physics.jpg')">
+      <div class="absolute inset-0 z-10 bg-black opacity-30"></div>
+      <h1 class="container relative z-20 px-4 pt-20 mx-auto text-5xl text-white">Physics</h1>
     </div>
   </div>
   <div class="min-w-full pt-16 bg-gray-100 dept h-200">
-    <div style="background-color:white" class="w-3/4 py-6 mx-auto h-5/6">
-      <h1 class="flex justify-center text-4xl">Department of Physics</h1>
-      <nav class="mx-6 bg-gray-100 h-11">
-        <ul class="flex justify-center my-4">
-          <li class="py-3 cursor-pointer mx-9">History</li>
-          <li class="py-3 cursor-pointer mx-9">Courses</li>
-          <li class="py-3 cursor-pointer mx-9">Outcome</li>
-          <li class="py-3 cursor-pointer mx-9">Faculty</li>
-          <li class="py-3 cursor-pointer mx-9">Intake</li>
-          <li class="py-3 cursor-pointer mx-9">Infrastructure</li>
-          <li class="py-3 cursor-pointer mx-9">Teaching</li>
-          <li class="py-3 cursor-pointer mx-9">Assessment</li>
-          <li class="py-3 cursor-pointer mx-9">Results</li>
-          <li class="py-3 cursor-pointer mx-9">Events</li>
+    <div class="container px-4 py-6 mx-auto bg-white">
+      <h1 class="flex justify-center pb-5 text-4xl">Department of Physics</h1>
+      <nav class="bg-gray-100 h-11">
+        <ul class="flex justify-center my-4 font-medium" data-id="tab-controller-contaner">
+          <li class="">
+            <button class="px-5 py-3 mx-1 text-white duration-300 ease-in-out hover:text-white hover:bg-primary bg-primary" onclick="changeTab(1);">History</button>
+          </li>
+          <li class="">
+            <button class="px-5 py-3 mx-1 duration-300 ease-in-out hover:bg-primary hover:text-white" onclick="changeTab(2);">Courses</button>
+          </li>
+          <li class="">
+            <button class="px-5 py-3 mx-1 duration-300 ease-in-out hover:bg-primary hover:text-white" onclick="changeTab(3);">Outcome</button>
+          </li>
+          <li class="">
+            <button class="px-5 py-3 mx-1 duration-300 ease-in-out hover:bg-primary hover:text-white" onclick="changeTab(4);">Faculty</button>
+          </li>
+          <li class="">
+            <button class="px-5 py-3 mx-1 duration-300 ease-in-out hover:bg-primary hover:text-white" onclick="changeTab(5);">Intake</button>
+          </li>
+          <li class="">
+            <button class="px-5 py-3 mx-1 duration-300 ease-in-out hover:bg-primary hover:text-white" onclick="changeTab(6);">Infrastructure</button>
+          </li>
+          <li class="">
+            <button class="px-5 py-3 mx-1 duration-300 ease-in-out hover:bg-primary hover:text-white" onclick="changeTab(7);">Teaching</button>
+          </li>
+          <li class="">
+            <button class="px-5 py-3 mx-1 duration-300 ease-in-out hover:bg-primary hover:text-white" onclick="changeTab(8);">Assessment</button>
+          </li>
+          <li class="">
+            <button class="px-5 py-3 mx-1 duration-300 ease-in-out hover:bg-primary hover:text-white" onclick="changeTab(9);">Results</button>
+          </li>
+          <li class="">
+            <button class="px-5 py-3 mx-1 duration-300 ease-in-out hover:bg-primary hover:text-white" onclick="changeTab(10);">Events</button>
+          </li>
         </ul>
       </nav>
+      <div class="px-8 mt-10 h-60" data-id="main-tab-container">
+        <div>History</div>
+        <div class="hidden">Courses</div>
+        <div class="hidden">outcome</div>
+        <div class="hidden">Faculty</div>
+        <div class="hidden">Intake</div>
+        <div class="hidden">Infrastructure</div>
+        <div class="hidden">Teaching</div>
+        <div class="hidden">Assessment</div>
+        <div class="hidden">Results</div>
+        <div class="hidden">Events</div>
+      </div>
     </div>
   </div>
 
   {{ partial "schema/website.html" . }}
+
+
+  <script>
+    function changeTab(index) {
+      const displayTabElement = document.querySelector('[data-id="main-tab-container"] div:not(.hidden)');
+      displayTabElement.classList.add('hidden');
+
+      const tabElements = document.querySelectorAll('[data-id="main-tab-container"] div');
+      tabElements[index - 1].classList.remove('hidden');
+
+      const currentSelectedButton = document.querySelector('[data-id="tab-controller-contaner"] button.bg-primary.text-white');
+      currentSelectedButton.classList.remove('text-white', 'bg-primary');
+
+      const tabControllerElements = document.querySelectorAll('[data-id="tab-controller-contaner"] button');
+      tabControllerElements[index - 1].classList.add('text-white', 'bg-primary');
+    }
+  </script>
 {{ end }}
