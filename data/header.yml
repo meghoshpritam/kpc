@@ -5,6 +5,10 @@ logo:
 
 college:
   name: Kanchrapara College
+  i18nNames: 
+    - Kanchrapara College
+    - कांचरापाड़ा कॉलेज
+    - কাঁচরাপাড়া কলেজ
   affiliated: Affiliated to University of Kalyani
   grade: Accredited by B+
 
