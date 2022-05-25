@@ -54,7 +54,7 @@
   </div>
   {{ with .Site.Data.footer }}
     {{ partial "contact-us.html" .contactUs }}
-    <div class="py-32 text-sm text-white bg-dark">
+    <div class="py-2 text-sm text-white bg-dark">
       {{ with .bottom }}
         <div class="flex items-center justify-center footer-last">
           {{ .before | markdownify }}
