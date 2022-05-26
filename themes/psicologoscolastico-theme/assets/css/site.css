@@ -147,3 +147,11 @@ input.nav-menu:checked ~ label.nav-menu svg {
 input.nav-menu:checked ~ ul.nav-menu {
   @apply block;
 }
+
+input.nav-menu ~ label.nav-menu-overlay {
+  @apply hidden;
+}
+
+input.nav-menu:checked ~ label.nav-menu-overlay {
+  @apply block;
+}

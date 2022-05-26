@@ -74,6 +74,10 @@ module.exports = {
         1.8: '1.8',
         17: '4.25rem',
       },
+      maxHeight: {
+        '65vh': '65h',
+        '70vh': '70vh',
+      },
       scale: {
         60: '0.6',
       },
