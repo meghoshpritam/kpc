@@ -9,7 +9,7 @@
               {{ $inputId := print (.label | urlize) "-nav-menu" $.suffix }}
               <input type="checkbox" name="{{ .label }}" id="{{ $inputId }}" hidden class="hidden nav-menu" data-id="top-nav-menu" onchange="closeOtherMenuItem(this);" />
               <label for="{{ $inputId }}" class="fixed inset-0 z-10 bg-black bg-opacity-10 nav-menu-overlay"></label>
-              <label for="{{ $inputId }}" class="cursor-pointer nav-menu relative z-20 {{ $classNme }}">{{ .label }}</label>
+              <label for="{{ $inputId }}" class="cursor-pointer nav-menu relative z-20 {{ $classNme }}" onmouseover="showMenu(this);">{{ .label }}</label>
               <ul class="absolute z-20 w-56 py-2 overflow-y-auto transform -translate-x-16 bg-white shadow-xl top-8 nav-menu max-h-65vh scroll-bar">
                 {{ range .submenu }}
                   <li class="mb-2 text-black1">
@@ -239,4 +239,11 @@
       menuInputElement.checked = false;
     }
   });
+
+  function showMenu(element) {
+    const id = element.getAttribute('for');
+    const inputElement = document.querySelector(`input#${id}`);
+    closeOtherMenuItem(inputElement);
+    inputElement.checked = true;
+  }
 </script>
