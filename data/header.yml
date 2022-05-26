@@ -106,13 +106,23 @@ menu:
       - label: NSOU
         url: /
       - label: Departments
-        url: /
-      - label: Arts
-        url: /
-      - label: Science
-        url: /
-      - label: Commerce
-        url: /
+        submenu:
+          - label: Under Graduate (UG)
+            submenu:
+              - label: Arts
+                url: /
+              - label: Science
+                url: /
+              - label: Commerce
+                url: /
+          - label: Post Graduate (PG)
+            submenu:
+              - label: Arts
+                url: /
+              - label: Science
+                url: /
+              - label: Commerce
+                url: /
       - label: Physical Education
         url: /
   - label: Beyond The Curriculum
