@@ -55,9 +55,9 @@
 
   <section class="py-4 pt-8 mt-16 transform lg:mt-0 lg:mx-8 lg:-translate-y-6 rounded-t-2xl bg-primary">
     <div class="container grid grid-cols-1 mx-auto md:grid-cols-2 gap-7 lg:grid-cols-3">
-      <div class="bg-white rounded-sm">
+      <div class="flex flex-col bg-white rounded-sm">
         <p class="py-2 mb-2 text-xl font-bold text-center text-black1">Notices</p>
-        <div class="bg-white">
+        <div class="flex-grow bg-white">
           {{ range seq 3 }}
             <a href="#" class="inline-flex items-center mb-4 hover:shadow-2xl">
               <div class="flex flex-col items-center justify-center w-16 h-24 px-2 mr-3 font-bold text-center text-white bg-sky-blue rounded-r-md">24 Jan</div>
@@ -65,11 +65,14 @@
             </a>
           {{ end }}
         </div>
+        <div class="flex justify-end w-full pb-3">
+          <a href="/" class="flex-shrink-0 inline-block px-8 py-2 font-bold text-white border-2 rounded-sm hover:text-sky-blue hover:bg-white bg-sky-blue border-sky-blue">See All</a>
+        </div>
       </div>
 
-      <div class="bg-white rounded-sm">
+      <div class="flex flex-col bg-white rounded-sm">
         <p class="py-2 mb-2 text-xl font-bold text-center text-black1">Events</p>
-        <div class="bg-white">
+        <div class="flex-grow bg-white">
           {{ range seq 3 }}
             <a href="#" class="inline-flex items-center mb-4 hover:shadow-2xl">
               <div class="flex flex-col items-center justify-center w-16 h-24 px-2 mr-3 font-bold text-center text-white bg-sky-blue rounded-r-md">24 Jan</div>
@@ -77,17 +80,23 @@
             </a>
           {{ end }}
         </div>
+        <div class="flex justify-end w-full pb-3">
+          <a href="/" class="flex-shrink-0 inline-block px-8 py-2 font-bold text-white border-2 rounded-sm hover:text-sky-blue hover:bg-white bg-sky-blue border-sky-blue">See All</a>
+        </div>
       </div>
 
-      <div class="bg-white rounded-sm">
+      <div class="flex flex-col bg-white rounded-sm">
         <p class="py-2 mb-2 text-xl font-bold text-center text-black1">Tenders</p>
-        <div class="bg-white">
-          {{ range seq 3 }}
+        <div class="flex-grow bg-white">
+          {{ range seq 2 }}
             <a href="#" class="inline-flex items-center mb-4 hover:shadow-2xl">
               <div class="flex flex-col items-center justify-center w-16 h-24 px-2 mr-3 font-bold text-center text-white bg-sky-blue rounded-r-md">24 Jan</div>
               <p class="text-13 py-2.5 pr-1">Webinar on, “Basic Computer and Soft Skill Training for Physics and Philosophy Undergraduates” (ICT/Computing Skills) organized by the Career Counselling and Placement Cell</p>
             </a>
           {{ end }}
+        </div>
+        <div class="flex justify-end w-full pb-3">
+          <a href="/" class="flex-shrink-0 inline-block px-8 py-2 font-bold text-white border-2 rounded-sm hover:text-sky-blue hover:bg-white bg-sky-blue border-sky-blue">See All</a>
         </div>
       </div>
     </div>
@@ -228,10 +237,10 @@
       </div>
       {{ $review := .reviews }}
       {{ $numReviews := len .list }}
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+      <div class="grid max-w-md grid-cols-1 gap-8 sm:grid-cols-2">
         {{ range seq 4 }}
           <div class="font-montserrat">
-            <div class="w-40 h-40 mx-auto bg-green-200 rounded-full"></div>
+            <div class="w-32 h-32 mx-auto bg-green-200 rounded-full"></div>
             <p class="font-bold mt-2.5 mb-1 text-center">Student Name</p>
             <p class="text-sm font-medium text-center text-secondary">Department</p>
           </div>
