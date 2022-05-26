@@ -123,7 +123,7 @@
     </div>
     <div class="flex flex-col items-center justify-center w-full h-full bg-red-200">img</div>
   </section>
-  <div class="container grid grid-cols-1 gap-10 mx-auto md:grid-cols-2 lg:grid-cols-3 my-28">
+  <div class="container grid grid-cols-1 gap-10 px-4 mx-auto md:grid-cols-2 lg:grid-cols-3 my-28">
     <div class="max-w-md mx-auto">
       <div class="flex flex-col items-center justify-center h-56 mb-4 bg-green-200">img</div>
       <h3 class="mb-2 text-2xl font-bold">Principal's Desk</h3>
@@ -150,15 +150,30 @@
     </div>
   </div>
 
-  <h3 class="mb-10 text-4xl font-bold text-center mt-28 text-primary">Our Departments</h3>
-  <div class="container grid grid-cols-1 gap-10 mx-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-28">
-    {{ range seq 4 }}
-      <a href="/departments/computer-science" class="inline-block pb-2 rounded-sm hover:shadow-2xl">
-        <div class="flex flex-col items-center justify-center mb-3 bg-yellow-200 rounded-sm h-44">img</div>
-        <h3 class="text-xl font-medium text-center">Department Name</h3>
-      </a>
-    {{ end }}
-  </div>
+  <section class="container relative w-full px-6 mx-auto d-glider-contain mb-28">
+    <h3 class="mb-10 text-4xl font-bold text-center mt-28 text-primary">Our Departments</h3>
+    <div class="w-full pb-3 d-glider">
+      {{ range seq 9 }}
+        <a href="/departments/computer-science" class="inline-block pb-2 rounded-sm hover:shadow-2xl sm:mx-5">
+          <div class="flex flex-col items-center justify-center mb-3 bg-yellow-200 rounded-sm h-44">img {{ . }}</div>
+          <h3 class="text-xl font-medium text-center">Department Name {{ . }}</h3>
+        </a>
+      {{ end }}
+    </div>
+
+    <button aria-label="Previous" class="absolute flex flex-col items-center justify-center w-8 h-8 mt-10 ml-10 text-white rounded-full -left-9 top-28 bg-sky-blue hover:bg-white d-glider-prev hover:text-secondary">
+      <svg class="flex-shrink-0 w-4 h-4 transform rotate-180">
+        <use xlink:href="#shape-arrow"></use>
+      </svg>
+    </button>
+    <button aria-label="Next" class="absolute flex flex-col items-center justify-center w-8 h-8 mt-10 mr-10 text-white rounded-full -right-9 top-28 bg-sky-blue hover:bg-white d-glider-next hover:text-secondary">
+      <svg class="flex-shrink-0 w-4 h-4 transform rotate-0">
+        <use xlink:href="#shape-arrow"></use>
+      </svg>
+    </button>
+
+    <div role="tablist" class="dots"></div>
+  </section>
 
   <div class="pb-12 bg-primary my-28 md:grid-cols-2">
     <h4 class="py-8 text-4xl font-bold text-center text-white pb-14">Our Facilities</h4>
@@ -271,7 +286,7 @@
     const glider = new Glider(document.querySelector('.glider'), {
       slidesToShow: 1,
       slidesToScroll: 1,
-      dots: '#dots',
+      dots: '.dots',
       rewind: true,
       draggable: true,
       arrows: {
@@ -281,5 +296,50 @@
     });
 
     glider.refresh(true);
+
+    var dGlider = new Glider(document.querySelector('.d-glider'), {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: '.dots',
+      rewind: true,
+      draggable: true,
+      duration: 0.25,
+      arrows: {
+        prev: '.d-glider-prev',
+        next: '.d-glider-next',
+      },
+      responsive: [
+        {
+          // screens greater than >= 768px
+          breakpoint: 768,
+          settings: {
+            // Set to `auto` and provide item width to adjust to viewport
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            duration: 0.25,
+          },
+        },
+        {
+          // screens greater than >= 1024px
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2,
+            duration: 0.25,
+          },
+        },
+        {
+          // screens greater than >= 1280px
+          breakpoint: 1280,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            duration: 0.25,
+          },
+        },
+      ],
+    });
+
+    dGlider.refresh(true);
   </script>
 {{ end }}
