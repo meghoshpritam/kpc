@@ -62,6 +62,9 @@ module.exports = {
         rockSalt: ['RockSalt', 'cursive', 'sans-serif'],
       },
       fontSize: {
+        7: '0.4375rem',
+        8: '0.5rem',
+        9: '0.5625rem',
         10: '0.625rem',
         11: '0.6875rem',
         13: '0.8125rem',
