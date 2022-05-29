@@ -77,6 +77,8 @@ menu:
         url: /
       - label: Non-Teaching Staff
         url: /
+      - label: Committee & Sub Committee
+        url: /
   - label: IQAC
     submenu:
       - label: About IQAC

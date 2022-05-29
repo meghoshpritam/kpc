@@ -1,26 +1,29 @@
 {{ define "sub-menu" }}
-  {{ $menuListItemClass := "mx-0 hover:text-white inline-flex w-full hover:bg-primary ease-in-out duration-300 px-2 py-1.5" }}
-  <li class="mb-2 text-black1">
-    {{ if .submenu }}
-      {{ $subMenuId1 := .label | urlize }}
-      <input type="checkbox" id="{{ $subMenuId1 }}" hidden class="hidden nav-menu" />
-      <label for="{{ $subMenuId1 }}" class="{{ $menuListItemClass }} cursor-pointer nav-menu flex justify-between">
-        <span>
-          {{ .label }}
-        </span>
-        <svg class="flex-shrink-0 w-2.5 h-2.5 mt-1.5 transform rotate-90">
-          <use xlink:href="#shape-arrow"></use>
-        </svg>
-      </label>
-      <ul class="ml-3 nav-menu">
-        {{ range .submenu }}
-          {{ block "sub-menu" . }}{{ end }}
-        {{ end }}
-      </ul>
-    {{ else }}
-      <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="{{ $menuListItemClass }}">{{ .label }}</a>
-    {{ end }}
-  </li>
+  {{ $prefix := .prefix }}
+  {{ with .ctx }}
+    {{ $menuListItemClass := "mx-0 hover:text-white inline-flex w-full hover:bg-primary ease-in-out duration-300 px-2 py-1.5" }}
+    <li class="mb-2 text-black1">
+      {{ if .submenu }}
+        {{ $subMenuId1 := print (.label | urlize) "_" $prefix }}
+        <input type="checkbox" id="{{ $subMenuId1 }}" hidden class="hidden nav-menu" />
+        <label for="{{ $subMenuId1 }}" class="{{ $menuListItemClass }} cursor-pointer nav-menu flex justify-between">
+          <span>
+            {{ .label }}
+          </span>
+          <svg class="flex-shrink-0 w-2.5 h-2.5 mt-1.5 transform rotate-90">
+            <use xlink:href="#shape-arrow"></use>
+          </svg>
+        </label>
+        <ul class="ml-3 nav-menu">
+          {{ range .submenu }}
+            {{ block "sub-menu" (dict "ctx" . "prefix" $prefix) }}{{ end }}
+          {{ end }}
+        </ul>
+      {{ else }}
+        <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="{{ $menuListItemClass }}">{{ .label }}</a>
+      {{ end }}
+    </li>
+  {{ end }}
 {{ end }}
 
 {{ define "sticky-menu" }}
@@ -37,7 +40,7 @@
               <label for="{{ $inputId }}" class="cursor-pointer nav-menu relative z-20 {{ $classNme }}" onmouseover="showMenu(this);">{{ .label }}</label>
               <ul class="absolute z-20 w-56 py-2 overflow-y-auto transform -translate-x-16 bg-white shadow-xl top-8 nav-menu max-h-65vh scroll-bar">
                 {{ range .submenu }}
-                  {{ block "sub-menu" . }}{{ end }}
+                  {{ block "sub-menu" (dict "ctx" . "prefix" "") }}{{ end }}
                 {{ end }}
               </ul>
             {{ else }}
@@ -134,7 +137,7 @@
   </header>
   <div class="fixed left-0 right-0 flex hidden h-full text-white menu-drawer-0303 z-60">
     <div class="flex-grow bg-black cursor-default bg-opacity-10" role="button" aria-label="close menu" onclick="App.toggleMenu()"></div>
-    <ul class="px-2 py-6 overflow-y-auto w-80 bg-primary">
+    <ul class="px-2 py-6 pb-12 overflow-y-auto w-80 bg-primary">
       <ul class="border-0 border-b border-white mb-2.5 text-sm">
         {{ range .topHeader.middle.top }}
           <li class="mb-1 text-white">
@@ -161,31 +164,7 @@
             </label>
             <ul class="duration-500 ease-in-out bg-white shadow-xl nav-menu">
               {{ range .submenu }}
-                <li class="mb-1 text-black1">
-                  {{ if .submenu }}
-                    <span class="mx-0 inline-flex w-full font-bold px-2 py-1.5">{{ .label }}</span>
-                    <ul class="ml-3">
-                      {{ range .submenu }}
-                        <li class="mb-1 text-black1">
-                          {{ if .submenu }}
-                            <span class="mx-0 inline-flex w-full font-bold px-2 py-1.5">{{ .label }}</span>
-                            <ul class="ml-3.5">
-                              {{ range .submenu }}
-                                <li class="mb-1 text-black1">
-                                  <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="mx-0 hover:text-white inline-flex w-full hover:bg-primary ease-in-out duration-300 px-2 py-1.5">{{ .label }}</a>
-                                </li>
-                              {{ end }}
-                            </ul>
-                          {{ else }}
-                            <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="mx-0 hover:text-white inline-flex w-full hover:bg-primary ease-in-out duration-300 px-2 py-1.5">{{ .label }}</a>
-                          {{ end }}
-                        </li>
-                      {{ end }}
-                    </ul>
-                  {{ else }}
-                    <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="mx-0 hover:text-white inline-flex w-full hover:bg-primary ease-in-out duration-300 px-2 py-1.5">{{ .label }}</a>
-                  {{ end }}
-                </li>
+                {{ block "sub-menu" (dict "ctx" . "prefix" "mobile-ext") }}{{ end }}
               {{ end }}
             </ul>
           {{ else }}
@@ -201,7 +180,6 @@
             >
           </li>
         {{ end }}
-
       </ul>
     </ul>
   </div>
