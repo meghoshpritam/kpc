@@ -53,6 +53,12 @@
   {{ end }}
 {{ end }}
 
+{{ define "boxed-primary-list" }}
+  <li>
+    <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="inline-block w-full px-1.5 py-2 text-xs text-center duration-300 ease-in-out border-2 rounded-md hover:bg-white hover:text-sky-blue border-sky-blue bg-sky-blue hover:border-white">{{ .label }}</a>
+  </li>
+{{ end }}
+
 {{ define "menu" }}
   <div class="container flex px-4 mx-auto py-2 sm:py-3.5 items-center">
     {{ with .logo }}
@@ -76,18 +82,14 @@
     <span class="flex-grow"></span>
     {{ with .topHeader.middle }}
       <div class="flex-col items-center hidden text-sm font-semibold lg:flex font-lato">
-        <ul class="flex">
+        <ul class="grid grid-cols-3 gap-3">
           {{ range .top }}
-            <li>
-              <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="mx-2 duration-300 ease-in-out border-0 border-b-2 border-transparent hover:border-white">{{ .label }}</a>
-            </li>
+            {{ block "boxed-primary-list" . }}{{ end }}
           {{ end }}
         </ul>
         <ul class="grid grid-cols-3 gap-3 mt-2">
           {{ range .bottom }}
-            <li>
-              <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="w-full text-center inline-block px-2.5 py-2.5 duration-300 ease-in-out border-2 rounded-md hover:bg-white hover:text-sky-blue border-sky-blue bg-sky-blue hover:border-white">{{ .label }}</a>
-            </li>
+            {{ block "boxed-primary-list" . }}{{ end }}
           {{ end }}
         </ul>
       </div>
