@@ -1,3 +1,28 @@
+{{ define "sub-menu" }}
+  {{ $menuListItemClass := "mx-0 hover:text-white inline-flex w-full hover:bg-primary ease-in-out duration-300 px-2 py-1.5" }}
+  <li class="mb-2 text-black1">
+    {{ if .submenu }}
+      {{ $subMenuId1 := .label | urlize }}
+      <input type="checkbox" id="{{ $subMenuId1 }}" hidden class="hidden nav-menu" />
+      <label for="{{ $subMenuId1 }}" class="{{ $menuListItemClass }} cursor-pointer nav-menu flex justify-between">
+        <span>
+          {{ .label }}
+        </span>
+        <svg class="flex-shrink-0 w-2.5 h-2.5 mt-1.5 transform rotate-90">
+          <use xlink:href="#shape-arrow"></use>
+        </svg>
+      </label>
+      <ul class="ml-3 nav-menu">
+        {{ range .submenu }}
+          {{ block "sub-menu" . }}{{ end }}
+        {{ end }}
+      </ul>
+    {{ else }}
+      <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="{{ $menuListItemClass }}">{{ .label }}</a>
+    {{ end }}
+  </li>
+{{ end }}
+
 {{ define "sticky-menu" }}
   {{ with .ctx }}
     <nav class="container relative hidden px-4 pb-3 mx-auto font-semibold text-13 lg:block font-roboto z-60">
@@ -12,31 +37,7 @@
               <label for="{{ $inputId }}" class="cursor-pointer nav-menu relative z-20 {{ $classNme }}" onmouseover="showMenu(this);">{{ .label }}</label>
               <ul class="absolute z-20 w-56 py-2 overflow-y-auto transform -translate-x-16 bg-white shadow-xl top-8 nav-menu max-h-65vh scroll-bar">
                 {{ range .submenu }}
-                  <li class="mb-2 text-black1">
-                    {{ if .submenu }}
-                      <span class="mx-0 inline-flex w-full font-bold px-2 py-1.5">{{ .label }}</span>
-                      <ul class="ml-3">
-                        {{ range .submenu }}
-                          <li class="mb-2 text-black1">
-                            {{ if .submenu }}
-                              <span class="mx-0 inline-flex w-full font-bold px-2 py-1.5">{{ .label }}</span>
-                              <ul class="ml-3.5">
-                                {{ range .submenu }}
-                                  <li class="mb-2 text-black1">
-                                    <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="mx-0 hover:text-white inline-flex w-full hover:bg-primary ease-in-out duration-300 px-2 py-1.5">{{ .label }}</a>
-                                  </li>
-                                {{ end }}
-                              </ul>
-                            {{ else }}
-                              <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="mx-0 hover:text-white inline-flex w-full hover:bg-primary ease-in-out duration-300 px-2 py-1.5">{{ .label }}</a>
-                            {{ end }}
-                          </li>
-                        {{ end }}
-                      </ul>
-                    {{ else }}
-                      <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="mx-0 hover:text-white inline-flex w-full hover:bg-primary ease-in-out duration-300 px-2 py-1.5">{{ .label }}</a>
-                    {{ end }}
-                  </li>
+                  {{ block "sub-menu" . }}{{ end }}
                 {{ end }}
               </ul>
             {{ else }}
@@ -124,16 +125,12 @@
 
 {{ $siteLink := $.RelPermalink }}
 {{ with .Site.Data.header }}
-  <header class="text-white page-relative-header-0203">
+  <header class="top-0 left-0 right-0 text-white z-60 bg-primary page-header-0203">
     {{ block "menu" . }}{{ end }}
-    <div class="py-1 pt-2 mb-3 text-sm bg-secondary">
+    <div class="py-1 pt-2 mb-3 text-sm bg-secondary hide-on-fixed">
       <marquee behavior="" direction="left">Scrolling text </marquee>
     </div>
     {{ block "sticky-menu" (dict "ctx" . "suffix" "-sticky") }}{{ end }}
-    <div class="fixed top-0 left-0 right-0 hidden text-white z-60 page-header-0203 bg-primary">
-      {{ block "menu" . }}{{ end }}
-      {{ block "sticky-menu" (dict "ctx" . "suffix" "") }}{{ end }}
-    </div>
   </header>
   <div class="fixed left-0 right-0 flex hidden h-full text-white menu-drawer-0303 z-60">
     <div class="flex-grow bg-black cursor-default bg-opacity-10" role="button" aria-label="close menu" onclick="App.toggleMenu()"></div>
@@ -209,41 +206,3 @@
     </ul>
   </div>
 {{ end }}
-
-
-<script defer>
-  window.setInterval(function () {
-    const headerNameContainerElements = document.querySelectorAll('[data-id="header-college-name-container"]');
-    for (const headerNameContainerElement of headerNameContainerElements) {
-      const currentDisplayedCollegeNameElement = headerNameContainerElement.querySelector('[data-id="header-college-name"]:not(.hidden)');
-      currentDisplayedCollegeNameElement.classList.add('hidden');
-      if (currentDisplayedCollegeNameElement.nextElementSibling) {
-        currentDisplayedCollegeNameElement.nextElementSibling.classList.remove('hidden');
-      } else {
-        const firstHeaderCollegeNameElement = headerNameContainerElement.querySelector('[data-id="header-college-name"]');
-        firstHeaderCollegeNameElement.classList.remove('hidden');
-      }
-    }
-  }, 3000);
-
-  function closeOtherMenuItem(element) {
-    const menuInputElements = document.querySelectorAll(`input[data-id="top-nav-menu"]:not(#${element.id})`);
-    for (const menuInputElement of menuInputElements) {
-      menuInputElement.checked = false;
-    }
-  }
-
-  window.addEventListener('scroll', function () {
-    const menuInputElements = document.querySelectorAll(`input[data-id="top-nav-menu"]`);
-    for (const menuInputElement of menuInputElements) {
-      menuInputElement.checked = false;
-    }
-  });
-
-  function showMenu(element) {
-    const id = element.getAttribute('for');
-    const inputElement = document.querySelector(`input#${id}`);
-    closeOtherMenuItem(inputElement);
-    inputElement.checked = true;
-  }
-</script>

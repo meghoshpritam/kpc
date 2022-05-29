@@ -4,6 +4,7 @@
 
 <body class="overflow-x-hidden">
     {{- partial "sprites.html" -}}
+    {{ partial "header.html" $ }}
     <main>
         {{- block "main" . }}{{- end }}
     </main>

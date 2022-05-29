@@ -1,6 +1,6 @@
 /* eslint-disable max-classes-per-file */
 const SCROLL_HEADER_SELECTOR = '.page-header-0203';
-const RELATIVE_HEADER_SELECTOR = '.page-relative-header-0203';
+const HIDE_ON_FIXED_CLASS = '.hide-on-fixed';
 const MENU_DRAWER_SELECTOR = '.menu-drawer-0303';
 const TAG_BLOG_CONTAINER_SELECTOR = '[data-id="blog-by-tag-0303"]';
 const TAG_BUTTON_SELECTOR = '[data-id="tag-selector-button-0303"]';
@@ -20,7 +20,7 @@ class App {
     let headerHeight = header.clientHeight;
 
     if (window.getComputedStyle(header, null).display === 'none') {
-      headerHeight = document.querySelector(RELATIVE_HEADER_SELECTOR).clientHeight;
+      headerHeight = document.querySelector(SCROLL_HEADER_SELECTOR).clientHeight;
     }
 
     document.querySelector(MENU_DRAWER_SELECTOR).style.top = `${headerHeight}px`;
@@ -39,10 +39,20 @@ class App {
     // fixed header on scroll
     if (window.pageYOffset > 40) {
       document.querySelector('.scroll-to-top-1606')?.classList.remove('hidden');
-      document.querySelector(SCROLL_HEADER_SELECTOR).classList.remove('hidden');
+      document.querySelector(SCROLL_HEADER_SELECTOR).classList.add('fixed');
+
+      const hideOnScrollElements = document.querySelectorAll(HIDE_ON_FIXED_CLASS);
+      for (const hideOnScrollElement of hideOnScrollElements) {
+        hideOnScrollElement.classList.add('hidden');
+      }
     } else {
       document.querySelector('.scroll-to-top-1606')?.classList.add('hidden');
-      document.querySelector(SCROLL_HEADER_SELECTOR).classList.add('hidden');
+      document.querySelector(SCROLL_HEADER_SELECTOR).classList.remove('fixed');
+
+      const hideOnScrollElements = document.querySelectorAll(HIDE_ON_FIXED_CLASS);
+      for (const hideOnScrollElement of hideOnScrollElements) {
+        hideOnScrollElement.classList.remove('hidden');
+      }
     }
   };
 
@@ -61,6 +71,26 @@ class App {
     checkboxElement.checked = false;
   };
 
+  static scrollCollegeName = () => {
+    window.setInterval(() => {
+      const headerNameContainerElements = document.querySelectorAll('[data-id="header-college-name-container"]');
+      for (const headerNameContainerElement of headerNameContainerElements) {
+        const currentDisplayedCollegeNameElement = headerNameContainerElement.querySelector(
+          '[data-id="header-college-name"]:not(.hidden)',
+        );
+        currentDisplayedCollegeNameElement.classList.add('hidden');
+        if (currentDisplayedCollegeNameElement.nextElementSibling) {
+          currentDisplayedCollegeNameElement.nextElementSibling.classList.remove('hidden');
+        } else {
+          const firstHeaderCollegeNameElement = headerNameContainerElement.querySelector(
+            '[data-id="header-college-name"]',
+          );
+          firstHeaderCollegeNameElement.classList.remove('hidden');
+        }
+      }
+    }, 3000);
+  };
+
   static onLoad = () => {
     // change current year
     document.querySelector('.current-year-footer-0102').innerHTML = new Date().getFullYear();
@@ -70,6 +100,8 @@ class App {
     App.clearContactForm();
 
     App.onScroll();
+
+    App.scrollCollegeName();
   };
 
   static tocHighlight = () => {
@@ -651,6 +683,7 @@ document.addEventListener('load', App.onLoad());
 
 document.addEventListener('scroll', () => {
   App.onScroll();
+  closeExpendedDesktopHeader();
 });
 
 function validateEmail(email) {
@@ -672,4 +705,25 @@ function onSubmitContactForm(event) {
   if (grecaptcha.getResponse() !== '') {
     event.target.submit();
   }
+}
+
+function closeOtherMenuItem(element) {
+  const menuInputElements = document.querySelectorAll(`input[data-id="top-nav-menu"]:not(#${element.id})`);
+  for (const menuInputElement of menuInputElements) {
+    menuInputElement.checked = false;
+  }
+}
+
+function closeExpendedDesktopHeader() {
+  const menuInputElements = document.querySelectorAll(`input[data-id="top-nav-menu"]`);
+  for (const menuInputElement of menuInputElements) {
+    menuInputElement.checked = false;
+  }
+}
+
+function showMenu(element) {
+  const id = element.getAttribute('for');
+  const inputElement = document.querySelector(`input#${id}`);
+  closeOtherMenuItem(inputElement);
+  inputElement.checked = true;
 }
