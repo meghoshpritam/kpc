@@ -12,7 +12,18 @@
             <h2 class="px-3 py-2 font-bold text-white bg-secondary">{{ .name }}</h2>
             <ol class="px-3.5 py-3.5 list-decimal list-inside">
               {{ range .members }}
-                <li class="mb-2">{{ . }}</li>
+                {{ if ne (printf "%T" .) "string" }}
+                  <h3 class="ml-2 font-bold">{{ .section }}</h3>
+                  <ul class="px-3.5 py-3.5 ml-2 list-decimal list-inside">
+                    {{ range .members }}
+                      <li class="mb-2">{{ . }}</li>
+                    {{ end }}
+                  </ul>
+                {{ else }}
+                  <li class="mb-2">
+                    {{ . }}
+                  </li>
+                {{ end }}
               {{ end }}
             </ol>
           </div>
