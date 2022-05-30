@@ -1,6 +1,6 @@
 baseURL = "https://kpc.technohubnetwork.com/"
 title = "psicologoscolastico"
-theme = "psicologoscolastico-theme"
+theme = "college-template"
 staticDir = ["assets"]
 defaultContentLanguage = "en"
 google_verification = "123"
