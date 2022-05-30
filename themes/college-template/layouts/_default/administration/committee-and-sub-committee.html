@@ -1,0 +1,25 @@
+{{ define "main" }}
+  <section class="bg-gray3">
+    <section class="container px-4 pt-10 mx-auto">
+      {{ with .Params.hero }}
+        <h1 class="text-5xl font-medium text-center">{{ .title }}</h1>
+      {{ end }}
+
+
+      <div class="grid grid-cols-1 pb-32 mt-10 lg:grid-cols-2 2xl:grid-cols-3 gap-x-16 gap-y-20">
+        {{ range .Params.committees }}
+          <div class="bg-white">
+            <h2 class="px-3 py-2 font-bold text-white bg-secondary">{{ .name }}</h2>
+            <ol class="px-3.5 py-3.5 list-decimal list-inside">
+              {{ range .members }}
+                <li class="mb-2">{{ . }}</li>
+              {{ end }}
+            </ol>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+  </section>
+
+  {{ partial "schema/website.html" . }}
+{{ end }}
