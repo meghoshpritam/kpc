@@ -19,6 +19,20 @@ trustedBy:
     url: /images/trusted-by-companies.svg
     alt: company trust
 
+noticeBoard:
+  - title: "Notices"
+    listPage: "content/notices.md"
+    param: "notices"
+    seeAllTitle: "See All Notices"
+  - title: "Events"
+    listPage: "content/events.md"
+    param: "events"
+    seeAllTitle: "See All Events"
+  - title: "Tenders"
+    listPage: "content/tenders.md"
+    param: "tenders"
+    seeAllTitle: "See All Tenders"
+
 aboutPlatform:
   heading:
     primary: Una piattaforma, 

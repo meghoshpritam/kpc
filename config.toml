@@ -2,7 +2,7 @@ baseURL = "https://kpc.technohubnetwork.com/"
 title = "psicologoscolastico"
 theme = "psicologoscolastico-theme"
 staticDir = ["assets"]
-defaultContentLanguage = "it"
+defaultContentLanguage = "en"
 google_verification = "123"
 disableKinds = ["taxonomy", "term"]
 enableRobotsTXT = true
@@ -10,9 +10,9 @@ googleAnalytics = "G-VLRQ226NHR"
 
 
 [languages]
-    [languages.it]
-    languageName = "IT"
-    languageCode = "it"
+    [languages.en]
+    languageName = "English"
+    languageCode = "en"
     title = "psicologoscolastico"
     weight = 1
 
