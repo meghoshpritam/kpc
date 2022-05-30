@@ -7,18 +7,28 @@
 
     <table class="w-full mt-7">
       <thead class="w-full border-2 border-secondary">
-        <tr class="grid w-full grid-cols-10 text-white bg-secondary">
-          <th class="col-span-2 px-2.5 py-2 border-r-2 border-white">Publish Date</th>
-          <th class="col-span-6 px-2.5 py-2 border-r-2 border-white">Notice Title</th>
+        <tr class="grid w-full grid-cols-12 text-white bg-secondary">
+          <th class="col-span-1 px-2.5 py-2 border-r-2 border-white">Event Date</th>
+          <th class="col-span-5 px-2.5 py-2 border-r-2 border-white">Event Title</th>
+          <th class="col-span-2 px-2.5 py-2 border-r-2 border-white">Department</th>
+          <th class="col-span-2 px-2.5 py-2 border-r-2 border-white">Event Banner</th>
           <th class="col-span-2 px-2.5 py-2">Download Link</th>
         </tr>
       </thead>
       <tbody class="w-full text-sm border-2 border-b-0 border-secondary">
         {{ range .Params.events }}
-          <tr class="grid w-full grid-cols-10 border-b-2 border-secondary">
-            <td class="col-span-2 px-2.5 py-2 border-r-2 border-secondary">{{  dateFormat "02/01/2006" .date }}</td>
-            <td class="col-span-6 px-2.5 py-2 border-r-2 border-secondary">{{ .title }}</td>
-            <td class="col-span-2 px-2.5 py-2 w-full flex justify-center">
+          <tr class="grid w-full grid-cols-12 border-b-2 border-secondary">
+            <td class="col-span-1 px-2.5 py-2 border-r-2 border-secondary">{{  dateFormat "02/01/2006" .date }}</td>
+            <td class="col-span-5 px-2.5 py-2 border-r-2 border-secondary">{{ .title }}</td>
+            <td class="col-span-2 px-2.5 py-2 border-r-2 border-secondary">{{ .department }}</td>
+            <td class="col-span-2 px-2.5 py-2 border-r-2 border-secondary">
+              {{ if .banner }}
+                <a href="{{ .banner }}" aria-label="{{ .title }}" title="{{ .title }}">
+                  <img src="{{ .banner }}" alt="{{ .title }}" title="{{ .title }}" class="object-cover object-center w-full h-20">
+                </a>
+              {{ end }}
+            </td>
+            <td class="col-span-2 px-2.5 py-2 w-full flex justify-center flex-col">
               <a href="{{ .downloadLink }}" class="px-5 hover:bg-white border-sky-blue border-2 ease-in-out duration-300 hover:text-sky-blue py-1.5 inline-block bg-sky-blue rounded-md mx-auto text-white font-bold text-sm">Download</a>
             </td>
           </tr>
