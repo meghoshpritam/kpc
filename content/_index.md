@@ -33,130 +33,25 @@ noticeBoard:
     param: "tenders"
     seeAllTitle: "See All Tenders"
 
-aboutPlatform:
-  heading:
-    primary: Una piattaforma, 
-    secondary: mille vantaggi.
+principalDesk:
+  title: "Principal's Desk"
+  name: "Dr. Pranab Kr. Bera"
+  image: "https://www.kanchraparacollege.ac.in/images/Teacher.jpg"
   details: >
-    Il tuo percorso di crescita, fatto di autonomie e separazioni, inizia proprio nella scuola. Lo psicologo scolastico ti aiuta a gestire al meglio!
-  features:
-    - title: Studenti
-      icon: file-invoice
-      details: >
-        Lo psicologo scolastico aiuta lo studente a fare luce su ciò che sta vivendo e a costruisce con lui un percorso per stare meglio, affrontando il problema in modo personalizzato
-      url: "/blog/bisogni-educativi-speciali/"
-    - title: Genitori
-      icon: calendar
-      details: >
-        Offre uno spazio di ascolto in cui  esprimere le fatiche del ruolo genitoriale e gettare le basi per la creazione di un rapporto di fiducia con la scuola nella crescita dei propri figli.
-      url: "/blog/circle-time-a-scuola/"
-    - title: Insegnanti
-      icon: users
-      details: >
-        Accoglie le richieste di insegnanti che osservano situazioni critiche o che desiderano un feedback rispetto alla gestione di casi delle loro classi
-      url: "/blog/lanimale-co-terapeuta-come-supporto-educativo/"
+    Situated at the cross point between Kalyani and Kanchrapara, Kanchrapara College, established in 1972, under the entrepreneurship of the then MLA of the area, Hon’ble Sri Jagdish Chandra Das, Ex-teacher, Kanchrapara High School, is still now carrying the legacy of spreading of education among the common people of the locality.
 
-whyUs:
-  heading:
-    primary: Perchè scegliere lo
-    secondary: Psicologo scolastico?
-  details: >
-    Il <span>90%</span> degli studenti grazie ai nostri consigli hanno risolto i loro problemi scolastici 
-  points:
-    - title: "PER INSEGNANTI E GENITORI"
-      url: "/blog/?rel=genitori+insegnanti"
-      linkLabel: "Consigli utili"
-      image:
-        url: "/images/teachers-and-parents.webp"
-        alt: "Per insegnanti e genitori"
-    - title: "PER STUDENTI"
-      url: "/blog/?rel=studenti"
-      linkLabel: "Consigli utili"
-      image:
-        url: "/images/students.webp"
-        alt: "Per studenti"
-  videoSection:
-    title: >
-      Crediamo fortemente nel lavoro di squadra <span>e insieme ti aiuteremo a vincere ogni sfida </span>
-    details: >
-      L’apprendimento passa attraverso le emozioni e la relazione. Pertanto ti aiuteremo a lavorare sul terreno delle emozioni per migliorare la tua esperienza scolastica.
-    video:
-      url: "https://www.youtube.com/embed/sYcYNHx0B-I?controls=0&autoplay=1&rel=0&showinfo=0"
-      thumbnail: "/images/confident-teacher-explaining.webp"
-      alt: "Crediamo fortemente nel lavoro di squadra e insieme ti aiuteremo a vincere ogni sfida "
 
-ourFormula:
-  heading:
-    primary: La Nostra
-    secondary: Formula
-  details: >
-    SICUREZZA IN SE STESSI + MIGLIORE APPRENDIMENTO = STARE BENE A SCUOLA
-  youCanDo:
-    title: >
-      Cosa puoi <span>fare?</span>
-    image:
-      url: /images/meeting.webp
-      alt: Cosa puoi fare?
-    list:
-      - title: "Pensa alla tua domanda"
-        icon: "four-boxes"
-      - title: "Compila il questionario "
-        icon: "two-boxes"
-      - title: "Fissa un colloquio con noi!"
-        icon: "users"
-  tools:
-    title: >
-      <span>Strumenti</span> per insegnanti e studenti
-    details: >
-      In questa piattaforma puoi trovare  molti consigli e strumenti didattici costruiti per essere distribuiti e utilizzati durante le lezioni.
-    image:
-      url: /images/tools-for-teachers-and-students.webp
-      alt: Strumenti per insegnanti e studenti
-    cta:
-      label: Scopri di più
-      url: /servizi/?rel=studenti+insegnanti
-  location:
-    title: >
-      Consigli, <span>Schede didattiche</span>, Mappe 
-    details: >
-      Studiare non è mai stato così semplice. Siamo qui per rendere il tuo apprendimento divertente e stimolante.
-    image:
-      url: /images/advice-didactic-cards-maps.webp
-      alt: Consigli, Schede didattiche, Mappe
-    cta:
-      label: Scopri di più
-      url: /servizi/
-  managementTools:
-    title: >
-      <span>Strumenti</span> di gestione della classe
-    details: >
-      Creare esperienze di apprendimento efficaci in classe non è mai stato semplice… oggi più che mai! Lo psicologo scolastico ti aiuta a trovare la strada giusta  per “contribuire” a migliorare il livello di motivazione di ogni studente.
-    image:
-      url: /images/classroom-management-tools.webp
-      alt: Strumenti di gestione della classe
-    cta:
-      label: Scopri di più
-      url: /servizi/
-  about:
-    title: >
-      <span>Parliamone!</span>
-    details: >
-      Siamo pronti a rispondere alle tue domade in presenza o da remoto, cerchiamo insieme la soluzione al tuo problema.
-    image:
-      url: /images/lets-talk-about.webp
-      alt: Parliamone!
+    The college started its journey on 13th Nov, 1972 with a meager number of only 32 students with affiliation of only Pre-University class. In course of time the college has grown up to full maturity. The college now has a number of more than 6000 students with Honors in 21 subjects in Science, Arts and Commerce division. The class of Science and Arts stream takes place in day shift. Commerce section runs in Evening shift. Both BA general and B.Com general and Honors courses are running in Evening shift. Apart from a good number of devoted Non-Teaching Staff whose service is available for 24 hours, there is a band of highly qualified teachers whose scholarly guidance and advice is always available for the students. Besides the traditional core subjects there are also honors course in some new emerging subjects like Environmental Science, Molecular Biology and Biotechnology, Microbiology, Food and Nutrition, Computer Science etc. Post-Graduation in Hindi is also running in this college for a few years. The college has a Study Centre under the Distance Education Directorate, University of Kalyani where M.A. in Bengali, English, History and Education is taught in the same premises on Sundays and Holidays. With all the basic amenities like Students’ Common Room, Gymnasium, Playground, Net Resource Centre etc the College each year attracts a large number of students from the surrounding areas and makes its presence felt in the academia by the good results each year the students attain.
 
-alwaysListening:
-  shortTitle: "SEMPRE IN ASCOLTO"
-  title: >
-    Parlare con lo <span>Psicologo Scolastico</span> non è mai stato cosi facile
-  details: >
-    Siamo presenti sulle migliori piattaforme di videoconferenza  per garantirti una comunicazione sicura e immediata.
-  cta:
-    label: "Fissa un colloquio"
-  image:
-      url: /images/social.webp
-      alt: Parlare con lo Psicologo Scolastico non è mai stato cosi facile
+visionMission:
+  - title: "Vision"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSADPzrYm_hQg2XMNc_9KTr9Axmn35s0DbsIQ&usqp=CAU"
+    details: >
+      The College of Education will be a world leader in the integration of (a) teaching and learning, (b) advancement of the knowledge base through research and scholarship, and (c) leadership in service and outreach. Further, the College will be a world leader in preparing professionals who provide leadership and exemplary educational and related services to improve the lives of individuals in a changing and complex global society.
+  - title: "Mission"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSADPzrYm_hQg2XMNc_9KTr9Axmn35s0DbsIQ&usqp=CAU"
+    details: >
+      The mission of the College of Education is to help prepare outstanding educators, scholars, and researchers, and to advance the profession of education, as broadly defined, through research on the science and art of teaching and learning, the application of clinical processes, the effective uses of technology, and the analysis and development of leadership and educational policy.
 
 testimonial:
   shortTitle: "Our Achievers"
