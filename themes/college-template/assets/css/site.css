@@ -56,6 +56,40 @@ a {
   @apply hover:text-secondary;
 }
 
+
+/* ##################################################### Container ##################################################### */
+@responsive {
+  .container {
+    @apply px-5;
+  }
+}
+
+
+@screen sm {
+  @responsive {
+    .container {
+      max-width: 95vw !important;
+    }
+  }
+}
+
+@screen md {
+  @responsive {
+    .container {
+      max-width: 95vw !important;
+    }
+  }
+}
+
+
+@screen 2xl {
+  @responsive {
+    .container {
+      max-width: 96rem;
+    }
+  }
+}
+
 /* ========================== homepage style ============================= */
 .hp-video-container::after {
   padding-top: 56.25%;
