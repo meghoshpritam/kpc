@@ -178,7 +178,7 @@
       </svg>
     </button>
 
-    <div role="tablist" class="dots"></div>
+    <div role="tablist" class="d-dots"></div>
   </section>
 
   <div class="pb-12 bg-primary my-28 md:grid-cols-2">
@@ -264,14 +264,30 @@
   {{ partial "schema/website.html" . }}
 
 
-  <div class="pb-16 bg-gray3 mt-28">
-    <div class="container mx-auto">
+  <div class="pb-16 bg-gray-100 mt-28">
+    <div class="container relative mx-auto">
       <h4 class="py-8 text-4xl font-bold text-center pb-14 text-primary">Our Gallery</h4>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-16 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-        {{ range seq 8 }}
-          <div class="h-32 bg-red-400 rounded-lg"></div>
+
+      <div class="w-full pb-3 g-glider">
+        {{ range seq 9 }}
+          <a href="/departments/computer-science" class="inline-block rounded-md sm:mx-5">
+            <div class="flex flex-col items-center justify-center mb-3 bg-red-200 rounded-md h-44">img {{ . }}</div>
+          </a>
         {{ end }}
       </div>
+
+      <button aria-label="Previous" class="absolute flex flex-col items-center justify-center w-8 h-8 mt-10 ml-10 text-white rounded-full -left-9 top-40 bg-sky-blue hover:bg-white g-glider-prev hover:text-secondary">
+        <svg class="flex-shrink-0 w-4 h-4 transform rotate-180">
+          <use xlink:href="#shape-arrow"></use>
+        </svg>
+      </button>
+      <button aria-label="Next" class="absolute flex flex-col items-center justify-center w-8 h-8 mt-10 mr-10 text-white rounded-full -right-9 top-40 bg-sky-blue hover:bg-white g-glider-next hover:text-secondary">
+        <svg class="flex-shrink-0 w-4 h-4 transform rotate-0">
+          <use xlink:href="#shape-arrow"></use>
+        </svg>
+      </button>
+
+      <div role="tablist" class="g-dots"></div>
     </div>
   </div>
 
@@ -280,8 +296,9 @@
     const glider = new Glider(document.querySelector('.glider'), {
       slidesToShow: 1,
       slidesToScroll: 1,
-      dots: '.dots',
+      dots: '.d-dots',
       rewind: true,
+      duration: 0.75,
       draggable: true,
       arrows: {
         prev: '.glider-prev',
@@ -289,14 +306,14 @@
       },
     });
 
-    glider.refresh(true);
+    sliderAuto(glider, 2000);
 
-    var dGlider = new Glider(document.querySelector('.d-glider'), {
+    const dGlider = new Glider(document.querySelector('.d-glider'), {
       slidesToShow: 1,
       slidesToScroll: 1,
       rewind: true,
       draggable: true,
-      duration: 0.25,
+      duration: 0.75,
       arrows: {
         prev: '.d-glider-prev',
         next: '.d-glider-next',
@@ -333,7 +350,51 @@
       ],
     });
 
-    dGlider.refresh(true);
+    sliderAuto(dGlider, 2000);
+
+    const gGlider = new Glider(document.querySelector('.g-glider'), {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      rewind: true,
+      draggable: true,
+      duration: 0.75,
+      arrows: {
+        prev: '.g-glider-prev',
+        next: '.g-glider-next',
+      },
+      responsive: [
+        {
+          // screens greater than >= 768px
+          breakpoint: 768,
+          settings: {
+            // Set to `auto` and provide item width to adjust to viewport
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            duration: 0.25,
+          },
+        },
+        {
+          // screens greater than >= 1024px
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            duration: 0.25,
+          },
+        },
+        {
+          // screens greater than >= 1280px
+          breakpoint: 1280,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 4,
+            duration: 0.25,
+          },
+        },
+      ],
+    });
+
+    sliderAuto(gGlider, 2000);
 
     function changeNoticeTab(name) {
       const targetElement = document.querySelector(`[data-notice-id="${name}"]`);
@@ -351,6 +412,28 @@
       }
       targetButton.classList.remove('text-black1', 'border-transparent');
       targetButton.classList.add('text-white', 'bg-secondary', 'border-secondary');
+    }
+
+    function sliderAuto(slider, miliseconds) {
+      const slidesCount = slider.track.childElementCount;
+      let slideTimeout = null;
+      let nextIndex = 1;
+
+      function slide() {
+        slideTimeout = setTimeout(function () {
+          if (nextIndex >= slidesCount) {
+            nextIndex = 0;
+          }
+          slider.scrollItem(nextIndex++);
+        }, miliseconds);
+      }
+
+      slider.ele.addEventListener('glider-animated', function () {
+        window.clearInterval(slideTimeout);
+        slide();
+      });
+
+      slide();
     }
   </script>
 {{ end }}
