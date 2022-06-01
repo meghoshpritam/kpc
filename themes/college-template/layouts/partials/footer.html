@@ -55,13 +55,15 @@
   {{ with .Site.Data.footer }}
     {{ partial "contact-us.html" .contactUs }}
     <div class="py-2 text-sm text-white bg-dark">
-      {{ with .bottom }}
-        <div class="flex items-center justify-center footer-last">
-          {{ .before | markdownify }}
-          <span class="current-year-footer-0102">2022</span>
-          {{ .after | markdownify }}
-        </div>
-      {{ end }}
+      <div class="container flex flex-col justify-between mx-auto text-center md:flex-row">
+        <p>
+          © All rights reserved to
+          <a href="/" title="Kanchrapara College" aria-label="Kanchrapara College" class="hover:underline"> Kanchrapara College </a>
+        </p>
+        <p class="mt-2 md:mt-0">
+          Developed By <a href="https://zotowebservices.com" class="text-secondary hover:text-primary" title="Zoto Web Services(ZWS)" aria-label="Zoto Web Services(ZWS)">ZWS</a>
+        </p>
+      </div>
     </div>
   {{ end }}
 </footer>
