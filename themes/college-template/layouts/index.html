@@ -35,7 +35,6 @@
                 <use xlink:href="#shape-arrow"></use>
               </svg>
             </button>
-            <div role="tablist" class="dots"></div>
           </div>
         </div>
         <div class="col-span-1 px-3 py-2 bg-white">
@@ -53,7 +52,37 @@
 
 
   <section class="py-4 pt-8 mt-16 transform lg:mt-0 lg:mx-8 lg:-translate-y-6 rounded-t-2xl bg-primary">
-    <div class="container grid grid-cols-1 mx-auto md:grid-cols-2 gap-7 lg:grid-cols-3">
+    <div class="container grid grid-cols-1 gap-10 mx-auto md:grid-cols-2 lg:grid-cols-3">
+      <div class="px-4 py-4 pb-10 bg-white rounded-md">
+        <div class="font-montserrat">
+          <p class="text-base font-bold">About us</p>
+          <hr class="outline-none border-none bg-secondary w-12 h-0.5 my-1.5" />
+          <h2 class="mt-2 mb-6 text-4xl font-bold text-secondary">Welcome to KPC</h2>
+          <div class="font-semibold font-roboto">
+            <p>UGC 2(f) and 12 (B) status</p>
+            <p>NAAC Accredited College with A Grade in 2017 (2nd Cycle)</p>
+            <p>[CGPA=3.02]</p>
+            <p>DST-FIST Sponsored College</p>
+            <p>RUSA funded College</p>
+            <p>Affiliated to Kalyani University, Kalyani</p>
+            <p></p>
+          </div>
+          <div class="mt-5 text-sm font-medium leading-relaxed">The College of Education conducts its programs and activities guided by overarching Vision, Mission, Goals, Values, Beliefs statements. All are revisited periodically and revised, if appropriate.</div>
+        </div>
+      </div>
+
+      <div class="overflow-hidden bg-white rounded-md" style="min-height: 30rem;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m27!1m12!1m3!1d7348.14993315714!2d88.44249800096388!3d22.94746606946661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m12!3e2!4m5!1s0x39f895a7d916ff3b%3A0x2db42e78e6fdfd4f!2sKanchrapara%20Station%2C%20Kanchrapara%20-%20Haringhata%20Road%2C%20Kanchrapara%20Loco%2C%20Kanchrapara%2C%20West%20Bengal!3m2!1d22.9440483!2d88.45027859999999!4m4!1s0x39f89501c0e3f1fd%3A0xbde716cb3a6f2642!3m2!1d22.9500669!2d88.44158589999999!5e0!3m2!1sen!2sin!4v1654069919682!5m2!1sen!2sin"
+          height="100%"
+          width="100%"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          style="overflow:hidden;height:100%;width:100%;border:0;"
+        ></iframe>
+      </div>
+
       <div class="bg-white rounded-md">
         <div class="grid grid-cols-3 overflow-hidden bg-white border-b-2 rounded-t-md border-secondary">
           {{ range  $idx, $noticeParams := .Params.noticeBoard }}
@@ -95,54 +124,6 @@
       </div>
     </div>
   </section>
-
-  <section class="container grid grid-cols-1 mx-auto gap-x-10 gap-y-14 my-28 md:grid-cols-2">
-    <div class="font-montserrat">
-      <p class="text-base font-bold">About us</p>
-      <hr class="outline-none border-none bg-secondary w-12 h-0.5 my-1.5" />
-      <h2 class="mt-2 mb-6 text-4xl font-bold">Welcome to KPC</h2>
-      <div class="font-semibold font-roboto">
-        <p>UGC 2(f) and 12 (B) status</p>
-        <p>NAAC Accredited College with A Grade in 2017 (2nd Cycle)</p>
-        <p>[CGPA=3.02]</p>
-        <p>DST-FIST Sponsored College</p>
-        <p>RUSA funded College</p>
-        <p>Affiliated to Kalyani University, Kalyani</p>
-        <p></p>
-      </div>
-      <div class="mt-5 text-sm font-medium leading-relaxed">
-        Kancharapara College, established in 1969, stood out at the time of its inception in being the only government college serving the intellectual needs of a whole generation of young learners from Burdwan (now Bardhaman) Bankura, Birbhum and Purulia. Despite experiencing overwhelming changes,
-        the institution continues to stand out as a distinguished house of learning, nurturing positive qualities of both students and staff and the only government college in the district of Paschim Bardhaman.
-      </div>
-    </div>
-    <div class="flex flex-col items-center justify-center w-full h-full bg-red-200">img</div>
-  </section>
-  <div class="container grid grid-cols-1 gap-10 mx-auto md:grid-cols-2 lg:grid-cols-3 my-28">
-    <div class="max-w-md mx-auto">
-      <div class="flex flex-col items-center justify-center h-56 mb-4 bg-green-200">img</div>
-      <h3 class="mb-2 text-2xl font-bold">Principal's Desk</h3>
-      <h4 class="text-xl font-bold text-primary">Dr. Pranab Kr. Bera</h4>
-      <p class="mt-1.5">
-        Situated at the cross point between Kalyani and Kanchrapara, Kanchrapara College, established in 1972, under the entrepreneurship of the then MLA of the area, Hon’ble Sri Jagdish Chandra Das, Ex-teacher, Kanchrapara High School, is still now carrying the legacy of spreading of education
-        among the common people of the locality.
-      </p>
-    </div>
-
-    <div class="max-w-md mx-auto">
-      <div class="flex flex-col items-center justify-center h-56 mb-4 bg-green-200">img</div>
-      <h3 class="mb-2 text-2xl font-bold">Our Mission & Vision</h3>
-      <p>Cultivating the sense of discipline and dedication in addition to the intellectual, moral and cultural development is the overall mission of Kancharapara College..</p>
-    </div>
-
-    <div class="max-w-md mx-auto">
-      <div class="flex flex-col items-center justify-center h-56 mb-4 bg-green-200">img</div>
-      <h3 class="mb-2 text-2xl font-bold">Our Objectives</h3>
-      <ul class="mt-1.5">
-        <li class="mb-1">• Holistic development of young adults enrolled as students.</li>
-        <li class="mb-1">• Providing quality higher education and taking care of intellectual, social, economic, emotional needs of students.</li>
-      </ul>
-    </div>
-  </div>
 
   <section class="container relative w-full mx-auto d-glider-contain mb-28">
     <h3 class="mb-10 text-4xl font-bold text-center mt-28 text-primary">Our Departments</h3>
@@ -294,7 +275,6 @@
     var dGlider = new Glider(document.querySelector('.d-glider'), {
       slidesToShow: 1,
       slidesToScroll: 1,
-      dots: '.dots',
       rewind: true,
       draggable: true,
       duration: 0.25,
