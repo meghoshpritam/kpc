@@ -7,10 +7,10 @@ college:
   name: Kanchrapara College
   i18nNames: 
     - Kanchrapara College
-    - कांचरापाड़ा कॉलेज
     - কাঁচরাপাড়া কলেজ
+    - कांचरापाड़ा कॉलेज
   affiliated: Affiliated to University of Kalyani
-  grade: Accredited by B+
+  grade: Accredited by NAAC
 
 topHeader:
   middle:
@@ -31,11 +31,9 @@ topHeader:
         
   right:
     menu:
-      ug:
-        label: UG Admission
+      - label: UG Admission
         url: /
-      pg:
-        label: PG Admission
+      - label: PG Admission
         url: /
     address: >
       Kanchrapara, North 24-PGS,

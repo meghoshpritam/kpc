@@ -132,8 +132,8 @@
 {{ with .Site.Data.header }}
   <header class="top-0 left-0 right-0 text-white z-60 bg-primary page-header-0203">
     {{ block "menu" . }}{{ end }}
-    <div class="py-1 pt-2 mb-3 text-sm bg-white hide-on-fixed">
-      <marquee behavior="" direction="left" style="color: black;">Scrolling text </marquee>
+    <div class="py-1 pt-2 mb-3 text-sm bg-secondary hide-on-fixed">
+      <marquee behavior="" direction="left">Scrolling text </marquee>
     </div>
     {{ block "sticky-menu" (dict "ctx" . "suffix" "-sticky") }}{{ end }}
   </header>
