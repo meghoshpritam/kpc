@@ -54,29 +54,45 @@
 
   <section class="py-4 pt-8 mt-16 transform lg:mt-0 lg:mx-8 lg:-translate-y-6 rounded-t-2xl bg-primary">
     <div class="container grid grid-cols-1 mx-auto md:grid-cols-2 gap-7 lg:grid-cols-3">
-      {{ range $noticeParams := .Params.noticeBoard }}
-        <div class="flex flex-col bg-white rounded-sm">
-          <p class="py-2 mb-2 text-xl font-bold text-center text-black1">{{ $noticeParams.title }}</p>
-          {{ with site.GetPage $noticeParams.listPage }}
-            <div class="flex-grow bg-white">
-              {{ range (index .Params $noticeParams.param) }}
-                <a href="{{ .downloadLink }}" class="relative inline-flex items-center mb-4 hover:shadow-2xl">
-                  {{ if .department }}
-                    <span class="absolute px-2 py-0.5 text-white rounded-full right-1.5 -top-2 bg-secondary font-bold text-9 text-center" style="min-width: 5rem;">{{ .department }}</span>
-                  {{ end }}
-                  <div class="flex flex-col items-center justify-center w-12 px-2 mr-3 font-bold text-center text-white h-14 text-13 bg-sky-blue rounded-r-md">
-                    {{ dateFormat "02 Jan" .date }}
-                  </div>
-                  <p class="py-3 pr-1 text-13">{{ .title }}</p>
-                </a>
-              {{ end }}
-            </div>
-            <div class="flex justify-end w-full pb-3">
-              <a href="{{ .RelPermalink }}" class="flex-shrink-0 inline-block px-8 py-2 font-bold text-white border-2 rounded-sm hover:text-sky-blue hover:bg-white bg-sky-blue border-sky-blue">See All</a>
-            </div>
+      <div class="bg-white rounded-md">
+        <div class="grid grid-cols-3 overflow-hidden bg-white border-b-2 rounded-t-md border-secondary">
+          {{ range  $idx, $noticeParams := .Params.noticeBoard }}
+            <button
+              data-notice-button="{{ $noticeParams.title | urlize }}"
+              onclick="changeNoticeTab('{{ $noticeParams.title | urlize }}')"
+              class="py-2 text-xl font-bold text-center {{ if eq $idx 0 }}
+                text-white bg-secondary border-secondary
+              {{ else }}
+                text-black1 border-transparent
+              {{ end }}"
+            >
+              {{ $noticeParams.title }}
+            </button>
           {{ end }}
         </div>
-      {{ end }}
+        {{ range  $idx, $noticeParams := .Params.noticeBoard }}
+          <div class="flex flex-col pt-3.5 rounded-b-md bg-white hover:text-secondary ease-in-out duration-300 rounded-sm {{ if ne $idx 0 }}hidden{{ end }}" data-notice-id="{{ $noticeParams.title | urlize }}">
+            {{ with site.GetPage $noticeParams.listPage }}
+              <div class="flex-grow bg-white">
+                {{ range (index .Params $noticeParams.param) }}
+                  <a href="{{ .downloadLink }}" class="relative inline-flex items-center mb-4 hover:shadow-2xl">
+                    {{ if .department }}
+                      <span class="absolute px-2 py-0.5 text-white rounded-full right-1.5 -top-2 bg-secondary font-bold text-9 text-center" style="min-width: 5rem;">{{ .department }}</span>
+                    {{ end }}
+                    <div class="flex flex-col items-center justify-center w-12 px-2 mr-3 font-bold text-center text-white h-14 text-13 bg-sky-blue rounded-r-md">
+                      {{ dateFormat "02 Jan" .date }}
+                    </div>
+                    <p class="py-3 pr-1 text-13">{{ .title }}</p>
+                  </a>
+                {{ end }}
+              </div>
+              <div class="flex justify-end w-full pb-3">
+                <a href="{{ .RelPermalink }}" class="flex-shrink-0 inline-block px-8 py-2 font-bold text-white border-2 rounded-sm hover:text-sky-blue hover:bg-white bg-sky-blue border-sky-blue">See All</a>
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
     </div>
   </section>
 
@@ -319,5 +335,23 @@
     });
 
     dGlider.refresh(true);
+
+    function changeNoticeTab(name) {
+      const targetElement = document.querySelector(`[data-notice-id="${name}"]`);
+      const displayElements = document.querySelectorAll(`[data-notice-id]:not(.hidden)`);
+      for (const displayElement of displayElements) {
+        displayElement.classList.add('hidden');
+      }
+      targetElement.classList.remove('hidden');
+
+      const targetButton = document.querySelector(`[data-notice-button="${name}"]`);
+      const displayButtons = document.querySelectorAll(`[data-notice-button].bg-secondary`);
+      for (const displayButton of displayButtons) {
+        displayButton.classList.remove('text-white', 'bg-secondary', 'border-secondary');
+        displayButton.classList.add('text-black1', 'border-transparent');
+      }
+      targetButton.classList.remove('text-black1', 'border-transparent');
+      targetButton.classList.add('text-white', 'bg-secondary', 'border-secondary');
+    }
   </script>
 {{ end }}
