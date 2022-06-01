@@ -10,7 +10,7 @@
         {{ range .Params.committees }}
           <div class="bg-white">
             <h2 class="px-3 py-2 font-bold text-white bg-primary">{{ .name }}</h2>
-            <ol class="px-3.5 py-3.5 list-decimal list-inside">
+            <ol class="px-3.5 py-3.5 font-roboto text-sm list-decimal list-inside">
               {{ range .members }}
                 {{ if ne (printf "%T" .) "string" }}
                   <h3 class="ml-2 font-bold">{{ .section }}</h3>
@@ -20,7 +20,7 @@
                     {{ end }}
                   </ul>
                 {{ else }}
-                  <li class="mb-2">
+                  <li class="mb-1">
                     {{ . }}
                   </li>
                 {{ end }}
