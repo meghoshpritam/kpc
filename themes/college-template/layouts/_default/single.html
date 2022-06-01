@@ -5,7 +5,7 @@
   {{ partial "header.html" . }}
   {{/* hero section start  */}}
   {{ with .Params.articleData }}
-  <div class="container grid grid-cols-1 px-4 pt-24 mx-auto text-white md:grid-cols-2">
+  <div class="container grid grid-cols-1 pt-24 mx-auto text-white md:grid-cols-2">
     <div class="py-20 pb-36">
       <h1 class="text-5xl font-semibold break-words lg:text-5xl xl:text-6xl">
         {{ .title }}
@@ -33,7 +33,7 @@
 
 {{ with .Params.articleData }}
 {{/* article data section start  */}}
-<section class="container px-4 mx-auto mt-14">
+<section class="container mx-auto mt-14">
   <div class="flex flex-wrap text-xs font-bold font-openSans text-secondary">
     <p class="mb-1">
       {{ $pageData.topSection.readingTime.before}}
@@ -65,7 +65,7 @@
 
 {{/* top section end  */}}
 
-<section class="container px-4 pb-56 mx-auto pt-14 font-openSans text-gray2">
+<section class="container pb-56 mx-auto pt-14 font-openSans text-gray2">
   {{/* article section start  */}}
   <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
     <div class="lg:order-2">

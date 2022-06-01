@@ -28,7 +28,7 @@
 
 {{ define "sticky-menu" }}
   {{ with .ctx }}
-    <nav class="container relative hidden px-4 pb-3 mx-auto font-semibold text-13 lg:block font-roboto z-60">
+    <nav class="container relative hidden pb-3 mx-auto font-semibold text-13 lg:block font-roboto z-60">
       <ul class="flex flex-wrap justify-between">
         {{ range .menu }}
           <li class="mr-1.5 last:m-0 relative">
@@ -55,12 +55,12 @@
 
 {{ define "boxed-primary-list" }}
   <li>
-    <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="inline-block w-full px-1.5 py-2 text-xs text-center duration-300 ease-in-out border-2 rounded-md hover:bg-white hover:text-sky-blue border-sky-blue bg-sky-blue hover:border-white">{{ .label }}</a>
+    <a href="{{ .url }}" title="{{ .label }}" aria-label="{{ .label }}" class="inline-block w-full px-1.5 font-bold py-1 text-xs text-center duration-300 ease-in-out border-2 rounded-md border-white hover:bg-black1 hover:text-white bg-white text-black1 hover:border-black1">{{ .label }}</a>
   </li>
 {{ end }}
 
 {{ define "menu" }}
-  <div class="container flex px-4 mx-auto py-2 sm:py-3.5 items-center">
+  <div class="container flex mx-auto py-2 sm:py-3.5 items-center">
     {{ with .logo }}
       <div class="flex items-center justify-center mr-4">
         <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="">

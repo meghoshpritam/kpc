@@ -4,7 +4,7 @@
 <section class="bg-left-bottom bg-no-repeat bg-cover bg-single-article">
   {{ partial "header.html" . }}
   {{/* hero section start  */}}
-  <div class="container grid grid-cols-1 px-4 pt-24 mx-auto text-white md:grid-cols-2">
+  <div class="container grid grid-cols-1 pt-24 mx-auto text-white md:grid-cols-2">
     <div class="py-20 pb-36">
       <h1 class="text-6xl font-semibold">
         {{ .Site.Data.notFoundPage.title }}
@@ -30,7 +30,7 @@
   {{/* hero section end  */}}
 </section>
 
-<section class="container px-5 mx-auto mb-20 mt-28 text-dark error-message-details min-h-50-screen">
+<section class="container mx-auto mb-20 mt-28 text-dark error-message-details min-h-50-screen">
   {{ with .Site.Data.notFoundPage.errorMessage }}
   <div class="max-w-5xl mx-auto text-3xl font-semibold leading-loose article-description md:text-4xl lg:text-6xl">
     {{ . | markdownify }}
