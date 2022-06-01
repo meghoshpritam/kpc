@@ -85,7 +85,7 @@ a {
 @screen 2xl {
   @responsive {
     .container {
-      max-width: 96rem;
+      max-width: 96rem !important;
     }
   }
 }
