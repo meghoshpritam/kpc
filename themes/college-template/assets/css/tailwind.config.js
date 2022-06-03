@@ -44,7 +44,7 @@ module.exports = {
         indigo3: '#5F5F7E',
         indigo4: '#80819A',
         orange1: '#FC8B59',
-        primary: '#1877f2',
+        primary: '#00397a',
         primary2: '#2300B1',
         pink1: '#FF6FCA',
         secondary: '#F48C06',
