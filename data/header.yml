@@ -66,7 +66,7 @@ menu:
       - label: Administrative Structure
         url: /
       - label: Governing Body
-        url: /
+        url: /administration/governing-body/
       - label: IQAC
         url: /
       - label: Teachers’ Council
@@ -76,7 +76,7 @@ menu:
       - label: Non-Teaching Staff
         url: /
       - label: Committee & Sub Committee
-        url: /administration/committee-and-sub-committee
+        url: /administration/committee-and-sub-committee/
   - label: IQAC
     submenu:
       - label: About IQAC

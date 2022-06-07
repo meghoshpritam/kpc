@@ -1,12 +1,12 @@
 {{ define "main" }}
   <section class="bg-gray-100">
-    <section class="container pt-10 mx-auto">
+    <section class="container pt-16 mx-auto">
       {{ with .Params.hero }}
         <h1 class="text-5xl font-medium text-center">{{ .title }}</h1>
       {{ end }}
 
 
-      <div class="grid grid-cols-1 pb-32 mt-10 lg:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-4">
+      <div class="grid grid-cols-1 pt-10 pb-32 mt-10 lg:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-4">
         {{ range .Params.committees }}
           <div class="bg-white">
             <h2 class="px-3 py-2 font-bold text-white bg-primary">{{ .name }}</h2>

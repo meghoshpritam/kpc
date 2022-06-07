@@ -1,0 +1,39 @@
+{{ define "main" }}
+  <section class="">
+    <section class="container pt-16 mx-auto">
+      {{ with .Params.hero }}
+        <h1 class="text-5xl font-medium text-center">{{ .title }}</h1>
+      {{ end }}
+
+
+      <div class="pt-10 pb-32 mt-10">
+        {{ $columns := .Params.columns }}
+        <table class="w-full mx-auto border-b border-l-2 border-r-2 max-w-7xl border-primary">
+          <thead class="w-full text-white bg-primary">
+            <tr class="grid w-full grid-cols-7">
+              {{ range $idx, $ctx := .Params.columns }}
+                <th class="px-2 border-white py-1.5 {{ if eq $idx 0 }}col-span-1{{ else }}col-span-2 border-l-2{{ end }}">{{ $ctx.label }}</th>
+              {{ end }}
+            </tr>
+          </thead>
+          <tbody class="w-full text-sm">
+            {{ range $idx, $rowData := .Params.rows }}
+              <tr class="grid w-full grid-cols-7 border-b border-primary">
+                {{ range $colIdx, $colVal := $columns }}
+                  {{ if eq $colVal.id "serialNo" }}
+                    <td class="px-2 py-1.5 text-center {{ if eq $colIdx 0 }}col-span-1{{ else }}col-span-2{{ end }}">{{ add $idx 1 }}</td>
+                  {{ else }}
+                    <td class="px-2 py-1.5 border-l-2 text-center border-primary {{ if eq $colIdx 0 }}col-span-1{{ else }}col-span-2{{ end }}">{{ index $rowData $colVal.id }}</td>
+                  {{ end }}
+                {{ end }}
+              </tr>
+            {{ end }}
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+
+  {{ partial "schema/website.html" . }}
+{{ end }}
