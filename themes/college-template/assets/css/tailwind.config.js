@@ -54,7 +54,7 @@ module.exports = {
         yellow1: '#F4C467',
       },
       fontFamily: {
-        lato: ['Poppins', 'Lato', 'sans-serif'],
+        lato: ['Lato', 'sans-serif'],
         montserrat: ['Poppins', 'Montserrat', 'sans-serif'],
         nunitoSans: ['Poppins', 'NunitoSans', 'sans-serif'],
         openSans: ['Poppins', 'OpenSans', 'sans-serif'],
@@ -91,6 +91,7 @@ module.exports = {
         13: '3.25rem',
         17: '4.25rem',
         68: '17rem',
+        69: '17.25rem',
         50: '12.5rem',
         79.2: '19.8rem',
         92: '23rem',

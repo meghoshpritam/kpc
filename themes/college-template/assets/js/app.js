@@ -93,7 +93,10 @@ class App {
 
   static onLoad = () => {
     // change current year
-    document.querySelector('.current-year-footer-0102').innerHTML = new Date().getFullYear();
+    const currentYearElement = document.querySelector('.current-year-footer-0102');
+    if (currentYearElement) {
+      currentYearElement.innerHTML = new Date().getFullYear();
+    }
 
     // onload clear and close contact form
     document.querySelector('input#contact-us-dialog').checked = false;

@@ -66,7 +66,7 @@
         <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="">
           <img src="{{ .image }}" title="{{ $.college.name }}" alt="{{ $.college.name }}" class="w-12 h-12 sm:w-16 sm:h-16" />
         </a>
-        <div class="ml-2.5 text-center font-lato w-56 sm:w-68">
+        <div class="ml-2.5 text-center w-56 sm:w-69">
           <a href="{{ .url }}" aria-label="{{ .title }}" title="{{ .title }}" class="" data-id="header-college-name-container">
             {{ range $idx, $ctx := $.college.i18nNames }}
               <span class="text-lg font-bold sm:text-2xl font-montserrat ease-in-out duration-300 {{ if ne $idx 0 }}hidden{{ end }}" data-id="header-college-name">{{ $ctx }}</span>
@@ -81,7 +81,7 @@
     {{ end }}
     <span class="flex-grow"></span>
     {{ with .topHeader.middle }}
-      <div class="flex-col items-center hidden text-sm font-semibold lg:flex font-lato">
+      <div class="flex-col items-center hidden text-sm font-semibold lg:flex">
         <ul class="flex gap-3 space-x-3">
           {{ range .top }}
             {{ block "boxed-primary-list" . }}{{ end }}
